@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { FiSearch, FiShoppingCart, FiMenu, FiX } from 'react-icons/fi';
+import logoImage from '../assets/home/logo.png';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,87 +17,41 @@ const Navbar = () => {
   return (
     <nav className="absolute w-full h-[91px] left-0 top-0 bg-[#EEEDE7] z-50 shadow-sm">
       <div className="w-full px-4 lg:px-8 h-full">
-        <div className="flex items-center justify-between h-full max-w-[1920px] mx-auto">
+        <div className="flex items-center justify-between h-full max-w-[1920px] mx-auto relative">
           {/* Logo Section - Group 189 */}
-          <div className="flex items-center lg:ml-[310px]">
-            <div className="flex items-center space-x-3 w-[157px] h-[37px]">
-              {/* Logo Icon - Group 123 */}
-              <div className="w-[35.22px] h-[35px] relative">
-                {/* Using the exact logo structure from your design */}
-                <svg
-                  width="35.22"
-                  height="35"
-                  viewBox="0 0 36 35"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-full h-full"
-                >
-                  {/* Outer circle */}
-                  <circle cx="17.61" cy="17.5" r="16.5" stroke="#8F7D6A" strokeWidth="1.5" fill="none"/>
-                  
-                  {/* Background vectors */}
-                  <rect 
-                    x="0.01" 
-                    y="2.84" 
-                    width="35.21" 
-                    height="29.15" 
-                    fill="#8F7D6A" 
-                    opacity="0.3"
-                  />
-                  <rect 
-                    x="4.11" 
-                    y="0.01" 
-                    width="26.99" 
-                    height="27.11" 
-                    fill="#8F7D6A" 
-                    opacity="0.3"
-                  />
-                  
-                  {/* Medical cross - main elements */}
-                  <rect 
-                    x="10.41" 
-                    y="13.32" 
-                    width="12.23" 
-                    height="9.52" 
-                    fill="#503217"
-                  />
-                  <rect 
-                    x="6.59" 
-                    y="9.41" 
-                    width="19.87" 
-                    height="17.34" 
-                    fill="#503217"
-                  />
-                </svg>
+          <div className="flex items-center lg:absolute lg:left-[300px] lg:top-1/2 lg:transform lg:-translate-y-1/2">
+            <div className="flex items-center w-[120px] h-[50px] cursor-pointer">
+              {/* Logo Image - Larger size to replace text */}
+              <div className="w-[120px] h-[50px] relative overflow-hidden">
+                <img 
+                  src={logoImage} 
+                  alt="Medifit Logo" 
+                  className="w-full h-full object-contain"
+                />
               </div>
-              
-              {/* Logo Text */}
-              <h1 className="text-[34px] font-medium font-poppins text-medifit-primary leading-[120%]">
-                Medifit
-              </h1>
             </div>
           </div>
 
           {/* Desktop Navigation Links - Frame 75 */}
-          <div className="hidden lg:flex items-center gap-[30px] absolute left-[744px] top-[32px] w-[403.14px] h-[26px]">
+          <div className="hidden lg:flex items-center gap-[40px] absolute left-[774px] top-[32px] w-[450px] h-[26px]">
             <a
               href="#home"
-              className="text-[18px] font-normal text-medifit-primary hover:text-medifit-secondary transition-colors duration-200 leading-[150%] w-[52px] h-[26px] flex items-center"
+              className="text-[18px] font-normal text-medifit-primary hover:text-medifit-secondary hover:bg-medifit-bg-secondary hover:scale-105 transition-all duration-200 leading-[150%] w-[52px] h-[26px] flex items-center rounded-md px-2"
             >
               Home
             </a>
             <a
               href="#shop"
-              className="text-[18px] font-normal text-medifit-primary hover:text-medifit-secondary transition-colors duration-200 leading-[150%] w-[43px] h-[26px] flex items-center"
+              className="text-[18px] font-normal text-medifit-primary hover:text-medifit-secondary hover:bg-medifit-bg-secondary hover:scale-105 transition-all duration-200 leading-[150%] w-[43px] h-[26px] flex items-center rounded-md px-2"
             >
               Shop
             </a>
             
             {/* Pages Dropdown - Group 122 */}
-            <div className="relative w-[69.14px] h-[26px]">
+            <div className="relative w-[69.14px] h-[26px] group">
               <button
                 onClick={togglePagesDropdown}
-                className="flex items-center space-x-2 text-[18px] font-normal text-medifit-primary hover:text-medifit-secondary transition-colors duration-200 leading-[150%] w-full h-full"
+                className="flex items-center space-x-2 text-[18px] font-normal text-medifit-primary hover:text-medifit-secondary hover:bg-medifit-bg-secondary hover:scale-105 transition-all duration-200 leading-[150%] w-full h-full rounded-md px-2"
               >
                 <span>Pages</span>
                 {/* Dropdown Arrow - fi_17808404 */}
@@ -106,7 +62,7 @@ const Navbar = () => {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   className={`transform transition-transform duration-200 ${
-                    isPagesDropdownOpen ? 'rotate-180' : 'rotate-[90.53deg]'
+                    isPagesDropdownOpen || 'group-hover:rotate-180'
                   }`}
                 >
                   <path
@@ -119,116 +75,65 @@ const Navbar = () => {
                 </svg>
               </button>
               
-              {/* Dropdown Menu */}
-              {isPagesDropdownOpen && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg border border-gray-200 py-2 z-50">
-                  <a
-                    href="#services"
-                    className="block px-4 py-2 text-medifit-primary hover:bg-medifit-bg-primary transition-colors duration-200"
-                  >
-                    Services
-                  </a>
-                  <a
-                    href="#products"
-                    className="block px-4 py-2 text-medifit-primary hover:bg-medifit-bg-primary transition-colors duration-200"
-                  >
-                    Products
-                  </a>
-                  <a
-                    href="#testimonials"
-                    className="block px-4 py-2 text-medifit-primary hover:bg-medifit-bg-primary transition-colors duration-200"
-                  >
-                    Testimonials
-                  </a>
-                </div>
-              )}
+              {/* Dropdown Menu - Shows on hover and click */}
+              <div className={`absolute top-full left-0 mt-2 w-48 bg-[#EEEDE7] rounded-md shadow-lg border border-gray-200 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ${isPagesDropdownOpen ? 'opacity-100 visible' : ''}`}>
+                <a
+                  href="#services"
+                  className="block px-4 py-2 text-medifit-primary hover:bg-medifit-bg-secondary hover:text-medifit-secondary hover:scale-105 transition-all duration-200 rounded-md mx-1"
+                >
+                  Services
+                </a>
+                <a
+                  href="#products"
+                  className="block px-4 py-2 text-medifit-primary hover:bg-medifit-bg-secondary hover:text-medifit-secondary hover:scale-105 transition-all duration-200 rounded-md mx-1"
+                >
+                  Products
+                </a>
+                <a
+                  href="#testimonials"
+                  className="block px-4 py-2 text-medifit-primary hover:bg-medifit-bg-secondary hover:text-medifit-secondary hover:scale-105 transition-all duration-200 rounded-md mx-1"
+                >
+                  Testimonials
+                </a>
+              </div>
             </div>
             
             <a
               href="#about"
-              className="text-[18px] font-normal text-medifit-primary hover:text-medifit-secondary transition-colors duration-200 leading-[150%] w-[52px] h-[26px] flex items-center"
+              className="text-[18px] font-normal text-medifit-primary hover:text-medifit-secondary hover:bg-medifit-bg-secondary hover:scale-105 transition-all duration-200 leading-[150%] w-[52px] h-[26px] flex items-center rounded-md px-2"
             >
               About
             </a>
             <a
               href="#contact"
-              className="text-[18px] font-normal text-medifit-primary hover:text-medifit-secondary transition-colors duration-200 leading-[150%] w-[67px] h-[26px] flex items-center"
+              className="text-[18px] font-normal text-medifit-primary hover:text-medifit-secondary hover:bg-medifit-bg-secondary hover:scale-105 transition-all duration-200 leading-[150%] w-[67px] h-[26px] flex items-center rounded-md px-2"
             >
               Contact
             </a>
           </div>
 
           {/* Right Side Icons */}
-          <div className="flex items-center space-x-4 lg:absolute lg:right-[100px] lg:top-[33px]">
-            {/* Search Icon - search-2 at left: 1541px */}
-            <button className="p-2 hover:bg-medifit-bg-secondary rounded-md transition-colors duration-200 w-[25px] h-[25px] relative">
-              <svg
-                width="25"
-                height="25"
-                viewBox="0 0 25 25"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="absolute inset-0"
-              >
-                <circle
-                  cx="12.5"
-                  cy="12.5"
-                  r="9.375"
-                  stroke="#503217"
-                  strokeWidth="1.5"
-                  fill="none"
-                />
-                <path
-                  d="m21 21-4.35-4.35"
-                  stroke="#503217"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+          <div className="flex items-center space-x-4 lg:space-x-6 lg:absolute lg:right-[100px] lg:top-[25px]">
+            {/* Search Icon - Hidden on mobile */}
+            <button className="hidden sm:flex p-2 hover:bg-medifit-bg-secondary hover:scale-110 rounded-md transition-all duration-200 w-[40px] h-[40px] items-center justify-center">
+              <FiSearch 
+                size={20} 
+                color="#503217"
+                className="transition-transform duration-200 hover:scale-110"
+              />
             </button>
 
-            {/* Cart Icon with Badge - cart at left: 1586px */}
-            <button className="relative p-2 hover:bg-medifit-bg-secondary rounded-md transition-colors duration-200 w-[25px] h-[25px]">
-              <svg
-                width="25"
-                height="25"
-                viewBox="0 0 25 25"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="absolute inset-0"
-              >
-                {/* Cart body */}
-                <rect
-                  x="6.77"
-                  y="18.23"
-                  width="9.46"
-                  height="3.13"
-                  stroke="#503217"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  rx="3"
-                  fill="none"
-                />
-                {/* Cart main area */}
-                <rect
-                  x="3.13"
-                  y="3.65"
-                  width="16.25"
-                  height="12.5"
-                  stroke="#503217"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  rx="3"
-                  fill="none"
-                />
-              </svg>
+            {/* Cart Icon with Badge - Hidden on mobile */}
+            <button className="hidden sm:flex relative p-2 hover:bg-medifit-bg-secondary hover:scale-110 rounded-md transition-all duration-200 w-[40px] h-[40px] items-center justify-center">
+              <FiShoppingCart 
+                size={20} 
+                color="#503217"
+                className="transition-transform duration-200 hover:scale-110"
+              />
               
-              {/* Cart Badge - Group 282 at left: 1605px */}
-              <div className="absolute -top-1 -right-1 w-[10.42px] h-[11.44px] bg-medifit-primary rounded-full flex items-center justify-center">
-                <span className="text-[8px] font-normal text-white leading-[150%]">
+              {/* Cart Badge */}
+              <div className="absolute -top-1 -right-1 w-[18px] h-[18px] bg-medifit-primary rounded-full flex items-center justify-center">
+                <span className="text-[10px] font-normal text-white leading-[150%]">
                   0
                 </span>
               </div>
@@ -237,33 +142,21 @@ const Navbar = () => {
             {/* Mobile Menu Toggle */}
             <button
               onClick={toggleMenu}
-              className="lg:hidden p-2 hover:bg-medifit-bg-secondary rounded-md transition-colors duration-200"
+              className="lg:hidden p-2 hover:bg-medifit-bg-secondary hover:scale-110 rounded-md transition-all duration-200 w-[40px] h-[40px] flex items-center justify-center"
             >
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                {isMenuOpen ? (
-                  <path
-                    d="M18 6L6 18M6 6l12 12"
-                    stroke="#503217"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                ) : (
-                  <path
-                    d="M3 12h18M3 6h18M3 18h18"
-                    stroke="#503217"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                )}
-              </svg>
+              {isMenuOpen ? (
+                <FiX 
+                  size={20} 
+                  color="#503217"
+                  className="transition-transform duration-200"
+                />
+              ) : (
+                <FiMenu 
+                  size={20} 
+                  color="#503217"
+                  className="transition-transform duration-200"
+                />
+              )}
             </button>
           </div>
         </div>
