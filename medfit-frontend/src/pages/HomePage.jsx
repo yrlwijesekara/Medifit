@@ -159,31 +159,42 @@ const HomePage = () => {
         </div>
 
         {/* Mobile Layout */}
-        <div className="block md:hidden px-4 pt-8 relative">
+        <div className="block md:hidden px-4 pt-16 relative">
           <div className="max-w-[350px] mx-auto text-center">
             <h1 className="font-poppins font-medium text-[32px] leading-[110%] text-[#503217] mb-4">
               Your trusted care now and always
             </h1>
-            <p className="font-sans-serif-collection font-normal text-[14px] leading-[150%] text-[#8F7D6A] mb-6">
+            <p className="font-sans-serif-collection font-normal text-[14px] leading-[150%] text-[#8F7D6A] mb-8">
               For the best results, align your health needs with your medication plan.
             </p>
             
-            <div className="relative w-[280px] h-[280px] mx-auto mb-6">
-              <div className="absolute inset-0 bg-[#EEEDE7] rounded-full"></div>
-              <div className="absolute inset-4 bg-center bg-cover bg-no-repeat rounded-full" style={{backgroundImage: `url(${mainProductImage})`}}>
-              </div>
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-                <h2 className="font-poppins font-medium text-[20px] leading-[120%] text-[#503217]">Medifit</h2>
+            {/* Centered Product Image Container */}
+            <div className="flex justify-center mb-10 mt-6 ">
+              <div className="relative w-[300px] h-[300px]">
+                <div className="absolute inset-0 bg-[#EEEDE7] rounded-full"></div>
+                <div className="absolute inset-4 bg-center bg-contain bg-no-repeat rounded-full" style={{backgroundImage: `url(${mainProductImage})`}}>
+                </div>
+                
               </div>
             </div>
             
-            <button className="flex items-center justify-center gap-2 px-4 py-3 bg-[#503217] rounded-[10px] hover:bg-[#6B4228] transition-colors duration-200 mx-auto">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="2" y="3" width="20" height="18" rx="2" stroke="#EEEDE7" strokeWidth="1.5"/>
-                <path d="M8 7v-2a4 4 0 0 1 8 0v2" stroke="#EEEDE7" strokeWidth="1.5"/>
-              </svg>
-              <span className="font-sans-serif-collection font-normal text-[14px] text-[#F2F2F2]">Shop now</span>
-            </button>
+            {/* Centered Button */}
+            <div className="flex justify-center mt-24">
+              <button className="relative flex items-center justify-center gap-4 px-10 py-5 bg-gradient-to-r from-[#503217] to-[#6B4228] hover:from-[#6B4228] hover:to-[#8B5538] hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl border-2 border-[#8F7D6A] hover:border-[#EEEDE7] active:scale-95 group overflow-hidden">
+                {/* Animated border effect */}
+                <div className="absolute inset-0 border-1 border-transparent bg-gradient-to-r from-[#EEEDE7] via-[#8F7D6A] to-[#EEEDE7] opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
+                <div className="absolute inset-[2px] bg-gradient-to-r from-[#503217] to-[#6B4228] group-hover:from-[#6B4228] group-hover:to-[#8B5538] transition-all duration-300"></div>
+                
+                {/* Content */}
+                <div className="relative flex items-center gap-4 z-10">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-sm group-hover:animate-bounce">
+                    <rect x="2" y="3" width="20" height="18" rx="2" stroke="#EEEDE7" strokeWidth="1.5"/>
+                    <path d="M8 7v-2a4 4 0 0 1 8 0v2" stroke="#EEEDE7" strokeWidth="1.5"/>
+                  </svg>
+                  <span className="font-sans-serif-collection font-semibold text-[18px] text-[#F2F2F2] drop-shadow-sm tracking-wide group-hover:text-white transition-colors duration-300">Shop Now</span>
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       </div>
