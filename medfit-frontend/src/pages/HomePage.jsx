@@ -206,7 +206,7 @@ const HomePage = () => {
       </div>
 
       {/* Shop by Category Section */}
-      <div className="absolute w-full h-[800px] md:h-[389px] left-0 top-[1120px] overflow-hidden">
+      <div className="absolute w-full h-[900px] md:h-[389px] left-0 top-[1120px] overflow-hidden">
         
         {/* Section Title */}
         <div className="absolute w-[439px] h-[72px] left-1/2 transform -translate-x-1/2 top-0">
@@ -491,6 +491,534 @@ const HomePage = () => {
             <div className="absolute left-[9.15%] right-[25.21%] top-0 bottom-[30.92%] bg-[#8F7D6A] transform -rotate-12"></div>
             {/* Vector 2 */}
             <div className="absolute left-[69.79%] right-[5.94%] top-[41.11%] bottom-[-38.39%] bg-[#8F7D6A] transform -rotate-12"></div>
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="absolute w-full left-0 top-[2070px] md:top-[1609px] h-[650px] md:h-[300px] overflow-hidden">
+        
+        {/* CTA Cards Container */}
+        <div className="absolute w-full left-0 top-0 px-4 md:px-0">
+          
+          {/* Desktop Layout - 3 CTAs in a row */}
+          <div className="hidden md:flex justify-center items-start gap-[30px] w-full">
+            
+            {/* CTA 1 - Hand sanitizer collection */}
+            <div className="relative w-[416px] h-[266px]">
+              {/* Background Rectangle */}
+              <div className="absolute w-[413px] h-[259px] left-0 top-0 bg-[#F2F2F2] rounded-[10px]"></div>
+              
+              {/* Decorative Ellipses */}
+              <div className="absolute w-[155px] h-[164px] left-0 top-[95px] bg-[#E2DFCF] opacity-20 rounded-full transform -rotate-[86deg]"></div>
+              <div className="absolute w-[245px] h-[126px] left-[147px] top-0 bg-[#E2DFCF] opacity-20 rounded-full transform rotate-1"></div>
+              
+              {/* Product Image Placeholder */}
+              <div className="absolute w-[163px] h-[202px] left-[234px] top-[30px] bg-gray-300 rounded flex items-center justify-center">
+                <span className="text-[#503217] text-sm font-medium">Sanitizer</span>
+              </div>
+              
+              {/* Content */}
+              <div className="absolute left-[26px] top-[24px] flex flex-col gap-[38px] w-[175px] h-[180px]">
+                {/* Badge */}
+                <div className="flex justify-center items-center px-[10px] py-[10px] w-[80px] h-[30px] bg-[#D3744A] rounded-[10px]">
+                  <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-[#EEEDE7]">Sanitizer</span>
+                </div>
+                
+                {/* Text Content */}
+                <div className="flex flex-col gap-[15px]">
+                  <h3 className="font-poppins font-medium text-[24px] leading-[150%] text-[#503217]">
+                    Hand sanitizer collection
+                  </h3>
+                  
+                  {/* Shop Now Link */}
+                  <div className="flex items-center gap-[10px] group">
+                    <div className="w-6 h-6 flex items-center justify-center">
+                      <div className="w-4 h-4 border-2 border-[#8F7D6A] rounded-sm"></div>
+                    </div>
+                    <span className="font-poppins font-medium text-[18px] leading-[150%] text-[#8F7D6A] group-hover:underline">Shop now</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA 2 - Face wash sale collection */}
+            <div className="relative w-[416px] h-[266px]">
+              {/* Background Rectangle */}
+              <div className="absolute w-[413px] h-[259px] left-0 top-0 bg-[#F2F2F2] rounded-[10px]"></div>
+              
+              {/* Decorative Ellipses */}
+              <div className="absolute w-[61px] h-[72px] left-[147px] top-[187px] bg-[#E2DFCF] opacity-20 rounded-full transform rotate-180"></div>
+              <div className="absolute w-[172px] h-[111px] left-[302px] top-[60px] bg-[#E2DFCF] opacity-20 rounded-full transform rotate-90"></div>
+              <div className="absolute w-[191px] h-[86px] left-[-1px] top-[47px] bg-[#E2DFCF] opacity-20 rounded-full transform -rotate-90"></div>
+              
+              {/* Product Image Placeholder */}
+              <div className="absolute w-[150px] h-[184px] left-[234px] top-[37px] bg-gray-300 rounded flex items-center justify-center">
+                <span className="text-[#503217] text-sm font-medium">Face Wash</span>
+              </div>
+              
+              {/* Content */}
+              <div className="absolute left-[26px] top-[24px] flex flex-col gap-[38px] w-[186px] h-[180px]">
+                {/* Badge */}
+                <div className="flex justify-center items-center px-[10px] py-[10px] w-[80px] h-[30px] bg-[#D3744A] rounded-[10px]">
+                  <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-[#EEEDE7]">Top deals</span>
+                </div>
+                
+                {/* Text Content */}
+                <div className="flex flex-col gap-[15px]">
+                  <h3 className="font-poppins font-medium text-[24px] leading-[150%] text-[#503217]">
+                    Face wash sale collection
+                  </h3>
+                  
+                  {/* Discover Now Link */}
+                  <div className="flex items-center gap-[10px] group">
+                    <div className="w-6 h-6 flex items-center justify-center">
+                      <div className="w-4 h-4 border-2 border-[#8F7D6A] rounded-full"></div>
+                    </div>
+                    <span className="font-poppins font-medium text-[18px] leading-[150%] text-[#8F7D6A] group-hover:underline">Discover now</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA 3 - Facial mask deals */}
+            <div className="relative w-[416px] h-[266px]">
+              {/* Background Rectangle */}
+              <div className="absolute w-[413px] h-[259px] left-0 top-0 bg-[#F2F2F2] rounded-[10px]"></div>
+              
+              {/* Decorative Elements */}
+              <div className="absolute w-[32px] h-[8px] left-[255px] top-[64px] bg-[#E2DFCF] opacity-20 rounded transform rotate-12"></div>
+              <div className="absolute w-[134px] h-[92px] left-[288px] top-[167px] bg-[#E2DFCF] opacity-20 rounded-[10px]"></div>
+              
+              {/* Product Image Placeholder */}
+              <div className="absolute w-[140px] h-[203px] left-[266px] top-[28px] bg-gray-300 rounded flex items-center justify-center transform scale-x-[-1]">
+                <span className="text-[#503217] text-sm font-medium transform scale-x-[-1]">Face Mask</span>
+              </div>
+              
+              {/* Content */}
+              <div className="absolute left-[26px] top-[24px] flex flex-col gap-[38px] w-[175px] h-[180px]">
+                {/* Badge */}
+                <div className="flex justify-center items-center px-[10px] py-[10px] w-[90px] h-[30px] bg-[#D3744A] rounded-[10px]">
+                  <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-[#EEEDE7]">Face mask</span>
+                </div>
+                
+                {/* Text Content */}
+                <div className="flex flex-col gap-[15px]">
+                  <h3 className="font-poppins font-medium text-[24px] leading-[150%] text-[#503217]">
+                    Facial mask deals save up to 50%
+                  </h3>
+                  
+                  {/* Discover Now Link */}
+                  <div className="flex items-center gap-[10px] group">
+                    <div className="w-6 h-6 flex items-center justify-center">
+                      <div className="w-4 h-4 border-2 border-[#8F7D6A] rounded-full"></div>
+                    </div>
+                    <span className="font-poppins font-medium text-[18px] leading-[150%] text-[#8F7D6A] group-hover:underline">Discover now</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Layout - Stacked CTAs */}
+          <div className="md:hidden flex flex-col gap-6 items-center">
+            
+            {/* CTA 1 - Hand sanitizer collection */}
+            <div className="relative w-[320px] h-[200px]">
+              {/* Background Rectangle */}
+              <div className="absolute w-full h-full bg-[#F2F2F2] rounded-[10px]"></div>
+              
+              {/* Product Image Placeholder */}
+              <div className="absolute w-[100px] h-[120px] right-4 top-4 bg-gray-300 rounded flex items-center justify-center">
+                <span className="text-[#503217] text-xs font-medium">Sanitizer</span>
+              </div>
+              
+              {/* Content */}
+              <div className="absolute left-4 top-4 flex flex-col gap-4 w-[180px]">
+                {/* Badge */}
+                <div className="flex justify-center items-center px-2 py-1 w-[60px] h-[25px] bg-[#D3744A] rounded-[8px]">
+                  <span className="font-sans-serif-collection font-normal text-[11px] leading-[150%] text-[#EEEDE7]">Sanitizer</span>
+                </div>
+                
+                {/* Text Content */}
+                <div className="flex flex-col gap-3">
+                  <h3 className="font-poppins font-medium text-[18px] leading-[150%] text-[#503217]">
+                    Hand sanitizer collection
+                  </h3>
+                  
+                  {/* Shop Now Link */}
+                  <div className="flex items-center gap-2 group">
+                    <div className="w-4 h-4 flex items-center justify-center">
+                      <div className="w-3 h-3 border border-[#8F7D6A] rounded-sm"></div>
+                    </div>
+                    <span className="font-poppins font-medium text-[14px] leading-[150%] text-[#8F7D6A] group-hover:underline">Shop now</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA 2 - Face wash sale collection */}
+            <div className="relative w-[320px] h-[200px]">
+              {/* Background Rectangle */}
+              <div className="absolute w-full h-full bg-[#F2F2F2] rounded-[10px]"></div>
+              
+              {/* Product Image Placeholder */}
+              <div className="absolute w-[100px] h-[120px] right-4 top-4 bg-gray-300 rounded flex items-center justify-center">
+                <span className="text-[#503217] text-xs font-medium">Face Wash</span>
+              </div>
+              
+              {/* Content */}
+              <div className="absolute left-4 top-4 flex flex-col gap-4 w-[180px]">
+                {/* Badge */}
+                <div className="flex justify-center items-center px-2 py-1 w-[60px] h-[25px] bg-[#D3744A] rounded-[8px]">
+                  <span className="font-sans-serif-collection font-normal text-[11px] leading-[150%] text-[#EEEDE7]">Top deals</span>
+                </div>
+                
+                {/* Text Content */}
+                <div className="flex flex-col gap-3">
+                  <h3 className="font-poppins font-medium text-[18px] leading-[150%] text-[#503217]">
+                    Face wash sale collection
+                  </h3>
+                  
+                  {/* Discover Now Link */}
+                  <div className="flex items-center gap-2 group">
+                    <div className="w-4 h-4 flex items-center justify-center">
+                      <div className="w-3 h-3 border border-[#8F7D6A] rounded-full"></div>
+                    </div>
+                    <span className="font-poppins font-medium text-[14px] leading-[150%] text-[#8F7D6A] group-hover:underline">Discover now</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA 3 - Facial mask deals */}
+            <div className="relative w-[320px] h-[200px]">
+              {/* Background Rectangle */}
+              <div className="absolute w-full h-full bg-[#F2F2F2] rounded-[10px]"></div>
+              
+              {/* Product Image Placeholder */}
+              <div className="absolute w-[100px] h-[120px] right-4 top-4 bg-gray-300 rounded flex items-center justify-center">
+                <span className="text-[#503217] text-xs font-medium">Face Mask</span>
+              </div>
+              
+              {/* Content */}
+              <div className="absolute left-4 top-4 flex flex-col gap-4 w-[180px]">
+                {/* Badge */}
+                <div className="flex justify-center items-center px-2 py-1 w-[65px] h-[25px] bg-[#D3744A] rounded-[8px]">
+                  <span className="font-sans-serif-collection font-normal text-[11px] leading-[150%] text-[#EEEDE7]">Face mask</span>
+                </div>
+                
+                {/* Text Content */}
+                <div className="flex flex-col gap-3">
+                  <h3 className="font-poppins font-medium text-[18px] leading-[150%] text-[#503217]">
+                    Facial mask deals save up to 50%
+                  </h3>
+                  
+                  {/* Discover Now Link */}
+                  <div className="flex items-center gap-2 group">
+                    <div className="w-4 h-4 flex items-center justify-center">
+                      <div className="w-3 h-3 border border-[#8F7D6A] rounded-full"></div>
+                    </div>
+                    <span className="font-poppins font-medium text-[14px] leading-[150%] text-[#8F7D6A] group-hover:underline">Discover now</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Latest health product Section */}
+      <div className="absolute w-full left-0 top-[2720px] md:top-[1909px] h-[600px] md:h-[479px] overflow-hidden">
+        
+        {/* Section Title */}
+        <div className="absolute w-[527px] h-[72px] left-1/2 transform -translate-x-1/2 top-0">
+          <h2 className="font-poppins font-medium text-[48px] leading-[120%] text-center text-[#503217] hidden md:block">
+            Latest health product
+          </h2>
+          <h2 className="font-poppins font-medium text-[32px] leading-[120%] text-center text-[#503217] md:hidden">
+            Latest health product
+          </h2>
+        </div>
+
+        {/* Products Container */}
+        <div className="absolute w-full left-0 top-[100px] md:top-[133px] px-4 md:px-0">
+          
+          {/* Desktop Layout - 4 products in a row */}
+          <div className="hidden md:flex justify-center gap-[30px] w-full">
+            
+            {/* Product 1 - Microscope */}
+            <div className="flex flex-col items-start gap-[15px] w-[302px] h-[341px]">
+              {/* Product Image Container */}
+              <div className="relative flex justify-center items-center w-[302px] h-[262px] bg-[#F2F2F2] rounded-[10px] overflow-hidden group">
+                {/* Badge */}
+                <div className="absolute flex justify-center items-center px-[10px] py-[10px] w-[50px] h-[30px] bg-[#D3744A] rounded-[10px] left-5 top-5 z-10">
+                  <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-white">New</span>
+                </div>
+                
+                {/* Product Image Placeholder */}
+                <div className="flex justify-center items-center w-[103px] h-[174px] bg-gray-300 rounded">
+                  <span className="text-[#503217] text-sm font-medium">Microscope</span>
+                </div>
+                
+                {/* Shop Now Button */}
+                <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[262px] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5">
+                  <div className="flex items-center gap-[5px]">
+                    {/* Cart Icon */}
+                    <div className="w-6 h-6 flex items-center justify-center">
+                      <div className="w-4 h-4 border-2 border-[#503217] rounded-sm"></div>
+                    </div>
+                    <span className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">Shop now</span>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Product Details */}
+              <div className="flex flex-col items-start gap-[5px] w-[143px] h-[64px]">
+                <h3 className="font-poppins font-medium text-[24px] leading-[150%] text-[#503217]">
+                  Microscope
+                </h3>
+                <p className="font-poppins font-medium text-[18px] leading-[150%] text-[#8F7D6A]">
+                  $45.00 USD
+                </p>
+              </div>
+            </div>
+
+            {/* Product 2 - Pulse oximeter */}
+            <div className="flex flex-col items-start gap-[15px] w-[302px] h-[345px]">
+              {/* Product Image Container */}
+              <div className="relative flex justify-center items-center w-[302px] h-[262px] bg-[#F2F2F2] rounded-[10px] overflow-hidden group">
+                {/* Badge */}
+                <div className="absolute flex justify-center items-center px-[10px] py-[10px] w-[81px] h-[30px] bg-[#D3744A] rounded-[10px] left-5 top-5 z-10">
+                  <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-white">Save 10%</span>
+                </div>
+                
+                {/* Product Image Placeholder */}
+                <div className="flex justify-center items-center w-[137px] h-[134px] bg-gray-300 rounded transform rotate-12">
+                  <span className="text-[#503217] text-sm font-medium">Pulse</span>
+                </div>
+              </div>
+              
+              {/* Product Details */}
+              <div className="flex flex-col items-start gap-[5px] w-[221px] h-[68px]">
+                <h3 className="font-poppins font-medium text-[24px] leading-[150%] text-[#503217]">
+                  Pulse oximeter
+                </h3>
+                <div className="flex items-center gap-[18px]">
+                  <p className="font-poppins font-medium text-[18px] leading-[150%] text-[#8F7D6A]">
+                    $19.00 USD
+                  </p>
+                  <div className="relative">
+                    <p className="font-poppins font-medium text-[16px] leading-[150%] text-[#8F7D6A]">
+                      $25.00 USD
+                    </p>
+                    <div className="absolute w-[55px] h-[1px] bg-[#8F7D6A] opacity-80 top-1/2 left-0"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Product 3 - Vitamin serum */}
+            <div className="flex flex-col items-start gap-[15px] w-[302px] h-[347px]">
+              {/* Product Image Container */}
+              <div className="relative flex justify-center items-center w-[302px] h-[262px] bg-[#F2F2F2] rounded-[10px] overflow-hidden group">
+                {/* Product Image Placeholder */}
+                <div className="flex justify-center items-center w-[95px] h-[178px] bg-gray-300 rounded">
+                  <span className="text-[#503217] text-sm font-medium transform -rotate-90">Vitamin</span>
+                </div>
+              </div>
+              
+              {/* Product Details */}
+              <div className="flex flex-col items-start gap-[5px] w-[225px] h-[70px]">
+                <h3 className="font-poppins font-medium text-[24px] leading-[150%] text-[#503217]">
+                  Vitamin serum
+                </h3>
+                <div className="flex items-center gap-[20px]">
+                  <p className="font-poppins font-medium text-[18px] leading-[150%] text-[#8F7D6A]">
+                    $20.00 USD
+                  </p>
+                  <div className="relative">
+                    <p className="font-poppins font-medium text-[16px] leading-[150%] text-[#8F7D6A]">
+                      $30.00 USD
+                    </p>
+                    <div className="absolute w-[55px] h-[1px] bg-[#8F7D6A] opacity-80 top-1/2 left-0"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Product 4 - High protein */}
+            <div className="flex flex-col items-start gap-[15px] w-[302px] h-[345px]">
+              {/* Product Image Container */}
+              <div className="relative flex justify-center items-center w-[302px] h-[262px] bg-[#F2F2F2] rounded-[10px] overflow-hidden group">
+                {/* Badge */}
+                <div className="absolute flex justify-center items-center px-[10px] py-[10px] w-[50px] h-[30px] bg-[#D3744A] rounded-[10px] left-5 top-5 z-10">
+                  <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-white">New</span>
+                </div>
+                
+                {/* Product Images - Two bottles */}
+                <div className="relative">
+                  {/* Back bottle */}
+                  <div className="absolute flex justify-center items-center w-[49px] h-[97px] bg-gray-300 rounded left-[67px] top-[-40px]">
+                    <span className="text-[#E2DFCF] text-[6px] font-medium transform rotate-1">Medifit</span>
+                  </div>
+                  {/* Front bottle */}
+                  <div className="flex justify-center items-center w-[81px] h-[158px] bg-gray-400 rounded">
+                    <span className="text-[#E2DFCF] text-[12px] font-medium transform rotate-1">Medifit</span>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Product Details */}
+              <div className="flex flex-col items-start gap-[5px] w-[152px] h-[68px]">
+                <h3 className="font-poppins font-medium text-[24px] leading-[150%] text-[#503217]">
+                  High protein
+                </h3>
+                <p className="font-poppins font-medium text-[18px] leading-[150%] text-[#8F7D6A]">
+                  $50.00 USD
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Layout - 2 products per row */}
+          <div className="md:hidden flex flex-col gap-6 items-center">
+            
+            {/* Row 1 */}
+            <div className="flex gap-4">
+              {/* Product 1 - Microscope */}
+              <div className="flex flex-col items-start gap-[10px] w-[160px] h-[220px]">
+                {/* Product Image Container */}
+                <div className="relative flex justify-center items-center w-[160px] h-[140px] bg-[#F2F2F2] rounded-[8px] overflow-hidden">
+                  {/* Badge */}
+                  <div className="absolute flex justify-center items-center px-[8px] py-[6px] w-[40px] h-[25px] bg-[#D3744A] rounded-[8px] left-3 top-3 z-10">
+                    <span className="font-sans-serif-collection font-normal text-[11px] leading-[150%] text-white">New</span>
+                  </div>
+                  
+                  {/* Product Image Placeholder */}
+                  <div className="flex justify-center items-center w-[60px] h-[100px] bg-gray-300 rounded">
+                    <span className="text-[#503217] text-xs font-medium">Micro</span>
+                  </div>
+                </div>
+                
+                {/* Product Details */}
+                <div className="flex flex-col items-start gap-[3px] w-full">
+                  <h3 className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">
+                    Microscope
+                  </h3>
+                  <p className="font-poppins font-medium text-[14px] leading-[150%] text-[#8F7D6A]">
+                    $45.00 USD
+                  </p>
+                </div>
+              </div>
+
+              {/* Product 2 - Pulse oximeter */}
+              <div className="flex flex-col items-start gap-[10px] w-[160px] h-[220px]">
+                {/* Product Image Container */}
+                <div className="relative flex justify-center items-center w-[160px] h-[140px] bg-[#F2F2F2] rounded-[8px] overflow-hidden">
+                  {/* Badge */}
+                  <div className="absolute flex justify-center items-center px-[8px] py-[6px] w-[55px] h-[25px] bg-[#D3744A] rounded-[8px] left-3 top-3 z-10">
+                    <span className="font-sans-serif-collection font-normal text-[11px] leading-[150%] text-white">Save 10%</span>
+                  </div>
+                  
+                  {/* Product Image Placeholder */}
+                  <div className="flex justify-center items-center w-[80px] h-[75px] bg-gray-300 rounded transform rotate-12">
+                    <span className="text-[#503217] text-xs font-medium">Pulse</span>
+                  </div>
+                </div>
+                
+                {/* Product Details */}
+                <div className="flex flex-col items-start gap-[3px] w-full">
+                  <h3 className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">
+                    Pulse oximeter
+                  </h3>
+                  <div className="flex items-center gap-2">
+                    <p className="font-poppins font-medium text-[14px] leading-[150%] text-[#8F7D6A]">
+                      $19.00 USD
+                    </p>
+                    <div className="relative">
+                      <p className="font-poppins font-medium text-[12px] leading-[150%] text-[#8F7D6A]">
+                        $25.00 USD
+                      </p>
+                      <div className="absolute w-[30px] h-[1px] bg-[#8F7D6A] opacity-80 top-1/2 left-0"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Row 2 */}
+            <div className="flex gap-4">
+              {/* Product 3 - Vitamin serum */}
+              <div className="flex flex-col items-start gap-[10px] w-[160px] h-[220px]">
+                {/* Product Image Container */}
+                <div className="relative flex justify-center items-center w-[160px] h-[140px] bg-[#F2F2F2] rounded-[8px] overflow-hidden">
+                  {/* Product Image Placeholder */}
+                  <div className="flex justify-center items-center w-[55px] h-[100px] bg-gray-300 rounded">
+                    <span className="text-[#503217] text-xs font-medium transform -rotate-90">Vitamin</span>
+                  </div>
+                </div>
+                
+                {/* Product Details */}
+                <div className="flex flex-col items-start gap-[3px] w-full">
+                  <h3 className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">
+                    Vitamin serum
+                  </h3>
+                  <div className="flex items-center gap-2">
+                    <p className="font-poppins font-medium text-[14px] leading-[150%] text-[#8F7D6A]">
+                      $20.00 USD
+                    </p>
+                    <div className="relative">
+                      <p className="font-poppins font-medium text-[12px] leading-[150%] text-[#8F7D6A]">
+                        $30.00 USD
+                      </p>
+                      <div className="absolute w-[30px] h-[1px] bg-[#8F7D6A] opacity-80 top-1/2 left-0"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Product 4 - High protein */}
+              <div className="flex flex-col items-start gap-[10px] w-[160px] h-[220px]">
+                {/* Product Image Container */}
+                <div className="relative flex justify-center items-center w-[160px] h-[140px] bg-[#F2F2F2] rounded-[8px] overflow-hidden">
+                  {/* Badge */}
+                  <div className="absolute flex justify-center items-center px-[8px] py-[6px] w-[40px] h-[25px] bg-[#D3744A] rounded-[8px] left-3 top-3 z-10">
+                    <span className="font-sans-serif-collection font-normal text-[11px] leading-[150%] text-white">New</span>
+                  </div>
+                  
+                  {/* Product Images - Two bottles */}
+                  <div className="relative">
+                    {/* Back bottle */}
+                    <div className="absolute flex justify-center items-center w-[30px] h-[55px] bg-gray-300 rounded left-[30px] top-[-20px]">
+                      <span className="text-[#E2DFCF] text-[4px] font-medium">Medifit</span>
+                    </div>
+                    {/* Front bottle */}
+                    <div className="flex justify-center items-center w-[45px] h-[85px] bg-gray-400 rounded">
+                      <span className="text-[#E2DFCF] text-[8px] font-medium">Medifit</span>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Product Details */}
+                <div className="flex flex-col items-start gap-[3px] w-full">
+                  <h3 className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">
+                    High protein
+                  </h3>
+                  <p className="font-poppins font-medium text-[14px] leading-[150%] text-[#8F7D6A]">
+                    $50.00 USD
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Decorative Medical Icon - Bottom Left */}
+        <div className="absolute w-[124px] h-[124px] left-[57px] bottom-[50px] opacity-10 transform -rotate-[27deg] hidden md:block">
+          {/* Medical Pills Icon */}
+          <div className="w-full h-full flex items-center justify-center">
+            <div className="w-16 h-16 bg-[#8F7D6A] rounded-full opacity-50"></div>
           </div>
         </div>
       </div>
