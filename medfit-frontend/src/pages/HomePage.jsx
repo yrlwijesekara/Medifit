@@ -14,7 +14,7 @@ const HomePage = () => {
       <Navbar />
       
       {/* Rectangle 64 - Main Container */}
-      <div className="absolute w-full h-[990px] left-0 top-[91px] bg-[#E8E6DE] overflow-hidden">
+      <div className="absolute w-full h-[500px] md:h-[990px] left-0 top-[91px] bg-[#E8E6DE] overflow-hidden">
         
         {/* Hero Section - 1703x908.89px */}
         <div className="absolute w-[1703px] h-[909px] -left-[85px] top-[65px] hidden xl:block">
@@ -164,49 +164,66 @@ const HomePage = () => {
           </div>
         </div>
 
-        {/* Mobile Layout */}
-        <div className="block md:hidden px-6 pt-12 relative">
-          <div className="max-w-[380px] mx-auto text-center">
-            <h1 className="font-poppins font-medium text-[28px] leading-[120%] text-[#503217] mb-6">
-              Your trusted care now and always
-            </h1>
-            <p className="font-sans-serif-collection font-normal text-[15px] leading-[160%] text-[#8F7D6A] mb-12 px-4">
-              For the best results, align your health needs with your medication plan.
-            </p>
-            
-            {/* Centered Product Image Container */}
-            <div className="flex justify-center mb-12 mt-8">
-              <div className="relative w-[280px] h-[280px]">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#F5F4F0] to-[#EEEDE7] rounded-full shadow-lg"></div>
-                <div className="absolute inset-6 bg-center bg-contain bg-no-repeat rounded-full" style={{backgroundImage: `url(${mainProductImage})`}}>
-                </div>
-                {/* Subtle glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-full"></div>
-              </div>
-            </div>
-            
-            {/* Centered Button with softer design */}
-            <div className="flex justify-center">
-              <button className="relative flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#503217] to-[#6B4228] hover:from-[#6B4228] hover:to-[#7D4F35] transition-all duration-500 shadow-md hover:shadow-lg rounded-xl border border-[#8F7D6A]/20 hover:border-[#EEEDE7]/30 active:scale-95 group overflow-hidden">
-                {/* Soft animated background */}
-                <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        {/* Mobile Layout - Redesigned for Beauty */}
+        <div className="block md:hidden relative min-h-[450px] flex items-center justify-center">
+          <div className="w-full px-6 py-12 flex items-center justify-center min-h-full">
+            <div className="w-full max-w-sm mx-auto">
+              
+              {/* Hero Content Container */}
+              <div className="text-center space-y-8 flex flex-col items-center justify-center">
                 
-                {/* Content */}
-                <div className="relative flex items-center gap-3 z-10">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-sm group-hover:scale-110 transition-transform duration-300">
-                    <rect x="2" y="3" width="20" height="18" rx="2" stroke="#EEEDE7" strokeWidth="1.5"/>
-                    <path d="M8 7v-2a4 4 0 0 1 8 0v2" stroke="#EEEDE7" strokeWidth="1.5"/>
-                  </svg>
-                  <span className="font-sans-serif-collection font-medium text-[16px] text-[#F2F2F2] drop-shadow-sm tracking-wide group-hover:text-white transition-colors duration-300">Shop Now</span>
+                {/* Title & Description Block */}
+                <div className="space-y-4 text-center w-full flex flex-col items-center">
+                  <h1 className="font-poppins font-semibold text-3xl leading-tight text-[#503217] tracking-tight text-center max-w-xs">
+                    Your trusted care now and always
+                  </h1>
+                  <p className="font-sans-serif-collection font-normal text-sm leading-relaxed text-[#8F7D6A] opacity-90 text-center max-w-xs px-2">
+                    For the best results, align your health needs with your medication plan.
+                  </p>
                 </div>
-              </button>
+                
+                {/* Product Showcase */}
+                <div className="flex justify-center items-center py-4 w-full">
+                  <div className="relative group flex justify-center">
+                    {/* Main Product Container - No Border */}
+                    <div className="relative w-56 h-44 flex items-center justify-center">
+                      {/* Product Image - No background borders */}
+                      <div className="w-full h-full flex items-center justify-center">
+                        <div 
+                          className="w-full h-full bg-center bg-contain bg-no-repeat transform group-hover:scale-105 transition-transform duration-700 ease-out" 
+                          style={{backgroundImage: `url(${mainProductImage})`}}
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Call-to-Action Button */}
+                <div className="flex justify-center items-center w-full pt-2">
+                  <button className="group relative bg-gradient-to-r from-[#503217] via-[#5D3A1F] to-[#6B4228] hover:from-[#6B4228] hover:via-[#7D4F35] hover:to-[#8F5C42] text-white font-medium py-4 px-10 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 ease-out border border-[#8F7D6A]/20 hover:border-[#EEEDE7]/30 w-44 mx-auto">
+                    
+                    {/* Button Background Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+                    
+                    {/* Button Content */}
+                    <div className="relative flex items-center justify-center gap-3">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="transform group-hover:scale-110 transition-transform duration-300">
+                        <rect x="2" y="3" width="20" height="18" rx="2" stroke="currentColor" strokeWidth="1.5"/>
+                        <path d="M8 7v-2a4 4 0 0 1 8 0v2" stroke="currentColor" strokeWidth="1.5"/>
+                      </svg>
+                      <span className="text-[15px] font-medium tracking-wide">Shop Now</span>
+                    </div>
+                  </button>
+                </div>
+                
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Shop by Category Section */}
-      <div className="absolute w-full h-[900px] md:h-[389px] left-0 top-[1120px] overflow-hidden">
+      <div className="absolute w-full h-[900px] md:h-[389px] left-0 top-[680px] md:top-[1200px] overflow-hidden">
         
         {/* Section Title */}
         <div className="absolute w-[439px] h-[72px] left-1/2 transform -translate-x-1/2 top-0">
@@ -496,7 +513,7 @@ const HomePage = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="absolute w-full left-0 top-[2070px] md:top-[1609px] h-[650px] md:h-[300px] overflow-hidden">
+      <div className="absolute w-full left-0 top-[1630px] md:top-[1689px] h-[650px] md:h-[300px] overflow-hidden">
         
         {/* CTA Cards Container */}
         <div className="absolute w-full left-0 top-0 px-4 md:px-0">
@@ -729,7 +746,7 @@ const HomePage = () => {
       </div>
 
       {/* Latest health product Section */}
-      <div className="absolute w-full left-0 top-[2720px] md:top-[1909px] h-[600px] md:h-[479px] overflow-hidden">
+      <div className="absolute w-full left-0 top-[2280px] md:top-[1989px] h-[600px] md:h-[479px] overflow-hidden">
         
         {/* Section Title */}
         <div className="absolute w-[527px] h-[72px] left-1/2 transform -translate-x-1/2 top-0">
