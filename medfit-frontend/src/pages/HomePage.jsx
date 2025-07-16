@@ -9,6 +9,10 @@ import categoryMedkits from '../assets/home/catergory-6.png';
 import ctaImage1 from '../assets/home/cta-1.png';
 import ctaImage2 from '../assets/home/cta-2.png';
 import ctaImage3 from '../assets/home/cta-3.png';
+import productMicroscope from '../assets/home/microscope.png';
+import productOximeter from '../assets/home/oximeter.png';
+import productSerum from '../assets/home/serum.png';
+import productProtein from '../assets/home/protein.png';
 
 const HomePage = () => {
   return (
@@ -543,7 +547,7 @@ const HomePage = () => {
               </div>
               
               {/* Content */}
-              <div className="absolute left-[26px] top-[24px] flex flex-col gap-[38px] w-[175px] h-[180px]">
+              <div className="absolute left-[26px] top-[24px] flex flex-col justify-between w-[175px] h-[180px]">
                 {/* Badge */}
                 <div className="flex justify-center items-center px-[10px] py-[10px] w-[80px] h-[30px] bg-[#D3744A] rounded-[10px]">
                   <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-[#EEEDE7]">Sanitizer</span>
@@ -558,7 +562,10 @@ const HomePage = () => {
                   {/* Shop Now Link */}
                   <div className="flex items-center gap-[10px] group">
                     <div className="w-6 h-6 flex items-center justify-center">
-                      <div className="w-4 h-4 border-2 border-[#8F7D6A] rounded-sm"></div>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="3" width="20" height="18" rx="2" stroke="#8F7D6A" strokeWidth="2"/>
+                        <path d="M8 7v-2a4 4 0 0 1 8 0v2" stroke="#8F7D6A" strokeWidth="2"/>
+                      </svg>
                     </div>
                     <span className="font-poppins font-medium text-[18px] leading-[150%] text-[#8F7D6A] group-hover:underline">Shop now</span>
                   </div>
@@ -586,7 +593,7 @@ const HomePage = () => {
               </div>
               
               {/* Content */}
-              <div className="absolute left-[26px] top-[24px] flex flex-col gap-[38px] w-[186px] h-[180px]">
+              <div className="absolute left-[26px] top-[24px] flex flex-col justify-between w-[175px] h-[180px]">
                 {/* Badge */}
                 <div className="flex justify-center items-center px-[10px] py-[10px] w-[80px] h-[30px] bg-[#D3744A] rounded-[10px]">
                   <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-[#EEEDE7]">Top deals</span>
@@ -601,7 +608,10 @@ const HomePage = () => {
                   {/* Discover Now Link */}
                   <div className="flex items-center gap-[10px] group">
                     <div className="w-6 h-6 flex items-center justify-center">
-                      <div className="w-4 h-4 border-2 border-[#8F7D6A] rounded-full"></div>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="#8F7D6A" strokeWidth="2"/>
+                        <circle cx="12" cy="12" r="3" stroke="#8F7D6A" strokeWidth="2"/>
+                      </svg>
                     </div>
                     <span className="font-poppins font-medium text-[18px] leading-[150%] text-[#8F7D6A] group-hover:underline">Discover now</span>
                   </div>
@@ -628,7 +638,7 @@ const HomePage = () => {
               </div>
               
               {/* Content */}
-              <div className="absolute left-[26px] top-[24px] flex flex-col gap-[38px] w-[175px] h-[180px]">
+              <div className="absolute left-[26px] top-[24px] flex flex-col justify-between w-[175px] h-[180px]">
                 {/* Badge */}
                 <div className="flex justify-center items-center px-[10px] py-[10px] w-[90px] h-[30px] bg-[#D3744A] rounded-[10px]">
                   <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-[#EEEDE7]">Face mask</span>
@@ -643,7 +653,10 @@ const HomePage = () => {
                   {/* Discover Now Link */}
                   <div className="flex items-center gap-[10px] group">
                     <div className="w-6 h-6 flex items-center justify-center">
-                      <div className="w-4 h-4 border-2 border-[#8F7D6A] rounded-full"></div>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="#8F7D6A" strokeWidth="2"/>
+                        <circle cx="12" cy="12" r="3" stroke="#8F7D6A" strokeWidth="2"/>
+                      </svg>
                     </div>
                     <span className="font-poppins font-medium text-[18px] leading-[150%] text-[#8F7D6A] group-hover:underline">Discover now</span>
                   </div>
@@ -685,7 +698,10 @@ const HomePage = () => {
                   {/* Shop Now Link */}
                   <div className="flex items-center gap-2 group">
                     <div className="w-4 h-4 flex items-center justify-center">
-                      <div className="w-3 h-3 border border-[#8F7D6A] rounded-sm"></div>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="3" width="20" height="18" rx="2" stroke="#8F7D6A" strokeWidth="2"/>
+                        <path d="M8 7v-2a4 4 0 0 1 8 0v2" stroke="#8F7D6A" strokeWidth="2"/>
+                      </svg>
                     </div>
                     <span className="font-poppins font-medium text-[14px] leading-[150%] text-[#8F7D6A] group-hover:underline">Shop now</span>
                   </div>
@@ -723,7 +739,10 @@ const HomePage = () => {
                   {/* Discover Now Link */}
                   <div className="flex items-center gap-2 group">
                     <div className="w-4 h-4 flex items-center justify-center">
-                      <div className="w-3 h-3 border border-[#8F7D6A] rounded-full"></div>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="#8F7D6A" strokeWidth="2"/>
+                        <circle cx="12" cy="12" r="3" stroke="#8F7D6A" strokeWidth="2"/>
+                      </svg>
                     </div>
                     <span className="font-poppins font-medium text-[14px] leading-[150%] text-[#8F7D6A] group-hover:underline">Discover now</span>
                   </div>
@@ -761,7 +780,10 @@ const HomePage = () => {
                   {/* Discover Now Link */}
                   <div className="flex items-center gap-2 group">
                     <div className="w-4 h-4 flex items-center justify-center">
-                      <div className="w-3 h-3 border border-[#8F7D6A] rounded-full"></div>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="#8F7D6A" strokeWidth="2"/>
+                        <circle cx="12" cy="12" r="3" stroke="#8F7D6A" strokeWidth="2"/>
+                      </svg>
                     </div>
                     <span className="font-poppins font-medium text-[14px] leading-[150%] text-[#8F7D6A] group-hover:underline">Discover now</span>
                   </div>
@@ -795,18 +817,27 @@ const HomePage = () => {
             <div className="flex flex-col items-start gap-[15px] w-[302px] h-[341px]">
               {/* Product Image Container */}
               <div className="relative flex justify-center items-center w-[302px] h-[262px] bg-[#F2F2F2] rounded-[10px] overflow-hidden group">
-                {/* Badge */}
-                <div className="absolute flex justify-center items-center px-[10px] py-[10px] w-[50px] h-[30px] bg-[#D3744A] rounded-[10px] left-5 top-5 z-10">
+                {/* Badge - Hidden by default, shown on hover */}
+                <div className="absolute flex justify-center items-center px-[10px] py-[10px] w-[50px] h-[30px] bg-[#D3744A] rounded-[10px] left-5 top-5 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-white">New</span>
                 </div>
                 
-                {/* Product Image Placeholder */}
-                <div className="flex justify-center items-center w-[103px] h-[174px] bg-gray-300 rounded">
-                  <span className="text-[#503217] text-sm font-medium">Microscope</span>
+                {/* Additional Badge - Hover only */}
+                <div className="absolute flex justify-center items-center px-[10px] py-[10px] w-[80px] h-[30px] bg-[#22C55E] rounded-[10px] right-5 top-5 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-white">Best Seller</span>
                 </div>
                 
-                {/* Shop Now Button */}
-                <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[262px] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5">
+                {/* Product Image Placeholder */}
+                <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
+                  <img 
+                    src={productMicroscope} 
+                    alt="Microscope" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                
+                {/* Shop Now Button - Hidden by default, shown on hover */}
+                <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[262px] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="flex items-center gap-[5px]">
                     {/* Cart Icon */}
                     <div className="w-6 h-6 flex items-center justify-center">
@@ -832,14 +863,29 @@ const HomePage = () => {
             <div className="flex flex-col items-start gap-[15px] w-[302px] h-[345px]">
               {/* Product Image Container */}
               <div className="relative flex justify-center items-center w-[302px] h-[262px] bg-[#F2F2F2] rounded-[10px] overflow-hidden group">
-                {/* Badge */}
-                <div className="absolute flex justify-center items-center px-[10px] py-[10px] w-[81px] h-[30px] bg-[#D3744A] rounded-[10px] left-5 top-5 z-10">
+                {/* Badge - Hidden by default, shown on hover */}
+                <div className="absolute flex justify-center items-center px-[10px] py-[10px] w-[81px] h-[30px] bg-[#D3744A] rounded-[10px] left-5 top-5 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-white">Save 10%</span>
                 </div>
                 
                 {/* Product Image Placeholder */}
-                <div className="flex justify-center items-center w-[137px] h-[134px] bg-gray-300 rounded transform rotate-12">
-                  <span className="text-[#503217] text-sm font-medium">Pulse</span>
+                <div className="flex justify-center items-center w-[160px] h-[160px] rounded overflow-hidden">
+                  <img 
+                    src={productOximeter} 
+                    alt="Pulse Oximeter" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                
+                {/* Shop Now Button - Hidden by default, shown on hover */}
+                <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[262px] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="flex items-center gap-[5px]">
+                    {/* Cart Icon */}
+                    <div className="w-6 h-6 flex items-center justify-center">
+                      <div className="w-4 h-4 border-2 border-[#503217] rounded-sm"></div>
+                    </div>
+                    <span className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">Shop now</span>
+                  </div>
                 </div>
               </div>
               
@@ -866,9 +912,29 @@ const HomePage = () => {
             <div className="flex flex-col items-start gap-[15px] w-[302px] h-[347px]">
               {/* Product Image Container */}
               <div className="relative flex justify-center items-center w-[302px] h-[262px] bg-[#F2F2F2] rounded-[10px] overflow-hidden group">
+                {/* Badge - Hidden by default, shown on hover */}
+                <div className="absolute flex justify-center items-center px-[10px] py-[10px] w-[70px] h-[30px] bg-[#4A90E2] rounded-[10px] left-5 top-5 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-white">Popular</span>
+                </div>
+                
                 {/* Product Image Placeholder */}
-                <div className="flex justify-center items-center w-[95px] h-[178px] bg-gray-300 rounded">
-                  <span className="text-[#503217] text-sm font-medium transform -rotate-90">Vitamin</span>
+                <div className="flex justify-center items-center w-[160px] h-[160px] rounded overflow-hidden">
+                  <img 
+                    src={productSerum} 
+                    alt="Vitamin Serum" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                
+                {/* Shop Now Button - Hidden by default, shown on hover */}
+                <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[262px] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="flex items-center gap-[5px]">
+                    {/* Cart Icon */}
+                    <div className="w-6 h-6 flex items-center justify-center">
+                      <div className="w-4 h-4 border-2 border-[#503217] rounded-sm"></div>
+                    </div>
+                    <span className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">Shop now</span>
+                  </div>
                 </div>
               </div>
               
@@ -895,20 +961,33 @@ const HomePage = () => {
             <div className="flex flex-col items-start gap-[15px] w-[302px] h-[345px]">
               {/* Product Image Container */}
               <div className="relative flex justify-center items-center w-[302px] h-[262px] bg-[#F2F2F2] rounded-[10px] overflow-hidden group">
-                {/* Badge */}
-                <div className="absolute flex justify-center items-center px-[10px] py-[10px] w-[50px] h-[30px] bg-[#D3744A] rounded-[10px] left-5 top-5 z-10">
+                {/* Badge - Hidden by default, shown on hover */}
+                <div className="absolute flex justify-center items-center px-[10px] py-[10px] w-[50px] h-[30px] bg-[#D3744A] rounded-[10px] left-5 top-5 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-white">New</span>
                 </div>
                 
-                {/* Product Images - Two bottles */}
-                <div className="relative">
-                  {/* Back bottle */}
-                  <div className="absolute flex justify-center items-center w-[49px] h-[97px] bg-gray-300 rounded left-[67px] top-[-40px]">
-                    <span className="text-[#E2DFCF] text-[6px] font-medium transform rotate-1">Medifit</span>
-                  </div>
-                  {/* Front bottle */}
-                  <div className="flex justify-center items-center w-[81px] h-[158px] bg-gray-400 rounded">
-                    <span className="text-[#E2DFCF] text-[12px] font-medium transform rotate-1">Medifit</span>
+                {/* Additional Badge - Hover only */}
+                <div className="absolute flex justify-center items-center px-[10px] py-[10px] w-[75px] h-[30px] bg-[#8B5CF6] rounded-[10px] right-5 top-5 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-white">Premium</span>
+                </div>
+                
+                {/* Product Image */}
+                <div className="flex justify-center items-center w-[160px] h-[160px] rounded overflow-hidden">
+                  <img 
+                    src={productProtein} 
+                    alt="High Protein" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                
+                {/* Shop Now Button - Hidden by default, shown on hover */}
+                <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[262px] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="flex items-center gap-[5px]">
+                    {/* Cart Icon */}
+                    <div className="w-6 h-6 flex items-center justify-center">
+                      <div className="w-4 h-4 border-2 border-[#503217] rounded-sm"></div>
+                    </div>
+                    <span className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">Shop now</span>
                   </div>
                 </div>
               </div>
@@ -933,15 +1012,35 @@ const HomePage = () => {
               {/* Product 1 - Microscope */}
               <div className="flex flex-col items-start gap-[10px] w-[160px] h-[220px]">
                 {/* Product Image Container */}
-                <div className="relative flex justify-center items-center w-[160px] h-[140px] bg-[#F2F2F2] rounded-[8px] overflow-hidden">
-                  {/* Badge */}
-                  <div className="absolute flex justify-center items-center px-[8px] py-[6px] w-[40px] h-[25px] bg-[#D3744A] rounded-[8px] left-3 top-3 z-10">
+                <div className="relative flex justify-center items-center w-[160px] h-[140px] bg-[#F2F2F2] rounded-[8px] overflow-hidden group">
+                  {/* Badge - Hidden by default, shown on hover */}
+                  <div className="absolute flex justify-center items-center px-[8px] py-[6px] w-[40px] h-[25px] bg-[#D3744A] rounded-[8px] left-3 top-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <span className="font-sans-serif-collection font-normal text-[11px] leading-[150%] text-white">New</span>
                   </div>
                   
-                  {/* Product Image Placeholder */}
-                  <div className="flex justify-center items-center w-[60px] h-[100px] bg-gray-300 rounded">
-                    <span className="text-[#503217] text-xs font-medium">Micro</span>
+                  {/* Additional Badge - Hover only */}
+                  <div className="absolute flex justify-center items-center px-[6px] py-[4px] w-[50px] h-[20px] bg-[#22C55E] rounded-[6px] right-3 top-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="font-sans-serif-collection font-normal text-[9px] leading-[150%] text-white">Best Seller</span>
+                  </div>
+                  
+                  {/* Product Image */}
+                  <div className="flex justify-center items-center w-[100px] h-[100px] rounded overflow-hidden">
+                    <img 
+                      src={productMicroscope} 
+                      alt="Microscope" 
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  
+                  {/* Shop Now Button - Mobile */}
+                  <div className="absolute flex justify-center items-center px-[8px] py-[4px] w-[120px] h-[25px] bg-[#E2DFCF] rounded-[6px] bottom-3 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="flex items-center gap-[3px]">
+                      {/* Cart Icon */}
+                      <div className="w-4 h-4 flex items-center justify-center">
+                        <div className="w-3 h-3 border-2 border-[#503217] rounded-sm"></div>
+                      </div>
+                      <span className="font-poppins font-medium text-[12px] leading-[150%] text-[#503217]">Shop now</span>
+                    </div>
                   </div>
                 </div>
                 
@@ -959,15 +1058,30 @@ const HomePage = () => {
               {/* Product 2 - Pulse oximeter */}
               <div className="flex flex-col items-start gap-[10px] w-[160px] h-[220px]">
                 {/* Product Image Container */}
-                <div className="relative flex justify-center items-center w-[160px] h-[140px] bg-[#F2F2F2] rounded-[8px] overflow-hidden">
-                  {/* Badge */}
-                  <div className="absolute flex justify-center items-center px-[8px] py-[6px] w-[55px] h-[25px] bg-[#D3744A] rounded-[8px] left-3 top-3 z-10">
+                <div className="relative flex justify-center items-center w-[160px] h-[140px] bg-[#F2F2F2] rounded-[8px] overflow-hidden group">
+                  {/* Badge - Hidden by default, shown on hover */}
+                  <div className="absolute flex justify-center items-center px-[8px] py-[6px] w-[55px] h-[25px] bg-[#D3744A] rounded-[8px] left-3 top-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <span className="font-sans-serif-collection font-normal text-[11px] leading-[150%] text-white">Save 10%</span>
                   </div>
                   
-                  {/* Product Image Placeholder */}
-                  <div className="flex justify-center items-center w-[80px] h-[75px] bg-gray-300 rounded transform rotate-12">
-                    <span className="text-[#503217] text-xs font-medium">Pulse</span>
+                  {/* Product Image */}
+                  <div className="flex justify-center items-center w-[100px] h-[100px] rounded overflow-hidden">
+                    <img 
+                      src={productOximeter} 
+                      alt="Pulse Oximeter" 
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  
+                  {/* Shop Now Button - Mobile */}
+                  <div className="absolute flex justify-center items-center px-[8px] py-[4px] w-[120px] h-[25px] bg-[#E2DFCF] rounded-[6px] bottom-3 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="flex items-center gap-[3px]">
+                      {/* Cart Icon */}
+                      <div className="w-4 h-4 flex items-center justify-center">
+                        <div className="w-3 h-3 border-2 border-[#503217] rounded-sm"></div>
+                      </div>
+                      <span className="font-poppins font-medium text-[12px] leading-[150%] text-[#503217]">Shop now</span>
+                    </div>
                   </div>
                 </div>
                 
@@ -996,10 +1110,30 @@ const HomePage = () => {
               {/* Product 3 - Vitamin serum */}
               <div className="flex flex-col items-start gap-[10px] w-[160px] h-[220px]">
                 {/* Product Image Container */}
-                <div className="relative flex justify-center items-center w-[160px] h-[140px] bg-[#F2F2F2] rounded-[8px] overflow-hidden">
-                  {/* Product Image Placeholder */}
-                  <div className="flex justify-center items-center w-[55px] h-[100px] bg-gray-300 rounded">
-                    <span className="text-[#503217] text-xs font-medium transform -rotate-90">Vitamin</span>
+                <div className="relative flex justify-center items-center w-[160px] h-[140px] bg-[#F2F2F2] rounded-[8px] overflow-hidden group">
+                  {/* Badge - Hidden by default, shown on hover */}
+                  <div className="absolute flex justify-center items-center px-[6px] py-[4px] w-[50px] h-[20px] bg-[#4A90E2] rounded-[6px] left-3 top-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="font-sans-serif-collection font-normal text-[10px] leading-[150%] text-white">Popular</span>
+                  </div>
+                  
+                  {/* Product Image */}
+                  <div className="flex justify-center items-center w-[100px] h-[100px] rounded overflow-hidden">
+                    <img 
+                      src={productSerum} 
+                      alt="Vitamin Serum" 
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  
+                  {/* Shop Now Button - Mobile */}
+                  <div className="absolute flex justify-center items-center px-[8px] py-[4px] w-[120px] h-[25px] bg-[#E2DFCF] rounded-[6px] bottom-3 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="flex items-center gap-[3px]">
+                      {/* Cart Icon */}
+                      <div className="w-4 h-4 flex items-center justify-center">
+                        <div className="w-3 h-3 border-2 border-[#503217] rounded-sm"></div>
+                      </div>
+                      <span className="font-poppins font-medium text-[12px] leading-[150%] text-[#503217]">Shop now</span>
+                    </div>
                   </div>
                 </div>
                 
@@ -1025,21 +1159,34 @@ const HomePage = () => {
               {/* Product 4 - High protein */}
               <div className="flex flex-col items-start gap-[10px] w-[160px] h-[220px]">
                 {/* Product Image Container */}
-                <div className="relative flex justify-center items-center w-[160px] h-[140px] bg-[#F2F2F2] rounded-[8px] overflow-hidden">
-                  {/* Badge */}
-                  <div className="absolute flex justify-center items-center px-[8px] py-[6px] w-[40px] h-[25px] bg-[#D3744A] rounded-[8px] left-3 top-3 z-10">
+                <div className="relative flex justify-center items-center w-[160px] h-[140px] bg-[#F2F2F2] rounded-[8px] overflow-hidden group">
+                  {/* Badge - Hidden by default, shown on hover */}
+                  <div className="absolute flex justify-center items-center px-[8px] py-[6px] w-[40px] h-[25px] bg-[#D3744A] rounded-[8px] left-3 top-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <span className="font-sans-serif-collection font-normal text-[11px] leading-[150%] text-white">New</span>
                   </div>
                   
-                  {/* Product Images - Two bottles */}
-                  <div className="relative">
-                    {/* Back bottle */}
-                    <div className="absolute flex justify-center items-center w-[30px] h-[55px] bg-gray-300 rounded left-[30px] top-[-20px]">
-                      <span className="text-[#E2DFCF] text-[4px] font-medium">Medifit</span>
-                    </div>
-                    {/* Front bottle */}
-                    <div className="flex justify-center items-center w-[45px] h-[85px] bg-gray-400 rounded">
-                      <span className="text-[#E2DFCF] text-[8px] font-medium">Medifit</span>
+                  {/* Additional Badge - Hover only */}
+                  <div className="absolute flex justify-center items-center px-[6px] py-[4px] w-[45px] h-[20px] bg-[#8B5CF6] rounded-[6px] right-3 top-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="font-sans-serif-collection font-normal text-[9px] leading-[150%] text-white">Premium</span>
+                  </div>
+                  
+                  {/* Product Image */}
+                  <div className="flex justify-center items-center w-[100px] h-[100px] rounded overflow-hidden">
+                    <img 
+                      src={productProtein} 
+                      alt="High Protein" 
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  
+                  {/* Shop Now Button - Mobile */}
+                  <div className="absolute flex justify-center items-center px-[8px] py-[4px] w-[120px] h-[25px] bg-[#E2DFCF] rounded-[6px] bottom-3 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="flex items-center gap-[3px]">
+                      {/* Cart Icon */}
+                      <div className="w-4 h-4 flex items-center justify-center">
+                        <div className="w-3 h-3 border-2 border-[#503217] rounded-sm"></div>
+                      </div>
+                      <span className="font-poppins font-medium text-[12px] leading-[150%] text-[#503217]">Shop now</span>
                     </div>
                   </div>
                 </div>
