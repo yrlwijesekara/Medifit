@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import mainProductImage from '././../assets/home/main-1.png';
 import categoryMedicine from '../assets/home/catergory-1.png';
@@ -15,6 +16,27 @@ import productSerum from '../assets/home/serum.png';
 import productProtein from '../assets/home/protein.png';
 
 const HomePage = () => {
+  // State for mobile badge visibility
+  const [mobileBadges, setMobileBadges] = useState({
+    // CTA cards
+    cta1: false,
+    cta2: false,
+    cta3: false,
+    // Product cards
+    product1: false,
+    product2: false,
+    product3: false,
+    product4: false,
+  });
+
+  // Toggle badge visibility for mobile
+  const toggleMobileBadge = (cardId) => {
+    setMobileBadges(prev => ({
+      ...prev,
+      [cardId]: !prev[cardId]
+    }));
+  };
+
   return (
     <>
       {/* Navigation Bar */}
@@ -529,7 +551,7 @@ const HomePage = () => {
           <div className="hidden md:flex justify-center items-start gap-[30px] w-full">
             
             {/* CTA 1 - Hand sanitizer collection */}
-            <div className="relative w-[416px] h-[266px]">
+            <div className="relative w-[416px] h-[266px] group">
               {/* Background Rectangle */}
               <div className="absolute w-[413px] h-[259px] left-0 top-0 bg-[#F2F2F2] rounded-[10px]"></div>
               
@@ -548,8 +570,8 @@ const HomePage = () => {
               
               {/* Content */}
               <div className="absolute left-[26px] top-[24px] flex flex-col justify-between w-[175px] h-[180px]">
-                {/* Badge */}
-                <div className="flex justify-center items-center px-[10px] py-[10px] w-[80px] h-[30px] bg-[#D3744A] rounded-[10px]">
+                {/* Badge - Hidden by default, shown on hover */}
+                <div className="flex justify-center items-center px-[10px] py-[10px] w-[80px] h-[30px] bg-[#D3744A] rounded-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-[#EEEDE7]">Sanitizer</span>
                 </div>
                 
@@ -574,7 +596,7 @@ const HomePage = () => {
             </div>
 
             {/* CTA 2 - Face wash sale collection */}
-            <div className="relative w-[416px] h-[266px]">
+            <div className="relative w-[416px] h-[266px] group">
               {/* Background Rectangle */}
               <div className="absolute w-[413px] h-[259px] left-0 top-0 bg-[#F2F2F2] rounded-[10px]"></div>
               
@@ -594,8 +616,8 @@ const HomePage = () => {
               
               {/* Content */}
               <div className="absolute left-[26px] top-[24px] flex flex-col justify-between w-[175px] h-[180px]">
-                {/* Badge */}
-                <div className="flex justify-center items-center px-[10px] py-[10px] w-[80px] h-[30px] bg-[#D3744A] rounded-[10px]">
+                {/* Badge - Hidden by default, shown on hover */}
+                <div className="flex justify-center items-center px-[10px] py-[10px] w-[80px] h-[30px] bg-[#D3744A] rounded-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-[#EEEDE7]">Top deals</span>
                 </div>
                 
@@ -620,7 +642,7 @@ const HomePage = () => {
             </div>
 
             {/* CTA 3 - Facial mask deals */}
-            <div className="relative w-[416px] h-[266px]">
+            <div className="relative w-[416px] h-[266px] group">
               {/* Background Rectangle */}
               <div className="absolute w-[413px] h-[259px] left-0 top-0 bg-[#F2F2F2] rounded-[10px]"></div>
               
@@ -639,8 +661,8 @@ const HomePage = () => {
               
               {/* Content */}
               <div className="absolute left-[26px] top-[24px] flex flex-col justify-between w-[175px] h-[180px]">
-                {/* Badge */}
-                <div className="flex justify-center items-center px-[10px] py-[10px] w-[90px] h-[30px] bg-[#D3744A] rounded-[10px]">
+                {/* Badge - Hidden by default, shown on hover */}
+                <div className="flex justify-center items-center px-[10px] py-[10px] w-[90px] h-[30px] bg-[#D3744A] rounded-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-[#EEEDE7]">Face mask</span>
                 </div>
                 
@@ -669,9 +691,9 @@ const HomePage = () => {
           <div className="md:hidden flex flex-col gap-6 items-center">
             
             {/* CTA 1 - Hand sanitizer collection */}
-            <div className="relative w-[320px] h-[200px]">
+            <div className="relative w-[320px] h-[200px] group" onClick={() => toggleMobileBadge('cta1')}>
               {/* Background Rectangle */}
-              <div className="absolute w-full h-full bg-[#F2F2F2] rounded-[10px]"></div>
+              <div className="absolute w-full h-full bg-[#F2F2F2] rounded-[10px] cursor-pointer"></div>
               
               {/* Product Image Placeholder */}
               <div className="absolute w-[100px] h-[120px] right-4 top-4 rounded flex items-center justify-center overflow-hidden">
@@ -684,8 +706,8 @@ const HomePage = () => {
               
               {/* Content */}
               <div className="absolute left-4 top-4 flex flex-col gap-4 w-[180px]">
-                {/* Badge */}
-                <div className="flex justify-center items-center px-2 py-1 w-[60px] h-[25px] bg-[#D3744A] rounded-[8px]">
+                {/* Badge - Mobile: onClick toggle, Desktop: hover */}
+                <div className={`flex justify-center items-center px-2 py-1 w-[60px] h-[25px] bg-[#D3744A] rounded-[8px] transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.cta1 ? 'opacity-100' : 'opacity-0'}`}>
                   <span className="font-sans-serif-collection font-normal text-[11px] leading-[150%] text-[#EEEDE7]">Sanitizer</span>
                 </div>
                 
@@ -710,9 +732,9 @@ const HomePage = () => {
             </div>
 
             {/* CTA 2 - Face wash sale collection */}
-            <div className="relative w-[320px] h-[200px]">
+            <div className="relative w-[320px] h-[200px] group" onClick={() => toggleMobileBadge('cta2')}>
               {/* Background Rectangle */}
-              <div className="absolute w-full h-full bg-[#F2F2F2] rounded-[10px]"></div>
+              <div className="absolute w-full h-full bg-[#F2F2F2] rounded-[10px] cursor-pointer"></div>
               
               {/* Product Image Placeholder */}
               <div className="absolute w-[100px] h-[120px] right-4 top-4 rounded flex items-center justify-center overflow-hidden">
@@ -725,8 +747,8 @@ const HomePage = () => {
               
               {/* Content */}
               <div className="absolute left-4 top-4 flex flex-col gap-4 w-[180px]">
-                {/* Badge */}
-                <div className="flex justify-center items-center px-2 py-1 w-[60px] h-[25px] bg-[#D3744A] rounded-[8px]">
+                {/* Badge - Mobile: onClick toggle, Desktop: hover */}
+                <div className={`flex justify-center items-center px-2 py-1 w-[60px] h-[25px] bg-[#D3744A] rounded-[8px] transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.cta2 ? 'opacity-100' : 'opacity-0'}`}>
                   <span className="font-sans-serif-collection font-normal text-[11px] leading-[150%] text-[#EEEDE7]">Top deals</span>
                 </div>
                 
@@ -751,9 +773,9 @@ const HomePage = () => {
             </div>
 
             {/* CTA 3 - Facial mask deals */}
-            <div className="relative w-[320px] h-[200px]">
+            <div className="relative w-[320px] h-[200px] group" onClick={() => toggleMobileBadge('cta3')}>
               {/* Background Rectangle */}
-              <div className="absolute w-full h-full bg-[#F2F2F2] rounded-[10px]"></div>
+              <div className="absolute w-full h-full bg-[#F2F2F2] rounded-[10px] cursor-pointer"></div>
               
               {/* Product Image Placeholder */}
               <div className="absolute w-[100px] h-[120px] right-4 top-4 rounded flex items-center justify-center overflow-hidden">
@@ -766,8 +788,8 @@ const HomePage = () => {
               
               {/* Content */}
               <div className="absolute left-4 top-4 flex flex-col gap-4 w-[180px]">
-                {/* Badge */}
-                <div className="flex justify-center items-center px-2 py-1 w-[65px] h-[25px] bg-[#D3744A] rounded-[8px]">
+                {/* Badge - Mobile: onClick toggle, Desktop: hover */}
+                <div className={`flex justify-center items-center px-2 py-1 w-[65px] h-[25px] bg-[#D3744A] rounded-[8px] transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.cta3 ? 'opacity-100' : 'opacity-0'}`}>
                   <span className="font-sans-serif-collection font-normal text-[11px] leading-[150%] text-[#EEEDE7]">Face mask</span>
                 </div>
                 
@@ -1010,16 +1032,16 @@ const HomePage = () => {
             {/* Row 1 */}
             <div className="flex gap-4">
               {/* Product 1 - Microscope */}
-              <div className="flex flex-col items-start gap-[10px] w-[160px] h-[220px]">
+              <div className="flex flex-col items-start gap-[10px] w-[160px] h-[220px]" onClick={() => toggleMobileBadge('product1')}>
                 {/* Product Image Container */}
-                <div className="relative flex justify-center items-center w-[160px] h-[140px] bg-[#F2F2F2] rounded-[8px] overflow-hidden group">
-                  {/* Badge - Hidden by default, shown on hover */}
-                  <div className="absolute flex justify-center items-center px-[8px] py-[6px] w-[40px] h-[25px] bg-[#D3744A] rounded-[8px] left-3 top-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="relative flex justify-center items-center w-[160px] h-[140px] bg-[#F2F2F2] rounded-[8px] overflow-hidden group cursor-pointer">
+                  {/* Badge - Mobile: onClick toggle, Desktop: hover */}
+                  <div className={`absolute flex justify-center items-center px-[8px] py-[6px] w-[40px] h-[25px] bg-[#D3744A] rounded-[8px] left-3 top-3 z-10 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.product1 ? 'opacity-100' : 'opacity-0'}`}>
                     <span className="font-sans-serif-collection font-normal text-[11px] leading-[150%] text-white">New</span>
                   </div>
                   
-                  {/* Additional Badge - Hover only */}
-                  <div className="absolute flex justify-center items-center px-[6px] py-[4px] w-[50px] h-[20px] bg-[#22C55E] rounded-[6px] right-3 top-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {/* Additional Badge - Mobile: onClick toggle, Desktop: hover */}
+                  <div className={`absolute flex justify-center items-center px-[6px] py-[4px] w-[50px] h-[20px] bg-[#22C55E] rounded-[6px] right-3 top-3 z-10 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.product1 ? 'opacity-100' : 'opacity-0'}`}>
                     <span className="font-sans-serif-collection font-normal text-[9px] leading-[150%] text-white">Best Seller</span>
                   </div>
                   
@@ -1032,8 +1054,8 @@ const HomePage = () => {
                     />
                   </div>
                   
-                  {/* Shop Now Button - Mobile */}
-                  <div className="absolute flex justify-center items-center px-[8px] py-[4px] w-[120px] h-[25px] bg-[#E2DFCF] rounded-[6px] bottom-3 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {/* Shop Now Button - Mobile: onClick toggle, Desktop: hover */}
+                  <div className={`absolute flex justify-center items-center px-[8px] py-[4px] w-[120px] h-[25px] bg-[#E2DFCF] rounded-[6px] bottom-3 left-5 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.product1 ? 'opacity-100' : 'opacity-0'}`}>
                     <div className="flex items-center gap-[3px]">
                       {/* Cart Icon */}
                       <div className="w-4 h-4 flex items-center justify-center">
@@ -1056,11 +1078,11 @@ const HomePage = () => {
               </div>
 
               {/* Product 2 - Pulse oximeter */}
-              <div className="flex flex-col items-start gap-[10px] w-[160px] h-[220px]">
+              <div className="flex flex-col items-start gap-[10px] w-[160px] h-[220px]" onClick={() => toggleMobileBadge('product2')}>
                 {/* Product Image Container */}
-                <div className="relative flex justify-center items-center w-[160px] h-[140px] bg-[#F2F2F2] rounded-[8px] overflow-hidden group">
-                  {/* Badge - Hidden by default, shown on hover */}
-                  <div className="absolute flex justify-center items-center px-[8px] py-[6px] w-[55px] h-[25px] bg-[#D3744A] rounded-[8px] left-3 top-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="relative flex justify-center items-center w-[160px] h-[140px] bg-[#F2F2F2] rounded-[8px] overflow-hidden group cursor-pointer">
+                  {/* Badge - Mobile: onClick toggle, Desktop: hover */}
+                  <div className={`absolute flex justify-center items-center px-[8px] py-[6px] w-[55px] h-[25px] bg-[#D3744A] rounded-[8px] left-3 top-3 z-10 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.product2 ? 'opacity-100' : 'opacity-0'}`}>
                     <span className="font-sans-serif-collection font-normal text-[11px] leading-[150%] text-white">Save 10%</span>
                   </div>
                   
@@ -1073,8 +1095,8 @@ const HomePage = () => {
                     />
                   </div>
                   
-                  {/* Shop Now Button - Mobile */}
-                  <div className="absolute flex justify-center items-center px-[8px] py-[4px] w-[120px] h-[25px] bg-[#E2DFCF] rounded-[6px] bottom-3 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {/* Shop Now Button - Mobile: onClick toggle, Desktop: hover */}
+                  <div className={`absolute flex justify-center items-center px-[8px] py-[4px] w-[120px] h-[25px] bg-[#E2DFCF] rounded-[6px] bottom-3 left-5 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.product2 ? 'opacity-100' : 'opacity-0'}`}>
                     <div className="flex items-center gap-[3px]">
                       {/* Cart Icon */}
                       <div className="w-4 h-4 flex items-center justify-center">
@@ -1108,11 +1130,11 @@ const HomePage = () => {
             {/* Row 2 */}
             <div className="flex gap-4">
               {/* Product 3 - Vitamin serum */}
-              <div className="flex flex-col items-start gap-[10px] w-[160px] h-[220px]">
+              <div className="flex flex-col items-start gap-[10px] w-[160px] h-[220px]" onClick={() => toggleMobileBadge('product3')}>
                 {/* Product Image Container */}
-                <div className="relative flex justify-center items-center w-[160px] h-[140px] bg-[#F2F2F2] rounded-[8px] overflow-hidden group">
-                  {/* Badge - Hidden by default, shown on hover */}
-                  <div className="absolute flex justify-center items-center px-[6px] py-[4px] w-[50px] h-[20px] bg-[#4A90E2] rounded-[6px] left-3 top-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="relative flex justify-center items-center w-[160px] h-[140px] bg-[#F2F2F2] rounded-[8px] overflow-hidden group cursor-pointer">
+                  {/* Badge - Mobile: onClick toggle, Desktop: hover */}
+                  <div className={`absolute flex justify-center items-center px-[6px] py-[4px] w-[50px] h-[20px] bg-[#4A90E2] rounded-[6px] left-3 top-3 z-10 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.product3 ? 'opacity-100' : 'opacity-0'}`}>
                     <span className="font-sans-serif-collection font-normal text-[10px] leading-[150%] text-white">Popular</span>
                   </div>
                   
@@ -1125,8 +1147,8 @@ const HomePage = () => {
                     />
                   </div>
                   
-                  {/* Shop Now Button - Mobile */}
-                  <div className="absolute flex justify-center items-center px-[8px] py-[4px] w-[120px] h-[25px] bg-[#E2DFCF] rounded-[6px] bottom-3 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {/* Shop Now Button - Mobile: onClick toggle, Desktop: hover */}
+                  <div className={`absolute flex justify-center items-center px-[8px] py-[4px] w-[120px] h-[25px] bg-[#E2DFCF] rounded-[6px] bottom-3 left-5 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.product3 ? 'opacity-100' : 'opacity-0'}`}>
                     <div className="flex items-center gap-[3px]">
                       {/* Cart Icon */}
                       <div className="w-4 h-4 flex items-center justify-center">
@@ -1157,16 +1179,16 @@ const HomePage = () => {
               </div>
 
               {/* Product 4 - High protein */}
-              <div className="flex flex-col items-start gap-[10px] w-[160px] h-[220px]">
+              <div className="flex flex-col items-start gap-[10px] w-[160px] h-[220px]" onClick={() => toggleMobileBadge('product4')}>
                 {/* Product Image Container */}
-                <div className="relative flex justify-center items-center w-[160px] h-[140px] bg-[#F2F2F2] rounded-[8px] overflow-hidden group">
-                  {/* Badge - Hidden by default, shown on hover */}
-                  <div className="absolute flex justify-center items-center px-[8px] py-[6px] w-[40px] h-[25px] bg-[#D3744A] rounded-[8px] left-3 top-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="relative flex justify-center items-center w-[160px] h-[140px] bg-[#F2F2F2] rounded-[8px] overflow-hidden group cursor-pointer">
+                  {/* Badge - Mobile: onClick toggle, Desktop: hover */}
+                  <div className={`absolute flex justify-center items-center px-[8px] py-[6px] w-[40px] h-[25px] bg-[#D3744A] rounded-[8px] left-3 top-3 z-10 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.product4 ? 'opacity-100' : 'opacity-0'}`}>
                     <span className="font-sans-serif-collection font-normal text-[11px] leading-[150%] text-white">New</span>
                   </div>
                   
-                  {/* Additional Badge - Hover only */}
-                  <div className="absolute flex justify-center items-center px-[6px] py-[4px] w-[45px] h-[20px] bg-[#8B5CF6] rounded-[6px] right-3 top-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {/* Additional Badge - Mobile: onClick toggle, Desktop: hover */}
+                  <div className={`absolute flex justify-center items-center px-[6px] py-[4px] w-[45px] h-[20px] bg-[#8B5CF6] rounded-[6px] right-3 top-3 z-10 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.product4 ? 'opacity-100' : 'opacity-0'}`}>
                     <span className="font-sans-serif-collection font-normal text-[9px] leading-[150%] text-white">Premium</span>
                   </div>
                   
@@ -1179,8 +1201,8 @@ const HomePage = () => {
                     />
                   </div>
                   
-                  {/* Shop Now Button - Mobile */}
-                  <div className="absolute flex justify-center items-center px-[8px] py-[4px] w-[120px] h-[25px] bg-[#E2DFCF] rounded-[6px] bottom-3 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {/* Shop Now Button - Mobile: onClick toggle, Desktop: hover */}
+                  <div className={`absolute flex justify-center items-center px-[8px] py-[4px] w-[120px] h-[25px] bg-[#E2DFCF] rounded-[6px] bottom-3 left-5 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.product4 ? 'opacity-100' : 'opacity-0'}`}>
                     <div className="flex items-center gap-[3px]">
                       {/* Cart Icon */}
                       <div className="w-4 h-4 flex items-center justify-center">
