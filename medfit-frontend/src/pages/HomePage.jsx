@@ -1,5 +1,11 @@
 import Navbar from '../components/Navbar';
 import mainProductImage from '././../assets/home/main-1.png';
+import categoryMedicine from '../assets/home/catergory-1.png';
+import categoryHealthcare from '../assets/home/catergory-2.png';
+import categoryBeautycare from '../assets/home/catergory-3.png';
+import categoryFitness from '../assets/home/catergory-4.png';
+import categoryLabequipment from '../assets/home/catergory-5.png';
+import categoryMedkits from '../assets/home/catergory-6.png';
 
 const HomePage = () => {
   return (
@@ -195,6 +201,296 @@ const HomePage = () => {
                 </div>
               </button>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Shop by Category Section */}
+      <div className="absolute w-full h-[800px] md:h-[389px] left-0 top-[1120px] overflow-hidden">
+        
+        {/* Section Title */}
+        <div className="absolute w-[439px] h-[72px] left-1/2 transform -translate-x-1/2 top-0">
+          <h2 className="font-poppins font-medium text-[48px] leading-[120%] text-center text-[#503217] hidden md:block">
+            Shop by Category
+          </h2>
+          <h2 className="font-poppins font-medium text-[32px] leading-[120%] text-center text-[#503217] md:hidden">
+            Shop by Category
+          </h2>
+        </div>
+
+        {/* Desktop Categories Container - Hidden on Mobile */}
+        <div className="absolute w-[1299px] h-[242px] left-1/2 transform -translate-x-1/2 top-[132px] justify-between hidden md:flex">
+          
+          {/* Category 1 - Medicine */}
+          <div className="flex flex-col justify-center items-center p-[10px] gap-[10px] w-[191px] h-[242px] border border-[rgba(143,125,106,0.1)] rounded-[10px] hover:shadow-lg transition-shadow duration-300">
+            <div className="flex flex-col justify-center items-center gap-5 w-[115px] h-[195px]">
+              {/* Icon Container */}
+              <div className="flex justify-center items-center p-[10px] w-[115px] h-[115px] border border-dashed border-[#503217] rounded-full">
+                <div className="flex justify-center items-center w-[102px] h-[102px] bg-[#E2DFCF] rounded-full">
+                  {/* Medicine/Capsule Icon */}
+                  <img src={categoryMedicine} alt="Medicine" className="w-[50px] h-[50px] object-contain" />
+                </div>
+              </div>
+              {/* Text Container */}
+              <div className="flex flex-col items-center gap-[3px] w-[139px] h-[57px]">
+                <h3 className="w-[83px] h-[27px] font-poppins font-medium text-[18px] leading-[150%] text-center text-[#503217]">
+                  Medicine
+                </h3>
+                <p className="w-[67px] h-[27px] font-sans-serif-collection font-normal text-[16px] leading-[150%] text-center text-[#8F7D6A]">
+                  32 Items
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Category 2 - Health care */}
+          <div className="flex flex-col justify-center items-center p-[10px] gap-[10px] w-[191px] h-[242px] border border-[rgba(143,125,106,0.1)] rounded-[10px] hover:shadow-lg transition-shadow duration-300">
+            <div className="flex flex-col justify-center items-center gap-5 w-[115px] h-[195px]">
+              {/* Icon Container */}
+              <div className="flex justify-center items-center p-[10px] w-[115px] h-[115px] border border-dashed border-[#503217] rounded-full">
+                <div className="flex justify-center items-center w-[102px] h-[102px] bg-[#E2DFCF] rounded-full">
+                  {/* Heart Icon */}
+                  <img src={categoryHealthcare} alt="Health care" className="w-[50px] h-[50px] object-contain" />
+                </div>
+              </div>
+              {/* Text Container */}
+              <div className="flex flex-col items-center gap-[3px] w-[139px] h-[57px]">
+                <h3 className="w-[107px] h-[27px] font-poppins font-medium text-[18px] leading-[150%] text-center text-[#503217]">
+                  Health care
+                </h3>
+                <p className="w-[67px] h-[27px] font-sans-serif-collection font-normal text-[16px] leading-[150%] text-center text-[#8F7D6A]">
+                  20 Items
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Category 3 - Beauty care */}
+          <div className="flex flex-col justify-center items-center p-[10px] gap-[10px] w-[191px] h-[242px] border border-[rgba(143,125,106,0.1)] rounded-[10px] hover:shadow-lg transition-shadow duration-300">
+            <div className="flex flex-col justify-center items-center gap-5 w-[115px] h-[195px]">
+              {/* Icon Container */}
+              <div className="flex justify-center items-center p-[10px] w-[115px] h-[115px] border border-dashed border-[#503217] rounded-full">
+                <div className="flex justify-center items-center w-[102px] h-[102px] bg-[#E2DFCF] rounded-full">
+                  {/* Leaf Icon */}
+                  <img src={categoryBeautycare} alt="Beauty care" className="w-[50px] h-[50px] object-contain" />
+                </div>
+              </div>
+              {/* Text Container */}
+              <div className="flex flex-col items-center gap-[3px] w-[139px] h-[57px]">
+                <h3 className="w-[119px] h-[27px] font-poppins font-medium text-[18px] leading-[150%] text-center text-[#503217]">
+                  Beauty care
+                </h3>
+                <p className="w-[72px] h-[27px] font-sans-serif-collection font-normal text-[16px] leading-[150%] text-center text-[#8F7D6A]">
+                  30 Items
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Category 4 - Fitness */}
+          <div className="flex flex-col justify-center items-center p-[10px] gap-[10px] w-[191px] h-[242px] border border-[rgba(143,125,106,0.1)] rounded-[10px] hover:shadow-lg transition-shadow duration-300">
+            <div className="flex flex-col justify-center items-center gap-5 w-[115px] h-[195px]">
+              {/* Icon Container */}
+              <div className="flex justify-center items-center p-[10px] w-[115px] h-[115px] border border-dashed border-[#503217] rounded-full">
+                <div className="flex justify-center items-center w-[102px] h-[102px] bg-[#E2DFCF] rounded-full">
+                  {/* Heartbeat/Fitness Icon */}
+                  <img src={categoryFitness} alt="Fitness" className="w-[50px] h-[50px] object-contain" />
+                </div>
+              </div>
+              {/* Text Container */}
+              <div className="flex flex-col items-center gap-[3px] w-[139px] h-[57px]">
+                <h3 className="w-[71px] h-[27px] font-poppins font-medium text-[18px] leading-[150%] text-center text-[#503217]">
+                  Fitness
+                </h3>
+                <p className="w-[72px] h-[27px] font-sans-serif-collection font-normal text-[16px] leading-[150%] text-center text-[#8F7D6A]">
+                  35 Items
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Category 5 - Lab equipment */}
+          <div className="flex flex-col justify-center items-center p-[10px] gap-[10px] w-[191px] h-[242px] border border-[rgba(143,125,106,0.1)] rounded-[10px] hover:shadow-lg transition-shadow duration-300">
+            <div className="flex flex-col justify-center items-center gap-5 w-[115px] h-[195px]">
+              {/* Icon Container */}
+              <div className="flex justify-center items-center p-[10px] w-[115px] h-[115px] border border-dashed border-[#503217] rounded-full">
+                <div className="flex justify-center items-center w-[102px] h-[102px] bg-[#E2DFCF] rounded-full">
+                  {/* Vials/Lab Equipment Icon */}
+                  <img src={categoryLabequipment} alt="Lab equipment" className="w-[50px] h-[50px] object-contain" />
+                </div>
+              </div>
+              {/* Text Container */}
+              <div className="flex flex-col items-center gap-[3px] w-[139px] h-[57px]">
+                <h3 className="w-[138px] h-[27px] font-poppins font-medium text-[18px] leading-[150%] text-center text-[#503217]">
+                  Lab equipment
+                </h3>
+                <p className="w-[72px] h-[27px] font-sans-serif-collection font-normal text-[16px] leading-[150%] text-center text-[#8F7D6A]">
+                  25 Items
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Category 6 - Medkits */}
+          <div className="flex flex-col justify-center items-center p-[10px] gap-[10px] w-[191px] h-[242px] border border-[rgba(143,125,106,0.1)] rounded-[10px] hover:shadow-lg transition-shadow duration-300">
+            <div className="flex flex-col justify-center items-center gap-5 w-[115px] h-[195px]">
+              {/* Icon Container */}
+              <div className="flex justify-center items-center p-[10px] w-[115px] h-[115px] border border-dashed border-[#503217] rounded-full">
+                <div className="flex justify-center items-center w-[102px] h-[102px] bg-[#E2DFCF] rounded-full">
+                  {/* Medical Briefcase Icon */}
+                  <img src={categoryMedkits} alt="Medkits" className="w-[50px] h-[50px] object-contain" />
+                </div>
+              </div>
+              {/* Text Container */}
+              <div className="flex flex-col items-center gap-[3px] w-[87px] h-[57px]">
+                <h3 className="w-[87px] h-[27px] font-poppins font-medium text-[18px] leading-[150%] text-center text-[#503217]">
+                  Medkits
+                </h3>
+                <p className="w-[87px] h-[27px] font-sans-serif-collection font-normal text-[16px] leading-[150%] text-center text-[#8F7D6A]">
+                  25 Items
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Categories Container - Visible only on Mobile */}
+        <div className="md:hidden flex flex-col items-center gap-4 px-4 top-[80px] absolute w-full">
+          
+          {/* Category 1 - Medicine */}
+          <div className="flex flex-col justify-center items-center p-[10px] gap-[10px] w-[280px] h-[120px] border border-[rgba(143,125,106,0.1)] rounded-[10px] hover:shadow-lg transition-shadow duration-300">
+            <div className="flex flex-row justify-center items-center gap-4 w-full h-full">
+              {/* Icon Container */}
+              <div className="flex justify-center items-center p-[8px] w-[70px] h-[70px] border border-dashed border-[#503217] rounded-full">
+                <div className="flex justify-center items-center w-[60px] h-[60px] bg-[#E2DFCF] rounded-full">
+                  <img src={categoryMedicine} alt="Medicine" className="w-[30px] h-[30px] object-contain" />
+                </div>
+              </div>
+              {/* Text Container */}
+              <div className="flex flex-col justify-center gap-[2px] flex-1">
+                <h3 className="font-poppins font-medium text-[16px] leading-[150%] text-center text-[#503217]">
+                  Medicine
+                </h3>
+                <p className="font-sans-serif-collection font-normal text-[14px] leading-[150%] text-center text-[#8F7D6A]">
+                  32 Items
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Category 2 - Health care */}
+          <div className="flex flex-col justify-center items-center p-[10px] gap-[10px] w-[280px] h-[120px] border border-[rgba(143,125,106,0.1)] rounded-[10px] hover:shadow-lg transition-shadow duration-300">
+            <div className="flex flex-row justify-center items-center gap-4 w-full h-full">
+              {/* Icon Container */}
+              <div className="flex justify-center items-center p-[8px] w-[70px] h-[70px] border border-dashed border-[#503217] rounded-full">
+                <div className="flex justify-center items-center w-[60px] h-[60px] bg-[#E2DFCF] rounded-full">
+                  <img src={categoryHealthcare} alt="Health care" className="w-[30px] h-[30px] object-contain" />
+                </div>
+              </div>
+              {/* Text Container */}
+              <div className="flex flex-col justify-center gap-[2px] flex-1">
+                <h3 className="font-poppins font-medium text-[16px] leading-[150%] text-center text-[#503217]">
+                  Health care
+                </h3>
+                <p className="font-sans-serif-collection font-normal text-[14px] leading-[150%] text-center text-[#8F7D6A]">
+                  20 Items
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Category 3 - Beauty care */}
+          <div className="flex flex-col justify-center items-center p-[10px] gap-[10px] w-[280px] h-[120px] border border-[rgba(143,125,106,0.1)] rounded-[10px] hover:shadow-lg transition-shadow duration-300">
+            <div className="flex flex-row justify-center items-center gap-4 w-full h-full">
+              {/* Icon Container */}
+              <div className="flex justify-center items-center p-[8px] w-[70px] h-[70px] border border-dashed border-[#503217] rounded-full">
+                <div className="flex justify-center items-center w-[60px] h-[60px] bg-[#E2DFCF] rounded-full">
+                  <img src={categoryBeautycare} alt="Beauty care" className="w-[30px] h-[30px] object-contain" />
+                </div>
+              </div>
+              {/* Text Container */}
+              <div className="flex flex-col justify-center gap-[2px] flex-1">
+                <h3 className="font-poppins font-medium text-[16px] leading-[150%] text-center text-[#503217]">
+                  Beauty care
+                </h3>
+                <p className="font-sans-serif-collection font-normal text-[14px] leading-[150%] text-center text-[#8F7D6A]">
+                  30 Items
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Category 4 - Fitness */}
+          <div className="flex flex-col justify-center items-center p-[10px] gap-[10px] w-[280px] h-[120px] border border-[rgba(143,125,106,0.1)] rounded-[10px] hover:shadow-lg transition-shadow duration-300">
+            <div className="flex flex-row justify-center items-center gap-4 w-full h-full">
+              {/* Icon Container */}
+              <div className="flex justify-center items-center p-[8px] w-[70px] h-[70px] border border-dashed border-[#503217] rounded-full">
+                <div className="flex justify-center items-center w-[60px] h-[60px] bg-[#E2DFCF] rounded-full">
+                  <img src={categoryFitness} alt="Fitness" className="w-[30px] h-[30px] object-contain" />
+                </div>
+              </div>
+              {/* Text Container */}
+              <div className="flex flex-col justify-center gap-[2px] flex-1">
+                <h3 className="font-poppins font-medium text-[16px] leading-[150%] text-center text-[#503217]">
+                  Fitness
+                </h3>
+                <p className="font-sans-serif-collection font-normal text-[14px] leading-[150%] text-center text-[#8F7D6A]">
+                  35 Items
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Category 5 - Lab equipment */}
+          <div className="flex flex-col justify-center items-center p-[10px] gap-[10px] w-[280px] h-[120px] border border-[rgba(143,125,106,0.1)] rounded-[10px] hover:shadow-lg transition-shadow duration-300">
+            <div className="flex flex-row justify-center items-center gap-4 w-full h-full">
+              {/* Icon Container */}
+              <div className="flex justify-center items-center p-[8px] w-[70px] h-[70px] border border-dashed border-[#503217] rounded-full">
+                <div className="flex justify-center items-center w-[60px] h-[60px] bg-[#E2DFCF] rounded-full">
+                  <img src={categoryLabequipment} alt="Lab equipment" className="w-[30px] h-[30px] object-contain" />
+                </div>
+              </div>
+              {/* Text Container */}
+              <div className="flex flex-col justify-center gap-[2px] flex-1">
+                <h3 className="font-poppins font-medium text-[16px] leading-[150%] text-center text-[#503217]">
+                  Lab equipment
+                </h3>
+                <p className="font-sans-serif-collection font-normal text-[14px] leading-[150%] text-center text-[#8F7D6A]">
+                  25 Items
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Category 6 - Medkits */}
+          <div className="flex flex-col justify-center items-center p-[10px] gap-[10px] w-[280px] h-[120px] border border-[rgba(143,125,106,0.1)] rounded-[10px] hover:shadow-lg transition-shadow duration-300">
+            <div className="flex flex-row justify-center items-center gap-4 w-full h-full">
+              {/* Icon Container */}
+              <div className="flex justify-center items-center p-[8px] w-[70px] h-[70px] border border-dashed border-[#503217] rounded-full">
+                <div className="flex justify-center items-center w-[60px] h-[60px] bg-[#E2DFCF] rounded-full">
+                  <img src={categoryMedkits} alt="Medkits" className="w-[30px] h-[30px] object-contain" />
+                </div>
+              </div>
+              {/* Text Container */}
+              <div className="flex flex-col justify-center gap-[2px] flex-1">
+                <h3 className="font-poppins font-medium text-[16px] leading-[150%] text-center text-[#503217]">
+                  Medkits
+                </h3>
+                <p className="font-sans-serif-collection font-normal text-[14px] leading-[150%] text-center text-[#8F7D6A]">
+                  25 Items
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Medical Shape 4 - Decorative Element - Hidden on mobile */}
+        <div className="absolute w-[147px] h-[112px] left-[1684px] top-[229px] opacity-10 transform -rotate-12 hidden md:block">
+          <div className="absolute w-full h-full">
+            {/* Vector 1 */}
+            <div className="absolute left-[9.15%] right-[25.21%] top-0 bottom-[30.92%] bg-[#8F7D6A] transform -rotate-12"></div>
+            {/* Vector 2 */}
+            <div className="absolute left-[69.79%] right-[5.94%] top-[41.11%] bottom-[-38.39%] bg-[#8F7D6A] transform -rotate-12"></div>
           </div>
         </div>
       </div>
