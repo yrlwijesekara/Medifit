@@ -6,6 +6,9 @@ import categoryBeautycare from '../assets/home/catergory-3.png';
 import categoryFitness from '../assets/home/catergory-4.png';
 import categoryLabequipment from '../assets/home/catergory-5.png';
 import categoryMedkits from '../assets/home/catergory-6.png';
+import ctaImage1 from '../assets/home/cta-1.png';
+import ctaImage2 from '../assets/home/cta-2.png';
+import ctaImage3 from '../assets/home/cta-3.png';
 
 const HomePage = () => {
   return (
@@ -531,8 +534,12 @@ const HomePage = () => {
               <div className="absolute w-[245px] h-[126px] left-[147px] top-0 bg-[#E2DFCF] opacity-20 rounded-full transform rotate-1"></div>
               
               {/* Product Image Placeholder */}
-              <div className="absolute w-[163px] h-[202px] left-[234px] top-[30px] bg-gray-300 rounded flex items-center justify-center">
-                <span className="text-[#503217] text-sm font-medium">Sanitizer</span>
+              <div className="absolute w-[163px] h-[202px] left-[234px] top-[30px] rounded flex items-center justify-center overflow-hidden">
+                <img 
+                  src={ctaImage1} 
+                  alt="Hand sanitizer collection" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               
               {/* Content */}
@@ -570,8 +577,12 @@ const HomePage = () => {
               <div className="absolute w-[191px] h-[86px] left-[-1px] top-[47px] bg-[#E2DFCF] opacity-20 rounded-full transform -rotate-90"></div>
               
               {/* Product Image Placeholder */}
-              <div className="absolute w-[150px] h-[184px] left-[234px] top-[37px] bg-gray-300 rounded flex items-center justify-center">
-                <span className="text-[#503217] text-sm font-medium">Face Wash</span>
+              <div className="absolute w-[150px] h-[184px] left-[234px] top-[37px] rounded flex items-center justify-center overflow-hidden">
+                <img 
+                  src={ctaImage2} 
+                  alt="Face wash sale collection" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               
               {/* Content */}
@@ -608,8 +619,12 @@ const HomePage = () => {
               <div className="absolute w-[134px] h-[92px] left-[288px] top-[167px] bg-[#E2DFCF] opacity-20 rounded-[10px]"></div>
               
               {/* Product Image Placeholder */}
-              <div className="absolute w-[140px] h-[203px] left-[266px] top-[28px] bg-gray-300 rounded flex items-center justify-center transform scale-x-[-1]">
-                <span className="text-[#503217] text-sm font-medium transform scale-x-[-1]">Face Mask</span>
+              <div className="absolute w-[140px] h-[203px] left-[266px] top-[28px] rounded flex items-center justify-center overflow-hidden transform scale-x-[-1]">
+                <img 
+                  src={ctaImage3} 
+                  alt="Facial mask deals" 
+                  className="w-full h-full object-cover transform scale-x-[-1]"
+                />
               </div>
               
               {/* Content */}
@@ -646,8 +661,12 @@ const HomePage = () => {
               <div className="absolute w-full h-full bg-[#F2F2F2] rounded-[10px]"></div>
               
               {/* Product Image Placeholder */}
-              <div className="absolute w-[100px] h-[120px] right-4 top-4 bg-gray-300 rounded flex items-center justify-center">
-                <span className="text-[#503217] text-xs font-medium">Sanitizer</span>
+              <div className="absolute w-[100px] h-[120px] right-4 top-4 rounded flex items-center justify-center overflow-hidden">
+                <img 
+                  src={ctaImage1} 
+                  alt="Hand sanitizer collection" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               
               {/* Content */}
@@ -680,8 +699,12 @@ const HomePage = () => {
               <div className="absolute w-full h-full bg-[#F2F2F2] rounded-[10px]"></div>
               
               {/* Product Image Placeholder */}
-              <div className="absolute w-[100px] h-[120px] right-4 top-4 bg-gray-300 rounded flex items-center justify-center">
-                <span className="text-[#503217] text-xs font-medium">Face Wash</span>
+              <div className="absolute w-[100px] h-[120px] right-4 top-4 rounded flex items-center justify-center overflow-hidden">
+                <img 
+                  src={ctaImage2} 
+                  alt="Face wash sale collection" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               
               {/* Content */}
@@ -714,8 +737,12 @@ const HomePage = () => {
               <div className="absolute w-full h-full bg-[#F2F2F2] rounded-[10px]"></div>
               
               {/* Product Image Placeholder */}
-              <div className="absolute w-[100px] h-[120px] right-4 top-4 bg-gray-300 rounded flex items-center justify-center">
-                <span className="text-[#503217] text-xs font-medium">Face Mask</span>
+              <div className="absolute w-[100px] h-[120px] right-4 top-4 rounded flex items-center justify-center overflow-hidden">
+                <img 
+                  src={ctaImage3} 
+                  alt="Facial mask deals" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               
               {/* Content */}
