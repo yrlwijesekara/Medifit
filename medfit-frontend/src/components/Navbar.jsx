@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FiSearch, FiShoppingCart, FiMenu, FiX } from 'react-icons/fi';
 import logoImage from '../assets/home/logo.png';
 
@@ -20,7 +21,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-full max-w-[1920px] mx-auto relative">
           {/* Logo Section - Group 189 */}
           <div className="flex items-center lg:absolute lg:left-[300px] lg:top-1/2 lg:transform lg:-translate-y-1/2">
-            <div className="flex items-center w-[120px] h-[50px] cursor-pointer">
+            <Link to="/" className="flex items-center w-[120px] h-[50px] cursor-pointer">
               {/* Logo Image - Larger size to replace text */}
               <div className="w-[120px] h-[50px] relative overflow-hidden">
                 <img 
@@ -29,23 +30,23 @@ const Navbar = () => {
                   className="w-full h-full object-contain"
                 />
               </div>
-            </div>
+            </Link>
           </div>
 
           {/* Desktop Navigation Links - Frame 75 */}
           <div className="hidden lg:flex items-center gap-[40px] absolute left-[774px] top-[32px] w-[450px] h-[26px]">
-            <a
-              href="#home"
+            <Link
+              to="/"
               className="text-[18px] font-normal text-medifit-primary hover:text-medifit-secondary hover:bg-medifit-bg-secondary hover:scale-105 transition-all duration-200 leading-[150%] w-[52px] h-[26px] flex items-center rounded-md px-2"
             >
               Home
-            </a>
-            <a
-              href="#shop"
+            </Link>
+            <Link
+              to="/shop"
               className="text-[18px] font-normal text-medifit-primary hover:text-medifit-secondary hover:bg-medifit-bg-secondary hover:scale-105 transition-all duration-200 leading-[150%] w-[43px] h-[26px] flex items-center rounded-md px-2"
             >
               Shop
-            </a>
+            </Link>
             
             {/* Pages Dropdown - Group 122 */}
             <div className="relative w-[69.14px] h-[26px] group">
@@ -164,8 +165,8 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="lg:hidden absolute top-full left-0 right-0 bg-gradient-to-b from-[#EEEDE7] to-[#E5E4DE] border-t border-gray-300 shadow-xl z-40 backdrop-blur-sm">
             <div className="px-6 py-8 space-y-6">
-              <a
-                href="#home"
+              <Link
+                to="/"
                 className="group block text-[18px] font-medium text-medifit-primary hover:text-medifit-secondary transition-all duration-300 py-3 px-4 rounded-xl hover:bg-white/50 hover:shadow-md hover:scale-[1.02] transform"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -173,9 +174,9 @@ const Navbar = () => {
                   <span className="w-2 h-2 bg-medifit-primary rounded-full group-hover:bg-medifit-secondary transition-colors duration-300"></span>
                   <span>Home</span>
                 </span>
-              </a>
-              <a
-                href="#shop"
+              </Link>
+              <Link
+                to="/shop"
                 className="group block text-[18px] font-medium text-medifit-primary hover:text-medifit-secondary transition-all duration-300 py-3 px-4 rounded-xl hover:bg-white/50 hover:shadow-md hover:scale-[1.02] transform"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -183,7 +184,7 @@ const Navbar = () => {
                   <span className="w-2 h-2 bg-medifit-primary rounded-full group-hover:bg-medifit-secondary transition-colors duration-300"></span>
                   <span>Shop</span>
                 </span>
-              </a>
+              </Link>
               
               {/* Mobile Pages Dropdown */}
               <div className="relative">
