@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 w-full h-[91px] bg-medifit-bg-primary z-50 shadow-sm">
+    <nav className="absolute w-full h-[91px] left-0 top-0 bg-[#EEEDE7] z-50 shadow-sm">
       <div className="w-full px-4 lg:px-8 h-full">
         <div className="flex items-center justify-between h-full max-w-[1920px] mx-auto">
           {/* Logo Section - Group 189 */}

@@ -8,6 +8,8 @@ export default {
     extend: {
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
+        'sans-serif-collection': ['Sans Serif Collection', 'sans-serif'],
+        'sans': ['Sans Serif Collection', 'sans-serif'], // Adding as default sans
       },
       colors: {
         'medifit': {
@@ -17,6 +19,9 @@ export default {
           'bg-secondary': '#E8E6DE',
           'white': '#F2F2F2',
         }
+      },
+      opacity: {
+        '15': '0.15',
       },
       container: {
         center: true,
