@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import mainProductImage from '././../assets/home/main-1.png';
+import mainBackgroundImage from '../assets/home/main-2.png';
 import categoryMedicine from '../assets/home/catergory-1.png';
 import categoryHealthcare from '../assets/home/catergory-2.png';
 import categoryBeautycare from '../assets/home/catergory-3.png';
 import categoryFitness from '../assets/home/catergory-4.png';
 import categoryLabequipment from '../assets/home/catergory-5.png';
 import categoryMedkits from '../assets/home/catergory-6.png';
+import categoryMainImage from '../assets/home/catergory-main.png';
 import ctaImage1 from '../assets/home/cta-1.png';
 import ctaImage2 from '../assets/home/cta-2.png';
 import ctaImage3 from '../assets/home/cta-3.png';
@@ -17,6 +19,7 @@ import productProtein from '../assets/home/protein.png';
 import featureImage1 from '../assets/home/feature-1.png';
 import featureImage2 from '../assets/home/feature-2.png';
 import featureImage3 from '../assets/home/feature-3.png';
+
 
 const HomePage = () => {
   // State for mobile badge visibility
@@ -51,23 +54,19 @@ const HomePage = () => {
         {/* Hero Section - 1703x908.89px */}
         <div className="absolute w-[1703px] h-[909px] -left-[85px] top-[65px] hidden xl:block">
           
-          {/* Medical Shape 1 - Left Bottom Decorative Element */}
-          <div className="absolute w-[388px] h-[374px] left-0 top-[570px] opacity-15 transform rotate-[8.9deg]">
-            {/* Clip path group with 3.51deg rotation */}
-            <div className="absolute left-[-0.21%] right-[83.32%] top-[10.42%] bottom-[84.96%] opacity-15 transform rotate-[3.51deg]">
-              {/* Vector - Black background */}
-              <div className="absolute w-[247px] h-[241px] left-[9.56px] top-[70px] bg-black matrix-transform"></div>
-              
-              {/* Vector - Brown background */}
-              <div className="absolute w-[267px] h-[207px] left-[18px] top-[120px] bg-[#8F7D6A] transform rotate-[3.51deg]"></div>
-              
-              {/* Small Vector */}
-              <div className="absolute w-[25px] h-[24px] left-[250px] top-[196px] bg-[#8F7D6A] transform rotate-[3.51deg]"></div>
-            </div>
+         
+          
+          {/* Main-2 Image - Left Bottom Decorative Element */}
+          <div className="absolute w-[400px] h-[400px] left-0 top-[500px] opacity-40 z-10">
+            <img 
+              src={mainBackgroundImage} 
+              alt="Medical decoration" 
+              className="w-full h-full object-cover transform rotate-[8.9deg]"
+            />
           </div>
 
           {/* Title & Button Section - Moved to Left Side */}
-          <div className="absolute w-[599px] h-[453px] left-[150px] top-[197px] flex flex-col items-start gap-[60px]">
+          <div className="absolute w-[599px] h-[453px] left-[150px] top-[197px] flex flex-col items-start gap-[60px] z-20">
             
             {/* Frame 76 - Title and Description Container */}
             <div className="flex flex-col items-start gap-5 w-[541px] h-[345px]">
@@ -257,8 +256,17 @@ const HomePage = () => {
       {/* Shop by Category Section */}
       <div className="absolute w-full h-[900px] md:h-[389px] left-0 top-[680px] md:top-[1200px] overflow-hidden">
         
+        {/* Background Category Main Image - Right Side */}
+        <div className="absolute w-[400px] h-[400px] right-[-50px] top-[-50px] opacity-40 z-0 hidden md:block">
+          <img 
+            src={categoryMainImage} 
+            alt="Category background" 
+            className="w-full h-full object-contain"
+          />
+        </div>
+        
         {/* Section Title */}
-        <div className="absolute w-[439px] h-[72px] left-1/2 transform -translate-x-1/2 top-0">
+        <div className="absolute w-[439px] h-[72px] left-1/2 transform -translate-x-1/2 top-0 z-10">
           <h2 className="font-poppins font-medium text-[48px] leading-[120%] text-center text-[#503217] hidden md:block">
             Shop by Category
           </h2>
@@ -268,7 +276,7 @@ const HomePage = () => {
         </div>
 
         {/* Desktop Categories Container - Hidden on Mobile */}
-        <div className="absolute w-[1299px] h-[242px] left-1/2 transform -translate-x-1/2 top-[132px] justify-between hidden md:flex">
+        <div className="absolute w-[1299px] h-[242px] left-1/2 transform -translate-x-1/2 top-[132px] justify-between hidden md:flex z-10">
           
           {/* Category 1 - Medicine */}
           <div className="flex flex-col justify-center items-center p-[10px] gap-[10px] w-[191px] h-[242px] border border-[rgba(143,125,106,0.1)] rounded-[10px] hover:shadow-lg transition-shadow duration-300">
@@ -404,7 +412,7 @@ const HomePage = () => {
         </div>
 
         {/* Mobile Categories Container - Visible only on Mobile */}
-        <div className="md:hidden flex flex-col items-center gap-4 px-4 top-[80px] absolute w-full">
+        <div className="md:hidden flex flex-col items-center gap-4 px-4 top-[80px] absolute w-full z-10">
           
           {/* Category 1 - Medicine */}
           <div className="flex flex-col justify-center items-center p-[10px] gap-[10px] w-[280px] h-[120px] border border-[rgba(143,125,106,0.1)] rounded-[10px] hover:shadow-lg transition-shadow duration-300">
