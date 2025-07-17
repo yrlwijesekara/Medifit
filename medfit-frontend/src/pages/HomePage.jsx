@@ -14,6 +14,9 @@ import productMicroscope from '../assets/home/microscope.png';
 import productOximeter from '../assets/home/oximeter.png';
 import productSerum from '../assets/home/serum.png';
 import productProtein from '../assets/home/protein.png';
+import featureImage1 from '../assets/home/feature-1.png';
+import featureImage2 from '../assets/home/feature-2.png';
+import featureImage3 from '../assets/home/feature-3.png';
 
 const HomePage = () => {
   // State for mobile badge visibility
@@ -817,7 +820,7 @@ const HomePage = () => {
       </div>
 
       {/* Latest health product Section */}
-      <div className="absolute w-full left-0 top-[2330px] md:top-[2089px] h-[600px] md:h-[479px] overflow-hidden">
+      <div className="absolute w-full left-0 top-[2330px] md:top-[2089px] h-[800px] md:h-[479px] overflow-hidden">
         
         
         {/* Section Title */}
@@ -1226,6 +1229,80 @@ const HomePage = () => {
               </div>
             </div>
           </div>
+
+          {/* Mobile Features Section - Simple like Desktop with Title */}
+          <div className="md:hidden mt-12 px-4">
+            <div className="max-w-sm sm:max-w-md mx-auto">
+              
+              {/* Section Title */}
+              <div className="text-center mb-6">
+                <h2 className="font-poppins font-medium text-[24px] leading-[130%] text-[#503217]">
+                  Why we choose MediFit
+                </h2>
+              </div>
+              
+              {/* Features Container */}
+              <div className="bg-[#F2F2F2] rounded-[10px] p-6 space-y-8 sm:flex sm:flex-col sm:items-center">
+                
+                {/* Feature 1 - 30 Days Warranty */}
+                <div className="flex items-center gap-6 py-4 sm:max-w-md sm:w-full">
+                  <div className="w-[40px] h-[40px] flex items-center justify-center flex-shrink-0">
+                    <img 
+                      src={featureImage1} 
+                      alt="30 Days Warranty" 
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-poppins font-medium text-[18px] leading-[150%] text-[#503217] mb-1">
+                      30 Days warranty
+                    </h3>
+                    <p className="font-sans-serif-collection font-normal text-[16px] leading-[150%] text-[#8F7D6A]">
+                      Enjoy peace of mind with warranty
+                    </p>
+                  </div>
+                </div>
+                
+                {/* Feature 2 - Exchange Policy */}
+                <div className="flex items-center gap-6 py-4 sm:max-w-md sm:w-full">
+                  <div className="w-[40px] h-[40px] flex items-center justify-center flex-shrink-0">
+                    <img 
+                      src={featureImage2} 
+                      alt="Exchange Policy" 
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-poppins font-medium text-[18px] leading-[150%] text-[#503217] mb-1">
+                      Exchange policy
+                    </h3>
+                    <p className="font-sans-serif-collection font-normal text-[16px] leading-[150%] text-[#8F7D6A]">
+                      You're satisfied with your purchase
+                    </p>
+                  </div>
+                </div>
+                
+                {/* Feature 3 - Secure Payment */}
+                <div className="flex items-center gap-6 py-4 sm:max-w-md sm:w-full">
+                  <div className="w-[40px] h-[40px] flex items-center justify-center flex-shrink-0">
+                    <img 
+                      src={featureImage3} 
+                      alt="Secure Payment" 
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-poppins font-medium text-[18px] leading-[150%] text-[#503217] mb-1">
+                      Secure payment
+                    </h3>
+                    <p className="font-sans-serif-collection font-normal text-[16px] leading-[150%] text-[#8F7D6A]">
+                      Shop with confidence every time
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Decorative Medical Icon - Bottom Left */}
@@ -1233,6 +1310,91 @@ const HomePage = () => {
           {/* Medical Pills Icon */}
           <div className="w-full h-full flex items-center justify-center">
             <div className="w-16 h-16 bg-[#8F7D6A] rounded-full opacity-50"></div>
+          </div>
+        </div>
+      </div>
+
+      {/* Features Section - Group 179 */}
+      <div className="absolute w-[1300px] h-[140px] left-1/2 transform -translate-x-1/2 top-[2628px] hidden lg:block">
+        
+        {/* Background Rectangle 89 */}
+        <div className="absolute w-[1300px] h-[140px] left-0 top-0 bg-[#F2F2F2] rounded-[10px]"></div>
+        
+        {/* Feature 1 - 30 Days Warranty - Group 178 */}
+        <div className="absolute w-[389px] h-[115.77px] left-[30px] top-[12px]">
+          
+          {/* Icon Container - Group 173 */}
+          <div className="absolute w-[117.55px] h-[115.77px] left-0 top-0">
+            {/* Feature 1 Image */}
+            <div className="absolute w-[40px] h-[40px] left-[43px] top-[41px]">
+              <img 
+                src={featureImage1} 
+                alt="30 Days Warranty" 
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+          
+          {/* Text Content - Frame 110 */}
+          <div className="absolute flex flex-col items-start gap-[5px] w-[261px] h-[56px] left-[128px] top-[30px]">
+            <h3 className="w-[261px] h-[27px] font-poppins font-medium text-[18px] leading-[150%] text-[#503217]">
+              30 Days warranty
+            </h3>
+            <p className="w-[261px] h-[24px] font-sans-serif-collection font-normal text-[16px] leading-[150%] text-[#8F7D6A]">
+              Enjoy peace of mind with warranty
+            </p>
+          </div>
+        </div>
+        
+        {/* Feature 2 - Exchange Policy - Group 177 */}
+        <div className="absolute w-[389px] h-[115.23px] left-[456px] top-[12px]">
+          
+          {/* Icon Container - Group 174 */}
+          <div className="absolute w-[117.43px] h-[115.23px] left-0 top-0">
+            {/* Feature 2 Image */}
+            <div className="absolute w-[40px] h-[40px] left-[40px] top-[38px]">
+              <img 
+                src={featureImage2} 
+                alt="Exchange Policy" 
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+          
+          {/* Text Content - Frame 88 */}
+          <div className="absolute flex flex-col items-start gap-[5px] w-[261px] h-[55px] left-[128px] top-[31px]">
+            <h3 className="w-[149px] h-[27px] font-poppins font-medium text-[18px] leading-[150%] text-center text-[#503217]">
+              Exchange policy
+            </h3>
+            <p className="w-[269px] h-[23px] font-sans-serif-collection font-normal text-[16px] leading-[150%] text-[#8F7D6A]">
+              You're satisfied with your purchase
+            </p>
+          </div>
+        </div>
+        
+        {/* Feature 3 - Secure Payment - Group 176 */}
+        <div className="absolute w-[389px] h-[115.23px] left-[881px] top-[12px]">
+          
+          {/* Icon Container - Group 175 */}
+          <div className="absolute w-[117.43px] h-[115.23px] left-0 top-0">
+            {/* Feature 3 Image */}
+            <div className="absolute w-[40px] h-[40px] left-[41px] top-[40px]">
+              <img 
+                src={featureImage3} 
+                alt="Secure Payment" 
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+          
+          {/* Text Content - Frame 89 */}
+          <div className="absolute flex flex-col items-start gap-[5px] w-[261px] h-[56px] left-[128px] top-[28px]">
+            <h3 className="w-[153px] h-[27px] font-poppins font-medium text-[18px] leading-[150%] text-center text-[#503217]">
+              Secure payment
+            </h3>
+            <p className="w-[247px] h-[24px] font-sans-serif-collection font-normal text-[16px] leading-[150%] text-[#8F7D6A]">
+              Shop with confidence every time
+            </p>
           </div>
         </div>
       </div>
