@@ -20,6 +20,14 @@ import productProtein from '../assets/home/protein.png';
 import featureImage1 from '../assets/home/feature-1.png';
 import featureImage2 from '../assets/home/feature-2.png';
 import featureImage3 from '../assets/home/feature-3.png';
+import storeCollection1 from '../assets/home/storecollection-1.png';
+import storeCollection2 from '../assets/home/storecollection-2.png';
+import storeCollection3 from '../assets/home/storecollection-3.png';
+import storeCollection4 from '../assets/home/storecollection-4.png';
+import storeCollection5 from '../assets/home/storecollection-5.png';
+import storeCollection6 from '../assets/home/storecollection-6.png';
+import storeCollection7 from '../assets/home/storecollection-7.png';
+import storeCollection8 from '../assets/home/storecollection-8.png';
 
 
 const HomePage = () => {
@@ -1441,8 +1449,8 @@ const HomePage = () => {
                 {/* Product Image */}
                 <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
                   <img 
-                    src={productSerum} 
-                    alt="B12 medicine" 
+                    src={storeCollection1} 
+                    alt="Store Collection 1" 
                     className="w-full h-full object-contain"
                   />
                 </div>
@@ -1484,8 +1492,8 @@ const HomePage = () => {
                 {/* Product Image */}
                 <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
                   <img 
-                    src={productOximeter} 
-                    alt="Tonometer" 
+                    src={storeCollection2} 
+                    alt="Store Collection 2" 
                     className="w-full h-full object-contain"
                   />
                 </div>
@@ -1527,8 +1535,8 @@ const HomePage = () => {
                 {/* Product Image */}
                 <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
                   <img 
-                    src={productMicroscope} 
-                    alt="ECG cardiograph" 
+                   src={storeCollection3} 
+                    alt="Store Collection 3"
                     className="w-full h-full object-contain"
                   />
                 </div>
@@ -1570,8 +1578,8 @@ const HomePage = () => {
                 {/* Product Image */}
                 <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
                   <img 
-                    src={productOximeter} 
-                    alt="Blood glucose meter" 
+                    src={storeCollection4} 
+                    alt="Store Collection 4"
                     className="w-full h-full object-contain"
                   />
                 </div>
@@ -1617,8 +1625,8 @@ const HomePage = () => {
                 {/* Product Image */}
                 <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
                   <img 
-                    src={categoryMedicine} 
-                    alt="Lab hand gloves" 
+                    src={storeCollection5} 
+                    alt="Store Collection 5" 
                     className="w-full h-full object-contain"
                   />
                 </div>
@@ -1665,8 +1673,8 @@ const HomePage = () => {
                 {/* Product Image */}
                 <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
                   <img 
-                    src={categoryHealthcare} 
-                    alt="Stethoscope" 
+                    src={storeCollection6} 
+                    alt="Store Collection 6" 
                     className="w-full h-full object-contain"
                   />
                 </div>
@@ -1708,8 +1716,8 @@ const HomePage = () => {
                 {/* Product Image */}
                 <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
                   <img 
-                    src={categoryBeautycare} 
-                    alt="Inhaler pressure drop" 
+                    src={storeCollection7} 
+                    alt="Store Collection 7" 
                     className="w-full h-full object-contain"
                   />
                 </div>
@@ -1751,16 +1759,16 @@ const HomePage = () => {
                 {/* Product Image */}
                 <div className="relative flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
                   <img 
-                    src={productProtein} 
-                    alt="Multi vitamin" 
+                    src={storeCollection8} 
+                    alt="Store Collection 8" 
                     className="w-full h-full object-contain"
                   />
                   
                   {/* Second bottle in background */}
                   <div className="absolute top-2 right-2 transform rotate-12 opacity-70">
                     <img 
-                      src={productProtein} 
-                      alt="Multi vitamin Background" 
+                      src={storeCollection8} 
+                    alt="Store Collection 8" 
                       className="w-[60px] h-[90px] object-contain"
                     />
                   </div>
