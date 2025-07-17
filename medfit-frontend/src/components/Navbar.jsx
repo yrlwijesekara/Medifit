@@ -16,7 +16,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="absolute w-full h-[91px] left-0 top-0 bg-[#EEEDE7] z-50 shadow-sm">
+    <nav className="sticky top-0 w-full h-[91px] left-0 top-0 bg-[#EEEDE7] z-50 shadow-sm">
       <div className="w-full px-4 lg:px-8 h-full">
         <div className="flex items-center justify-between h-full max-w-[1920px] mx-auto relative">
           {/* Logo Section - Group 189 */}
