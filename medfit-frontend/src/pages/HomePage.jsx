@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
+import Center from '../components/Center';
 import mainProductImage from '././../assets/home/main-1.png';
 import mainBackgroundImage from '../assets/home/main-2.png';
 import categoryMedicine from '../assets/home/catergory-1.png';
@@ -1404,6 +1405,391 @@ const HomePage = () => {
               Shop with confidence every time
             </p>
           </div>
+        </div>
+      </div>
+
+      {/* Store Collection Section */}
+      <div className="absolute w-full left-0 top-[3150px] md:top-[2800px] lg:top-[2900px] min-h-[1200px] lg:min-h-[1000px]">
+        
+        {/* Section Title */}
+        <div className="absolute w-full left-0 top-0">
+          <Center>
+            <h2 className="font-poppins font-medium text-[28px] md:text-[36px] lg:text-[48px] leading-[120%] text-center text-[#503217]">
+              Explore Our Store Collection
+            </h2>
+          </Center>
+        </div>
+
+        {/* Products Grid Container */}
+        <div className="absolute w-full left-0 top-[80px] md:top-[120px] lg:top-[140px]">
+          <Center>
+            
+            {/* First Row - 4 Products */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-[30px] mb-20 lg:mb-28 justify-items-center">
+            
+            {/* Product 1 - B12 medicine */}
+            <div className="flex flex-col items-start gap-[15px] w-[302px] h-[345px] max-w-full">
+              
+              {/* Product Image Container */}
+              <div className="relative flex justify-center items-center w-full h-[262px] bg-[#F2F2F2] rounded-[10px] overflow-hidden group">
+                
+                {/* Badge - Hidden by default, shown on hover */}
+                <div className="absolute flex justify-center items-center px-[10px] py-[10px] w-[50px] h-[30px] bg-[#D3744A] rounded-[10px] left-5 top-5 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-white">Sale</span>
+                </div>
+                
+                {/* Product Image */}
+                <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
+                  <img 
+                    src={productSerum} 
+                    alt="B12 medicine" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                
+                {/* Shop Now Button - Hidden by default, shown on hover */}
+                <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="flex items-center gap-[5px]">
+                    {/* Cart Icon */}
+                    <div className="w-6 h-6 flex items-center justify-center">
+                      <div className="w-4 h-4 border-2 border-[#503217] rounded-sm"></div>
+                    </div>
+                    <span className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">Shop now</span>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Product Details */}
+              <div className="flex flex-col items-start gap-[5px] w-full">
+                <h3 className="font-poppins font-medium text-[20px] lg:text-[24px] leading-[150%] text-[#503217]">
+                  B12 medicine
+                </h3>
+                <div className="flex items-center gap-4">
+                  <span className="font-poppins font-medium text-[16px] lg:text-[18px] leading-[150%] text-[#8F7D6A]">
+                    $19.00 USD
+                  </span>
+                  <span className="font-poppins font-medium text-[14px] lg:text-[16px] leading-[150%] text-[#8F7D6A] line-through opacity-60">
+                    $25.00 USD
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Product 2 - Tonometer */}
+            <div className="flex flex-col items-start gap-[15px] w-[302px] h-[345px] max-w-full">
+              
+              {/* Product Image Container */}
+              <div className="relative flex justify-center items-center w-full h-[262px] bg-[#F2F2F2] rounded-[10px] overflow-hidden group">
+                
+                {/* Product Image */}
+                <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
+                  <img 
+                    src={productOximeter} 
+                    alt="Tonometer" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                
+                {/* Shop Now Button - Hidden by default, shown on hover */}
+                <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="flex items-center gap-[5px]">
+                    {/* Cart Icon */}
+                    <div className="w-6 h-6 flex items-center justify-center">
+                      <div className="w-4 h-4 border-2 border-[#503217] rounded-sm"></div>
+                    </div>
+                    <span className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">Shop now</span>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Product Details */}
+              <div className="flex flex-col items-start gap-[5px] w-full">
+                <h3 className="font-poppins font-medium text-[20px] lg:text-[24px] leading-[150%] text-[#503217]">
+                  Tonometer
+                </h3>
+                <span className="font-poppins font-medium text-[16px] lg:text-[18px] leading-[150%] text-[#8F7D6A]">
+                  $19.00 USD
+                </span>
+              </div>
+            </div>
+
+            {/* Product 3 - ECG cardiograph */}
+            <div className="flex flex-col items-start gap-[15px] w-[302px] h-[345px] max-w-full">
+              
+              {/* Product Image Container */}
+              <div className="relative flex justify-center items-center w-full h-[262px] bg-[#F2F2F2] rounded-[10px] overflow-hidden group">
+                
+                {/* Badge - Hidden by default, shown on hover */}
+                <div className="absolute flex justify-center items-center px-[10px] py-[10px] w-[50px] h-[30px] bg-[#D3744A] rounded-[10px] left-5 top-5 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-white">Sale</span>
+                </div>
+                
+                {/* Product Image */}
+                <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
+                  <img 
+                    src={productMicroscope} 
+                    alt="ECG cardiograph" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                
+                {/* Shop Now Button - Hidden by default, shown on hover */}
+                <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="flex items-center gap-[5px]">
+                    {/* Cart Icon */}
+                    <div className="w-6 h-6 flex items-center justify-center">
+                      <div className="w-4 h-4 border-2 border-[#503217] rounded-sm"></div>
+                    </div>
+                    <span className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">Shop now</span>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Product Details */}
+              <div className="flex flex-col items-start gap-[5px] w-full">
+                <h3 className="font-poppins font-medium text-[20px] lg:text-[24px] leading-[150%] text-[#503217]">
+                  ECG cardiograph
+                </h3>
+                <div className="flex items-center gap-4">
+                  <span className="font-poppins font-medium text-[16px] lg:text-[18px] leading-[150%] text-[#8F7D6A]">
+                    $20.00 USD
+                  </span>
+                  <span className="font-poppins font-medium text-[14px] lg:text-[16px] leading-[150%] text-[#8F7D6A] line-through opacity-60">
+                    $35.00 USD
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Product 4 - Blood glucose meter */}
+            <div className="flex flex-col items-start gap-[15px] w-[302px] h-[345px] max-w-full">
+              
+              {/* Product Image Container */}
+              <div className="relative flex justify-center items-center w-full h-[262px] bg-[#F2F2F2] rounded-[10px] overflow-hidden group">
+                
+                {/* Product Image */}
+                <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
+                  <img 
+                    src={productOximeter} 
+                    alt="Blood glucose meter" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                
+                {/* Shop Now Button - Hidden by default, shown on hover */}
+                <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="flex items-center gap-[5px]">
+                    {/* Cart Icon */}
+                    <div className="w-6 h-6 flex items-center justify-center">
+                      <div className="w-4 h-4 border-2 border-[#503217] rounded-sm"></div>
+                    </div>
+                    <span className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">Shop now</span>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Product Details */}
+              <div className="flex flex-col items-start gap-[5px] w-full">
+                <h3 className="font-poppins font-medium text-[20px] lg:text-[24px] leading-[150%] text-[#503217]">
+                  Blood glucose meter
+                </h3>
+                <span className="font-poppins font-medium text-[16px] lg:text-[18px] leading-[150%] text-[#8F7D6A]">
+                  $15.00 USD
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Second Row - 4 Products */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-[30px] justify-items-center mt-8 lg:mt-12">
+            
+            {/* Product 5 - Lab hand gloves */}
+            <div className="flex flex-col items-start gap-[15px] w-[302px] h-[345px] max-w-full">
+              
+              {/* Product Image Container */}
+              <div className="relative flex justify-center items-center w-full h-[262px] bg-[#F2F2F2] rounded-[10px] overflow-hidden group">
+                
+                {/* Badge - Hidden by default, shown on hover */}
+                <div className="absolute flex justify-center items-center px-[10px] py-[10px] w-[50px] h-[30px] bg-[#D3744A] rounded-[10px] left-5 top-5 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-white">Sale</span>
+                </div>
+                
+                {/* Product Image */}
+                <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
+                  <img 
+                    src={categoryMedicine} 
+                    alt="Lab hand gloves" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                
+                {/* Shop Now Button - Hidden by default, shown on hover */}
+                <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="flex items-center gap-[5px]">
+                    {/* Cart Icon */}
+                    <div className="w-6 h-6 flex items-center justify-center">
+                      <div className="w-4 h-4 border-2 border-[#503217] rounded-sm"></div>
+                    </div>
+                    <span className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">Shop now</span>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Product Details */}
+              <div className="flex flex-col items-start gap-[5px] w-full">
+                <h3 className="font-poppins font-medium text-[20px] lg:text-[24px] leading-[150%] text-[#503217]">
+                  Lab hand gloves
+                </h3>
+                <div className="flex items-center gap-4">
+                  <span className="font-poppins font-medium text-[16px] lg:text-[18px] leading-[150%] text-[#8F7D6A]">
+                    $20.00 USD
+                  </span>
+                  <span className="font-poppins font-medium text-[14px] lg:text-[16px] leading-[150%] text-[#8F7D6A] line-through opacity-60">
+                    $35.00 USD
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Product 6 - Stethoscope */}
+            <div className="flex flex-col items-start gap-[15px] w-[302px] h-[345px] max-w-full">
+              
+              {/* Product Image Container */}
+              <div className="relative flex justify-center items-center w-full h-[262px] bg-[#F2F2F2] rounded-[10px] overflow-hidden group">
+                
+                {/* Badge - Hidden by default, shown on hover */}
+                <div className="absolute flex justify-center items-center px-[10px] py-[10px] w-[50px] h-[30px] bg-[#D3744A] rounded-[10px] left-5 top-5 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-white">Sale</span>
+                </div>
+                
+                {/* Product Image */}
+                <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
+                  <img 
+                    src={categoryHealthcare} 
+                    alt="Stethoscope" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                
+                {/* Shop Now Button - Hidden by default, shown on hover */}
+                <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="flex items-center gap-[5px]">
+                    {/* Cart Icon */}
+                    <div className="w-6 h-6 flex items-center justify-center">
+                      <div className="w-4 h-4 border-2 border-[#503217] rounded-sm"></div>
+                    </div>
+                    <span className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">Shop now</span>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Product Details */}
+              <div className="flex flex-col items-start gap-[5px] w-full">
+                <h3 className="font-poppins font-medium text-[20px] lg:text-[24px] leading-[150%] text-[#503217]">
+                  Stethoscope
+                </h3>
+                <div className="flex items-center gap-4">
+                  <span className="font-poppins font-medium text-[16px] lg:text-[18px] leading-[150%] text-[#8F7D6A]">
+                    $20.00 USD
+                  </span>
+                  <span className="font-poppins font-medium text-[14px] lg:text-[16px] leading-[150%] text-[#8F7D6A] line-through opacity-60">
+                    $35.00 USD
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Product 7 - Inhaler pressure drop */}
+            <div className="flex flex-col items-start gap-[15px] w-[302px] h-[345px] max-w-full">
+              
+              {/* Product Image Container */}
+              <div className="relative flex justify-center items-center w-full h-[262px] bg-[#F2F2F2] rounded-[10px] overflow-hidden group">
+                
+                {/* Product Image */}
+                <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
+                  <img 
+                    src={categoryBeautycare} 
+                    alt="Inhaler pressure drop" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                
+                {/* Shop Now Button - Hidden by default, shown on hover */}
+                <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="flex items-center gap-[5px]">
+                    {/* Cart Icon */}
+                    <div className="w-6 h-6 flex items-center justify-center">
+                      <div className="w-4 h-4 border-2 border-[#503217] rounded-sm"></div>
+                    </div>
+                    <span className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">Shop now</span>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Product Details */}
+              <div className="flex flex-col items-start gap-[5px] w-full">
+                <h3 className="font-poppins font-medium text-[20px] lg:text-[24px] leading-[150%] text-[#503217]">
+                  Inhaler pressure drop
+                </h3>
+                <span className="font-poppins font-medium text-[16px] lg:text-[18px] leading-[150%] text-[#8F7D6A]">
+                  $35.00 USD
+                </span>
+              </div>
+            </div>
+
+            {/* Product 8 - Multi vitamin */}
+            <div className="flex flex-col items-start gap-[15px] w-[302px] h-[345px] max-w-full">
+              
+              {/* Product Image Container */}
+              <div className="relative flex justify-center items-center w-full h-[262px] bg-[#F2F2F2] rounded-[10px] overflow-hidden group">
+                
+                {/* Additional Badge - Hover only */}
+                <div className="absolute flex justify-center items-center px-[10px] py-[10px] w-[80px] h-[30px] bg-[#22C55E] rounded-[10px] right-5 top-5 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-white">Popular</span>
+                </div>
+                
+                {/* Product Image */}
+                <div className="relative flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
+                  <img 
+                    src={productProtein} 
+                    alt="Multi vitamin" 
+                    className="w-full h-full object-contain"
+                  />
+                  
+                  {/* Second bottle in background */}
+                  <div className="absolute top-2 right-2 transform rotate-12 opacity-70">
+                    <img 
+                      src={productProtein} 
+                      alt="Multi vitamin Background" 
+                      className="w-[60px] h-[90px] object-contain"
+                    />
+                  </div>
+                </div>
+                
+                {/* Shop Now Button - Hidden by default, shown on hover */}
+                <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="flex items-center gap-[5px]">
+                    {/* Cart Icon */}
+                    <div className="w-6 h-6 flex items-center justify-center">
+                      <div className="w-4 h-4 border-2 border-[#503217] rounded-sm"></div>
+                    </div>
+                    <span className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">Shop now</span>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Product Details */}
+              <div className="flex flex-col items-start gap-[5px] w-full">
+                <h3 className="font-poppins font-medium text-[20px] lg:text-[24px] leading-[150%] text-[#503217]">
+                  Multi vitamin
+                </h3>
+                <span className="font-poppins font-medium text-[16px] lg:text-[18px] leading-[150%] text-[#8F7D6A]">
+                  $20.00 USD
+                </span>
+              </div>
+            </div>
+          </div>
+        </Center>
         </div>
       </div>
     </>
