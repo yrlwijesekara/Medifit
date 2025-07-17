@@ -817,7 +817,8 @@ const HomePage = () => {
       </div>
 
       {/* Latest health product Section */}
-      <div className="absolute w-full left-0 top-[2280px] md:top-[1989px] h-[600px] md:h-[479px] overflow-hidden">
+      <div className="absolute w-full left-0 top-[2330px] md:top-[2089px] h-[600px] md:h-[479px] overflow-hidden">
+        
         
         {/* Section Title */}
         <div className="absolute w-[527px] h-[72px] left-1/2 transform -translate-x-1/2 top-0">
