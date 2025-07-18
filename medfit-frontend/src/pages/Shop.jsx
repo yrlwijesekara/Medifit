@@ -47,48 +47,95 @@ const Shop = () => {
           </div>
         </div>
       </div>
-      <div class="bg-[#E2DFCF] py-6">
-  <div class="max-w-screen-xl mx-auto px-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10lace-items-center">
-    
-  
-    <div class="flex items-center gap-2">
-      <img src="/Emblem.png" alt="Emblem logo" class="w-40px h-153px" />
-      
-    </div>
+      <div className="bg-[#E2DFCF] py-8">
+        <div className="max-w-screen-xl mx-auto px-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-16 place-items-center">
+          {/* Emblem Logo */}
+          <div className="flex items-center justify-center">
+            <img
+              src="/Emblem.png"
+              alt="Emblem logo"
+              className="w-[120px] h-[40px] object-contain"
+            />
+          </div>
 
-    
-    <div class="flex items-center gap-2">
-      <img src="/Grapho.png" alt="Grapho logo" class="w-40px h-153px" />
-      
-    </div>
+          {/* Grapho Logo */}
+          <div className="flex items-center justify-center">
+            <img
+              src="/Grapho.png"
+              alt="Grapho logo"
+              className="w-[120px] h-[40px] object-contain"
+            />
+          </div>
 
-    
-    <div class="flex items-center gap-2">
-      <img src="/Wayline.png" alt="Wayline logo" class="w-40px h-153px" />
-   
-    </div>
+          {/* Wayline Logo */}
+          <div className="flex items-center justify-center">
+            <img
+              src="/Wayline.png"
+              alt="Wayline logo"
+              className="w-[120px] h-[40px] object-contain"
+            />
+          </div>
 
-    
-    <div class="flex items-center gap-2">
-      <img src="/signet.png" alt="Signet logo" class="w-40px h-153px" />
-     
-    </div>
+          {/* Signet Logo */}
+          <div className="flex items-center justify-center">
+            <img
+              src="/signet.png"
+              alt="Signet logo"
+              className="w-[120px] h-[40px] object-contain"
+            />
+          </div>
 
-    
-    <div class="flex items-center gap-2">
-      <img src="/Prelude.png" alt="Prelude logo" class="w-40px h-153px" ></img>
-      
-    </div>
+          {/* Prelude Logo */}
+          <div className="flex items-center justify-center">
+            <img
+              src="/Prelude.png"
+              alt="Prelude logo"
+              className="w-[120px] h-[40px] object-contain"
+            />
+          </div>
 
-  
-    <div class="flex items-center gap-2">
-      <img src="signum.png" alt="Signum logo" class="w-40px h-153px" />
-      
-    </div>
+          {/* Signum Logo */}
+          <div className="flex items-center justify-center">
+            <img
+              src="/signum.png"
+              alt="Signum logo"
+              className="w-[120px] h-[40px] object-contain"
+            />
+          </div>
+        </div>
+      </div>
+      {/* Story session */}
 
-  </div>
-</div>
-
+      <div className=" w-full  bg-[#E2DFCF] flex flex-col items-center justify-center">
+        <div className="container w-full bg-red-500">
+          <div className="md:bg-green-400  lg:bg-blue-400 bg-yellow-400 xl:bg-pink-400 grid lg:grid-cols-2 grid-cols-1">
+            <div className=" bg-red-400">
+              <h1 className="text-[68px] leading-[1.2] font-medium tracking-normal text-[#503217] font-poppins">
+                Bringing trusted health solutions to your doorstep focused on
+                quality care & reliability
+                <h2 class="text-[18px] leading-[1.5] font-normal tracking-normal font-sans text-[#503217]">
+                  Our store offers a comprehensive range of pharmaceuticals,
+                  health and wellness products, and medical supplies to meet the
+                  diverse needs of our community.
+                </h2>
+              </h1>
+              
+            </div>
+             
+             <div className=" bg-yellow-400 w-full grid grid-cols-2 gap-4">
+                <div className="bg-white p-4 col-span-2 border-b"></div>
+                <div className="bg-yellow-400 w-full ">
+                  <img
+                    src="/female-holding-pill.jpg"
+                    alt=""
+                    className="w-full h-[300px] object-cover"
+                  />
+                </div>
+                
+                </div>
+              </div>
+            </div>
+          </div> 
     </>
   );
 };
