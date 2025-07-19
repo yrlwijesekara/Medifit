@@ -126,7 +126,7 @@ const Shop = () => {
         <div className="container w-full bg-red-500">
           <div className="md:bg-green-400  lg:bg-blue-400 bg-yellow-400 xl:bg-pink-400 grid lg:grid-cols-2 grid-cols-1">
             <div className=" bg-red-400">
-              <h1 className="text-[68px] leading-[1.2] font-medium tracking-normal text-[#503217] font-poppins">  
+              <h1 className="text-[50px] leading-[1.2] font-medium tracking-normal text-[#503217] font-poppins">
                 Bringing trusted health solutions to your doorstep focused on
                 quality care & reliability
                 <h2 class="text-[18px] leading-[1.5] font-normal tracking-normal font-sans text-[#503217]">
@@ -142,10 +142,138 @@ const Shop = () => {
               <div className="bg-blue-400 w-full  ">
                 <img
                   src="/female-holding-pill.jpg "
-                  alt="" 
+                  alt=""
                   className="w-full h-[400px] object-cover"
                 />
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className=" w-full  bg-[#E2DFCF] flex flex-col items-center justify-center">
+        <div className="container w-full bg-red-500">
+          <div className="md:bg-green-400  lg:bg-blue-400 bg-yellow-400 xl:bg-pink-400 grid lg:grid-cols-2 grid-cols-1"></div>
+          <div class="w-full bg-[#E2DFCF] py-10 px-4">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+              <div class="flex flex-col items-center">
+                <img
+                  src="thoughfull mode.png"
+                  alt="Thoughtfully Made"
+                  class="w-16 h-16 mb-4"
+                />
+                <p class="text-[#503217] font-semibold text-lg">
+                  Thoughtfully Made
+                </p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <img
+                  src="Non-toxtic.png"
+                  alt="Non-Toxic Formula"
+                  class="w-16 h-16 mb-4"
+                />
+                <p class="text-[#503217] font-semibold text-lg">
+                  Non-Toxic Formula
+                </p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <img
+                  src="Organic.png"
+                  alt="Organic Essentials"
+                  class="w-16 h-16 mb-4"
+                />
+                <p class="text-[#503217] font-semibold text-lg">
+                  Organic Essentials
+                </p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <img
+                  src="/Safe for everyone.png"
+                  alt="Safe for Everyone"
+                  class="w-16 h-16 mb-4"
+                />
+                <p class="text-[#503217] font-semibold text-lg">
+                  Safe for Everyone
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className=" w-full  bg-[#E2DFCF] flex flex-col items-center justify-center">
+        <div className="container w-full bg-red-500">
+          <div className="md:bg-green-400  lg:bg-blue-400 bg-yellow-400 xl:bg-pink-400 grid lg:grid-cols-2 grid-cols-1"></div>
+          <div class="grid grid-flow-col justify-items-center ...">
+            <div>
+              <h1 className="text-[50px] leading-[1.2] font-medium tracking-normal text-[#503217] font-poppins">
+                Discover our collection
+              </h1>
+              <h2 class="text-[18px] leading-[1.5] font-normal tracking-normal font-sans text-[#503217]">
+                Our medical store offers trusted products easy navigation, and
+                fast shipping
+              </h2>
+              <button className="mt-4 w-full px-6 py-3 bg-amber-100 text-amber-900 rounded-full font-medium flex items-center justify-center gap-2 hover:bg-amber-200 transition-colors">
+                <svg
+                  className="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                </svg>
+                Shop now
+              </button>
+            </div>
+            <div>
+              {" "}
+              <img
+                src="/Bottel.png"
+                alt=""
+                className="w-full h-[400px] object-cover"
+              />
+              <button className="mt-4 w-full px-6 py-3 bg-amber-100 text-amber-900 rounded-full font-medium flex items-center justify-center gap-2 hover:bg-amber-200 transition-colors">
+                <svg
+                  className="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                </svg>
+                Shop now
+              </button>
+            </div>
+            <div>
+              <div class="grid grid-flow-col justify-items-center ..."></div>
+              <img
+                src="/Pressure.png"
+                alt=""
+                className="w-full h-[400px] object-cover rounded-lg"
+              />
+            </div>
+          </div>
+          <div class="grid grid-flow-col justify-items-center ...">
+            <div>
+              <img
+                src="/Mask.png"
+                alt=""
+                className="w-full h-[400px] object-cover"
+              />
+            </div>
+            <div>
+              <img
+                src="/Temperature.png"
+                alt=""
+                className="w-full h-[400px] object-cover"
+              />
+            </div>
+            <div>
+              <img
+                src="/Nebulizer.png"
+                alt=""
+                className="w-full h-[400px] object-cover"
+              />
             </div>
           </div>
         </div>
