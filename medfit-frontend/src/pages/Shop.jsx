@@ -1,212 +1,279 @@
-import Navbar from '../components/Navbar';
-import doctorMedicineImage from '../assets/home/doctor-medicine-bottle.jpg';
-import wellnessImage from '../assets/home/Wellness.jpg';
+import Navbar from "../components/Navbar";
 
 const Shop = () => {
   return (
     <>
       {/* Navigation Bar */}
       <Navbar />
-      
+
       {/* Hero Section */}
-      <div className="absolute w-full h-[977px] left-0 top-0 bg-[#E8E6DE] overflow-hidden">
-        
-        {/* Rectangle 110 - Main Background */}
-        <div className="absolute w-full h-[977px] left-0 top-0 bg-[#E8E6DE]"></div>
-        
-        {/* Mask Group - Right Side Container */}
-        <div className="absolute w-[786px] h-[886px] left-[1134px] top-[91px] bg-[#E8E6DE] overflow-hidden">
-          
-          {/* Rectangle 108 & 109 - Background layers */}
-          <div className="absolute w-[786px] h-[886px] left-0 top-0 bg-[#E8E6DE]"></div>
-          <div className="absolute w-[786px] h-[886px] left-0 top-0 bg-[#E8E6DE]"></div>
-          
-          {/* Doctor Image - Flipped horizontally */}
-          <div 
-            className="absolute w-[1759px] h-[1153px] left-[-94px] top-[-267px] bg-cover bg-center transform scale-x-[-1]"
-            style={{
-              backgroundImage: `url(${doctorMedicineImage})`
-            }}
-          >
+
+      <div className=" w-full  bg-[#E2DFCF] flex flex-col items-center justify-center">
+        <div className="container w-full bg-red-500">
+          <div className="md:bg-green-400  lg:bg-blue-400 bg-yellow-400 xl:bg-pink-400 grid lg:grid-cols-2 grid-cols-1">
+            <div className=" bg-red-400">
+              <h1 className="text-[68px] leading-[1.2] font-medium tracking-normal text-[#503217] font-poppins">
+                From wellness to care all in one place
+              </h1>
+
+              <div className=" bg-yellow-400 w-full grid grid-cols-2 gap-4">
+                <div className="bg-white p-4 col-span-2 border-b"></div>
+                <div className="bg-blue-400 w-full ">
+                  <img
+                    src="/Wellness.jpg"
+                    alt=""
+                    className="w-full h-[300px] object-cover"
+                  />
+                </div>
+                <div className="bg-green-400 w-full ">
+                  <p>
+                    Your health is in good hands with Medifit. We’re here to
+                    provide you with a wide range of healthcare essentials,
+                    carefully selected.
+                  </p>
+                  <button className="flex items-center gap-2 w-[119px] h-[48px] px-[20px] rounded-[10px] opacity-100 bg-[#503217] text-white hover:bg-[#3e2814] transition cursor-pointer">
+                    {/* Bag Icon */}
+                    <svg
+                      className="w-5 h-5 flex-none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M6 2l1.5 4h9L18 2" />
+                      <path d="M3 6h18l-1.5 14h-15L3 6z" />
+                      <path d="M16 10a4 4 0 01-8 0" />
+                    </svg>
+
+                    {/* Button Text */}
+                    <span>Shop now</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="h-full bg-gray-400">
+              <img
+                src="/doctor-medicine-bottle.jpg"
+                alt=""
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
-        
-        {/* Group 248 - Main Content Container */}
-        <div className="absolute w-[707px] h-[581px] left-[310px] top-[243px]">
-          
-          {/* Main Heading */}
-          <h1 className="absolute w-[700px] h-[173px] left-[1px] top-0 font-poppins font-medium text-[68px] leading-[120%] text-[#503217]">
-            From wellness to care all in one place
-          </h1>
-          
-          {/* Group 247 - Content and Image Container */}
-          <div className="absolute w-[707px] h-[328px] left-0 top-[253px]">
-            
-            {/* Rectangle 122 - Left Image */}
-            <div 
-              className="absolute w-[302px] h-[328px] left-0 top-0 bg-cover bg-center rounded-[10px]"
-              style={{
-                backgroundImage: `url(${wellnessImage})`
-              }}
-            >
+      </div>
+      <div className="bg-[#E2DFCF] py-8">
+        <div className="max-w-screen-xl mx-auto px-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-16 place-items-center">
+          {/* Emblem Logo */}
+          <div className="flex items-center justify-center">
+            <img
+              src="/Emblem.png"
+              alt="Emblem logo"
+              className="w-[120px] h-[40px] object-contain"
+            />
+          </div>
+
+          {/* Grapho Logo */}
+          <div className="flex items-center justify-center">
+            <img
+              src="/Grapho.png"
+              alt="Grapho logo"
+              className="w-[120px] h-[40px] object-contain"
+            />
+          </div>
+
+          {/* Wayline Logo */}
+          <div className="flex items-center justify-center">
+            <img
+              src="/Wayline.png"
+              alt="Wayline logo"
+              className="w-[120px] h-[40px] object-contain"
+            />
+          </div>
+
+          {/* Signet Logo */}
+          <div className="flex items-center justify-center">
+            <img
+              src="/signet.png"
+              alt="Signet logo"
+              className="w-[120px] h-[40px] object-contain"
+            />
+          </div>
+
+          {/* Prelude Logo */}
+          <div className="flex items-center justify-center">
+            <img
+              src="/Prelude.png"
+              alt="Prelude logo"
+              className="w-[120px] h-[40px] object-contain"
+            />
+          </div>
+
+          {/* Signum Logo */}
+          <div className="flex items-center justify-center">
+            <img
+              src="/signum.png"
+              alt="Signum logo"
+              className="w-[120px] h-[40px] object-contain"
+            />
+          </div>
+        </div>
+      </div>
+      {/* Story session */}
+      <div className=" w-full  bg-[#E2DFCF] flex flex-col items-center justify-center">
+        <div className="container w-full bg-red-500">
+          <div className="md:bg-green-400  lg:bg-blue-400 bg-yellow-400 xl:bg-pink-400 grid lg:grid-cols-2 grid-cols-1">
+            <div className=" bg-red-400">
+              <h1 className="text-[50px] leading-[1.2] font-medium tracking-normal text-[#503217] font-poppins">
+                Bringing trusted health solutions to your doorstep focused on
+                quality care & reliability
+                <h2 class="text-[18px] leading-[1.5] font-normal tracking-normal font-sans text-[#503217]">
+                  Our store offers a comprehensive range of pharmaceuticals,
+                  health and wellness products, and medical supplies to meet the
+                  diverse needs of our community.
+                </h2>
+              </h1>
             </div>
-            
-            {/* Frame 263 - Right Content Container */}
-            <div className="absolute w-[374px] h-[178px] left-[333px] top-[150px] flex flex-col items-start gap-[50px]">
-              
-              {/* Description Text */}
-              <p className="w-[374px] h-[80px] font-sans-serif-collection font-normal text-[18px] leading-[150%] text-[#503217]">
-                Your health is in good hands with Medifit. We're here to provide you with a wide range of healthcare essentials, carefully selected.
-              </p>
-              
-              {/* Shop Now Button - Frame 77 */}
-              <button className="flex flex-row justify-center items-center p-5 gap-[10px] w-[158px] h-[48px] bg-[#503217] rounded-[10px] hover:bg-[#6B4228] transition-colors duration-200">
-                {/* Bag Icon */}
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-none">
-                  <rect 
-                    x="2" 
-                    y="3" 
-                    width="20" 
-                    height="18" 
-                    rx="2" 
-                    stroke="#EEEDE7" 
-                    strokeWidth="1.5"
-                  />
-                  <path 
-                    d="M8 7v-2a4 4 0 0 1 8 0v2" 
-                    stroke="#EEEDE7" 
-                    strokeWidth="1.5"
-                  />
+
+            <div className=" bg-yellow-400 w-full grid grid-cols-2 gap-4">
+              <div className="bg-white p-5 col-span-5 border-b"></div>
+              <div className="bg-blue-400 w-full  ">
+                <img
+                  src="/female-holding-pill.jpg "
+                  alt=""
+                  className="w-full h-[400px] object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className=" w-full  bg-[#E2DFCF] flex flex-col items-center justify-center">
+        <div className="container w-full bg-red-500">
+          <div className="md:bg-green-400  lg:bg-blue-400 bg-yellow-400 xl:bg-pink-400 grid lg:grid-cols-2 grid-cols-1"></div>
+          <div class="w-full bg-[#E2DFCF] py-10 px-4">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+              <div class="flex flex-col items-center">
+                <img
+                  src="thoughfull mode.png"
+                  alt="Thoughtfully Made"
+                  class="w-16 h-16 mb-4"
+                />
+                <p class="text-[#503217] font-semibold text-lg">
+                  Thoughtfully Made
+                </p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <img
+                  src="Non-toxtic.png"
+                  alt="Non-Toxic Formula"
+                  class="w-16 h-16 mb-4"
+                />
+                <p class="text-[#503217] font-semibold text-lg">
+                  Non-Toxic Formula
+                </p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <img
+                  src="Organic.png"
+                  alt="Organic Essentials"
+                  class="w-16 h-16 mb-4"
+                />
+                <p class="text-[#503217] font-semibold text-lg">
+                  Organic Essentials
+                </p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <img
+                  src="/Safe for everyone.png"
+                  alt="Safe for Everyone"
+                  class="w-16 h-16 mb-4"
+                />
+                <p class="text-[#503217] font-semibold text-lg">
+                  Safe for Everyone
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className=" w-full  bg-[#E2DFCF] flex flex-col items-center justify-center">
+        <div className="container w-full bg-red-500">
+          <div className="md:bg-green-400  lg:bg-blue-400 bg-yellow-400 xl:bg-pink-400 grid lg:grid-cols-2 grid-cols-1"></div>
+          <div class="grid grid-flow-col justify-items-center ...">
+            <div>
+              <h1 className="text-[50px] leading-[1.2] font-medium tracking-normal text-[#503217] font-poppins">
+                Discover our collection
+              </h1>
+              <h2 class="text-[18px] leading-[1.5] font-normal tracking-normal font-sans text-[#503217]">
+                Our medical store offers trusted products easy navigation, and
+                fast shipping
+              </h2>
+              <button className="mt-4 w-full px-6 py-3 bg-amber-100 text-amber-900 rounded-full font-medium flex items-center justify-center gap-2 hover:bg-amber-200 transition-colors">
+                <svg
+                  className="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
                 </svg>
-                
-                {/* Shop now Text */}
-                <span className="w-[84px] h-[27px] font-sans-serif-collection font-normal text-[18px] leading-[150%] text-[#F2F2F2]">
-                  Shop now
-                </span>
+                Shop now
               </button>
             </div>
-          </div>
-        </div>
-        
-        {/* Responsive Design for smaller screens */}
-        
-        {/* Large Desktop Layout (lg to xl) */}
-        <div className="hidden lg:block xl:hidden px-8 pt-24 relative">
-          <div className="max-w-[1400px] mx-auto">
-            <div className="flex flex-col lg:flex-row items-center gap-12">
-              {/* Left Content */}
-              <div className="flex-1 max-w-[600px]">
-                <h1 className="font-poppins font-medium text-[54px] leading-[120%] text-[#503217] mb-8">
-                  From wellness to care all in one place
-                </h1>
-                
-                <div className="flex flex-col lg:flex-row items-start gap-8">
-                  {/* Product Image */}
-                  <div 
-                    className="w-[280px] h-[300px] bg-cover bg-center rounded-[10px] flex-shrink-0"
-                    style={{
-                      backgroundImage: `url(${wellnessImage})`
-                    }}
-                  >
-                  </div>
-                  
-                  {/* Text and Button */}
-                  <div className="flex flex-col gap-8">
-                    <p className="font-sans-serif-collection font-normal text-[16px] leading-[150%] text-[#503217] max-w-[350px]">
-                      Your health is in good hands with Medifit. We're here to provide you with a wide range of healthcare essentials, carefully selected.
-                    </p>
-                    
-                    <button className="flex items-center justify-center gap-3 px-5 py-3 bg-[#503217] rounded-[10px] hover:bg-[#6B4228] transition-colors duration-200 w-[158px]">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="2" y="3" width="20" height="18" rx="2" stroke="#EEEDE7" strokeWidth="1.5"/>
-                        <path d="M8 7v-2a4 4 0 0 1 8 0v2" stroke="#EEEDE7" strokeWidth="1.5"/>
-                      </svg>
-                      <span className="font-sans-serif-collection font-normal text-[16px] text-[#F2F2F2]">Shop now</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Right Content - Doctor Image */}
-              <div className="flex-1 max-w-[500px] relative">
-                <div 
-                  className="w-full h-[600px] bg-cover bg-center rounded-[10px] transform scale-x-[-1]"
-                  style={{
-                    backgroundImage: `url(${doctorMedicineImage})`
-                  }}
+            <div>
+              {" "}
+              <img
+                src="/Bottel.png"
+                alt=""
+                className="w-full h-[400px] object-cover"
+              />
+              <button className="mt-4 w-full px-6 py-3 bg-amber-100 text-amber-900 rounded-full font-medium flex items-center justify-center gap-2 hover:bg-amber-200 transition-colors">
+                <svg
+                  className="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
                 >
-                </div>
-              </div>
+                  <path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                </svg>
+                Shop now
+              </button>
+            </div>
+            <div>
+              <div class="grid grid-flow-col justify-items-center ..."></div>
+              <img
+                src="/Pressure.png"
+                alt=""
+                className="w-full h-[400px] object-cover rounded-lg"
+              />
             </div>
           </div>
-        </div>
-        
-        {/* Tablet Layout */}
-        <div className="hidden md:block lg:hidden px-6 pt-20 relative">
-          <div className="max-w-[700px] mx-auto">
-            <h1 className="font-poppins font-medium text-[42px] leading-[120%] text-[#503217] mb-8 text-center">
-              From wellness to care all in one place
-            </h1>
-            
-            <div className="flex flex-col items-center gap-8">
-              {/* Product Image */}
-              <div 
-                className="w-[350px] h-[350px] bg-cover bg-center rounded-[10px]"
-                style={{
-                  backgroundImage: `url(${wellnessImage})`
-                }}
-              >
-              </div>
-              
-              {/* Text and Button */}
-              <div className="flex flex-col items-center gap-6 max-w-[500px]">
-                <p className="font-sans-serif-collection font-normal text-[16px] leading-[150%] text-[#503217] text-center">
-                  Your health is in good hands with Medifit. We're here to provide you with a wide range of healthcare essentials, carefully selected.
-                </p>
-                
-                <button className="flex items-center justify-center gap-3 px-5 py-3 bg-[#503217] rounded-[10px] hover:bg-[#6B4228] transition-colors duration-200">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="2" y="3" width="20" height="18" rx="2" stroke="#EEEDE7" strokeWidth="1.5"/>
-                    <path d="M8 7v-2a4 4 0 0 1 8 0v2" stroke="#EEEDE7" strokeWidth="1.5"/>
-                  </svg>
-                  <span className="font-sans-serif-collection font-normal text-[16px] text-[#F2F2F2]">Shop now</span>
-                </button>
-              </div>
+          <div class="grid grid-flow-col justify-items-center ...">
+            <div>
+              <img
+                src="/Mask.png"
+                alt=""
+                className="w-full h-[400px] object-cover"
+              />
             </div>
-          </div>
-        </div>
-        
-        {/* Mobile Layout */}
-        <div className="block md:hidden px-4 pt-24 relative">
-          <div className="max-w-[350px] mx-auto">
-            <h1 className="font-poppins font-medium text-[28px] leading-[120%] text-[#503217] mb-6 text-center">
-              From wellness to care all in one place
-            </h1>
-            
-            <div className="flex flex-col items-center gap-6">
-              {/* Product Image */}
-              <div 
-                className="w-[280px] h-[280px] bg-cover bg-center rounded-[10px]"
-                style={{
-                  backgroundImage: `url(${wellnessImage})`
-                }}
-              >
-              </div>
-              
-              {/* Text and Button */}
-              <div className="flex flex-col items-center gap-6">
-                <p className="font-sans-serif-collection font-normal text-[14px] leading-[150%] text-[#503217] text-center">
-                  Your health is in good hands with Medifit. We're here to provide you with a wide range of healthcare essentials, carefully selected.
-                </p>
-                
-                <button className="flex items-center justify-center gap-3 px-5 py-3 bg-[#503217] rounded-[10px] hover:bg-[#6B4228] transition-colors duration-200">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="2" y="3" width="20" height="18" rx="2" stroke="#EEEDE7" strokeWidth="1.5"/>
-                    <path d="M8 7v-2a4 4 0 0 1 8 0v2" stroke="#EEEDE7" strokeWidth="1.5"/>
-                  </svg>
-                  <span className="font-sans-serif-collection font-normal text-[14px] text-[#F2F2F2]">Shop now</span>
-                </button>
-              </div>
+            <div>
+              <img
+                src="/Temperature.png"
+                alt=""
+                className="w-full h-[400px] object-cover"
+              />
+            </div>
+            <div>
+              <img
+                src="/Nebulizer.png"
+                alt=""
+                className="w-full h-[400px] object-cover"
+              />
             </div>
           </div>
         </div>
