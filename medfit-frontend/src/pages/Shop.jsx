@@ -335,21 +335,20 @@ const Shop = () => {
       </div>
 
       <div class="flex gap-4">
-        <div class="w-32 h-32 bg-#E8E6DE"></div>
-        <div class="w-32 h-32 bg-#E8E6DE"></div>
+        <div class="w-500 h-32 bg-[#E2DFCF]"></div>
       </div>
 
       {/* Shop session */}
       <div className=" w-full  bg-[#E2DFCF] flex flex-col items-center justify-center">
-        <div className="container w-full bg-#E8E6DE">
+        <div className="container w-full bg-[#E2DFCF]">
           <div className="md:bg-green-400  lg:bg-blue-400 bg-yellow-400 xl:bg-pink-400 grid lg:grid-cols-2 grid-cols-1"></div>
           <div class="grid grid-flow-col justify-items-center ...">
-            <div className="bg-[#F3F1EA] w-full px-4 py-12">
+            <div className="bg-[#E2DFCF] w-full px-4 py-12">
               {/* Section Title */}
               <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-semibold text-[#503217] mb-10">
                 Shop by category
               </h2>
-
+ 
               {/* Category Cards */}
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 justify-items-center mb-16">
                 {/* Repeat this card for each category */}
@@ -406,7 +405,7 @@ const Shop = () => {
                 </div>
 
                 {/* Medifit bottle image */}
-                <div className="w-full">
+                <div className="w-full ">
                   <img
                     src="/medifit.png"
                     alt="Medifit bottle"
@@ -435,6 +434,10 @@ const Shop = () => {
           </div>
         </div>
       </div>
+      
+       <div class="flex gap-4">
+        <div class="w-500 h-32 bg-[#E2DFCF]"></div>
+      </div>
       <div className=" w-full  bg-[#E2DFCF] flex flex-col items-center justify-center">
         <div className="container w-full bg-#E8E6DE">
           <div className="md:bg-green-400  lg:bg-blue-400 bg-yellow-400 xl:bg-pink-400 grid lg:grid-cols-2 grid-cols-1"></div>
@@ -454,7 +457,7 @@ const Shop = () => {
                   </p>
                   <div className="flex items-center mt-6">
                     <img
-                      src="/avatar1.jpg"
+                      src="/Olivia.png"
                       className="w-12 h-12 rounded-full mr-3"
                     />
                     <p className="font-semibold text-[#4A2E15]">
@@ -471,7 +474,7 @@ const Shop = () => {
                   </p>
                   <div className="flex items-center mt-6">
                     <img
-                      src="/avatar2.jpg"
+                      src="/Sophia Brown.png"
                       className="w-12 h-12 rounded-full mr-3"
                     />
                     <p className="font-semibold text-[#4A2E15]">Sophia Brown</p>
@@ -486,7 +489,7 @@ const Shop = () => {
                   </p>
                   <div className="flex items-center mt-6">
                     <img
-                      src="/avatar3.jpg"
+                      src="/Ethan.png"
                       className="w-12 h-12 rounded-full mr-3"
                     />
                     <p className="font-semibold text-[#4A2E15]">Ethan Harris</p>
