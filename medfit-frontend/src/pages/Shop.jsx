@@ -8,16 +8,14 @@ const Shop = () => {
 
       {/* Hero Section */}
 
-      <div className=" w-full  bg-[#E2DFCF] flex flex-col items-center justify-center">
-        <div className="container w-full bg-red-500">
-          <div className="md:bg-green-400  lg:bg-blue-400 bg-yellow-400 xl:bg-pink-400 grid lg:grid-cols-2 grid-cols-1">
-            <div className=" bg-red-400">
-              <h1 className="text-[68px] leading-[1.2] font-medium tracking-normal text-[#503217] font-poppins">
+      <div className=" w-full  bg-[#E8E6DE] flex flex-col items-center justify-center">
+        <div className="container w-full bg-#E8E6DE">
+          <div className="md:bg-#E8E6DE  lg:bg-#E8E6DEbg-#E8E6DE xl:bg-#E8E6DE grid lg:grid-cols-2 grid-cols-1">
+            <div className=" bg-#E8E6DE">
+              <h1 className="text-[68px] mt-8 mb-6 leading-[1.2] font-medium tracking-normal text-[#503217] font-poppins ">
                 From wellness to care all in one place
               </h1>
-
-              <div className=" bg-yellow-400 w-full grid grid-cols-2 gap-4">
-                <div className="bg-white p-4 col-span-2 border-b"></div>
+              <div className=" bg-#E8E6DE w-full grid grid-cols-2 gap-4">
                 <div className="bg-blue-400 w-full ">
                   <img
                     src="/Wellness.jpg"
@@ -25,32 +23,34 @@ const Shop = () => {
                     className="w-full h-[300px] object-cover"
                   />
                 </div>
-                <div className="bg-green-400 w-full ">
-                  <p>
-                    Your health is in good hands with Medifit. We’re here to
-                    provide you with a wide range of healthcare essentials,
-                    carefully selected.
-                  </p>
-                  <button className="flex items-center gap-2 w-[119px] h-[48px] px-[20px] rounded-[10px] opacity-100 bg-[#503217] text-white hover:bg-[#3e2814] transition cursor-pointer">
-                    {/* Bag Icon */}
-                    <svg
-                      className="w-5 h-5 flex-none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M6 2l1.5 4h9L18 2" />
-                      <path d="M3 6h18l-1.5 14h-15L3 6z" />
-                      <path d="M16 10a4 4 0 01-8 0" />
-                    </svg>
+                <div className="bg-#E8E6DE w-full relative">
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <p>
+                      Your health is in good hands with Medifit. We’re here to
+                      provide you with a wide range of healthcare essentials,
+                      carefully selected.
+                    </p>
+                    <button className="flex items-center gap-2 w-[119px] h-[48px] px-[20px] rounded-[10px] opacity-100 bg-[#503217] text-white hover:bg-[#3e2814] transition cursor-pointer">
+                      {/* Bag Icon */}
+                      <svg
+                        className="w-5 h-5 flex-none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M6 2l1.5 4h9L18 2" />
+                        <path d="M3 6h18l-1.5 14h-15L3 6z" />
+                        <path d="M16 10a4 4 0 01-8 0" />
+                      </svg>
 
-                    {/* Button Text */}
-                    <span>Shop now</span>
-                  </button>
+                      {/* Button Text */}
+                      <span>Shop now</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -65,7 +65,7 @@ const Shop = () => {
         </div>
       </div>
       <div className="bg-[#E2DFCF] py-8">
-        <div className="max-w-screen-xl mx-auto px-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-16 place-items-center">
+        <div className=" mx-auto px-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-16 place-items-center">
           {/* Emblem Logo */}
           <div className="flex items-center justify-center">
             <img
@@ -122,10 +122,10 @@ const Shop = () => {
         </div>
       </div>
       {/* Story session */}
-      <div className=" w-full  bg-[#E2DFCF] flex flex-col items-center justify-center">
-        <div className="container w-full bg-red-500">
-          <div className="md:bg-green-400  lg:bg-blue-400 bg-yellow-400 xl:bg-pink-400 grid lg:grid-cols-2 grid-cols-1">
-            <div className=" bg-red-400">
+      <div className=" w-full  bg-[#E8E6DE] flex flex-col items-center justify-center">
+        <div className="container w-full bg-#E8E6DE">
+          <div className="md:bg-#E8E6DE  lg:bg-#E8E6DE bg-#E8E6DE xl:bg-#E8E6DE grid lg:grid-cols-2 grid-cols-1">
+            <div className=" #E8E6DE">
               <h1 className="text-[50px] leading-[1.2] font-medium tracking-normal text-[#503217] font-poppins">
                 Bringing trusted health solutions to your doorstep focused on
                 quality care & reliability
@@ -137,8 +137,7 @@ const Shop = () => {
               </h1>
             </div>
 
-            <div className=" bg-yellow-400 w-full grid grid-cols-2 gap-4">
-              <div className="bg-white p-5 col-span-5 border-b"></div>
+            <div className=" bg-[#E8E6DE]  w-full grid grid-cols-2 gap-4">
               <div className="bg-blue-400 w-full  ">
                 <img
                   src="/female-holding-pill.jpg "
@@ -150,11 +149,15 @@ const Shop = () => {
           </div>
         </div>
       </div>
+
+      <div class="flex gap-4">
+        <div class="w-500 h-32 bg-[#E8E6DE]"></div>
+      </div>
       {/* Features Section */}
-      <div className=" w-full  bg-[#E2DFCF] flex flex-col items-center justify-center">
-        <div className="container w-full bg-[#E2DFCF]">
+      <div className=" w-full  bg-[#E8E6DE] flex flex-col items-center justify-center">
+        <div className="container w-full bg-[#E8E6DE]">
           <div className="md:bg-green-400  lg:bg-blue-400 bg-yellow-400 xl:bg-pink-400 grid lg:grid-cols-2 grid-cols-1"></div>
-          <div class="w-full bg-[#E2DFCF] py-10 px-4">
+          <div class="w-full bg-[#E8E6DE] py-10 px-4">
             <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
               <div class="flex flex-col items-center">
                 <img
@@ -203,31 +206,31 @@ const Shop = () => {
           </div>
         </div>
       </div>
+
       {/*Discover session */}
-      <div className=" w-full  bg-[#E2DFCF] flex flex-col items-center justify-center">
-        <div className="container w-full bg-[#E2DFCF]s">
+      <div className=" w-full  bg-[#E8E6DE] flex flex-col items-center justify-center">
+        <div className="container w-full">
           <div className="md:bg-green-400  lg:bg-blue-400 bg-yellow-400 xl:bg-pink-400 grid lg:grid-cols-2 grid-cols-1"></div>
           <div class="grid grid-flow-col justify-items-center ...">
-            <div className="bg-[#E2DFCF]  text-white px-4 py-16">
-              <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-10 items-start">
-                {/* Left Content */}
-                <div className="lg:col-span-1 flex flex-col gap-6">
-                  <h2 className="text-3xl sm:text-4xl font-semibold text-#503217 leading-snug">
-                    Discover our
-                    <br />
-                    collection
-                  </h2>
-                  <p className="text-#8F7D6A text-base leading-relaxed">
-                    Our medical store offers trusted products, easy navigation,
-                    and fast shipping
-                  </p>
-                  <button className="bg-[#503217] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#3e2814] transition bg-[#3e2814] transition cursor-pointer">
-                    View all products &nbsp; →
-                  </button>
-                </div>
-
+            <div className=" text-white px-4 py-16">
+              <div className="w-full mx-auto grid  items-start">
                 {/* Product Cards */}
                 <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {/* Left Content */}
+                  <div className="lg:col-span-1 flex flex-col gap-6">
+                    <h2 className="text-3xl sm:text-4xl font-semibold text-#503217 leading-snug">
+                      Discover our
+                      <br />
+                      collection
+                    </h2>
+                    <p className="text-#8F7D6A text-base leading-relaxed">
+                      Our medical store offers trusted products, easy
+                      navigation, and fast shipping
+                    </p>
+                    <button className="bg-[#503217] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#3e2814] transition bg-[#3e2814] transition cursor-pointer">
+                      View all products &nbsp; →
+                    </button>
+                  </div>
                   {/* Product 1 - Hair tablets */}
                   <div className="bg-[#F3F1EA] rounded-xl p-4 flex flex-col gap-3">
                     <img
@@ -334,23 +337,19 @@ const Shop = () => {
         </div>
       </div>
 
-      <div class="flex gap-4">
-        <div class="w-500 h-32 bg-[#E2DFCF]"></div>
-      </div>
-
       {/* Shop session */}
       <div className=" w-full  bg-[#E2DFCF] flex flex-col items-center justify-center">
         <div className="container w-full bg-[#E2DFCF]">
           <div className="md:bg-green-400  lg:bg-blue-400 bg-yellow-400 xl:bg-pink-400 grid lg:grid-cols-2 grid-cols-1"></div>
-          <div class="grid grid-flow-col justify-items-center ...">
+          <div class="grid grid-flow-col justify-items-center bg-[#E2DFCF]">
             <div className="bg-[#E2DFCF] w-full px-4 py-12">
               {/* Section Title */}
-              <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-semibold text-[#503217] mb-10">
+              <h2 className="text-center  text-2xl sm:text-3xl md:text-4xl font-semibold text-[#503217] ">
                 Shop by category
               </h2>
- 
+
               {/* Category Cards */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 justify-items-center mb-16">
+              <div className="grid mt-8 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 justify-items-center mb-16">
                 {/* Repeat this card for each category */}
                 <div className="bg-white rounded-xl shadow-sm w-full max-w-[140px] h-[160px] flex flex-col items-center justify-center">
                   <img
@@ -358,7 +357,7 @@ const Shop = () => {
                     alt="Health care"
                     className="w-[50px] h-[70px] mb-2"
                   />
-                  <p className="text-sm font-medium text-[#503217]">
+                  <p className="text-sm font-medium text-[#503217] ">
                     Health care
                   </p>
                 </div>
@@ -394,25 +393,26 @@ const Shop = () => {
               </div>
 
               {/* Promo Section */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-                {/* Woman with pill image */}
-                <div className="w-full">
-                  <img
-                    src="/woman.jpg"
-                    alt="Woman with pills"
-                    className="w-full rounded-lg object-cover"
-                  />
-                </div>
+              <div className="grid grid-cols-2 gap-4 grid md:grid-cols-2 gap-4">
+                <div className="relative w-full flex items-center">
+                  {/* Woman with pill image */}
+                  <div className="w-4/5">
+                    <img
+                      src="/woman.jpg"
+                      alt="Woman with pills"
+                      className="w-full rounded-lg object-cover"
+                    />
+                  </div>
 
-                {/* Medifit bottle image */}
-                <div className="w-full ">
-                  <img
-                    src="/medifit.png"
-                    alt="Medifit bottle"
-                    className="w-full rounded-lg object-contain"
-                  />
+                  {/* Medifit bottle image */}
+                  <div className="absolute right-0 h-4/5">
+                    <img
+                      src="/medifit.png"
+                      alt="Medifit bottle"
+                      className="w-full h-full rounded-lg object-contain"
+                    />
+                  </div>
                 </div>
-
                 {/* Text and button */}
                 <div className="w-full text-center md:text-left">
                   <h3 className="text-[#503217] text-2xl sm:text-3xl font-semibold leading-snug mb-4">
@@ -434,24 +434,21 @@ const Shop = () => {
           </div>
         </div>
       </div>
-      
-       <div class="flex gap-4">
-        <div class="w-500 h-32 bg-[#E2DFCF]"></div>
-      </div>
-      <div className=" w-full  bg-[#E2DFCF] flex flex-col items-center justify-center">
-        <div className="container w-full bg-#E8E6DE">
+
+      <div className=" w-full  bg-[#E8E6DE] flex flex-col items-center justify-center">
+        <div className="container w-full bg-[#E8E6DE]">
           <div className="md:bg-green-400  lg:bg-blue-400 bg-yellow-400 xl:bg-pink-400 grid lg:grid-cols-2 grid-cols-1"></div>
           <div class="grid grid-flow-col justify-items-center ...">
-            <div className="bg-[#E2DFCF] w-full px-4 py-12"></div>
-            <section className="px-4 py-20 md:px-20 bg-[#E2DFCF] text-white text-center">
-              <h2 className="text-4xl font-bold text-[#4A2E15] mb-14">
+            <div className="bg-[#E8E6DE] w-full px-4 py-12"></div>
+            <section className="px-4 py-20 md:px-20 bg-[#E8E6DE] text-white text-center ">
+              <h2 className="text-4xl font-bold text-[#4A2E15] mb-14 ">
                 Customers review
               </h2>
 
-              <div className="grid md:grid-cols-3 gap-8">
+              <div className="grid md:grid-cols-3 gap-8 ">
                 {/* Review Card */}
-                <div className="bg-[#F3F0EB] text-[#5F4632] p-6 rounded-2xl text-left">
-                  <p className="text-xl mb-4">
+                <div className="bg-[#F3F0EB] text-[#5F4632] p-6 rounded-2xl text-left ">
+                  <p className="text-xl ">
                     💬 B12 Medicine keeps me energized and focused all day. A
                     true lifesaver for vitality and wellness!
                   </p>
@@ -497,6 +494,104 @@ const Shop = () => {
                 </div>
               </div>
             </section>
+          </div>
+        </div>
+      </div>
+      
+      <div className=" w-full  bg-[#E8E6DE] flex flex-col items-center justify-center">
+        <div className="container w-full bg-[#E8E6DE]">
+          <div className="md:bg-green-400  lg:bg-blue-400 bg-yellow-400 xl:bg-pink-400 grid lg:grid-cols-2 grid-cols-1"></div>
+          <div class="grid grid-flow-col justify-items-center ..."></div>
+          <div className="bg-[#E8E6DE] text-white px-6 py-16">
+            {/* Header */}
+            <div className="flex flex-col items-center mb-12">
+              {/* Icon */}
+              <div className="mb-4">
+                <img src="/icon.png" alt="Icon" className="h-16" />{" "}
+                {/* Replace with actual path to the icon */}
+              </div>
+              {/* Title */}
+              <h2 className="text-3xl md:text-5xl font-bold text-[#503217]">
+                Healthcare Insights
+              </h2>
+            </div>
+
+            {/* Card Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              {/* Card 1 */}
+              <div className="bg-white rounded-xl overflow-hidden text-black">
+                <img
+                  src="/omega.jpg" // Replace with actual image
+                  alt="Living well"
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-6">
+                  <p className="text-gray-500 flex items-center gap-2 mb-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      className="w-5 h-5"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M8 7V3M16 7V3M4 11h16M5 19h14a2 2 0 002-2V7H3v10a2 2 0 002 2z"
+                      />
+                    </svg>
+                    October 25, 2024
+                  </p>
+                  <h3 className="text-lg font-semibold text-[#503217] mb-4">
+                    Living well with <br /> chronic conditions
+                  </h3>
+                  <a
+                    href="#"
+                    className="text-[#503217] font-medium hover:underline"
+                  >
+                    Read more &gt;
+                  </a>
+                </div>
+              </div>
+
+              {/* Card 2 */}
+              <div className="bg-white rounded-xl overflow-hidden text-black">
+                <img
+                  src="/supplements.jpg" 
+                  alt="Fitness essentials"
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-6">
+                  <p className="text-gray-500 flex items-center gap-2 mb-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      className="w-5 h-5"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M8 7V3M16 7V3M4 11h16M5 19h14a2 2 0 002-2V7H3v10a2 2 0 002 2z"
+                      />
+                    </svg>
+                    October 25, 2024
+                  </p>
+                  <h3 className="text-lg font-semibold text-[#503217] mb-4">
+                    Strength home-Based <br /> fitness essential
+                  </h3>
+                  <a
+                    href="#"
+                    className="text-[#503217] font-medium hover:underline"
+                  >
+                    Read more &gt;
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
