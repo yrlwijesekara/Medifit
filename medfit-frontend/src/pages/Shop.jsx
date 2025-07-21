@@ -125,7 +125,7 @@ const Shop = () => {
       <div className=" w-full  bg-[#E8E6DE] flex flex-col items-center justify-center ">
         <div className="container w-full bg-#E8E6DE mt-10">
           <div className="md:bg-#E8E6DE  lg:bg-#E8E6DE bg-#E8E6DE xl:bg-#E8E6DE grid lg:grid-cols-3 grid-cols-1 gap-10">
-            <div className=" #E8E6DE col-span-2" >
+            <div className=" #E8E6DE col-span-2">
               <h1 className="text-[50px] leading-[1.2] font-medium tracking-normal text-[#503217] font-poppins">
                 Bringing trusted health solutions to your doorstep focused on
                 quality care & reliability
@@ -150,7 +150,6 @@ const Shop = () => {
         </div>
       </div>
 
-     
       {/* Features Section */}
       <div className=" w-full  bg-[#E8E6DE] flex flex-col items-center justify-center">
         <div className="container w-full bg-[#E8E6DE]">
@@ -348,45 +347,70 @@ const Shop = () => {
 
               {/* Category Cards */}
               <div className="grid mt-8 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 justify-items-center mb-16">
-                {/* Repeat this card for each category */}
-                <div className="bg-white rounded-xl shadow-sm w-full max-w-[140px] h-[160px] flex flex-col items-center justify-center">
-                  <img
-                    src="/Yellow-Bottle.png"
-                    alt="Health care"
-                    className="w-[50px] h-[70px] mb-2"
-                  />
-                  <p className="text-sm font-medium text-[#503217] ">
-                    Health care
-                  </p>
+                {/* cards */}
+                 <div className="bg-white rounded-xl shadow-sm w-full max-w-[140px] h-[160px] flex flex-col items-center justify-center">
+                  <div className="flex items-center gap-2 mb-2">
+                    <img
+                      src="/Heart.png"
+                      alt="Heart"
+                      className="w-fixed"
+                      
+                    />
+                    <img
+                      src="/Yellow.png"
+                      alt="Bottle 1"
+                      className="w-[150px] h-[185px]"
+                    />
+                  </div>
+                  
                 </div>
 
                 <div className="bg-white rounded-xl shadow-sm w-full max-w-[140px] h-[160px] flex flex-col items-center justify-center">
-                  <img
-                    src="/green-bottle.png"
-                    alt="Beauty care"
-                    className="w-[50px] h-[70px] mb-2"
-                  />
-                  <p className="text-sm font-medium text-[#503217]">
-                    Beauty care
-                  </p>
+                 <div className="flex items-center gap-2 mb-2">
+                    <img
+                      src="/Beauty Care.png"
+                      alt="Heart"
+                      className="w-fixed"
+                      
+                    />
+                    <img
+                      src="/Yellow.png"
+                      alt="Bottle 1"
+                      className="w-[150px] h-[185px]"
+                    />
+                  </div>
                 </div>
 
                 <div className="bg-white rounded-xl shadow-sm w-full max-w-[140px] h-[160px] flex flex-col items-center justify-center">
-                  <img
-                    src="/orange-bottle.png"
-                    alt="Fitness"
-                    className="w-[50px] h-[70px] mb-2"
-                  />
-                  <p className="text-sm font-medium text-[#503217]">Fitness</p>
+                  <div className="flex items-center gap-2 mb-2">
+                    <img
+                      src="/Fitness.png"
+                      alt="Heart"
+                      className="w-fixed"
+                      
+                    />
+                    <img
+                      src="/Orange.png"
+                      alt="Bottle 1"
+                      className="w-[150px] h-[185px]"
+                    />
+                  </div>
                 </div>
 
                 <div className="bg-white rounded-xl shadow-sm w-full max-w-[140px] h-[160px] flex flex-col items-center justify-center">
-                  <img
-                    src="/blue-bottle.png"
-                    alt="Other"
-                    className="w-[50px] h-[70px] mb-2"
-                  />
-                  <p className="text-sm font-medium text-[#503217]">Medicine</p>
+                  <div className="flex items-center gap-2 mb-2">
+                    <img
+                      src="/Medicine.png"
+                      alt="Heart"
+                      className="w-fixed"
+                      
+                    />
+                    <img
+                      src="/Blue.png"
+                      alt="Bottle 1"
+                      className="w-[150px] h-[185px]"
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -495,7 +519,7 @@ const Shop = () => {
           </div>
         </div>
       </div>
-      
+
       <div className=" w-full  bg-[#E8E6DE] flex flex-col items-center justify-center relative">
         <div className="container w-full bg-[#E8E6DE]">
           <div className="md:bg-green-400  lg:bg-blue-400 bg-yellow-400 xl:bg-pink-400 grid lg:grid-cols-2 grid-cols-1"></div>
@@ -555,7 +579,7 @@ const Shop = () => {
               {/* Card 2 */}
               <div className="bg-white rounded-xl overflow-hidden text-black">
                 <img
-                  src="/supplements.jpg" 
+                  src="/supplements.jpg"
                   alt="Fitness essentials"
                   className="w-full h-64 object-cover"
                 />
