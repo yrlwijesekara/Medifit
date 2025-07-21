@@ -64,8 +64,8 @@ const Shop = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#E2DFCF] py-8">
-        <div className=" mx-auto px-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-16 place-items-center">
+      <div className="bg-[#E2DFCF] py-8 ">
+        <div className=" mx-auto px-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-16 place-items-center ">
           {/* Emblem Logo */}
           <div className="flex items-center justify-center">
             <img
@@ -122,10 +122,10 @@ const Shop = () => {
         </div>
       </div>
       {/* Story session */}
-      <div className=" w-full  bg-[#E8E6DE] flex flex-col items-center justify-center">
-        <div className="container w-full bg-#E8E6DE">
-          <div className="md:bg-#E8E6DE  lg:bg-#E8E6DE bg-#E8E6DE xl:bg-#E8E6DE grid lg:grid-cols-2 grid-cols-1">
-            <div className=" #E8E6DE">
+      <div className=" w-full  bg-[#E8E6DE] flex flex-col items-center justify-center ">
+        <div className="container w-full bg-#E8E6DE mt-10">
+          <div className="md:bg-#E8E6DE  lg:bg-#E8E6DE bg-#E8E6DE xl:bg-#E8E6DE grid lg:grid-cols-3 grid-cols-1 gap-10">
+            <div className=" #E8E6DE col-span-2" >
               <h1 className="text-[50px] leading-[1.2] font-medium tracking-normal text-[#503217] font-poppins">
                 Bringing trusted health solutions to your doorstep focused on
                 quality care & reliability
@@ -137,7 +137,7 @@ const Shop = () => {
               </h1>
             </div>
 
-            <div className=" bg-[#E8E6DE]  w-full grid grid-cols-2 gap-4">
+            <div className=" bg-[#E8E6DE] ">
               <div className="bg-blue-400 w-full  ">
                 <img
                   src="/female-holding-pill.jpg "
@@ -150,13 +150,11 @@ const Shop = () => {
         </div>
       </div>
 
-      <div class="flex gap-4">
-        <div class="w-500 h-32 bg-[#E8E6DE]"></div>
-      </div>
+     
       {/* Features Section */}
       <div className=" w-full  bg-[#E8E6DE] flex flex-col items-center justify-center">
         <div className="container w-full bg-[#E8E6DE]">
-          <div className="md:bg-green-400  lg:bg-blue-400 bg-yellow-400 xl:bg-pink-400 grid lg:grid-cols-2 grid-cols-1"></div>
+          <div className="md:bg-green-400  lg:bg-blue-400 bg-yellow-400 xl:bg-pink-400 grid lg:grid-cols-2 grid-cols-1 mb-10"></div>
           <div class="w-full bg-[#E8E6DE] py-10 px-4">
             <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
               <div class="flex flex-col items-center">
@@ -218,12 +216,12 @@ const Shop = () => {
                 <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {/* Left Content */}
                   <div className="lg:col-span-1 flex flex-col gap-6">
-                    <h2 className="text-3xl sm:text-4xl font-semibold text-#503217 leading-snug">
+                    <h2 className="text-3xl sm:text-4xl font-semibold text-[#503217] leading-snug ">
                       Discover our
                       <br />
                       collection
                     </h2>
-                    <p className="text-#8F7D6A text-base leading-relaxed">
+                    <p className="text-[#8F7D6A] text-base leading-relaxed">
                       Our medical store offers trusted products, easy
                       navigation, and fast shipping
                     </p>
@@ -498,17 +496,16 @@ const Shop = () => {
         </div>
       </div>
       
-      <div className=" w-full  bg-[#E8E6DE] flex flex-col items-center justify-center">
+      <div className=" w-full  bg-[#E8E6DE] flex flex-col items-center justify-center relative">
         <div className="container w-full bg-[#E8E6DE]">
           <div className="md:bg-green-400  lg:bg-blue-400 bg-yellow-400 xl:bg-pink-400 grid lg:grid-cols-2 grid-cols-1"></div>
           <div class="grid grid-flow-col justify-items-center ..."></div>
           <div className="bg-[#E8E6DE] text-white px-6 py-16">
             {/* Header */}
-            <div className="flex flex-col items-center mb-12">
+            <div className="flex flex-col items-center mb-12 ">
               {/* Icon */}
-              <div className="mb-4">
-                <img src="/icon.png" alt="Icon" className="h-16" />{" "}
-                {/* Replace with actual path to the icon */}
+              <div className="mb-4 absolute left-0 top-[-20px]">
+                <img src="/Health tablets.png" alt="Icon" className="h-30" />{" "}
               </div>
               {/* Title */}
               <h2 className="text-3xl md:text-5xl font-bold text-[#503217]">
