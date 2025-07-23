@@ -334,120 +334,139 @@ const Shop = () => {
         </div>
       </div>
 
+  
       {/* Shop session */}
-      <div className=" w-full  bg-[#E2DFCF] flex flex-col items-center justify-center">
-        <div className="container w-full bg-[#E2DFCF]">
-          <div className="md:bg-green-400  lg:bg-blue-400 bg-yellow-400 xl:bg-pink-400 grid lg:grid-cols-2 grid-cols-1"></div>
-          <div class="grid grid-flow-col justify-items-center bg-[#E2DFCF]">
-            <div className="bg-[#E2DFCF] w-full px-4 py-12">
-              {/* Section Title */}
-              <h2 className="text-center  text-2xl sm:text-3xl md:text-4xl font-semibold text-[#503217] ">
-                Shop by category
-              </h2>
-
-              {/* Category Cards */}
-              <div className="grid mt-8 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 justify-items-center mb-16">
-                {/* cards */}
-                 <div className="bg-white rounded-xl shadow-sm w-full max-w-[140px] h-[160px] flex flex-col items-center justify-center">
-                  <div className="flex items-center gap-2 mb-2">
-                    <img
-                      src="/Heart.png"
-                      alt="Heart"
-                      className="w-fixed"
-                      
-                    />
-                    <img
-                      src="/Yellow.png"
-                      alt="Bottle 1"
-                      className="w-[150px] h-[185px]"
-                    />
-                  </div>
-                  
+      <div className="w-full bg-[#E2DFCF] flex flex-col items-center justify-center">
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="w-full py-12">
+            {/* Section Title */}
+            <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-[#503217] mb-8">
+              Shop by category
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 sm:gap-6 justify-items-center mb-12 lg:mb-16">
+              
+              {/* Health Care Card */}
+              <div className="bg-white rounded-xl shadow-sm w-full max-w-[140px] sm:max-w-[160px] h-[140px] sm:h-[160px] flex flex-col items-center justify-center relative">
+                {/* Heart Icon */}
+                <div className="absolute top-2 right-2 sm:top-3 sm:right-3">
+                  <i className="bi bi-heart text-[#503217] text-sm sm:text-lg hover:text-red-500 cursor-pointer transition-colors"></i>
                 </div>
-
-                <div className="bg-white rounded-xl shadow-sm w-full max-w-[140px] h-[160px] flex flex-col items-center justify-center">
-                 <div className="flex items-center gap-2 mb-2">
-                    <img
-                      src="/Beauty Care.png"
-                      alt="Heart"
-                      className="w-fixed"
-                      
-                    />
-                    <img
-                      src="/Yellow.png"
-                      alt="Bottle 1"
-                      className="w-[150px] h-[185px]"
-                    />
-                  </div>
+                <div className="flex items-center gap-1 sm:gap-2 mb-2">
+                  <img
+                    src="/Heart.png"
+                    alt="Heart"
+                    className="w-[55px] h-[70px] sm:w-[40px] sm:h-[40px]"
+                  />
+                  <img
+                    src="/Yellow.png"
+                    alt="Health Care Bottle"
+                    className="w-[55px] h-[70px] sm:w-[65px] sm:h-[80px]"
+                  />
                 </div>
+                
+              </div>
 
-                <div className="bg-white rounded-xl shadow-sm w-full max-w-[140px] h-[160px] flex flex-col items-center justify-center">
-                  <div className="flex items-center gap-2 mb-2">
-                    <img
-                      src="/Fitness.png"
-                      alt="Heart"
-                      className="w-fixed"
-                      
-                    />
-                    <img
-                      src="/Orange.png"
-                      alt="Bottle 1"
-                      className="w-[150px] h-[185px]"
-                    />
-                  </div>
+              {/* Beauty Care Card */}
+              <div className="bg-white rounded-xl shadow-sm w-full max-w-[140px] sm:max-w-[160px] h-[140px] sm:h-[160px] flex flex-col items-center justify-center relative">
+                {/* Heart Icon */}
+                <div className="absolute top-2 right-2 sm:top-3 sm:right-3">
+                  <i className="bi bi-heart text-[#503217] text-sm sm:text-lg hover:text-red-500 cursor-pointer transition-colors"></i>
                 </div>
+                <div className="flex items-center gap-1 sm:gap-2 mb-2">
+                  <img
+                    src="/Beauty Care.png"
+                    alt="Beauty Care"
+                    className="w-[55px] h-[70px] sm:w-[40px] sm:h-[40px]"
+                  />
+                  <img
+                    src="/Yellow.png"
+                    alt="Beauty Care Bottle"
+                    className="w-[55px] h-[70px] sm:w-[65px] sm:h-[80px]"
+                  />
+                </div>
+               
+              </div>
 
-                <div className="bg-white rounded-xl shadow-sm w-full max-w-[140px] h-[160px] flex flex-col items-center justify-center">
-                  <div className="flex items-center gap-2 mb-2">
-                    <img
-                      src="/Medicine.png"
-                      alt="Heart"
-                      className="w-fixed"
-                      
-                    />
-                    <img
-                      src="/Blue.png"
-                      alt="Bottle 1"
-                      className="w-[150px] h-[185px]"
-                    />
-                  </div>
+              {/* Fitness Card */}
+              <div className="bg-white rounded-xl shadow-sm w-full max-w-[140px] sm:max-w-[160px] h-[140px] sm:h-[160px] flex flex-col items-center justify-center relative">
+                {/* Heart Icon */}
+                <div className="absolute top-2 right-2 sm:top-3 sm:right-3">
+                  <i className="bi bi-heart text-[#503217] text-sm sm:text-lg hover:text-red-500 cursor-pointer transition-colors"></i>
+                </div>
+                <div className="flex items-center gap-1 sm:gap-2 mb-2">
+                  <img
+                    src="/Fitness.png"
+                    alt="Fitness"
+                    className="w-[55px] h-[70px] sm:w-[40px] sm:h-[40px]"
+                  />
+                  <img
+                    src="/Orange.png"
+                    alt="Fitness Bottle"
+                    className="w-[55px] h-[70px] sm:w-[65px] sm:h-[80px]"
+                  />
+                </div>
+                
+              </div>
+
+              {/* Medicine Card */}
+              <div className="bg-white rounded-xl shadow-sm w-full max-w-[140px] sm:max-w-[160px] h-[140px] sm:h-[160px] flex flex-col items-center justify-center relative">
+                {/* Heart Icon */}
+                <div className="absolute top-2 right-2 sm:top-3 sm:right-3">
+                  <i className="bi bi-heart text-[#503217] text-sm sm:text-lg hover:text-red-500 cursor-pointer transition-colors"></i>
+                </div>
+                <div className="flex items-center gap-1 sm:gap-2 mb-2">
+                  <img
+                    src="/Medicine.png"
+                    alt="Medicine"
+                    className="w-[55px] h-[70px] sm:w-[40px] sm:h-[40px]"
+                  />
+                  <img
+                    src="/Blue.png"
+                    alt="Medicine Bottle"
+                    className="w-[55px] h-[70px] sm:w-[65px] sm:h-[80px]"
+                  />
+                </div>
+                
+              </div>
+            </div>
+
+            {/* Promo Section - Responsive Layout */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+              
+              {/* Image Section */}
+              <div className="relative w-full flex items-center justify-center order-2 lg:order-1">
+                {/* Woman with pill image */}
+                <div className="w-4/5 max-w-[400px]">
+                  <img
+                    src="/woman.jpg"
+                    alt="Woman with pills"
+                    className="w-full h-[250px] sm:h-[300px] lg:h-[350px] rounded-lg object-cover"
+                  />
+                </div>
+                {/* Medifit bottle image */}
+                <div className="absolute right-0 h-3/4 max-w-[120px] sm:max-w-[150px]">
+                  <img
+                    src="/medifit.png"
+                    alt="Medifit bottle"
+                    className="w-full h-full rounded-lg object-contain"
+                  />
                 </div>
               </div>
 
-              {/* Promo Section */}
-              <div className="grid grid-cols-2 gap-4 grid md:grid-cols-2 gap-4">
-                <div className="relative w-full flex items-center">
-                  {/* Woman with pill image */}
-                  <div className="w-4/5">
-                    <img
-                      src="/woman.jpg"
-                      alt="Woman with pills"
-                      className="w-full rounded-lg object-cover"
-                    />
-                  </div>
-
-                  {/* Medifit bottle image */}
-                  <div className="absolute right-0 h-4/5">
-                    <img
-                      src="/medifit.png"
-                      alt="Medifit bottle"
-                      className="w-full h-full rounded-lg object-contain"
-                    />
-                  </div>
-                </div>
-                {/* Text and button */}
-                <div className="w-full text-center md:text-left">
-                  <h3 className="text-[#503217] text-2xl sm:text-3xl font-semibold leading-snug mb-4">
-                    Save up to 10% on select tablets
-                    <br />
-                    limited time only!
-                  </h3>
-                  <p className="text-[#503217] text-sm sm:text-base mb-6">
-                    Don’t miss out on our limited-time sale! 10% discount
-                    <br className="hidden sm:block" /> on a wide range of
-                    essential health products.
-                  </p>
-                  <button className="bg-[#503217] text-white px-6 py-3 rounded-full font-medium hover:bg-[#3e2814]transition bg-[#3e2814] transition cursor-pointer">
+              {/* Text and button */}
+              <div className="w-full text-center lg:text-left flex flex-col justify-center order-1 lg:order-2 px-4 lg:px-0">
+                <h3 className="text-[#503217] text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-semibold leading-snug mb-4 lg:mb-6">
+                  Save up to 10% on select tablets
+                  <br className="hidden sm:block" />
+                  limited time only!
+                </h3>
+                <p className="text-[#503217] text-sm sm:text-base lg:text-lg mb-6 lg:mb-8 leading-relaxed">
+                  Don't miss out on our limited-time sale! 10% discount
+                  <br className="hidden sm:block" /> 
+                  on a wide range of essential health products.
+                </p>
+                <div className="flex justify-center lg:justify-start">
+                  <button className="bg-[#503217] text-white px-6 py-3 lg:px-8 lg:py-4 rounded-full font-medium hover:bg-[#3e2814] transition-colors duration-300 text-sm sm:text-base">
                     View sale products
                   </button>
                 </div>
