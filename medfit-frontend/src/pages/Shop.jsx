@@ -543,7 +543,6 @@ const Shop = () => {
         <div className="container w-full bg-[#E8E6DE]">
           <div className="md:bg-green-400  lg:bg-blue-400 bg-yellow-400 xl:bg-pink-400 grid lg:grid-cols-2 grid-cols-1"></div>
           <div class="grid grid-flow-col justify-items-center ..."></div>
-          <div className="bg-[#E8E6DE] text-white px-6 py-16">
             {/* Header */}
             <div className="flex flex-col items-center mb-12 ">
               {/* Icon */}
@@ -634,7 +633,7 @@ const Shop = () => {
             </div>
           </div>
         </div>
-      </div>
+      
     </>
   );
 };
