@@ -1,19 +1,10 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
-import mainProductImage from '././../assets/home/main-1.png';
-import categoryMedicine from '../assets/home/catergory-1.png';
-import categoryHealthcare from '../assets/home/catergory-2.png';
-import categoryBeautycare from '../assets/home/catergory-3.png';
-import categoryFitness from '../assets/home/catergory-4.png';
-import categoryLabequipment from '../assets/home/catergory-5.png';
-import categoryMedkits from '../assets/home/catergory-6.png';
-import ctaImage1 from '../assets/home/cta-1.png';
-import ctaImage2 from '../assets/home/cta-2.png';
-import ctaImage3 from '../assets/home/cta-3.png';
-import productMicroscope from '../assets/home/microscope.png';
-import productOximeter from '../assets/home/oximeter.png';
-import productSerum from '../assets/home/serum.png';
-import productProtein from '../assets/home/protein.png';
+import Center from '../components/Center';
+import Footer from '../components/Footer';
+import ProductCard from '../components/ProductCard';
+
+
 
 const HomePage = () => {
   // State for mobile badge visibility
@@ -41,39 +32,36 @@ const HomePage = () => {
     <>
       {/* Navigation Bar */}
       <Navbar />
-      
+
       {/* Rectangle 64 - Main Container */}
       <div className="absolute w-full h-[500px] md:h-[990px] left-0 top-[91px] bg-[#E8E6DE] overflow-hidden">
-        
+
         {/* Hero Section - 1703x908.89px */}
         <div className="absolute w-[1703px] h-[909px] -left-[85px] top-[65px] hidden xl:block">
-          
-          {/* Medical Shape 1 - Left Bottom Decorative Element */}
-          <div className="absolute w-[388px] h-[374px] left-0 top-[570px] opacity-15 transform rotate-[8.9deg]">
-            {/* Clip path group with 3.51deg rotation */}
-            <div className="absolute left-[-0.21%] right-[83.32%] top-[10.42%] bottom-[84.96%] opacity-15 transform rotate-[3.51deg]">
-              {/* Vector - Black background */}
-              <div className="absolute w-[247px] h-[241px] left-[9.56px] top-[70px] bg-black matrix-transform"></div>
-              
-              {/* Vector - Brown background */}
-              <div className="absolute w-[267px] h-[207px] left-[18px] top-[120px] bg-[#8F7D6A] transform rotate-[3.51deg]"></div>
-              
-              {/* Small Vector */}
-              <div className="absolute w-[25px] h-[24px] left-[250px] top-[196px] bg-[#8F7D6A] transform rotate-[3.51deg]"></div>
-            </div>
+
+
+
+          {/* Main-2 Image - Left Bottom Decorative Element */}
+          <div className="absolute w-[400px] h-[400px] left-0 top-[500px] opacity-40 z-10">
+            <img
+              src={"/home/main-2.png"}
+              alt="Medical decoration"
+              className="w-full h-full object-cover transform rotate-[8.9deg]"
+            />
           </div>
 
+
           {/* Title & Button Section - Moved to Left Side */}
-          <div className="absolute w-[599px] h-[453px] left-[150px] top-[197px] flex flex-col items-start gap-[60px]">
-            
+          <div className="absolute w-[599px] h-[453px] left-[150px] top-[197px] flex flex-col items-start gap-[60px] z-20">
+
             {/* Frame 76 - Title and Description Container */}
             <div className="flex flex-col items-start gap-5 w-[541px] h-[345px]">
-              
+
               {/* Main Heading - "Your trusted care now and always" */}
               <h1 className="w-[541px] h-[273px] font-poppins font-medium text-[80px] leading-[110%] text-[#503217] flex-none order-0">
                 Your trusted care now and always
               </h1>
-              
+
               {/* Description Text */}
               <p className="w-[415px] h-[52px] font-sans-serif-collection font-normal text-[18px] leading-[150%] text-[#8F7D6A] flex-none order-1">
                 For the best results, align your health needs with your medication plan.
@@ -84,22 +72,22 @@ const HomePage = () => {
             <button className="flex flex-row justify-center items-center p-5 gap-[10px] w-[158px] h-[48px] bg-[#503217] rounded-[10px] flex-none order-1 hover:bg-[#6B4228] transition-colors duration-200">
               {/* Bag Icon - 24x24px */}
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-none order-0">
-                <rect 
-                  x="2" 
-                  y="3" 
-                  width="20" 
-                  height="18" 
-                  rx="2" 
-                  stroke="#EEEDE7" 
+                <rect
+                  x="2"
+                  y="3"
+                  width="20"
+                  height="18"
+                  rx="2"
+                  stroke="#EEEDE7"
                   strokeWidth="1.5"
                 />
-                <path 
-                  d="M8 7v-2a4 4 0 0 1 8 0v2" 
-                  stroke="#EEEDE7" 
+                <path
+                  d="M8 7v-2a4 4 0 0 1 8 0v2"
+                  stroke="#EEEDE7"
                   strokeWidth="1.5"
                 />
               </svg>
-              
+
               {/* "Shop now" Text */}
               <span className="w-[84px] h-[27px] font-sans-serif-collection font-normal text-[18px] leading-[150%] text-[#F2F2F2] flex-none order-1">
                 Shop now
@@ -109,24 +97,24 @@ const HomePage = () => {
 
           {/* Group 220 - Product Images Container - Top Right Position */}
           <div className="absolute w-[668px] h-[716px] left-[950px] top-[20px] z-20">
-            
+
             {/* Ellipse 12 - Background Circle */}
             <div className="absolute w-[596px] h-[596px] left-[43px] top-[49px] bg-[#EEEDE7] rounded-full"></div>
-            
+
             {/* Main Product Image - amber-bottle-full-pills - Prominent Front Display */}
             <div className="absolute w-[700px] h-[600px] left-[-20px] top-[120px] z-30">
-              <div 
-                className="w-full h-full bg-center bg-contain bg-no-repeat" 
-                style={{backgroundImage: `url(${mainProductImage})`}}
+              <div
+                className="w-full h-full bg-center bg-contain bg-no-repeat"
+                style={{ backgroundImage: `url(${"/home/main-1.png"})` }}
               >
               </div>
             </div>
-            
-       
+
+
           </div>
 
           {/* Medical Shape 3 - 82x95px - Removed for cleaner layout */}
-          
+
           {/* Medical Shape 5 - 162x153px - Removed for cleaner layout */}
 
           {/* Stethoscope Image - Removed for cleaner layout */}
@@ -145,17 +133,17 @@ const HomePage = () => {
               </p>
               <button className="flex items-center justify-center gap-3 px-5 py-3 bg-[#503217] rounded-[10px] hover:bg-[#6B4228] transition-colors duration-200">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="2" y="3" width="20" height="18" rx="2" stroke="#EEEDE7" strokeWidth="1.5"/>
-                  <path d="M8 7v-2a4 4 0 0 1 8 0v2" stroke="#EEEDE7" strokeWidth="1.5"/>
+                  <rect x="2" y="3" width="20" height="18" rx="2" stroke="#EEEDE7" strokeWidth="1.5" />
+                  <path d="M8 7v-2a4 4 0 0 1 8 0v2" stroke="#EEEDE7" strokeWidth="1.5" />
                 </svg>
                 <span className="font-sans-serif-collection font-normal text-[16px] text-[#F2F2F2]">Shop now</span>
               </button>
             </div>
-            
+
             {/* Right Content - Adjusted for better balance */}
             <div className="relative flex-1 max-w-[550px] h-[500px]">
               <div className="absolute inset-0 bg-[#EEEDE7] rounded-full"></div>
-              <div className="absolute inset-8 bg-center bg-cover bg-no-repeat rounded-full" style={{backgroundImage: `url(${mainProductImage})`}}>
+              <div className="absolute inset-8 bg-center bg-cover bg-no-repeat rounded-full" style={{ backgroundImage: `url(${"/home/main-1.png"})` }}>
               </div>
               <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2">
                 <h2 className="font-poppins font-medium text-[32px] leading-[120%] text-[#503217]">Medifit</h2>
@@ -173,20 +161,20 @@ const HomePage = () => {
             <p className="font-sans-serif-collection font-normal text-[16px] leading-[150%] text-[#8F7D6A] mb-8 max-w-[400px] mx-auto">
               For the best results, align your health needs with your medication plan.
             </p>
-            
+
             <div className="relative w-[400px] h-[400px] mx-auto mb-8">
               <div className="absolute inset-0 bg-[#EEEDE7] rounded-full"></div>
-              <div className="absolute inset-6 bg-center bg-cover bg-no-repeat rounded-full" style={{backgroundImage: `url(${mainProductImage})`}}>
+              <div className="absolute inset-6 bg-center bg-cover bg-no-repeat rounded-full" style={{ backgroundImage: `url(${"/home/main-1.png"})` }}>
               </div>
               <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
                 <h2 className="font-poppins font-medium text-[28px] leading-[120%] text-[#503217]">Medifit</h2>
               </div>
             </div>
-            
+
             <button className="flex items-center justify-center gap-3 px-5 py-3 bg-[#503217] rounded-[10px] hover:bg-[#6B4228] transition-colors duration-200 mx-auto">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="2" y="3" width="20" height="18" rx="2" stroke="#EEEDE7" strokeWidth="1.5"/>
-                <path d="M8 7v-2a4 4 0 0 1 8 0v2" stroke="#EEEDE7" strokeWidth="1.5"/>
+                <rect x="2" y="3" width="20" height="18" rx="2" stroke="#EEEDE7" strokeWidth="1.5" />
+                <path d="M8 7v-2a4 4 0 0 1 8 0v2" stroke="#EEEDE7" strokeWidth="1.5" />
               </svg>
               <span className="font-sans-serif-collection font-normal text-[16px] text-[#F2F2F2]">Shop now</span>
             </button>
@@ -197,10 +185,10 @@ const HomePage = () => {
         <div className="block md:hidden relative min-h-[450px] flex items-center justify-center">
           <div className="w-full px-6 py-12 flex items-center justify-center min-h-full">
             <div className="w-full max-w-sm mx-auto">
-              
+
               {/* Hero Content Container */}
               <div className="text-center space-y-8 flex flex-col items-center justify-center">
-                
+
                 {/* Title & Description Block */}
                 <div className="space-y-4 text-center w-full flex flex-col items-center">
                   <h1 className="font-poppins font-semibold text-3xl leading-tight text-[#503217] tracking-tight text-center max-w-xs">
@@ -210,7 +198,7 @@ const HomePage = () => {
                     For the best results, align your health needs with your medication plan.
                   </p>
                 </div>
-                
+
                 {/* Product Showcase */}
                 <div className="flex justify-center items-center py-4 w-full">
                   <div className="relative group flex justify-center">
@@ -218,33 +206,33 @@ const HomePage = () => {
                     <div className="relative w-56 h-44 flex items-center justify-center">
                       {/* Product Image - No background borders */}
                       <div className="w-full h-full flex items-center justify-center">
-                        <div 
-                          className="w-full h-full bg-center bg-contain bg-no-repeat transform group-hover:scale-105 transition-transform duration-700 ease-out" 
-                          style={{backgroundImage: `url(${mainProductImage})`}}
+                        <div
+                          className="w-full h-full bg-center bg-contain bg-no-repeat transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                          style={{ backgroundImage: `url(${"/home/main-1.png"})` }}
                         ></div>
                       </div>
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Call-to-Action Button */}
                 <div className="flex justify-center items-center w-full pt-2">
                   <button className="group relative bg-gradient-to-r from-[#503217] via-[#5D3A1F] to-[#6B4228] hover:from-[#6B4228] hover:via-[#7D4F35] hover:to-[#8F5C42] text-white font-medium py-4 px-10 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 ease-out border border-[#8F7D6A]/20 hover:border-[#EEEDE7]/30 w-44 mx-auto">
-                    
+
                     {/* Button Background Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
-                    
+
                     {/* Button Content */}
                     <div className="relative flex items-center justify-center gap-3">
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="transform group-hover:scale-110 transition-transform duration-300">
-                        <rect x="2" y="3" width="20" height="18" rx="2" stroke="currentColor" strokeWidth="1.5"/>
-                        <path d="M8 7v-2a4 4 0 0 1 8 0v2" stroke="currentColor" strokeWidth="1.5"/>
+                        <rect x="2" y="3" width="20" height="18" rx="2" stroke="currentColor" strokeWidth="1.5" />
+                        <path d="M8 7v-2a4 4 0 0 1 8 0v2" stroke="currentColor" strokeWidth="1.5" />
                       </svg>
                       <span className="text-[15px] font-medium tracking-wide">Shop Now</span>
                     </div>
                   </button>
                 </div>
-                
+
               </div>
             </div>
           </div>
@@ -253,9 +241,18 @@ const HomePage = () => {
 
       {/* Shop by Category Section */}
       <div className="absolute w-full h-[900px] md:h-[389px] left-0 top-[680px] md:top-[1200px] overflow-hidden">
-        
+
+        {/* Background Category Main Image - Right Side */}
+        <div className="absolute w-[400px] h-[400px] right-[-50px] top-[-50px] opacity-40 z-0 hidden md:block">
+          <img
+            src={"/home/catergory-main.png"}
+            alt="Category background"
+            className="w-full h-full object-contain"
+          />
+        </div>
+
         {/* Section Title */}
-        <div className="absolute w-[439px] h-[72px] left-1/2 transform -translate-x-1/2 top-0">
+        <div className="absolute w-[439px] h-[72px] left-1/2 transform -translate-x-1/2 top-0 z-10">
           <h2 className="font-poppins font-medium text-[48px] leading-[120%] text-center text-[#503217] hidden md:block">
             Shop by Category
           </h2>
@@ -265,8 +262,8 @@ const HomePage = () => {
         </div>
 
         {/* Desktop Categories Container - Hidden on Mobile */}
-        <div className="absolute w-[1299px] h-[242px] left-1/2 transform -translate-x-1/2 top-[132px] justify-between hidden md:flex">
-          
+        <div className="absolute w-[1299px] h-[242px] left-1/2 transform -translate-x-1/2 top-[132px] justify-between hidden md:flex z-10">
+
           {/* Category 1 - Medicine */}
           <div className="flex flex-col justify-center items-center p-[10px] gap-[10px] w-[191px] h-[242px] border border-[rgba(143,125,106,0.1)] rounded-[10px] hover:shadow-lg transition-shadow duration-300">
             <div className="flex flex-col justify-center items-center gap-5 w-[115px] h-[195px]">
@@ -274,7 +271,7 @@ const HomePage = () => {
               <div className="flex justify-center items-center p-[10px] w-[115px] h-[115px] border border-dashed border-[#503217] rounded-full">
                 <div className="flex justify-center items-center w-[102px] h-[102px] bg-[#E2DFCF] rounded-full">
                   {/* Medicine/Capsule Icon */}
-                  <img src={categoryMedicine} alt="Medicine" className="w-[50px] h-[50px] object-contain" />
+                  <img src={"/home/catergory-1.png"} alt="Medicine" className="w-[50px] h-[50px] object-contain" />
                 </div>
               </div>
               {/* Text Container */}
@@ -296,7 +293,7 @@ const HomePage = () => {
               <div className="flex justify-center items-center p-[10px] w-[115px] h-[115px] border border-dashed border-[#503217] rounded-full">
                 <div className="flex justify-center items-center w-[102px] h-[102px] bg-[#E2DFCF] rounded-full">
                   {/* Heart Icon */}
-                  <img src={categoryHealthcare} alt="Health care" className="w-[50px] h-[50px] object-contain" />
+                  <img src={"/home/catergory-2.png"} alt="Health care" className="w-[50px] h-[50px] object-contain" />
                 </div>
               </div>
               {/* Text Container */}
@@ -318,7 +315,7 @@ const HomePage = () => {
               <div className="flex justify-center items-center p-[10px] w-[115px] h-[115px] border border-dashed border-[#503217] rounded-full">
                 <div className="flex justify-center items-center w-[102px] h-[102px] bg-[#E2DFCF] rounded-full">
                   {/* Leaf Icon */}
-                  <img src={categoryBeautycare} alt="Beauty care" className="w-[50px] h-[50px] object-contain" />
+                  <img src={"/home/catergory-3.png"} alt="Beauty care" className="w-[50px] h-[50px] object-contain" />
                 </div>
               </div>
               {/* Text Container */}
@@ -340,7 +337,7 @@ const HomePage = () => {
               <div className="flex justify-center items-center p-[10px] w-[115px] h-[115px] border border-dashed border-[#503217] rounded-full">
                 <div className="flex justify-center items-center w-[102px] h-[102px] bg-[#E2DFCF] rounded-full">
                   {/* Heartbeat/Fitness Icon */}
-                  <img src={categoryFitness} alt="Fitness" className="w-[50px] h-[50px] object-contain" />
+                  <img src={"/home/catergory-4.png"} alt="Fitness" className="w-[50px] h-[50px] object-contain" />
                 </div>
               </div>
               {/* Text Container */}
@@ -362,7 +359,7 @@ const HomePage = () => {
               <div className="flex justify-center items-center p-[10px] w-[115px] h-[115px] border border-dashed border-[#503217] rounded-full">
                 <div className="flex justify-center items-center w-[102px] h-[102px] bg-[#E2DFCF] rounded-full">
                   {/* Vials/Lab Equipment Icon */}
-                  <img src={categoryLabequipment} alt="Lab equipment" className="w-[50px] h-[50px] object-contain" />
+                  <img src={"/home/catergory-5.png"} alt="Lab equipment" className="w-[50px] h-[50px] object-contain" />
                 </div>
               </div>
               {/* Text Container */}
@@ -384,7 +381,7 @@ const HomePage = () => {
               <div className="flex justify-center items-center p-[10px] w-[115px] h-[115px] border border-dashed border-[#503217] rounded-full">
                 <div className="flex justify-center items-center w-[102px] h-[102px] bg-[#E2DFCF] rounded-full">
                   {/* Medical Briefcase Icon */}
-                  <img src={categoryMedkits} alt="Medkits" className="w-[50px] h-[50px] object-contain" />
+                  <img src={"/home/catergory-6.png"} alt="Medkits" className="w-[50px] h-[50px] object-contain" />
                 </div>
               </div>
               {/* Text Container */}
@@ -401,15 +398,15 @@ const HomePage = () => {
         </div>
 
         {/* Mobile Categories Container - Visible only on Mobile */}
-        <div className="md:hidden flex flex-col items-center gap-4 px-4 top-[80px] absolute w-full">
-          
+        <div className="md:hidden flex flex-col items-center gap-4 px-4 top-[80px] absolute w-full z-10">
+
           {/* Category 1 - Medicine */}
           <div className="flex flex-col justify-center items-center p-[10px] gap-[10px] w-[280px] h-[120px] border border-[rgba(143,125,106,0.1)] rounded-[10px] hover:shadow-lg transition-shadow duration-300">
             <div className="flex flex-row justify-center items-center gap-4 w-full h-full">
               {/* Icon Container */}
               <div className="flex justify-center items-center p-[8px] w-[70px] h-[70px] border border-dashed border-[#503217] rounded-full">
                 <div className="flex justify-center items-center w-[60px] h-[60px] bg-[#E2DFCF] rounded-full">
-                  <img src={categoryMedicine} alt="Medicine" className="w-[30px] h-[30px] object-contain" />
+                  <img src={"/home/catergory-1.png"} alt="Medicine" className="w-[30px] h-[30px] object-contain" />
                 </div>
               </div>
               {/* Text Container */}
@@ -430,7 +427,7 @@ const HomePage = () => {
               {/* Icon Container */}
               <div className="flex justify-center items-center p-[8px] w-[70px] h-[70px] border border-dashed border-[#503217] rounded-full">
                 <div className="flex justify-center items-center w-[60px] h-[60px] bg-[#E2DFCF] rounded-full">
-                  <img src={categoryHealthcare} alt="Health care" className="w-[30px] h-[30px] object-contain" />
+                  <img src={"/home/catergory-2.png"} alt="Health care" className="w-[30px] h-[30px] object-contain" />
                 </div>
               </div>
               {/* Text Container */}
@@ -451,7 +448,7 @@ const HomePage = () => {
               {/* Icon Container */}
               <div className="flex justify-center items-center p-[8px] w-[70px] h-[70px] border border-dashed border-[#503217] rounded-full">
                 <div className="flex justify-center items-center w-[60px] h-[60px] bg-[#E2DFCF] rounded-full">
-                  <img src={categoryBeautycare} alt="Beauty care" className="w-[30px] h-[30px] object-contain" />
+                  <img src={"/home/catergory-3.png"} alt="Beauty care" className="w-[30px] h-[30px] object-contain" />
                 </div>
               </div>
               {/* Text Container */}
@@ -472,7 +469,7 @@ const HomePage = () => {
               {/* Icon Container */}
               <div className="flex justify-center items-center p-[8px] w-[70px] h-[70px] border border-dashed border-[#503217] rounded-full">
                 <div className="flex justify-center items-center w-[60px] h-[60px] bg-[#E2DFCF] rounded-full">
-                  <img src={categoryFitness} alt="Fitness" className="w-[30px] h-[30px] object-contain" />
+                  <img src={"/home/catergory-4.png"} alt="Fitness" className="w-[30px] h-[30px] object-contain" />
                 </div>
               </div>
               {/* Text Container */}
@@ -493,7 +490,7 @@ const HomePage = () => {
               {/* Icon Container */}
               <div className="flex justify-center items-center p-[8px] w-[70px] h-[70px] border border-dashed border-[#503217] rounded-full">
                 <div className="flex justify-center items-center w-[60px] h-[60px] bg-[#E2DFCF] rounded-full">
-                  <img src={categoryLabequipment} alt="Lab equipment" className="w-[30px] h-[30px] object-contain" />
+                  <img src={"/home/catergory-5.png"} alt="Lab equipment" className="w-[30px] h-[30px] object-contain" />
                 </div>
               </div>
               {/* Text Container */}
@@ -514,7 +511,7 @@ const HomePage = () => {
               {/* Icon Container */}
               <div className="flex justify-center items-center p-[8px] w-[70px] h-[70px] border border-dashed border-[#503217] rounded-full">
                 <div className="flex justify-center items-center w-[60px] h-[60px] bg-[#E2DFCF] rounded-full">
-                  <img src={categoryMedkits} alt="Medkits" className="w-[30px] h-[30px] object-contain" />
+                  <img src={"/home/catergory-6.png"} alt="Medkits" className="w-[30px] h-[30px] object-contain" />
                 </div>
               </div>
               {/* Text Container */}
@@ -543,50 +540,50 @@ const HomePage = () => {
 
       {/* CTA Section */}
       <div className="absolute w-full left-0 top-[1630px] md:top-[1689px] h-[650px] md:h-[300px] overflow-hidden">
-        
+
         {/* CTA Cards Container */}
         <div className="absolute w-full left-0 top-0 px-4 md:px-0">
-          
+
           {/* Desktop Layout - 3 CTAs in a row */}
           <div className="hidden md:flex justify-center items-start gap-[30px] w-full">
-            
+
             {/* CTA 1 - Hand sanitizer collection */}
             <div className="relative w-[416px] h-[266px] group">
               {/* Background Rectangle */}
               <div className="absolute w-[413px] h-[259px] left-0 top-0 bg-[#F2F2F2] rounded-[10px]"></div>
-              
+
               {/* Decorative Ellipses */}
               <div className="absolute w-[155px] h-[164px] left-0 top-[95px] bg-[#E2DFCF] opacity-20 rounded-full transform -rotate-[86deg]"></div>
               <div className="absolute w-[245px] h-[126px] left-[147px] top-0 bg-[#E2DFCF] opacity-20 rounded-full transform rotate-1"></div>
-              
+
               {/* Product Image Placeholder */}
               <div className="absolute w-[163px] h-[202px] left-[234px] top-[30px] rounded flex items-center justify-center overflow-hidden">
-                <img 
-                  src={ctaImage1} 
-                  alt="Hand sanitizer collection" 
+                <img
+                  src={"/home/cta-1.png"}
+                  alt="Hand sanitizer collection"
                   className="w-full h-full object-cover"
                 />
               </div>
-              
+
               {/* Content */}
               <div className="absolute left-[26px] top-[24px] flex flex-col justify-between w-[175px] h-[180px]">
                 {/* Badge - Hidden by default, shown on hover */}
                 <div className="flex justify-center items-center px-[10px] py-[10px] w-[80px] h-[30px] bg-[#D3744A] rounded-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-[#EEEDE7]">Sanitizer</span>
                 </div>
-                
+
                 {/* Text Content */}
                 <div className="flex flex-col gap-[15px]">
                   <h3 className="font-poppins font-medium text-[24px] leading-[150%] text-[#503217]">
                     Hand sanitizer collection
                   </h3>
-                  
+
                   {/* Shop Now Link */}
                   <div className="flex items-center gap-[10px] group">
                     <div className="w-6 h-6 flex items-center justify-center">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="2" y="3" width="20" height="18" rx="2" stroke="#8F7D6A" strokeWidth="2"/>
-                        <path d="M8 7v-2a4 4 0 0 1 8 0v2" stroke="#8F7D6A" strokeWidth="2"/>
+                        <rect x="2" y="3" width="20" height="18" rx="2" stroke="#8F7D6A" strokeWidth="2" />
+                        <path d="M8 7v-2a4 4 0 0 1 8 0v2" stroke="#8F7D6A" strokeWidth="2" />
                       </svg>
                     </div>
                     <span className="font-poppins font-medium text-[18px] leading-[150%] text-[#8F7D6A] group-hover:underline">Shop now</span>
@@ -599,40 +596,40 @@ const HomePage = () => {
             <div className="relative w-[416px] h-[266px] group">
               {/* Background Rectangle */}
               <div className="absolute w-[413px] h-[259px] left-0 top-0 bg-[#F2F2F2] rounded-[10px]"></div>
-              
+
               {/* Decorative Ellipses */}
               <div className="absolute w-[61px] h-[72px] left-[147px] top-[187px] bg-[#E2DFCF] opacity-20 rounded-full transform rotate-180"></div>
               <div className="absolute w-[172px] h-[111px] left-[302px] top-[60px] bg-[#E2DFCF] opacity-20 rounded-full transform rotate-90"></div>
               <div className="absolute w-[191px] h-[86px] left-[-1px] top-[47px] bg-[#E2DFCF] opacity-20 rounded-full transform -rotate-90"></div>
-              
+
               {/* Product Image Placeholder */}
               <div className="absolute w-[150px] h-[184px] left-[234px] top-[37px] rounded flex items-center justify-center overflow-hidden">
-                <img 
-                  src={ctaImage2} 
-                  alt="Face wash sale collection" 
+                <img
+                  src={"/home/cta-2.png"}
+                  alt="Face wash sale collection"
                   className="w-full h-full object-cover"
                 />
               </div>
-              
+
               {/* Content */}
               <div className="absolute left-[26px] top-[24px] flex flex-col justify-between w-[175px] h-[180px]">
                 {/* Badge - Hidden by default, shown on hover */}
                 <div className="flex justify-center items-center px-[10px] py-[10px] w-[80px] h-[30px] bg-[#D3744A] rounded-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-[#EEEDE7]">Top deals</span>
                 </div>
-                
+
                 {/* Text Content */}
                 <div className="flex flex-col gap-[15px]">
                   <h3 className="font-poppins font-medium text-[24px] leading-[150%] text-[#503217]">
                     Face wash sale collection
                   </h3>
-                  
+
                   {/* Discover Now Link */}
                   <div className="flex items-center gap-[10px] group">
                     <div className="w-6 h-6 flex items-center justify-center">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="#8F7D6A" strokeWidth="2"/>
-                        <circle cx="12" cy="12" r="3" stroke="#8F7D6A" strokeWidth="2"/>
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="#8F7D6A" strokeWidth="2" />
+                        <circle cx="12" cy="12" r="3" stroke="#8F7D6A" strokeWidth="2" />
                       </svg>
                     </div>
                     <span className="font-poppins font-medium text-[18px] leading-[150%] text-[#8F7D6A] group-hover:underline">Discover now</span>
@@ -645,39 +642,39 @@ const HomePage = () => {
             <div className="relative w-[416px] h-[266px] group">
               {/* Background Rectangle */}
               <div className="absolute w-[413px] h-[259px] left-0 top-0 bg-[#F2F2F2] rounded-[10px]"></div>
-              
+
               {/* Decorative Elements */}
               <div className="absolute w-[32px] h-[8px] left-[255px] top-[64px] bg-[#E2DFCF] opacity-20 rounded transform rotate-12"></div>
               <div className="absolute w-[134px] h-[92px] left-[288px] top-[167px] bg-[#E2DFCF] opacity-20 rounded-[10px]"></div>
-              
+
               {/* Product Image Placeholder */}
               <div className="absolute w-[140px] h-[203px] left-[266px] top-[28px] rounded flex items-center justify-center overflow-hidden transform scale-x-[-1]">
-                <img 
-                  src={ctaImage3} 
-                  alt="Facial mask deals" 
+                <img
+                  src={"/home/cta-3.png"}
+                  alt="Facial mask deals"
                   className="w-full h-full object-cover transform scale-x-[-1]"
                 />
               </div>
-              
+
               {/* Content */}
               <div className="absolute left-[26px] top-[24px] flex flex-col justify-between w-[175px] h-[180px]">
                 {/* Badge - Hidden by default, shown on hover */}
                 <div className="flex justify-center items-center px-[10px] py-[10px] w-[90px] h-[30px] bg-[#D3744A] rounded-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-[#EEEDE7]">Face mask</span>
                 </div>
-                
+
                 {/* Text Content */}
                 <div className="flex flex-col gap-[15px]">
                   <h3 className="font-poppins font-medium text-[24px] leading-[150%] text-[#503217]">
                     Facial mask deals save up to 50%
                   </h3>
-                  
+
                   {/* Discover Now Link */}
                   <div className="flex items-center gap-[10px] group">
                     <div className="w-6 h-6 flex items-center justify-center">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="#8F7D6A" strokeWidth="2"/>
-                        <circle cx="12" cy="12" r="3" stroke="#8F7D6A" strokeWidth="2"/>
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="#8F7D6A" strokeWidth="2" />
+                        <circle cx="12" cy="12" r="3" stroke="#8F7D6A" strokeWidth="2" />
                       </svg>
                     </div>
                     <span className="font-poppins font-medium text-[18px] leading-[150%] text-[#8F7D6A] group-hover:underline">Discover now</span>
@@ -689,40 +686,40 @@ const HomePage = () => {
 
           {/* Mobile Layout - Stacked CTAs */}
           <div className="md:hidden flex flex-col gap-6 items-center">
-            
+
             {/* CTA 1 - Hand sanitizer collection */}
             <div className="relative w-[320px] h-[200px] group" onClick={() => toggleMobileBadge('cta1')}>
               {/* Background Rectangle */}
               <div className="absolute w-full h-full bg-[#F2F2F2] rounded-[10px] cursor-pointer"></div>
-              
+
               {/* Product Image Placeholder */}
               <div className="absolute w-[100px] h-[120px] right-4 top-4 rounded flex items-center justify-center overflow-hidden">
-                <img 
-                  src={ctaImage1} 
-                  alt="Hand sanitizer collection" 
+                <img
+                  src={"/home/cta-1.png"}
+                  alt="Hand sanitizer collection"
                   className="w-full h-full object-cover"
                 />
               </div>
-              
+
               {/* Content */}
               <div className="absolute left-4 top-4 flex flex-col gap-4 w-[180px]">
                 {/* Badge - Mobile: onClick toggle, Desktop: hover */}
                 <div className={`flex justify-center items-center px-2 py-1 w-[60px] h-[25px] bg-[#D3744A] rounded-[8px] transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.cta1 ? 'opacity-100' : 'opacity-0'}`}>
                   <span className="font-sans-serif-collection font-normal text-[11px] leading-[150%] text-[#EEEDE7]">Sanitizer</span>
                 </div>
-                
+
                 {/* Text Content */}
                 <div className="flex flex-col gap-3">
                   <h3 className="font-poppins font-medium text-[18px] leading-[150%] text-[#503217]">
                     Hand sanitizer collection
                   </h3>
-                  
+
                   {/* Shop Now Link */}
                   <div className="flex items-center gap-2 group">
                     <div className="w-4 h-4 flex items-center justify-center">
                       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="2" y="3" width="20" height="18" rx="2" stroke="#8F7D6A" strokeWidth="2"/>
-                        <path d="M8 7v-2a4 4 0 0 1 8 0v2" stroke="#8F7D6A" strokeWidth="2"/>
+                        <rect x="2" y="3" width="20" height="18" rx="2" stroke="#8F7D6A" strokeWidth="2" />
+                        <path d="M8 7v-2a4 4 0 0 1 8 0v2" stroke="#8F7D6A" strokeWidth="2" />
                       </svg>
                     </div>
                     <span className="font-poppins font-medium text-[14px] leading-[150%] text-[#8F7D6A] group-hover:underline">Shop now</span>
@@ -735,35 +732,35 @@ const HomePage = () => {
             <div className="relative w-[320px] h-[200px] group" onClick={() => toggleMobileBadge('cta2')}>
               {/* Background Rectangle */}
               <div className="absolute w-full h-full bg-[#F2F2F2] rounded-[10px] cursor-pointer"></div>
-              
+
               {/* Product Image Placeholder */}
               <div className="absolute w-[100px] h-[120px] right-4 top-4 rounded flex items-center justify-center overflow-hidden">
-                <img 
-                  src={ctaImage2} 
-                  alt="Face wash sale collection" 
+                <img
+                  src={"/home/cta-2.png"}
+                  alt="Face wash sale collection"
                   className="w-full h-full object-cover"
                 />
               </div>
-              
+
               {/* Content */}
               <div className="absolute left-4 top-4 flex flex-col gap-4 w-[180px]">
                 {/* Badge - Mobile: onClick toggle, Desktop: hover */}
                 <div className={`flex justify-center items-center px-2 py-1 w-[60px] h-[25px] bg-[#D3744A] rounded-[8px] transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.cta2 ? 'opacity-100' : 'opacity-0'}`}>
                   <span className="font-sans-serif-collection font-normal text-[11px] leading-[150%] text-[#EEEDE7]">Top deals</span>
                 </div>
-                
+
                 {/* Text Content */}
                 <div className="flex flex-col gap-3">
                   <h3 className="font-poppins font-medium text-[18px] leading-[150%] text-[#503217]">
                     Face wash sale collection
                   </h3>
-                  
+
                   {/* Discover Now Link */}
                   <div className="flex items-center gap-2 group">
                     <div className="w-4 h-4 flex items-center justify-center">
                       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="#8F7D6A" strokeWidth="2"/>
-                        <circle cx="12" cy="12" r="3" stroke="#8F7D6A" strokeWidth="2"/>
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="#8F7D6A" strokeWidth="2" />
+                        <circle cx="12" cy="12" r="3" stroke="#8F7D6A" strokeWidth="2" />
                       </svg>
                     </div>
                     <span className="font-poppins font-medium text-[14px] leading-[150%] text-[#8F7D6A] group-hover:underline">Discover now</span>
@@ -776,35 +773,35 @@ const HomePage = () => {
             <div className="relative w-[320px] h-[200px] group" onClick={() => toggleMobileBadge('cta3')}>
               {/* Background Rectangle */}
               <div className="absolute w-full h-full bg-[#F2F2F2] rounded-[10px] cursor-pointer"></div>
-              
+
               {/* Product Image Placeholder */}
               <div className="absolute w-[100px] h-[120px] right-4 top-4 rounded flex items-center justify-center overflow-hidden">
-                <img 
-                  src={ctaImage3} 
-                  alt="Facial mask deals" 
+                <img
+                  src={"/home/cta-3.png"}
+                  alt="Facial mask deals"
                   className="w-full h-full object-cover"
                 />
               </div>
-              
+
               {/* Content */}
               <div className="absolute left-4 top-4 flex flex-col gap-4 w-[180px]">
                 {/* Badge - Mobile: onClick toggle, Desktop: hover */}
                 <div className={`flex justify-center items-center px-2 py-1 w-[65px] h-[25px] bg-[#D3744A] rounded-[8px] transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.cta3 ? 'opacity-100' : 'opacity-0'}`}>
                   <span className="font-sans-serif-collection font-normal text-[11px] leading-[150%] text-[#EEEDE7]">Face mask</span>
                 </div>
-                
+
                 {/* Text Content */}
                 <div className="flex flex-col gap-3">
                   <h3 className="font-poppins font-medium text-[18px] leading-[150%] text-[#503217]">
                     Facial mask deals save up to 50%
                   </h3>
-                  
+
                   {/* Discover Now Link */}
                   <div className="flex items-center gap-2 group">
                     <div className="w-4 h-4 flex items-center justify-center">
                       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="#8F7D6A" strokeWidth="2"/>
-                        <circle cx="12" cy="12" r="3" stroke="#8F7D6A" strokeWidth="2"/>
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="#8F7D6A" strokeWidth="2" />
+                        <circle cx="12" cy="12" r="3" stroke="#8F7D6A" strokeWidth="2" />
                       </svg>
                     </div>
                     <span className="font-poppins font-medium text-[14px] leading-[150%] text-[#8F7D6A] group-hover:underline">Discover now</span>
@@ -817,8 +814,9 @@ const HomePage = () => {
       </div>
 
       {/* Latest health product Section */}
-      <div className="absolute w-full left-0 top-[2280px] md:top-[1989px] h-[600px] md:h-[479px] overflow-hidden">
-        
+      <div className="absolute w-full left-0 top-[2330px] md:top-[2089px] h-[800px] md:h-[479px] overflow-hidden">
+
+
         {/* Section Title */}
         <div className="absolute w-[527px] h-[72px] left-1/2 transform -translate-x-1/2 top-0">
           <h2 className="font-poppins font-medium text-[48px] leading-[120%] text-center text-[#503217] hidden md:block">
@@ -831,10 +829,10 @@ const HomePage = () => {
 
         {/* Products Container */}
         <div className="absolute w-full left-0 top-[100px] md:top-[133px] px-4 md:px-0">
-          
+
           {/* Desktop Layout - 4 products in a row */}
           <div className="hidden md:flex justify-center gap-[30px] w-full">
-            
+
             {/* Product 1 - Microscope */}
             <div className="flex flex-col items-start gap-[15px] w-[302px] h-[341px]">
               {/* Product Image Container */}
@@ -843,21 +841,21 @@ const HomePage = () => {
                 <div className="absolute flex justify-center items-center px-[10px] py-[10px] w-[50px] h-[30px] bg-[#D3744A] rounded-[10px] left-5 top-5 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-white">New</span>
                 </div>
-                
+
                 {/* Additional Badge - Hover only */}
                 <div className="absolute flex justify-center items-center px-[10px] py-[10px] w-[80px] h-[30px] bg-[#22C55E] rounded-[10px] right-5 top-5 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-white">Best Seller</span>
                 </div>
-                
+
                 {/* Product Image Placeholder */}
                 <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
-                  <img 
-                    src={productMicroscope} 
-                    alt="Microscope" 
+                  <img
+                    src={"/home/microscope.png"}
+                    alt="Microscope"
                     className="w-full h-full object-contain"
                   />
                 </div>
-                
+
                 {/* Shop Now Button - Hidden by default, shown on hover */}
                 <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[262px] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="flex items-center gap-[5px]">
@@ -869,7 +867,7 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-              
+
               {/* Product Details */}
               <div className="flex flex-col items-start gap-[5px] w-[143px] h-[64px]">
                 <h3 className="font-poppins font-medium text-[24px] leading-[150%] text-[#503217]">
@@ -889,16 +887,16 @@ const HomePage = () => {
                 <div className="absolute flex justify-center items-center px-[10px] py-[10px] w-[81px] h-[30px] bg-[#D3744A] rounded-[10px] left-5 top-5 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-white">Save 10%</span>
                 </div>
-                
+
                 {/* Product Image Placeholder */}
                 <div className="flex justify-center items-center w-[160px] h-[160px] rounded overflow-hidden">
-                  <img 
-                    src={productOximeter} 
-                    alt="Pulse Oximeter" 
+                  <img
+                    src={"/home/oximeter.png"}
+                    alt="Pulse Oximeter"
                     className="w-full h-full object-contain"
                   />
                 </div>
-                
+
                 {/* Shop Now Button - Hidden by default, shown on hover */}
                 <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[262px] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="flex items-center gap-[5px]">
@@ -910,7 +908,7 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-              
+
               {/* Product Details */}
               <div className="flex flex-col items-start gap-[5px] w-[221px] h-[68px]">
                 <h3 className="font-poppins font-medium text-[24px] leading-[150%] text-[#503217]">
@@ -938,16 +936,16 @@ const HomePage = () => {
                 <div className="absolute flex justify-center items-center px-[10px] py-[10px] w-[70px] h-[30px] bg-[#4A90E2] rounded-[10px] left-5 top-5 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-white">Popular</span>
                 </div>
-                
+
                 {/* Product Image Placeholder */}
                 <div className="flex justify-center items-center w-[160px] h-[160px] rounded overflow-hidden">
-                  <img 
-                    src={productSerum} 
-                    alt="Vitamin Serum" 
+                  <img
+                    src={"/home/serum.png"}
+                    alt="Vitamin Serum"
                     className="w-full h-full object-contain"
                   />
                 </div>
-                
+
                 {/* Shop Now Button - Hidden by default, shown on hover */}
                 <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[262px] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="flex items-center gap-[5px]">
@@ -959,7 +957,7 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-              
+
               {/* Product Details */}
               <div className="flex flex-col items-start gap-[5px] w-[225px] h-[70px]">
                 <h3 className="font-poppins font-medium text-[24px] leading-[150%] text-[#503217]">
@@ -987,21 +985,21 @@ const HomePage = () => {
                 <div className="absolute flex justify-center items-center px-[10px] py-[10px] w-[50px] h-[30px] bg-[#D3744A] rounded-[10px] left-5 top-5 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-white">New</span>
                 </div>
-                
+
                 {/* Additional Badge - Hover only */}
                 <div className="absolute flex justify-center items-center px-[10px] py-[10px] w-[75px] h-[30px] bg-[#8B5CF6] rounded-[10px] right-5 top-5 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-white">Premium</span>
                 </div>
-                
+
                 {/* Product Image */}
                 <div className="flex justify-center items-center w-[160px] h-[160px] rounded overflow-hidden">
-                  <img 
-                    src={productProtein} 
-                    alt="High Protein" 
+                  <img
+                    src={"/home/protein.png"}
+                    alt="High Protein"
                     className="w-full h-full object-contain"
                   />
                 </div>
-                
+
                 {/* Shop Now Button - Hidden by default, shown on hover */}
                 <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[262px] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="flex items-center gap-[5px]">
@@ -1013,7 +1011,7 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-              
+
               {/* Product Details */}
               <div className="flex flex-col items-start gap-[5px] w-[152px] h-[68px]">
                 <h3 className="font-poppins font-medium text-[24px] leading-[150%] text-[#503217]">
@@ -1028,7 +1026,7 @@ const HomePage = () => {
 
           {/* Mobile Layout - 2 products per row */}
           <div className="md:hidden flex flex-col gap-6 items-center">
-            
+
             {/* Row 1 */}
             <div className="flex gap-4">
               {/* Product 1 - Microscope */}
@@ -1039,21 +1037,21 @@ const HomePage = () => {
                   <div className={`absolute flex justify-center items-center px-[8px] py-[6px] w-[40px] h-[25px] bg-[#D3744A] rounded-[8px] left-3 top-3 z-10 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.product1 ? 'opacity-100' : 'opacity-0'}`}>
                     <span className="font-sans-serif-collection font-normal text-[11px] leading-[150%] text-white">New</span>
                   </div>
-                  
+
                   {/* Additional Badge - Mobile: onClick toggle, Desktop: hover */}
                   <div className={`absolute flex justify-center items-center px-[6px] py-[4px] w-[50px] h-[20px] bg-[#22C55E] rounded-[6px] right-3 top-3 z-10 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.product1 ? 'opacity-100' : 'opacity-0'}`}>
                     <span className="font-sans-serif-collection font-normal text-[9px] leading-[150%] text-white">Best Seller</span>
                   </div>
-                  
+
                   {/* Product Image */}
                   <div className="flex justify-center items-center w-[100px] h-[100px] rounded overflow-hidden">
-                    <img 
-                      src={productMicroscope} 
-                      alt="Microscope" 
+                    <img
+                      src={"/home/microscope.png"}
+                      alt="Microscope"
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  
+
                   {/* Shop Now Button - Mobile: onClick toggle, Desktop: hover */}
                   <div className={`absolute flex justify-center items-center px-[8px] py-[4px] w-[120px] h-[25px] bg-[#E2DFCF] rounded-[6px] bottom-3 left-5 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.product1 ? 'opacity-100' : 'opacity-0'}`}>
                     <div className="flex items-center gap-[3px]">
@@ -1065,7 +1063,7 @@ const HomePage = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Product Details */}
                 <div className="flex flex-col items-start gap-[3px] w-full">
                   <h3 className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">
@@ -1085,16 +1083,16 @@ const HomePage = () => {
                   <div className={`absolute flex justify-center items-center px-[8px] py-[6px] w-[55px] h-[25px] bg-[#D3744A] rounded-[8px] left-3 top-3 z-10 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.product2 ? 'opacity-100' : 'opacity-0'}`}>
                     <span className="font-sans-serif-collection font-normal text-[11px] leading-[150%] text-white">Save 10%</span>
                   </div>
-                  
+
                   {/* Product Image */}
                   <div className="flex justify-center items-center w-[100px] h-[100px] rounded overflow-hidden">
-                    <img 
-                      src={productOximeter} 
-                      alt="Pulse Oximeter" 
+                    <img
+                      src={"/home/oximeter.png"}
+                      alt="Pulse Oximeter"
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  
+
                   {/* Shop Now Button - Mobile: onClick toggle, Desktop: hover */}
                   <div className={`absolute flex justify-center items-center px-[8px] py-[4px] w-[120px] h-[25px] bg-[#E2DFCF] rounded-[6px] bottom-3 left-5 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.product2 ? 'opacity-100' : 'opacity-0'}`}>
                     <div className="flex items-center gap-[3px]">
@@ -1106,7 +1104,7 @@ const HomePage = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Product Details */}
                 <div className="flex flex-col items-start gap-[3px] w-full">
                   <h3 className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">
@@ -1137,16 +1135,16 @@ const HomePage = () => {
                   <div className={`absolute flex justify-center items-center px-[6px] py-[4px] w-[50px] h-[20px] bg-[#4A90E2] rounded-[6px] left-3 top-3 z-10 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.product3 ? 'opacity-100' : 'opacity-0'}`}>
                     <span className="font-sans-serif-collection font-normal text-[10px] leading-[150%] text-white">Popular</span>
                   </div>
-                  
+
                   {/* Product Image */}
                   <div className="flex justify-center items-center w-[100px] h-[100px] rounded overflow-hidden">
-                    <img 
-                      src={productSerum} 
-                      alt="Vitamin Serum" 
+                    <img
+                      src={"/home/serum.png"}
+                      alt="Vitamin Serum"
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  
+
                   {/* Shop Now Button - Mobile: onClick toggle, Desktop: hover */}
                   <div className={`absolute flex justify-center items-center px-[8px] py-[4px] w-[120px] h-[25px] bg-[#E2DFCF] rounded-[6px] bottom-3 left-5 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.product3 ? 'opacity-100' : 'opacity-0'}`}>
                     <div className="flex items-center gap-[3px]">
@@ -1158,7 +1156,7 @@ const HomePage = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Product Details */}
                 <div className="flex flex-col items-start gap-[3px] w-full">
                   <h3 className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">
@@ -1186,21 +1184,21 @@ const HomePage = () => {
                   <div className={`absolute flex justify-center items-center px-[8px] py-[6px] w-[40px] h-[25px] bg-[#D3744A] rounded-[8px] left-3 top-3 z-10 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.product4 ? 'opacity-100' : 'opacity-0'}`}>
                     <span className="font-sans-serif-collection font-normal text-[11px] leading-[150%] text-white">New</span>
                   </div>
-                  
+
                   {/* Additional Badge - Mobile: onClick toggle, Desktop: hover */}
                   <div className={`absolute flex justify-center items-center px-[6px] py-[4px] w-[45px] h-[20px] bg-[#8B5CF6] rounded-[6px] right-3 top-3 z-10 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.product4 ? 'opacity-100' : 'opacity-0'}`}>
                     <span className="font-sans-serif-collection font-normal text-[9px] leading-[150%] text-white">Premium</span>
                   </div>
-                  
+
                   {/* Product Image */}
                   <div className="flex justify-center items-center w-[100px] h-[100px] rounded overflow-hidden">
-                    <img 
-                      src={productProtein} 
-                      alt="High Protein" 
+                    <img
+                      src={"/home/protein.png"}
+                      alt="High Protein"
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  
+
                   {/* Shop Now Button - Mobile: onClick toggle, Desktop: hover */}
                   <div className={`absolute flex justify-center items-center px-[8px] py-[4px] w-[120px] h-[25px] bg-[#E2DFCF] rounded-[6px] bottom-3 left-5 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.product4 ? 'opacity-100' : 'opacity-0'}`}>
                     <div className="flex items-center gap-[3px]">
@@ -1212,7 +1210,7 @@ const HomePage = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Product Details */}
                 <div className="flex flex-col items-start gap-[3px] w-full">
                   <h3 className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">
@@ -1221,6 +1219,80 @@ const HomePage = () => {
                   <p className="font-poppins font-medium text-[14px] leading-[150%] text-[#8F7D6A]">
                     $50.00 USD
                   </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Features Section - Simple like Desktop with Title */}
+          <div className="md:hidden mt-12 px-4">
+            <div className="max-w-sm sm:max-w-md mx-auto">
+
+              {/* Section Title */}
+              <div className="text-center mb-6">
+                <h2 className="font-poppins font-medium text-[24px] leading-[130%] text-[#503217]">
+                  Why we choose MediFit
+                </h2>
+              </div>
+
+              {/* Features Container */}
+              <div className="bg-[#F2F2F2] rounded-[10px] p-6 space-y-8 sm:flex sm:flex-col sm:items-center">
+
+                {/* Feature 1 - 30 Days Warranty */}
+                <div className="flex items-center gap-6 py-4 sm:max-w-md sm:w-full">
+                  <div className="w-[40px] h-[40px] flex items-center justify-center flex-shrink-0">
+                    <img
+                      src={"/home/feature-1.png"}
+                      alt="30 Days Warranty"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-poppins font-medium text-[18px] leading-[150%] text-[#503217] mb-1">
+                      30 Days warranty
+                    </h3>
+                    <p className="font-sans-serif-collection font-normal text-[16px] leading-[150%] text-[#8F7D6A]">
+                      Enjoy peace of mind with warranty
+                    </p>
+                  </div>
+                </div>
+
+                {/* Feature 2 - Exchange Policy */}
+                <div className="flex items-center gap-6 py-4 sm:max-w-md sm:w-full">
+                  <div className="w-[40px] h-[40px] flex items-center justify-center flex-shrink-0">
+                    <img
+                      src={"/home/feature-2.png"}
+                      alt="Exchange Policy"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-poppins font-medium text-[18px] leading-[150%] text-[#503217] mb-1">
+                      Exchange policy
+                    </h3>
+                    <p className="font-sans-serif-collection font-normal text-[16px] leading-[150%] text-[#8F7D6A]">
+                      You're satisfied with your purchase
+                    </p>
+                  </div>
+                </div>
+
+                {/* Feature 3 - Secure Payment */}
+                <div className="flex items-center gap-6 py-4 sm:max-w-md sm:w-full">
+                  <div className="w-[40px] h-[40px] flex items-center justify-center flex-shrink-0">
+                    <img
+                      src={"/home/feature-3.png"}
+                      alt="Secure Payment"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-poppins font-medium text-[18px] leading-[150%] text-[#503217] mb-1">
+                      Secure payment
+                    </h3>
+                    <p className="font-sans-serif-collection font-normal text-[16px] leading-[150%] text-[#8F7D6A]">
+                      Shop with confidence every time
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1235,6 +1307,540 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+
+      {/* Features Section - Group 179 */}
+      <div className="absolute w-[1300px] h-[140px] left-1/2 transform -translate-x-1/2 top-[2628px] hidden lg:block">
+
+        {/* Background Rectangle 89 */}
+        <div className="absolute w-[1300px] h-[140px] left-0 top-0 bg-[#F2F2F2] rounded-[10px]"></div>
+
+        {/* Feature 1 - 30 Days Warranty - Group 178 */}
+        <div className="absolute w-[389px] h-[115.77px] left-[30px] top-[12px]">
+
+          {/* Icon Container - Group 173 */}
+          <div className="absolute w-[117.55px] h-[115.77px] left-0 top-0">
+            {/* Feature 1 Image */}
+            <div className="absolute w-[40px] h-[40px] left-[43px] top-[41px]">
+              <img
+                src={"/home/feature-1.png"}
+                alt="30 Days Warranty"
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+
+          {/* Text Content - Frame 110 */}
+          <div className="absolute flex flex-col items-start gap-[5px] w-[261px] h-[56px] left-[128px] top-[30px]">
+            <h3 className="w-[261px] h-[27px] font-poppins font-medium text-[18px] leading-[150%] text-[#503217]">
+              30 Days warranty
+            </h3>
+            <p className="w-[261px] h-[24px] font-sans-serif-collection font-normal text-[16px] leading-[150%] text-[#8F7D6A]">
+              Enjoy peace of mind with warranty
+            </p>
+          </div>
+        </div>
+
+        {/* Feature 2 - Exchange Policy - Group 177 */}
+        <div className="absolute w-[389px] h-[115.23px] left-[456px] top-[12px]">
+
+          {/* Icon Container - Group 174 */}
+          <div className="absolute w-[117.43px] h-[115.23px] left-0 top-0">
+            {/* Feature 2 Image */}
+            <div className="absolute w-[40px] h-[40px] left-[40px] top-[38px]">
+              <img
+                src={"/home/feature-2.png"}
+                alt="Exchange Policy"
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+
+          {/* Text Content - Frame 88 */}
+          <div className="absolute flex flex-col items-start gap-[5px] w-[261px] h-[55px] left-[128px] top-[31px]">
+            <h3 className="w-[149px] h-[27px] font-poppins font-medium text-[18px] leading-[150%] text-center text-[#503217]">
+              Exchange policy
+            </h3>
+            <p className="w-[269px] h-[23px] font-sans-serif-collection font-normal text-[16px] leading-[150%] text-[#8F7D6A]">
+              You're satisfied with your purchase
+            </p>
+          </div>
+        </div>
+
+        {/* Feature 3 - Secure Payment - Group 176 */}
+        <div className="absolute w-[389px] h-[115.23px] left-[881px] top-[12px]">
+
+          {/* Icon Container - Group 175 */}
+          <div className="absolute w-[117.43px] h-[115.23px] left-0 top-0">
+            {/* Feature 3 Image */}
+            <div className="absolute w-[40px] h-[40px] left-[41px] top-[40px]">
+              <img
+                src={"/home/feature-3.png"}
+                alt="Secure Payment"
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+
+          {/* Text Content - Frame 89 */}
+          <div className="absolute flex flex-col items-start gap-[5px] w-[261px] h-[56px] left-[128px] top-[28px]">
+            <h3 className="w-[153px] h-[27px] font-poppins font-medium text-[18px] leading-[150%] text-center text-[#503217]">
+              Secure payment
+            </h3>
+            <p className="w-[247px] h-[24px] font-sans-serif-collection font-normal text-[16px] leading-[150%] text-[#8F7D6A]">
+              Shop with confidence every time
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Store Collection Section */}
+      <div className="absolute w-full left-0 top-[3150px] md:top-[2800px] lg:top-[2900px] min-h-[1200px] lg:min-h-[1000px]">
+
+        {/* Section Title */}
+        <div className="absolute w-full left-0 top-0">
+          <Center>
+            <h2 className="font-poppins font-medium text-[28px] md:text-[36px] lg:text-[48px] leading-[120%] text-center text-[#503217]">
+              Explore Our Store Collection
+            </h2>
+          </Center>
+        </div>
+
+        {/* Products Grid Container */}
+        <div className="absolute w-full left-0 top-[80px] md:top-[120px] lg:top-[140px]">
+          <Center>
+
+            {/* First Row - 4 Products */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-[30px] mb-20 lg:mb-28 justify-items-center">
+
+              {/* Product 1 - B12 medicine */}
+              <div className="flex flex-col items-start gap-[15px] w-[302px] h-[345px] max-w-full">
+
+                {/* Product Image Container */}
+                <div className="relative flex justify-center items-center w-full h-[262px] bg-[#F2F2F2] rounded-[10px] overflow-hidden group">
+
+                  {/* Badge - Hidden by default, shown on hover */}
+                  <div className="absolute flex justify-center items-center px-[10px] py-[10px] w-[50px] h-[30px] bg-[#D3744A] rounded-[10px] left-5 top-5 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-white">Sale</span>
+                  </div>
+
+                  {/* Product Image */}
+                  <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
+                    <img
+                      src={"/home/storecollection-1.png"}
+                      alt="Store Collection 1"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+
+                  {/* Shop Now Button - Hidden by default, shown on hover */}
+                  <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="flex items-center gap-[5px]">
+                      {/* Cart Icon */}
+                      <div className="w-6 h-6 flex items-center justify-center">
+                        <div className="w-4 h-4 border-2 border-[#503217] rounded-sm"></div>
+                      </div>
+                      <span className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">Shop now</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Product Details */}
+                <div className="flex flex-col items-start gap-[5px] w-full">
+                  <h3 className="font-poppins font-medium text-[20px] lg:text-[24px] leading-[150%] text-[#503217]">
+                    B12 medicine
+                  </h3>
+                  <div className="flex items-center gap-4">
+                    <span className="font-poppins font-medium text-[16px] lg:text-[18px] leading-[150%] text-[#8F7D6A]">
+                      $19.00 USD
+                    </span>
+                    <span className="font-poppins font-medium text-[14px] lg:text-[16px] leading-[150%] text-[#8F7D6A] line-through opacity-60">
+                      $25.00 USD
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Product 2 - Tonometer */}
+              <div className="flex flex-col items-start gap-[15px] w-[302px] h-[345px] max-w-full">
+
+                {/* Product Image Container */}
+                <div className="relative flex justify-center items-center w-full h-[262px] bg-[#F2F2F2] rounded-[10px] overflow-hidden group">
+
+                  {/* Product Image */}
+                  <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
+                    <img
+                      src={"/home/storecollection-2.png"}
+                      alt="Store Collection 2"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+
+                  {/* Shop Now Button - Hidden by default, shown on hover */}
+                  <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="flex items-center gap-[5px]">
+                      {/* Cart Icon */}
+                      <div className="w-6 h-6 flex items-center justify-center">
+                        <div className="w-4 h-4 border-2 border-[#503217] rounded-sm"></div>
+                      </div>
+                      <span className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">Shop now</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Product Details */}
+                <div className="flex flex-col items-start gap-[5px] w-full">
+                  <h3 className="font-poppins font-medium text-[20px] lg:text-[24px] leading-[150%] text-[#503217]">
+                    Tonometer
+                  </h3>
+                  <span className="font-poppins font-medium text-[16px] lg:text-[18px] leading-[150%] text-[#8F7D6A]">
+                    $19.00 USD
+                  </span>
+                </div>
+              </div>
+
+              {/* Product 3 - ECG cardiograph */}
+              <div className="flex flex-col items-start gap-[15px] w-[302px] h-[345px] max-w-full">
+
+                {/* Product Image Container */}
+                <div className="relative flex justify-center items-center w-full h-[262px] bg-[#F2F2F2] rounded-[10px] overflow-hidden group">
+
+                  {/* Badge - Hidden by default, shown on hover */}
+                  <div className="absolute flex justify-center items-center px-[10px] py-[10px] w-[50px] h-[30px] bg-[#D3744A] rounded-[10px] left-5 top-5 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-white">Sale</span>
+                  </div>
+
+                  {/* Product Image */}
+                  <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
+                    <img
+                      src={"/home/storecollection-3.png"}
+                      alt="Store Collection 3"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+
+                  {/* Shop Now Button - Hidden by default, shown on hover */}
+                  <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="flex items-center gap-[5px]">
+                      {/* Cart Icon */}
+                      <div className="w-6 h-6 flex items-center justify-center">
+                        <div className="w-4 h-4 border-2 border-[#503217] rounded-sm"></div>
+                      </div>
+                      <span className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">Shop now</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Product Details */}
+                <div className="flex flex-col items-start gap-[5px] w-full">
+                  <h3 className="font-poppins font-medium text-[20px] lg:text-[24px] leading-[150%] text-[#503217]">
+                    ECG cardiograph
+                  </h3>
+                  <div className="flex items-center gap-4">
+                    <span className="font-poppins font-medium text-[16px] lg:text-[18px] leading-[150%] text-[#8F7D6A]">
+                      $20.00 USD
+                    </span>
+                    <span className="font-poppins font-medium text-[14px] lg:text-[16px] leading-[150%] text-[#8F7D6A] line-through opacity-60">
+                      $35.00 USD
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Product 4 - Blood glucose meter */}
+              <div className="flex flex-col items-start gap-[15px] w-[302px] h-[345px] max-w-full">
+
+                {/* Product Image Container */}
+                <div className="relative flex justify-center items-center w-full h-[262px] bg-[#F2F2F2] rounded-[10px] overflow-hidden group">
+
+                  {/* Product Image */}
+                  <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
+                    <img
+                      src={"/home/storecollection-4.png"}
+                      alt="Store Collection 4"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+
+                  {/* Shop Now Button - Hidden by default, shown on hover */}
+                  <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="flex items-center gap-[5px]">
+                      {/* Cart Icon */}
+                      <div className="w-6 h-6 flex items-center justify-center">
+                        <div className="w-4 h-4 border-2 border-[#503217] rounded-sm"></div>
+                      </div>
+                      <span className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">Shop now</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Product Details */}
+                <div className="flex flex-col items-start gap-[5px] w-full">
+                  <h3 className="font-poppins font-medium text-[20px] lg:text-[24px] leading-[150%] text-[#503217]">
+                    Blood glucose meter
+                  </h3>
+                  <span className="font-poppins font-medium text-[16px] lg:text-[18px] leading-[150%] text-[#8F7D6A]">
+                    $15.00 USD
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Second Row - 4 Products */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-[30px] justify-items-center mt-8 lg:mt-12">
+
+              {/* Product 5 - Lab hand gloves */}
+              <div className="flex flex-col items-start gap-[15px] w-[302px] h-[345px] max-w-full">
+
+                {/* Product Image Container */}
+                <div className="relative flex justify-center items-center w-full h-[262px] bg-[#F2F2F2] rounded-[10px] overflow-hidden group">
+
+                  {/* Badge - Hidden by default, shown on hover */}
+                  <div className="absolute flex justify-center items-center px-[10px] py-[10px] w-[50px] h-[30px] bg-[#D3744A] rounded-[10px] left-5 top-5 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-white">Sale</span>
+                  </div>
+
+                  {/* Product Image */}
+                  <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
+                    <img
+                      src={"/home/storecollection-5.png"}
+                      alt="Store Collection 5"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+
+                  {/* Shop Now Button - Hidden by default, shown on hover */}
+                  <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="flex items-center gap-[5px]">
+                      {/* Cart Icon */}
+                      <div className="w-6 h-6 flex items-center justify-center">
+                        <div className="w-4 h-4 border-2 border-[#503217] rounded-sm"></div>
+                      </div>
+                      <span className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">Shop now</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Product Details */}
+                <div className="flex flex-col items-start gap-[5px] w-full">
+                  <h3 className="font-poppins font-medium text-[20px] lg:text-[24px] leading-[150%] text-[#503217]">
+                    Lab hand gloves
+                  </h3>
+                  <div className="flex items-center gap-4">
+                    <span className="font-poppins font-medium text-[16px] lg:text-[18px] leading-[150%] text-[#8F7D6A]">
+                      $20.00 USD
+                    </span>
+                    <span className="font-poppins font-medium text-[14px] lg:text-[16px] leading-[150%] text-[#8F7D6A] line-through opacity-60">
+                      $35.00 USD
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Product 6 - Stethoscope */}
+              <div className="flex flex-col items-start gap-[15px] w-[302px] h-[345px] max-w-full">
+
+                {/* Product Image Container */}
+                <div className="relative flex justify-center items-center w-full h-[262px] bg-[#F2F2F2] rounded-[10px] overflow-hidden group">
+
+                  {/* Badge - Hidden by default, shown on hover */}
+                  <div className="absolute flex justify-center items-center px-[10px] py-[10px] w-[50px] h-[30px] bg-[#D3744A] rounded-[10px] left-5 top-5 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-white">Sale</span>
+                  </div>
+
+                  {/* Product Image */}
+                  <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
+                    <img
+                      src={"/home/storecollection-6.png"}
+                      alt="Store Collection 6"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+
+                  {/* Shop Now Button - Hidden by default, shown on hover */}
+                  <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="flex items-center gap-[5px]">
+                      {/* Cart Icon */}
+                      <div className="w-6 h-6 flex items-center justify-center">
+                        <div className="w-4 h-4 border-2 border-[#503217] rounded-sm"></div>
+                      </div>
+                      <span className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">Shop now</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Product Details */}
+                <div className="flex flex-col items-start gap-[5px] w-full">
+                  <h3 className="font-poppins font-medium text-[20px] lg:text-[24px] leading-[150%] text-[#503217]">
+                    Stethoscope
+                  </h3>
+                  <div className="flex items-center gap-4">
+                    <span className="font-poppins font-medium text-[16px] lg:text-[18px] leading-[150%] text-[#8F7D6A]">
+                      $20.00 USD
+                    </span>
+                    <span className="font-poppins font-medium text-[14px] lg:text-[16px] leading-[150%] text-[#8F7D6A] line-through opacity-60">
+                      $35.00 USD
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Product 7 - Inhaler pressure drop */}
+              <div className="flex flex-col items-start gap-[15px] w-[302px] h-[345px] max-w-full">
+
+                {/* Product Image Container */}
+                <div className="relative flex justify-center items-center w-full h-[262px] bg-[#F2F2F2] rounded-[10px] overflow-hidden group">
+
+                  {/* Product Image */}
+                  <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
+                    <img
+                      src={"/home/storecollection-7.png"}
+                      alt="Store Collection 7"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+
+                  {/* Shop Now Button - Hidden by default, shown on hover */}
+                  <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="flex items-center gap-[5px]">
+                      {/* Cart Icon */}
+                      <div className="w-6 h-6 flex items-center justify-center">
+                        <div className="w-4 h-4 border-2 border-[#503217] rounded-sm"></div>
+                      </div>
+                      <span className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">Shop now</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Product Details */}
+                <div className="flex flex-col items-start gap-[5px] w-full">
+                  <h3 className="font-poppins font-medium text-[20px] lg:text-[24px] leading-[150%] text-[#503217]">
+                    Inhaler pressure drop
+                  </h3>
+                  <span className="font-poppins font-medium text-[16px] lg:text-[18px] leading-[150%] text-[#8F7D6A]">
+                    $35.00 USD
+                  </span>
+                </div>
+              </div>
+
+              {/* Product 8 - Multi vitamin */}
+              <div className="flex flex-col items-start gap-[15px] w-[302px] h-[345px] max-w-full">
+
+                {/* Product Image Container */}
+                <div className="relative flex justify-center items-center w-full h-[262px] bg-[#F2F2F2] rounded-[10px] overflow-hidden group">
+
+                  {/* Additional Badge - Hover only */}
+                  <div className="absolute flex justify-center items-center px-[10px] py-[10px] w-[80px] h-[30px] bg-[#22C55E] rounded-[10px] right-5 top-5 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-white">Popular</span>
+                  </div>
+
+                  {/* Product Image */}
+                  <div className="relative flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
+                    <img
+                      src={"/home/storecollection-8.png"}
+                      alt="Store Collection 8"
+                      className="w-full h-full object-contain"
+                    />
+
+                    {/* Second bottle in background */}
+                    <div className="absolute top-2 right-2 transform rotate-12 opacity-70">
+                      <img
+                        src={"/home/storecollection-8.png"}
+                        alt="Store Collection 8"
+                        className="w-[60px] h-[90px] object-contain"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Shop Now Button - Hidden by default, shown on hover */}
+                  <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="flex items-center gap-[5px]">
+                      {/* Cart Icon */}
+                      <div className="w-6 h-6 flex items-center justify-center">
+                        <div className="w-4 h-4 border-2 border-[#503217] rounded-sm"></div>
+                      </div>
+                      <span className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">Shop now</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Product Details */}
+                <div className="flex flex-col items-start gap-[5px] w-full">
+                  <h3 className="font-poppins font-medium text-[20px] lg:text-[24px] leading-[150%] text-[#503217]">
+                    Multi vitamin
+                  </h3>
+                  <span className="font-poppins font-medium text-[16px] lg:text-[18px] leading-[150%] text-[#8F7D6A]">
+                    $20.00 USD
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Center>
+
+         
+
+          {/* Newsletter Section */}
+          <div className="relative w-full flex justify-center items-center mt-32 mb-24 z-10">
+            <div className="relative w-[1300px] h-[562px] bg-transparent flex rounded-[10px] overflow-hidden shadow-none">
+              {/* Left: Image */}
+              <div className="hidden md:block w-1/2 h-full relative">
+                <div className="absolute w-full h-full bg-[#F2F2F2] rounded-l-[10px]"></div>
+                <img
+                  src={"/home/newslettersection.png"}
+                  alt="Newsletter section"
+                  className="absolute w-full h-full object-cover object-center rounded-l-[10px]"
+                  style={{ transform: "scaleX(-1)" }}
+                />
+              </div>
+              {/* Right: Form */}
+              <div className="w-full md:w-1/2 h-full flex flex-col justify-center items-center bg-[#F2F2F2] rounded-r-[10px] px-8 py-12">
+                <div className="mb-2">
+                  <span className="font-poppins font-medium text-[24px] leading-[150%] text-[#6C543E]">
+                    Join our Newsletter
+                  </span>
+                </div>
+                <h2 className="font-poppins font-medium text-[32px] md:text-[48px] leading-[120%] text-[#503217] text-center mb-6">
+                  Sign Up for an Instant<br className="hidden md:block" /> 15% Discount
+                </h2>
+                <form className="w-full max-w-[358px] flex flex-col items-center gap-4">
+                  <div className="relative w-full">
+                    <input
+                      type="email"
+                      
+                      className="w-full h-12 pl-12 pr-4 rounded-[10px] border border-[#503217] bg-[#EBE9E0] text-[#8F7D6A] font-sans-serif-collection text-[18px] focus:outline-none"
+                    />
+                    {/* Email Icon */}
+                    <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#8F7D6A]">
+                      <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <rect x="2" y="5" width="20" height="14" rx="3" stroke="#8F7D6A" strokeWidth="2" />
+                        <path d="M3 7l9 6 9-6" stroke="#8F7D6A" strokeWidth="2" />
+                      </svg>
+                    </span>
+                  </div>
+                  <button
+                    type="submit"
+                    className="w-full h-12 mt-2 bg-[#503217] border border-[#503217] rounded-[10px] flex items-center justify-center gap-2 text-[#F2F2F2] font-poppins font-medium text-[18px] hover:bg-[#6C543E] transition"
+                  >
+                    <span>Sign up</span>
+                    {/* External Link Icon */}
+                    <span>
+                      <svg width="20" height="20" fill="none" viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="18" height="18" rx="4" stroke="#F2F2F2" strokeWidth="1.5" />
+                        <path d="M8 12l3 3 5-5" stroke="#F2F2F2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          {/* Footer */}
+      <Footer />
+
+        </div>
+      </div>
+
+      
+      
     </>
   );
 };
