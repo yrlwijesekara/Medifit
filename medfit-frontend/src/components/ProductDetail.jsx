@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Navbar from './Navbar';
 import ProductImage from './ProductImage';
 import ProductInfo from './ProductInfo';
+import ProductCard from './ProductCard';
 import Center from './Center';
 
 const ProductDetail = ({ 
@@ -328,6 +329,59 @@ const ProductDetail = ({
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+
+          {/* Recent Products Section */}
+          <div className="mb-20 lg:mb-24">
+            {/* Section Title */}
+            <div className="text-center py-16">
+              <h2 
+                className="text-3xl md:text-4xl lg:text-5xl font-poppins font-medium leading-tight my-8"
+                style={{ color: '#503217' }}
+              >
+                Recent Products
+              </h2>
+            </div>
+
+            {/* Products Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+              {/* Product 1 - Microscope */}
+              <ProductCard
+                image="/home/microscope.png"
+                title="Microscope"
+                price="$45.00 USD"
+                badge="New"
+                hasShopNow={true}
+              />
+
+              {/* Product 2 - Pulse Oximeter */}
+              <ProductCard
+                image="/home/oximeter.png"
+                title="Pulse oximeter"
+                price="$19.00 USD"
+                originalPrice="$25.00 USD"
+                badge="Save 10%"
+                hasShopNow={true}
+              />
+
+              {/* Product 3 - Vitamin Serum */}
+              <ProductCard
+                image="/home/serum.png"
+                title="Vitamin serum"
+                price="$20.00 USD"
+                originalPrice="$30.00 USD"
+                hasShopNow={true}
+              />
+
+              {/* Product 4 - High Protein */}
+              <ProductCard
+                image="/home/protein.png"
+                title="High protein"
+                price="$50.00 USD"
+                badge="New"
+                hasShopNow={true}
+              />
             </div>
           </div>
           

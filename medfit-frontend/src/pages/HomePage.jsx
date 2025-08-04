@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Center from '../components/Center';
 import Footer from '../components/Footer';
+import ProductCard from '../components/ProductCard';
 
 
 
@@ -1774,6 +1775,9 @@ const HomePage = () => {
               </div>
             </div>
           </Center>
+
+         
+
           {/* Newsletter Section */}
           <div className="relative w-full flex justify-center items-center mt-32 mb-24 z-10">
             <div className="relative w-[1300px] h-[562px] bg-transparent flex rounded-[10px] overflow-hidden shadow-none">
