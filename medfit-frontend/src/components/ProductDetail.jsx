@@ -1,6 +1,7 @@
 import Navbar from './Navbar';
 import ProductImage from './ProductImage';
 import ProductInfo from './ProductInfo';
+import Center from './Center';
 
 const ProductDetail = ({ 
   product = {
@@ -23,8 +24,8 @@ const ProductDetail = ({
       <Navbar />
       
       {/* Main Content */}
-      <div className="pt-[120px] sm:pt-[140px] lg:pt-[160px] pb-20 lg:pb-8 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+      <div className="pt-[120px] sm:pt-[140px] lg:pt-[160px] pb-20 lg:pb-8">
+        <Center maxWidth="1200px" padding="px-4 sm:px-6 lg:px-8">
           {/* Product Detail Section */}
           <div className="flex flex-col xl:flex-row xl:items-start xl:justify-center gap-8 xl:gap-12 min-h-[600px] mt-8">
             {/* Product Images - Left Side */}
@@ -46,7 +47,7 @@ const ProductDetail = ({
               />
             </div>
           </div>
-        </div>
+        </Center>
       </div>
 
       {/* Mobile Bottom Spacing for Sticky Cart */}
