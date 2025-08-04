@@ -61,7 +61,7 @@ const About = () => {
           <div className="flex flex-col items-center mb-12 ">
             {/* Icon */}
             <div className="mb-4 absolute left-0 top-[-20px]">
-              <img src="/medicine-pills-icon.png" alt="Icon" className="h-30" />{" "}
+              <img src="/medicine-pills-icon.png" alt="Icon" className="h-30" />
             </div>
           </div>
           {/* About Us Section */}
@@ -87,6 +87,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      
       <div className=" w-full  bg-[#E8E6DE] flex flex-col items-center justify-center relative">
         <div className="container w-full bg-[#E8E6DE]">
           <div className="md:bg-green-400  lg:bg-blue-400 bg-yellow-400 xl:bg-pink-400 grid lg:grid-cols-2 grid-cols-1"></div>
@@ -140,7 +141,13 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="w-full bg-[#E2DFCF] flex flex-col items-center justify-center">
+
+      {/* Contact Section */}
+      <div className="w-full bg-[#E2DFCF] flex flex-col items-center justify-center relative">
+        {/* Icon positioned at top-right corner */}
+        <div className="absolute top-4 right-4 z-10">
+          <img src="/medical shape 5 1.png" alt="Pills Capsules Icon" className="h-30" />
+        </div>
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="w-full py-12">
             <section className="bg-[#E2DFCF] w-full py-16 px-6 md:px-16">
@@ -153,14 +160,14 @@ const About = () => {
               <div className="flex flex-col lg:flex-row items-start gap-10">
                 {/* Left Side: Icons and Labels */}
                 <div className="space-y-6 text-xl font-medium">
-                  <div className="flex items-center gap-3 text-[#9C8D7A]">
+                  <div className="flex items-center gap-3 text-[#9C8D7A] cursor-pointer transition-all duration-300 hover:text-[#503217]">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke-width="1.5"
                       stroke="currentColor"
-                      class="size-6"
+                      className="size-6 transition-transform duration-300 hover:scale-125"
                     >
                       <path
                         stroke-linecap="round"
@@ -171,14 +178,14 @@ const About = () => {
 
                     <span>Mission</span>
                   </div>
-                  <div className="flex items-center gap-3 text-[#503217]">
+                  <div className="flex items-center gap-3 text-[#9C8D7A] cursor-pointer transition-all duration-300 hover:text-[#503217]">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
                       stroke="currentColor"
-                      className="size-6"
+                      className="size-6 transition-transform duration-300 hover:scale-125"
                     >
                       <path
                         strokeLinecap="round"
@@ -189,13 +196,13 @@ const About = () => {
 
                     <span>Commitments</span>
                   </div>
-                  <div className="flex items-center gap-3 text-[#9C8D7A]">
+                  <div className="flex items-center gap-3 text-[#9C8D7A] cursor-pointer transition-all duration-300 hover:text-[#503217]">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="w-6 h-6"
+                      className="w-6 h-6 transition-transform duration-300 hover:scale-125"
                       fill="none"
                       stroke="currentColor"
-                      strokeWidth="2"
+                      strokeWidth={1.5}
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -237,7 +244,7 @@ const About = () => {
         <div className="container w-full bg-[#E8E6DE]">
           <div className="md:bg-green-400  lg:bg-blue-400 bg-yellow-400 xl:bg-pink-400 grid lg:grid-cols-2 grid-cols-1"></div>
           <div class="grid grid-flow-col justify-items-center ..."></div>
-          <section className="bg-[#E8E6DE] px-6 py-16">
+          <section className="bg-[#F2F2F2]  px-6 py-16">
             <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-semibold text-[#503217] leading-snug mb-6">
