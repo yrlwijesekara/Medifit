@@ -135,28 +135,7 @@ const ProductInfo = ({
         </div>
       </div>
 
-      {/* Mobile Sticky Add to Cart - Only show on mobile */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 shadow-lg z-50">
-        <div className="flex items-center justify-between max-w-sm mx-auto">
-          <div className="space-y-1">
-            <div className="flex items-center space-x-2">
-              <span className="text-lg font-poppins font-medium" style={{ color: '#8F7D6A' }}>
-                ${currentPrice.toFixed(2)}
-              </span>
-              {originalPrice > currentPrice && (
-                <span className="text-sm line-through opacity-70" style={{ color: '#8F7D6A' }}>
-                  ${originalPrice.toFixed(2)}
-                </span>
-              )}
-            </div>
-            <p className="text-sm" style={{ color: '#8F7D6A' }}>Qty: {quantity}</p>
-          </div>
-          <button className="flex items-center space-x-2 px-4 py-2 bg-medifit-primary text-medifit-bg-primary rounded-lg hover:bg-medifit-primary/90 transition-all duration-200 font-poppins font-medium text-sm shadow-lg">
-            <span>Add to Cart</span>
-            <FiShoppingCart size={16} />
-          </button>
-        </div>
-      </div>
+      
     </div>
   );
 };

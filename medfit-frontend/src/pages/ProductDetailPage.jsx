@@ -1,5 +1,5 @@
 import ProductDetail from '../components/ProductDetail';
-// Import product images
+// Import product images from assets as fallback
 import productImage1 from '../assets/home/storecollection-1.png';
 import productImage2 from '../assets/home/storecollection-2.png';
 
@@ -11,8 +11,10 @@ const ProductDetailPage = () => {
     originalPrice: 25.00,
     description: "B12 Medicine is a premium supplement that combats B12 deficiency and supports energy, red blood cell formation, and nervous system health. Perfect for those with fatigue, anemia, or restricted diets like vegetarians and vegans.",
     images: [
-      productImage1,
-      productImage2
+      "/shopdetail/shopdetails-1.png",    // First B12 supplement image
+      "/shopdetail/shopdetails-2.png",    // Second B12 supplement image
+      productImage1,                      // Fallback from assets
+      productImage2                       // Additional fallback view
     ],
     benefits: [
       "Boosts energy levels.",
