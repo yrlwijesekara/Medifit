@@ -112,12 +112,15 @@ const ProductDetail = ({
             </div>
           </div>
 
+          {/* Spacer between sections */}
+          <div className="h-10 lg:h-12"></div>
+
           {/* Customer Testimonials Section */}
-          <div className="mt-16 mb-8">
+          <div className="mb-20 lg:mb-24">
             {/* Section Title */}
-            <div className="text-center mb-12">
+            <div className="text-center py-16">
               <h2 
-                className="text-3xl md:text-4xl lg:text-5xl font-poppins font-medium leading-tight"
+                className="text-3xl md:text-4xl lg:text-5xl font-poppins font-medium leading-tight my-8"
                 style={{ color: '#503217' }}
               >
                 Customers review
@@ -265,6 +268,9 @@ const ProductDetail = ({
               </div>
             </div>
           </div>
+          
+          {/* Bottom spacer to show testimonials margin */}
+          <div className="h-20 lg:h-24"></div>
         </Center>
       </div>
 
