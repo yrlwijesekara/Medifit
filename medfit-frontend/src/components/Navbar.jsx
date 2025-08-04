@@ -163,7 +163,7 @@ const Navbar = () => {
         </div>
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-gradient-to-b from-[#EEEDE7] to-[#E5E4DE] border-t border-gray-300 shadow-xl z-40 backdrop-blur-sm">
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-gradient-to-b from-[#EEEDE7] to-[#E5E4DE] border-t border-gray-300 shadow-xl z-50 backdrop-blur-sm">
             <div className="px-6 py-8 space-y-6">
               <Link
                 to="/"
