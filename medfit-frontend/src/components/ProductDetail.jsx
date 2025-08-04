@@ -4,6 +4,7 @@ import ProductImage from './ProductImage';
 import ProductInfo from './ProductInfo';
 import ProductCard from './ProductCard';
 import Center from './Center';
+import Footer from './Footer';
 
 const ProductDetail = ({
   product = {
@@ -70,7 +71,7 @@ const ProductDetail = ({
   };
 
   return (
-    <div className="min-h-screen bg-medifit-white">
+    <div className="min-h-screen bg-medifit-white flex flex-col">
       {/* Navigation */}
       <Navbar />
 
@@ -78,7 +79,7 @@ const ProductDetail = ({
       <div className="h-[120px] sm:h-[130px] lg:h-[140px]"></div>
 
       {/* Main Content */}
-      <div className="py-8 lg:py-12">
+      <div className="flex-1 py-8 lg:py-12">
         <Center maxWidth="1200px" padding="px-4 sm:px-6 lg:px-8">
           {/* Product Detail Section */}
           <div className="flex flex-col xl:flex-row xl:items-start xl:justify-center gap-8 xl:gap-12 min-h-[600px] mt-8">
@@ -542,8 +543,8 @@ const ProductDetail = ({
         </Center>
       </div>
 
-      {/* Mobile Bottom Spacing for Sticky Cart */}
-      <div className="lg:hidden h-20"></div>
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

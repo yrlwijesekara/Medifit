@@ -4,7 +4,7 @@ import { HiMail, HiPhone, HiLocationMarker } from 'react-icons/hi';
 
 const Footer = () => {
   return (
-    <footer className="relative w-full min-h-[565px] mt-16 overflow-hidden">
+    <footer className="relative w-full min-h-[auto] overflow-hidden">
       {/* Main Footer Container */}
       <div className="relative w-full bg-[#E8E6DE] rounded-[5px] mx-auto px-4 lg:px-8 py-8 lg:py-16">
         
