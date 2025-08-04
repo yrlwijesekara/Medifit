@@ -2,34 +2,6 @@ import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Center from '../components/Center';
 import Footer from '../components/Footer';
-import mainProductImage from '././../assets/home/main-1.png';
-import mainBackgroundImage from '../assets/home/main-2.png';
-import categoryMedicine from '../assets/home/catergory-1.png';
-import categoryHealthcare from '../assets/home/catergory-2.png';
-import categoryBeautycare from '../assets/home/catergory-3.png';
-import categoryFitness from '../assets/home/catergory-4.png';
-import categoryLabequipment from '../assets/home/catergory-5.png';
-import categoryMedkits from '../assets/home/catergory-6.png';
-import categoryMainImage from '../assets/home/catergory-main.png';
-import ctaImage1 from '../assets/home/cta-1.png';
-import ctaImage2 from '../assets/home/cta-2.png';
-import ctaImage3 from '../assets/home/cta-3.png';
-import productMicroscope from '../assets/home/microscope.png';
-import productOximeter from '../assets/home/oximeter.png';
-import productSerum from '../assets/home/serum.png';
-import productProtein from '../assets/home/protein.png';
-import featureImage1 from '../assets/home/feature-1.png';
-import featureImage2 from '../assets/home/feature-2.png';
-import featureImage3 from '../assets/home/feature-3.png';
-import storeCollection1 from '../assets/home/storecollection-1.png';
-import storeCollection2 from '../assets/home/storecollection-2.png';
-import storeCollection3 from '../assets/home/storecollection-3.png';
-import storeCollection4 from '../assets/home/storecollection-4.png';
-import storeCollection5 from '../assets/home/storecollection-5.png';
-import storeCollection6 from '../assets/home/storecollection-6.png';
-import storeCollection7 from '../assets/home/storecollection-7.png';
-import storeCollection8 from '../assets/home/storecollection-8.png';
-import newsletter from '../assets/home/newslettersection.png';
 
 
 
@@ -71,7 +43,7 @@ const HomePage = () => {
           {/* Main-2 Image - Left Bottom Decorative Element */}
           <div className="absolute w-[400px] h-[400px] left-0 top-[500px] opacity-40 z-10">
             <img
-              src={mainBackgroundImage}
+              src={"/home/main-2.png"}
               alt="Medical decoration"
               className="w-full h-full object-cover transform rotate-[8.9deg]"
             />
@@ -132,7 +104,7 @@ const HomePage = () => {
             <div className="absolute w-[700px] h-[600px] left-[-20px] top-[120px] z-30">
               <div
                 className="w-full h-full bg-center bg-contain bg-no-repeat"
-                style={{ backgroundImage: `url(${mainProductImage})` }}
+                style={{ backgroundImage: `url(${"/home/main-1.png"})` }}
               >
               </div>
             </div>
@@ -170,7 +142,7 @@ const HomePage = () => {
             {/* Right Content - Adjusted for better balance */}
             <div className="relative flex-1 max-w-[550px] h-[500px]">
               <div className="absolute inset-0 bg-[#EEEDE7] rounded-full"></div>
-              <div className="absolute inset-8 bg-center bg-cover bg-no-repeat rounded-full" style={{ backgroundImage: `url(${mainProductImage})` }}>
+              <div className="absolute inset-8 bg-center bg-cover bg-no-repeat rounded-full" style={{ backgroundImage: `url(${"/home/main-1.png"})` }}>
               </div>
               <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2">
                 <h2 className="font-poppins font-medium text-[32px] leading-[120%] text-[#503217]">Medifit</h2>
@@ -191,7 +163,7 @@ const HomePage = () => {
 
             <div className="relative w-[400px] h-[400px] mx-auto mb-8">
               <div className="absolute inset-0 bg-[#EEEDE7] rounded-full"></div>
-              <div className="absolute inset-6 bg-center bg-cover bg-no-repeat rounded-full" style={{ backgroundImage: `url(${mainProductImage})` }}>
+              <div className="absolute inset-6 bg-center bg-cover bg-no-repeat rounded-full" style={{ backgroundImage: `url(${"/home/main-1.png"})` }}>
               </div>
               <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
                 <h2 className="font-poppins font-medium text-[28px] leading-[120%] text-[#503217]">Medifit</h2>
@@ -235,7 +207,7 @@ const HomePage = () => {
                       <div className="w-full h-full flex items-center justify-center">
                         <div
                           className="w-full h-full bg-center bg-contain bg-no-repeat transform group-hover:scale-105 transition-transform duration-700 ease-out"
-                          style={{ backgroundImage: `url(${mainProductImage})` }}
+                          style={{ backgroundImage: `url(${"/home/main-1.png"})` }}
                         ></div>
                       </div>
                     </div>
@@ -272,7 +244,7 @@ const HomePage = () => {
         {/* Background Category Main Image - Right Side */}
         <div className="absolute w-[400px] h-[400px] right-[-50px] top-[-50px] opacity-40 z-0 hidden md:block">
           <img
-            src={categoryMainImage}
+            src={"/home/catergory-main.png"}
             alt="Category background"
             className="w-full h-full object-contain"
           />
@@ -298,7 +270,7 @@ const HomePage = () => {
               <div className="flex justify-center items-center p-[10px] w-[115px] h-[115px] border border-dashed border-[#503217] rounded-full">
                 <div className="flex justify-center items-center w-[102px] h-[102px] bg-[#E2DFCF] rounded-full">
                   {/* Medicine/Capsule Icon */}
-                  <img src={categoryMedicine} alt="Medicine" className="w-[50px] h-[50px] object-contain" />
+                  <img src={"/home/catergory-1.png"} alt="Medicine" className="w-[50px] h-[50px] object-contain" />
                 </div>
               </div>
               {/* Text Container */}
@@ -320,7 +292,7 @@ const HomePage = () => {
               <div className="flex justify-center items-center p-[10px] w-[115px] h-[115px] border border-dashed border-[#503217] rounded-full">
                 <div className="flex justify-center items-center w-[102px] h-[102px] bg-[#E2DFCF] rounded-full">
                   {/* Heart Icon */}
-                  <img src={categoryHealthcare} alt="Health care" className="w-[50px] h-[50px] object-contain" />
+                  <img src={"/home/catergory-2.png"} alt="Health care" className="w-[50px] h-[50px] object-contain" />
                 </div>
               </div>
               {/* Text Container */}
@@ -342,7 +314,7 @@ const HomePage = () => {
               <div className="flex justify-center items-center p-[10px] w-[115px] h-[115px] border border-dashed border-[#503217] rounded-full">
                 <div className="flex justify-center items-center w-[102px] h-[102px] bg-[#E2DFCF] rounded-full">
                   {/* Leaf Icon */}
-                  <img src={categoryBeautycare} alt="Beauty care" className="w-[50px] h-[50px] object-contain" />
+                  <img src={"/home/catergory-3.png"} alt="Beauty care" className="w-[50px] h-[50px] object-contain" />
                 </div>
               </div>
               {/* Text Container */}
@@ -364,7 +336,7 @@ const HomePage = () => {
               <div className="flex justify-center items-center p-[10px] w-[115px] h-[115px] border border-dashed border-[#503217] rounded-full">
                 <div className="flex justify-center items-center w-[102px] h-[102px] bg-[#E2DFCF] rounded-full">
                   {/* Heartbeat/Fitness Icon */}
-                  <img src={categoryFitness} alt="Fitness" className="w-[50px] h-[50px] object-contain" />
+                  <img src={"/home/catergory-4.png"} alt="Fitness" className="w-[50px] h-[50px] object-contain" />
                 </div>
               </div>
               {/* Text Container */}
@@ -386,7 +358,7 @@ const HomePage = () => {
               <div className="flex justify-center items-center p-[10px] w-[115px] h-[115px] border border-dashed border-[#503217] rounded-full">
                 <div className="flex justify-center items-center w-[102px] h-[102px] bg-[#E2DFCF] rounded-full">
                   {/* Vials/Lab Equipment Icon */}
-                  <img src={categoryLabequipment} alt="Lab equipment" className="w-[50px] h-[50px] object-contain" />
+                  <img src={"/home/catergory-5.png"} alt="Lab equipment" className="w-[50px] h-[50px] object-contain" />
                 </div>
               </div>
               {/* Text Container */}
@@ -408,7 +380,7 @@ const HomePage = () => {
               <div className="flex justify-center items-center p-[10px] w-[115px] h-[115px] border border-dashed border-[#503217] rounded-full">
                 <div className="flex justify-center items-center w-[102px] h-[102px] bg-[#E2DFCF] rounded-full">
                   {/* Medical Briefcase Icon */}
-                  <img src={categoryMedkits} alt="Medkits" className="w-[50px] h-[50px] object-contain" />
+                  <img src={"/home/catergory-6.png"} alt="Medkits" className="w-[50px] h-[50px] object-contain" />
                 </div>
               </div>
               {/* Text Container */}
@@ -433,7 +405,7 @@ const HomePage = () => {
               {/* Icon Container */}
               <div className="flex justify-center items-center p-[8px] w-[70px] h-[70px] border border-dashed border-[#503217] rounded-full">
                 <div className="flex justify-center items-center w-[60px] h-[60px] bg-[#E2DFCF] rounded-full">
-                  <img src={categoryMedicine} alt="Medicine" className="w-[30px] h-[30px] object-contain" />
+                  <img src={"/home/catergory-1.png"} alt="Medicine" className="w-[30px] h-[30px] object-contain" />
                 </div>
               </div>
               {/* Text Container */}
@@ -454,7 +426,7 @@ const HomePage = () => {
               {/* Icon Container */}
               <div className="flex justify-center items-center p-[8px] w-[70px] h-[70px] border border-dashed border-[#503217] rounded-full">
                 <div className="flex justify-center items-center w-[60px] h-[60px] bg-[#E2DFCF] rounded-full">
-                  <img src={categoryHealthcare} alt="Health care" className="w-[30px] h-[30px] object-contain" />
+                  <img src={"/home/catergory-2.png"} alt="Health care" className="w-[30px] h-[30px] object-contain" />
                 </div>
               </div>
               {/* Text Container */}
@@ -475,7 +447,7 @@ const HomePage = () => {
               {/* Icon Container */}
               <div className="flex justify-center items-center p-[8px] w-[70px] h-[70px] border border-dashed border-[#503217] rounded-full">
                 <div className="flex justify-center items-center w-[60px] h-[60px] bg-[#E2DFCF] rounded-full">
-                  <img src={categoryBeautycare} alt="Beauty care" className="w-[30px] h-[30px] object-contain" />
+                  <img src={"/home/catergory-3.png"} alt="Beauty care" className="w-[30px] h-[30px] object-contain" />
                 </div>
               </div>
               {/* Text Container */}
@@ -496,7 +468,7 @@ const HomePage = () => {
               {/* Icon Container */}
               <div className="flex justify-center items-center p-[8px] w-[70px] h-[70px] border border-dashed border-[#503217] rounded-full">
                 <div className="flex justify-center items-center w-[60px] h-[60px] bg-[#E2DFCF] rounded-full">
-                  <img src={categoryFitness} alt="Fitness" className="w-[30px] h-[30px] object-contain" />
+                  <img src={"/home/catergory-4.png"} alt="Fitness" className="w-[30px] h-[30px] object-contain" />
                 </div>
               </div>
               {/* Text Container */}
@@ -517,7 +489,7 @@ const HomePage = () => {
               {/* Icon Container */}
               <div className="flex justify-center items-center p-[8px] w-[70px] h-[70px] border border-dashed border-[#503217] rounded-full">
                 <div className="flex justify-center items-center w-[60px] h-[60px] bg-[#E2DFCF] rounded-full">
-                  <img src={categoryLabequipment} alt="Lab equipment" className="w-[30px] h-[30px] object-contain" />
+                  <img src={"/home/catergory-5.png"} alt="Lab equipment" className="w-[30px] h-[30px] object-contain" />
                 </div>
               </div>
               {/* Text Container */}
@@ -538,7 +510,7 @@ const HomePage = () => {
               {/* Icon Container */}
               <div className="flex justify-center items-center p-[8px] w-[70px] h-[70px] border border-dashed border-[#503217] rounded-full">
                 <div className="flex justify-center items-center w-[60px] h-[60px] bg-[#E2DFCF] rounded-full">
-                  <img src={categoryMedkits} alt="Medkits" className="w-[30px] h-[30px] object-contain" />
+                  <img src={"/home/catergory-6.png"} alt="Medkits" className="w-[30px] h-[30px] object-contain" />
                 </div>
               </div>
               {/* Text Container */}
@@ -586,7 +558,7 @@ const HomePage = () => {
               {/* Product Image Placeholder */}
               <div className="absolute w-[163px] h-[202px] left-[234px] top-[30px] rounded flex items-center justify-center overflow-hidden">
                 <img
-                  src={ctaImage1}
+                  src={"/home/cta-1.png"}
                   alt="Hand sanitizer collection"
                   className="w-full h-full object-cover"
                 />
@@ -632,7 +604,7 @@ const HomePage = () => {
               {/* Product Image Placeholder */}
               <div className="absolute w-[150px] h-[184px] left-[234px] top-[37px] rounded flex items-center justify-center overflow-hidden">
                 <img
-                  src={ctaImage2}
+                  src={"/home/cta-2.png"}
                   alt="Face wash sale collection"
                   className="w-full h-full object-cover"
                 />
@@ -677,7 +649,7 @@ const HomePage = () => {
               {/* Product Image Placeholder */}
               <div className="absolute w-[140px] h-[203px] left-[266px] top-[28px] rounded flex items-center justify-center overflow-hidden transform scale-x-[-1]">
                 <img
-                  src={ctaImage3}
+                  src={"/home/cta-3.png"}
                   alt="Facial mask deals"
                   className="w-full h-full object-cover transform scale-x-[-1]"
                 />
@@ -722,7 +694,7 @@ const HomePage = () => {
               {/* Product Image Placeholder */}
               <div className="absolute w-[100px] h-[120px] right-4 top-4 rounded flex items-center justify-center overflow-hidden">
                 <img
-                  src={ctaImage1}
+                  src={"/home/cta-1.png"}
                   alt="Hand sanitizer collection"
                   className="w-full h-full object-cover"
                 />
@@ -763,7 +735,7 @@ const HomePage = () => {
               {/* Product Image Placeholder */}
               <div className="absolute w-[100px] h-[120px] right-4 top-4 rounded flex items-center justify-center overflow-hidden">
                 <img
-                  src={ctaImage2}
+                  src={"/home/cta-2.png"}
                   alt="Face wash sale collection"
                   className="w-full h-full object-cover"
                 />
@@ -804,7 +776,7 @@ const HomePage = () => {
               {/* Product Image Placeholder */}
               <div className="absolute w-[100px] h-[120px] right-4 top-4 rounded flex items-center justify-center overflow-hidden">
                 <img
-                  src={ctaImage3}
+                  src={"/home/cta-3.png"}
                   alt="Facial mask deals"
                   className="w-full h-full object-cover"
                 />
@@ -877,7 +849,7 @@ const HomePage = () => {
                 {/* Product Image Placeholder */}
                 <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
                   <img
-                    src={productMicroscope}
+                    src={"/home/microscope.png"}
                     alt="Microscope"
                     className="w-full h-full object-contain"
                   />
@@ -918,7 +890,7 @@ const HomePage = () => {
                 {/* Product Image Placeholder */}
                 <div className="flex justify-center items-center w-[160px] h-[160px] rounded overflow-hidden">
                   <img
-                    src={productOximeter}
+                    src={"/home/oximeter.png"}
                     alt="Pulse Oximeter"
                     className="w-full h-full object-contain"
                   />
@@ -967,7 +939,7 @@ const HomePage = () => {
                 {/* Product Image Placeholder */}
                 <div className="flex justify-center items-center w-[160px] h-[160px] rounded overflow-hidden">
                   <img
-                    src={productSerum}
+                    src={"/home/serum.png"}
                     alt="Vitamin Serum"
                     className="w-full h-full object-contain"
                   />
@@ -1021,7 +993,7 @@ const HomePage = () => {
                 {/* Product Image */}
                 <div className="flex justify-center items-center w-[160px] h-[160px] rounded overflow-hidden">
                   <img
-                    src={productProtein}
+                    src={"/home/protein.png"}
                     alt="High Protein"
                     className="w-full h-full object-contain"
                   />
@@ -1073,7 +1045,7 @@ const HomePage = () => {
                   {/* Product Image */}
                   <div className="flex justify-center items-center w-[100px] h-[100px] rounded overflow-hidden">
                     <img
-                      src={productMicroscope}
+                      src={"/home/microscope.png"}
                       alt="Microscope"
                       className="w-full h-full object-contain"
                     />
@@ -1114,7 +1086,7 @@ const HomePage = () => {
                   {/* Product Image */}
                   <div className="flex justify-center items-center w-[100px] h-[100px] rounded overflow-hidden">
                     <img
-                      src={productOximeter}
+                      src={"/home/oximeter.png"}
                       alt="Pulse Oximeter"
                       className="w-full h-full object-contain"
                     />
@@ -1166,7 +1138,7 @@ const HomePage = () => {
                   {/* Product Image */}
                   <div className="flex justify-center items-center w-[100px] h-[100px] rounded overflow-hidden">
                     <img
-                      src={productSerum}
+                      src={"/home/serum.png"}
                       alt="Vitamin Serum"
                       className="w-full h-full object-contain"
                     />
@@ -1220,7 +1192,7 @@ const HomePage = () => {
                   {/* Product Image */}
                   <div className="flex justify-center items-center w-[100px] h-[100px] rounded overflow-hidden">
                     <img
-                      src={productProtein}
+                      src={"/home/protein.png"}
                       alt="High Protein"
                       className="w-full h-full object-contain"
                     />
@@ -1269,7 +1241,7 @@ const HomePage = () => {
                 <div className="flex items-center gap-6 py-4 sm:max-w-md sm:w-full">
                   <div className="w-[40px] h-[40px] flex items-center justify-center flex-shrink-0">
                     <img
-                      src={featureImage1}
+                      src={"/home/feature-1.png"}
                       alt="30 Days Warranty"
                       className="w-full h-full object-contain"
                     />
@@ -1288,7 +1260,7 @@ const HomePage = () => {
                 <div className="flex items-center gap-6 py-4 sm:max-w-md sm:w-full">
                   <div className="w-[40px] h-[40px] flex items-center justify-center flex-shrink-0">
                     <img
-                      src={featureImage2}
+                      src={"/home/feature-2.png"}
                       alt="Exchange Policy"
                       className="w-full h-full object-contain"
                     />
@@ -1307,7 +1279,7 @@ const HomePage = () => {
                 <div className="flex items-center gap-6 py-4 sm:max-w-md sm:w-full">
                   <div className="w-[40px] h-[40px] flex items-center justify-center flex-shrink-0">
                     <img
-                      src={featureImage3}
+                      src={"/home/feature-3.png"}
                       alt="Secure Payment"
                       className="w-full h-full object-contain"
                     />
@@ -1349,7 +1321,7 @@ const HomePage = () => {
             {/* Feature 1 Image */}
             <div className="absolute w-[40px] h-[40px] left-[43px] top-[41px]">
               <img
-                src={featureImage1}
+                src={"/home/feature-1.png"}
                 alt="30 Days Warranty"
                 className="w-full h-full object-contain"
               />
@@ -1375,7 +1347,7 @@ const HomePage = () => {
             {/* Feature 2 Image */}
             <div className="absolute w-[40px] h-[40px] left-[40px] top-[38px]">
               <img
-                src={featureImage2}
+                src={"/home/feature-2.png"}
                 alt="Exchange Policy"
                 className="w-full h-full object-contain"
               />
@@ -1401,7 +1373,7 @@ const HomePage = () => {
             {/* Feature 3 Image */}
             <div className="absolute w-[40px] h-[40px] left-[41px] top-[40px]">
               <img
-                src={featureImage3}
+                src={"/home/feature-3.png"}
                 alt="Secure Payment"
                 className="w-full h-full object-contain"
               />
@@ -1453,7 +1425,7 @@ const HomePage = () => {
                   {/* Product Image */}
                   <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
                     <img
-                      src={storeCollection1}
+                      src={"/home/storecollection-1.png"}
                       alt="Store Collection 1"
                       className="w-full h-full object-contain"
                     />
@@ -1496,7 +1468,7 @@ const HomePage = () => {
                   {/* Product Image */}
                   <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
                     <img
-                      src={storeCollection2}
+                      src={"/home/storecollection-2.png"}
                       alt="Store Collection 2"
                       className="w-full h-full object-contain"
                     />
@@ -1539,7 +1511,7 @@ const HomePage = () => {
                   {/* Product Image */}
                   <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
                     <img
-                      src={storeCollection3}
+                      src={"/home/storecollection-3.png"}
                       alt="Store Collection 3"
                       className="w-full h-full object-contain"
                     />
@@ -1582,7 +1554,7 @@ const HomePage = () => {
                   {/* Product Image */}
                   <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
                     <img
-                      src={storeCollection4}
+                      src={"/home/storecollection-4.png"}
                       alt="Store Collection 4"
                       className="w-full h-full object-contain"
                     />
@@ -1629,7 +1601,7 @@ const HomePage = () => {
                   {/* Product Image */}
                   <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
                     <img
-                      src={storeCollection5}
+                      src={"/home/storecollection-5.png"}
                       alt="Store Collection 5"
                       className="w-full h-full object-contain"
                     />
@@ -1677,7 +1649,7 @@ const HomePage = () => {
                   {/* Product Image */}
                   <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
                     <img
-                      src={storeCollection6}
+                      src={"/home/storecollection-6.png"}
                       alt="Store Collection 6"
                       className="w-full h-full object-contain"
                     />
@@ -1720,7 +1692,7 @@ const HomePage = () => {
                   {/* Product Image */}
                   <div className="flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
                     <img
-                      src={storeCollection7}
+                      src={"/home/storecollection-7.png"}
                       alt="Store Collection 7"
                       className="w-full h-full object-contain"
                     />
@@ -1763,7 +1735,7 @@ const HomePage = () => {
                   {/* Product Image */}
                   <div className="relative flex justify-center items-center w-[160px] h-[200px] rounded overflow-hidden">
                     <img
-                      src={storeCollection8}
+                      src={"/home/storecollection-8.png"}
                       alt="Store Collection 8"
                       className="w-full h-full object-contain"
                     />
@@ -1771,7 +1743,7 @@ const HomePage = () => {
                     {/* Second bottle in background */}
                     <div className="absolute top-2 right-2 transform rotate-12 opacity-70">
                       <img
-                        src={storeCollection8}
+                        src={"/home/storecollection-8.png"}
                         alt="Store Collection 8"
                         className="w-[60px] h-[90px] object-contain"
                       />
@@ -1809,8 +1781,8 @@ const HomePage = () => {
               <div className="hidden md:block w-1/2 h-full relative">
                 <div className="absolute w-full h-full bg-[#F2F2F2] rounded-l-[10px]"></div>
                 <img
-                  src={newsletter}
-                  alt="newslettersection"
+                  src={"/home/newslettersection.png"}
+                  alt="Newsletter section"
                   className="absolute w-full h-full object-cover object-center rounded-l-[10px]"
                   style={{ transform: "scaleX(-1)" }}
                 />
@@ -1819,7 +1791,7 @@ const HomePage = () => {
               <div className="w-full md:w-1/2 h-full flex flex-col justify-center items-center bg-[#F2F2F2] rounded-r-[10px] px-8 py-12">
                 <div className="mb-2">
                   <span className="font-poppins font-medium text-[24px] leading-[150%] text-[#6C543E]">
-                    Join our newsletter
+                    Join our Newsletter
                   </span>
                 </div>
                 <h2 className="font-poppins font-medium text-[32px] md:text-[48px] leading-[120%] text-[#503217] text-center mb-6">

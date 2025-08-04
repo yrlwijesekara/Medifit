@@ -1,7 +1,4 @@
 import ProductDetail from '../components/ProductDetail';
-// Import product images from assets as fallback
-import productImage1 from '../assets/home/storecollection-1.png';
-import productImage2 from '../assets/home/storecollection-2.png';
 
 const ProductDetailPage = () => {
   // Sample product data - you can replace this with props or fetch from API
@@ -13,8 +10,8 @@ const ProductDetailPage = () => {
     images: [
       "/shopdetail/shopdetails-1.png",    // First B12 supplement image
       "/shopdetail/shopdetails-2.png",    // Second B12 supplement image
-      productImage1,                      // Fallback from assets
-      productImage2                       // Additional fallback view
+      "/home/storecollection-1.png",      // Fallback from public assets
+      "/home/storecollection-2.png"       // Additional fallback view
     ],
     benefits: [
       "Boosts energy levels.",

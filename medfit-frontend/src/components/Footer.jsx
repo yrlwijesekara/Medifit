@@ -1,8 +1,6 @@
 import React from 'react';
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { HiMail, HiPhone, HiLocationMarker } from 'react-icons/hi';
-import logo from '../assets/home/logo.png';
-import medicalicon from '../assets/home/footer.png';
 
 const Footer = () => {
   return (
@@ -19,7 +17,7 @@ const Footer = () => {
           <div className="w-full h-full relative">
             {/* Medical Cross Icon SVG */}
            <img 
-                      src={medicalicon} 
+                      src={"/home/footer.png"} 
                       alt="Medical Icon" 
                       className="w-full h-full object-contain"
                       onError={(e) => {
@@ -109,7 +107,7 @@ const Footer = () => {
                   {/* Logo */}
                   <div className="relative w-[184px] h-[84px] flex-shrink-0">
                     <img 
-                      src={logo} 
+                      src={"/home/logo.png"} 
                       alt="Medifit Logo" 
                       className="w-full h-full object-contain"
                       onError={(e) => {

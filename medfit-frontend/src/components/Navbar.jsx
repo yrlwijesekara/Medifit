@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FiSearch, FiShoppingCart, FiMenu, FiX } from 'react-icons/fi';
-import logoImage from '../assets/home/logo.png';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,7 +25,7 @@ const Navbar = () => {
               {/* Logo Image - Larger size to replace text */}
               <div className="w-[120px] h-[50px] relative overflow-hidden">
                 <img 
-                  src={logoImage} 
+                  src="/home/logo.png" 
                   alt="Medifit Logo" 
                   className="w-full h-full object-contain"
                 />

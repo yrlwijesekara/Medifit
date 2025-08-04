@@ -1,13 +1,12 @@
 import { useState } from 'react';
-import logoImage from '../assets/home/logo.png';
 
 const ProductImage = ({ images = [], productName = "B12 Medicine" }) => {
   const [selectedImage, setSelectedImage] = useState(0);
   
   // Default images if none provided
   const defaultImages = [
-    logoImage,
-    logoImage
+    "/home/logo.png",
+    "/home/logo.png"
   ];
   
   const productImages = images.length > 0 ? images : defaultImages;
@@ -27,7 +26,7 @@ const ProductImage = ({ images = [], productName = "B12 Medicine" }) => {
         <div className="absolute bottom-4 left-4 xl:left-1/2 xl:top-[264px] xl:-translate-x-1/2 xl:bottom-auto flex items-center gap-2 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg shadow-md xl:bg-transparent xl:shadow-none xl:backdrop-blur-none">
           <div className="w-[18px] h-[18px]">
             <img 
-              src={logoImage} 
+              src={"/home/logo.png"} 
               alt="Medifit Logo" 
               className="w-full h-full object-contain"
             />
@@ -56,28 +55,34 @@ const ProductImage = ({ images = [], productName = "B12 Medicine" }) => {
         </div>
       )}
 
-      {/* Image Thumbnails - Mobile */}
+      {/* Image Thumbnails - Mobile (Only shopdetail images) */}
       {productImages.length > 1 && (
         <div className="md:hidden flex gap-2 overflow-x-auto pb-2 mt-4">
-          {productImages.map((image, index) => (
-            <button
-              key={index}
-              onClick={() => setSelectedImage(index)}
-              className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all duration-200 ${
-                selectedImage === index 
-                  ? 'border-medifit-primary shadow-md' 
-                  : 'border-gray-200 hover:border-medifit-secondary'
-              }`}
-            >
-              <img 
-                src={image} 
-                alt={`${productName} - View ${index + 1}`}
-                className="w-full h-full object-cover"
-              />
-            </button>
-          ))}
+          {productImages
+            .filter(image => image.includes('/shopdetail/'))
+            .map((image, index) => {
+              const originalIndex = productImages.indexOf(image);
+              return (
+                <button
+                  key={originalIndex}
+                  onClick={() => setSelectedImage(originalIndex)}
+                  className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all duration-200 ${
+                    selectedImage === originalIndex 
+                      ? 'border-medifit-primary shadow-md' 
+                      : 'border-gray-200 hover:border-medifit-secondary'
+                  }`}
+                >
+                  <img 
+                    src={image} 
+                    alt={`${productName} - View ${index + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                </button>
+              );
+            })}
         </div>
       )}
+
     </div>
   );
 };
