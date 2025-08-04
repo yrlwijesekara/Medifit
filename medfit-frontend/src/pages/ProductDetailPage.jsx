@@ -1,4 +1,7 @@
 import ProductDetail from '../components/ProductDetail';
+// Import product images
+import productImage1 from '../assets/home/storecollection-1.png';
+import productImage2 from '../assets/home/storecollection-2.png';
 
 const ProductDetailPage = () => {
   // Sample product data - you can replace this with props or fetch from API
@@ -8,9 +11,8 @@ const ProductDetailPage = () => {
     originalPrice: 25.00,
     description: "B12 Medicine is a premium supplement that combats B12 deficiency and supports energy, red blood cell formation, and nervous system health. Perfect for those with fatigue, anemia, or restricted diets like vegetarians and vegans.",
     images: [
-      // Add your product image URLs here
-      // "/path/to/product-image-1.jpg",
-      // "/path/to/product-image-2.jpg"
+      productImage1,
+      productImage2
     ],
     benefits: [
       "Boosts energy levels.",
