@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const ProductCard = ({ 
   image, 
@@ -9,10 +9,21 @@ const ProductCard = ({
   badgeColor = "#D3744A",
   hasShopNow = false 
 }) => {
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleCardClick = () => {
+    if (hasShopNow) {
+      setIsClicked(!isClicked);
+    }
+  };
+
   return (
     <div className="flex flex-col items-start gap-[15px] w-[250px]">
       {/* Product Image Container */}
-      <div className="relative flex justify-center items-center w-[250px] h-[220px] bg-[#F2F2F2] rounded-[10px] group">
+      <div 
+        className="relative flex justify-center items-center w-[250px] h-[220px] bg-[#F2F2F2] rounded-[10px] group cursor-pointer"
+        onClick={handleCardClick}
+      >
         {/* Product Image */}
         <div className="flex justify-center items-center w-full h-full">
           <img
@@ -36,7 +47,7 @@ const ProductCard = ({
 
         {/* Shop Now Button - Only for microscope */}
         {hasShopNow && (
-          <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[210px] h-[35px] bottom-5 left-5 bg-[#E2DFCF] rounded-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className={`absolute flex justify-center items-center px-[10px] py-[5px] w-[210px] h-[35px] bottom-5 left-5 bg-[#E2DFCF] rounded-[10px] transition-opacity duration-300 ${isClicked ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}>
             <span className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">
               Shop now
             </span>
