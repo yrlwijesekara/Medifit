@@ -332,6 +332,9 @@ const ProductDetail = ({
             </div>
           </div>
 
+          {/* Spacer between sections */}
+          <div className="h-10 lg:h-12"></div>
+
           {/* Recent Products Section */}
           <div className="mb-20 lg:mb-24">
             {/* Section Title */}
@@ -345,7 +348,7 @@ const ProductDetail = ({
             </div>
 
             {/* Products Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mt-16 justify-items-center">
               {/* Product 1 - Microscope */}
               <ProductCard
                 image="/home/microscope.png"

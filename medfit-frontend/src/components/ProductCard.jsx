@@ -25,7 +25,7 @@ const ProductCard = ({
         {/* Badge */}
         {badge && (
           <div 
-            className="absolute flex justify-center items-center px-[10px] py-[5px] w-auto h-[30px] top-5 left-5 rounded-[10px] z-10"
+            className="absolute flex justify-center items-center px-[15px] py-[8px] w-auto h-auto top-5 left-5 rounded-[5px] z-10"
             style={{ backgroundColor: badgeColor }}
           >
             <span className="font-sans-serif-collection font-normal text-[13px] leading-[150%] text-white">
