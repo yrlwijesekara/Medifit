@@ -387,6 +387,162 @@ const ProductDetail = ({
               />
             </div>
           </div>
+
+          {/* Spacer between sections */}
+          <div className="h-10 lg:h-20"></div>
+
+          {/* CTA Section */}
+          <div className="mb-20 lg:mb-24">
+            <div 
+              className="relative w-full h-[400px] lg:h-[618px] rounded-[10px] overflow-hidden flex items-center"
+              
+            >
+              {/* Content Container */}
+              <div className="relative z-10 w-full h-full flex flex-col lg:flex-row">
+                {/* Text Content - Left Side */}
+                <div className="flex-1 flex items-center justify-center lg:justify-start px-6 lg:px-16 py-8 lg:py-0">
+                  <div className="max-w-[443px] flex flex-col gap-8 lg:gap-12 text-center lg:text-left">
+                    {/* Title and Description */}
+                    <div className="flex flex-col gap-4 lg:gap-5">
+                      <h2 
+                        className="text-2xl sm:text-3xl lg:text-5xl font-poppins font-medium leading-tight"
+                        style={{ color: '#503217' }}
+                      >
+                        Join our trustable Medifit product community
+                      </h2>
+                      <p 
+                        className="text-base lg:text-lg leading-relaxed max-w-[413px]"
+                        style={{ 
+                          color: '#8F7D6A',
+                          fontFamily: 'Sans Serif Collection',
+                          fontWeight: 400,
+                          lineHeight: '150%'
+                        }}
+                      >
+                        Join us as we build a community where wellness is accessible, education is empowering, and health is a shared journey.
+                      </p>
+                    </div>
+
+                    {/* CTA Button */}
+                    <div className="flex flex-col lg:flex-row items-center lg:justify-start gap-6 lg:gap-0">
+                      <button 
+                        className="flex items-center justify-center gap-1 px-4 py-2 lg:px-5 lg:py-3 rounded-[5px] transition-all duration-200 hover:opacity-90"
+                        style={{ backgroundColor: '#503217' }}
+                      >
+                        <span 
+                          className="text-base lg:text-lg font-poppins font-medium"
+                          style={{ color: '#EEEDE7' }}
+                        >
+                          Get started
+                        </span>
+                        <svg 
+                          className="w-5 h-5 lg:w-6 lg:h-6 ml-1" 
+                          viewBox="0 0 24 24" 
+                          fill="none" 
+                          stroke="#EEEDE7" 
+                          strokeWidth="1.5"
+                        >
+                          <path 
+                            strokeLinecap="round" 
+                            strokeLinejoin="round" 
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" 
+                          />
+                        </svg>
+                      </button>
+                      
+                      {/* Mobile CTA Images - 2 Rows Display */}
+                      <div className="lg:hidden w-full max-w-[300px] space-y-3">
+                        {/* First Row - 3 Images */}
+                        <div className="flex gap-2 overflow-hidden">
+                          <div className="w-1/3 h-[80px] rounded-[5px] overflow-hidden">
+                            <img 
+                              src="./shopdetail/cta-1.png" 
+                              alt="Medical supplements and capsules"
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          <div className="w-1/3 h-[80px] rounded-[5px] overflow-hidden">
+                            <img 
+                              src="./shopdetail/cta-2.png" 
+                              alt="Hand holding medication blister pack"
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          <div className="w-1/3 h-[80px] rounded-[5px] overflow-hidden -mr-4">
+                            <img 
+                              src="./shopdetail/cta-3.png" 
+                              alt="Pharmacy preparation and pills"
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                        </div>
+
+                        {/* Second Row - 2 Images with partial view */}
+                        <div className="flex gap-2 overflow-hidden">
+                          <div className="w-1/2 h-[80px] rounded-[5px] overflow-hidden">
+                            <img 
+                              src="./shopdetail/cta-4.png" 
+                              alt="Colorful vitamins and supplements"
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          <div className="w-1/2 h-[80px] rounded-[5px] overflow-hidden -mr-8">
+                            <img 
+                              src="./shopdetail/cta-1.png" 
+                              alt="Medical supplements and capsules"
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Image Grid - Right Side */}
+                <div className="w-full lg:w-[635px] h-full relative">
+                  {/* Image Grid Container */}
+                  <div className="absolute inset-0 grid grid-cols-2 gap-3 p-4">
+                    {/* Top Left Image */}
+                    <div className="relative overflow-hidden rounded-[10px_10px_0px_0px]">
+                      <img 
+                        src="./shopdetail/cta-1.png" 
+                        alt="Medical supplements and capsules"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+
+                    {/* Top Right Image */}
+                    <div className="relative overflow-hidden rounded-[10px_10px_0px_0px] transform rotate-180">
+                      <img 
+                        src="./shopdetail/cta-2.png" 
+                        alt="Hand holding medication blister pack"
+                        className="w-full h-full object-cover transform rotate-180"
+                      />
+                    </div>
+
+                    {/* Bottom Left Image */}
+                    <div className="relative overflow-hidden rounded-[0px_0px_10px_10px]">
+                      <img 
+                        src="./shopdetail/cta-3.png" 
+                        alt="Pharmacy preparation and pills"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+
+                    {/* Bottom Right Image */}
+                    <div className="relative overflow-hidden rounded-[0px_0px_10px_10px] transform rotate-180">
+                      <img 
+                        src="./shopdetail/cta-4.png" 
+                        alt="Colorful vitamins and supplements"
+                        className="w-full h-full object-cover transform rotate-180"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           
           {/* Bottom spacer to show testimonials margin */}
           <div className="h-20 lg:h-24"></div>
