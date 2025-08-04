@@ -23,8 +23,11 @@ const ProductDetail = ({
       {/* Navigation */}
       <Navbar />
       
+      {/* Spacer to prevent navbar overlap */}
+      <div className="h-[120px] sm:h-[130px] lg:h-[140px]"></div>
+      
       {/* Main Content */}
-      <div className="pt-[120px] sm:pt-[140px] lg:pt-[160px] pb-20 lg:pb-8">
+      <div className="py-8 lg:py-12">
         <Center maxWidth="1200px" padding="px-4 sm:px-6 lg:px-8">
           {/* Product Detail Section */}
           <div className="flex flex-col xl:flex-row xl:items-start xl:justify-center gap-8 xl:gap-12 min-h-[600px] mt-8">
