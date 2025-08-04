@@ -1,36 +1,38 @@
 import React from 'react';
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { HiMail, HiPhone, HiLocationMarker } from 'react-icons/hi';
+import Center from './Center';
 
 const Footer = () => {
   return (
-    <footer className="relative w-full min-h-[auto] overflow-hidden">
-      {/* Main Footer Container */}
-      <div className="relative w-full bg-[#E8E6DE] rounded-[5px] mx-auto px-4 lg:px-8 py-8 lg:py-16">
-        
-        {/* Decorative Elements */}
-        {/* Bottom Left Decorative Line */}
-        <div className="absolute left-[12px] bottom-[16px] w-[120px] h-[2px] bg-[#8F7D6A] opacity-20 transform scale-x-[-1] hidden lg:block"></div>
-        
-        {/* Top Right Decorative Medical Icon */}
-        <div className="absolute w-[176px] h-[176px] right-[50px] lg:right-[199px] top-0 opacity-50 transform rotate-[15deg] hidden md:block">
-          <div className="w-full h-full relative">
-            {/* Medical Cross Icon SVG */}
-           <img 
-                      src={"/home/footer.png"} 
-                      alt="Medical Icon" 
-                      className="w-full h-full object-contain"
-                      onError={(e) => {
-                        // Fallback SVG if image fails to load
-                        e.target.style.display = 'none';
-                        e.target.nextSibling.style.display = 'block';
-                      }}
-                    />
+    <footer className="relative w-full min-h-[auto] overflow-hidden bg-[#E8E6DE]">
+      <Center maxWidth="1200px" padding="px-4 sm:px-6 lg:px-8">
+        {/* Main Footer Container */}
+        <div className="relative w-full py-8 lg:py-16">
+          
+          {/* Decorative Elements */}
+          {/* Bottom Left Decorative Line */}
+          <div className="absolute left-[12px] bottom-[16px] w-[120px] h-[2px] bg-[#8F7D6A] opacity-20 transform scale-x-[-1] hidden lg:block"></div>
+          
+          {/* Top Right Decorative Medical Icon */}
+          <div className="absolute w-[176px] h-[176px] right-[50px] lg:right-[199px] top-0 opacity-50 transform rotate-[15deg] hidden md:block">
+            <div className="w-full h-full relative">
+              {/* Medical Cross Icon SVG */}
+             <img 
+                        src={"/home/footer.png"} 
+                        alt="Medical Icon" 
+                        className="w-full h-full object-contain"
+                        onError={(e) => {
+                          // Fallback SVG if image fails to load
+                          e.target.style.display = 'none';
+                          e.target.nextSibling.style.display = 'block';
+                        }}
+                      />
+            </div>
           </div>
-        </div>
 
-        {/* Footer Content Container */}
-        <div className="relative w-full max-w-[1400px] mx-auto">
+          {/* Footer Content Container */}
+          <div className="relative w-full">
           
           {/* Main Content Grid - Improved Layout */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
@@ -232,8 +234,9 @@ const Footer = () => {
               Design By Fuchsius, Powered By Fuchsius
             </p>
           </div>
+          </div>
         </div>
-      </div>
+      </Center>
     </footer>
   );
 };
