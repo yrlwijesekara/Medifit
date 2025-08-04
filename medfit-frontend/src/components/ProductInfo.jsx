@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FiShoppingCart, FiChevronDown } from 'react-icons/fi';
+import { FiShoppingCart, FiChevronUp, FiChevronDown, FiX, FiCheck } from 'react-icons/fi';
 
 const ProductInfo = ({ 
   name = "B12 Medicine",
@@ -14,11 +14,27 @@ const ProductInfo = ({
   ]
 }) => {
   const [quantity, setQuantity] = useState(1);
+  const [showCartPopup, setShowCartPopup] = useState(false);
+
+  const incrementQuantity = () => {
+    setQuantity(prev => prev + 1);
+  };
+
+  const decrementQuantity = () => {
+    setQuantity(prev => (prev > 1 ? prev - 1 : 1));
+  };
+
+  const handleAddToCart = () => {
+    setShowCartPopup(true);
+    setTimeout(() => {
+      setShowCartPopup(false);
+    }, 3000);
+  };
 
   return (
     <div className="w-full max-w-2xl mx-auto px-4 xl:px-0">
       {/* Product Name */}
-      <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-poppins font-medium leading-tight text-medifit-primary mb-4 xl:mb-6">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-poppins font-medium leading-tight mb-4 xl:mb-6" style={{ color: '#8B4513' }}>
         {name}
       </h1>
 
@@ -43,17 +59,31 @@ const ProductInfo = ({
       {/* Quantity and Add to Cart */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6 xl:mb-8">
         {/* Quantity Selector */}
-        <div className="relative flex items-center border-2 border-medifit-secondary rounded-lg overflow-hidden bg-medifit-bg-primary min-w-[80px] h-[50px] xl:h-[60px]">
-          <span className="flex-1 text-center text-lg xl:text-xl font-poppins font-medium text-medifit-primary">
+        <div className="flex items-center border-2 border-medifit-secondary rounded-lg overflow-hidden bg-medifit-bg-primary">
+          <button 
+            onClick={decrementQuantity}
+            className="px-3 py-3 xl:py-4 bg-medifit-bg-primary hover:bg-medifit-secondary/10 transition-colors duration-200 border-r border-medifit-secondary/30"
+          >
+            <FiChevronDown className="w-4 h-4 xl:w-5 xl:h-5 text-medifit-primary" strokeWidth={2} />
+          </button>
+          
+          <span className="px-4 py-3 xl:py-4 text-lg xl:text-xl font-poppins font-medium text-medifit-primary min-w-[60px] text-center">
             {quantity}
           </span>
-          <div className="absolute right-2 pointer-events-none">
-            <FiChevronDown className="w-4 h-4 xl:w-5 xl:h-5 text-medifit-primary" strokeWidth={1.5} />
-          </div>
+          
+          <button 
+            onClick={incrementQuantity}
+            className="px-3 py-3 xl:py-4 bg-medifit-bg-primary hover:bg-medifit-secondary/10 transition-colors duration-200 border-l border-medifit-secondary/30"
+          >
+            <FiChevronUp className="w-4 h-4 xl:w-5 xl:h-5 text-medifit-primary" strokeWidth={2} />
+          </button>
         </div>
 
         {/* Add to Cart Button */}
-        <button className="flex items-center justify-center gap-2 px-5 py-3 xl:py-3 bg-medifit-primary text-medifit-bg-primary rounded-lg hover:bg-medifit-primary/90 hover:scale-105 transition-all duration-200 font-poppins font-medium text-base xl:text-lg min-w-[150px] shadow-lg">
+        <button 
+          onClick={handleAddToCart}
+          className="flex items-center justify-center gap-2 px-5 py-3 xl:py-3 bg-[#8B4513] text-white rounded-lg hover:bg-[#7A3E11] hover:scale-105 transition-all duration-200 font-poppins font-medium text-base xl:text-lg min-w-[150px] shadow-lg"
+        >
           <span>Add to cart</span>
           <FiShoppingCart className="w-4 h-4 xl:w-5 xl:h-5" strokeWidth={1.5} />
         </button>
@@ -61,7 +91,7 @@ const ProductInfo = ({
 
       {/* Product Description */}
       <div className="mb-6 xl:mb-8">
-        <h2 className="text-lg sm:text-xl xl:text-2xl font-poppins font-medium text-medifit-primary mb-3">
+        <h2 className="text-lg sm:text-xl xl:text-2xl font-poppins font-medium mb-3" style={{ color: '#8B4513' }}>
           Product Description
         </h2>
         <div className="max-w-full overflow-hidden">
@@ -80,14 +110,14 @@ const ProductInfo = ({
 
       {/* Key Benefits */}
       <div className="mb-8 xl:mb-0">
-        <h2 className="text-lg sm:text-xl xl:text-2xl font-poppins font-medium text-medifit-primary mb-3">
+        <h2 className="text-lg sm:text-xl xl:text-2xl font-poppins font-medium mb-3" style={{ color: '#8B4513' }}>
           Key Benefits:
         </h2>
         <div className="space-y-2 xl:space-y-3">
           {benefits.map((benefit, index) => (
-            <div key={index} className="flex items-start gap-3">
+            <div key={index} className="flex items-center gap-3">
               <div 
-                className="w-2 h-2 rounded-full mt-2 flex-shrink-0" 
+                className="w-2 h-2 rounded-full flex-shrink-0" 
                 style={{ backgroundColor: '#8F7D6A' }}
               ></div>
               <p 
