@@ -135,7 +135,69 @@ const ProductInfo = ({
         </div>
       </div>
 
-      
+      {/* Features Section - Mobile (below key benefits) */}
+      <div className="xl:hidden mt-12 mb-8">
+        <div className="grid grid-cols-2 gap-4 sm:gap-6 px-2 max-w-sm mx-auto">
+          {/* Free shipping */}
+          <div className="flex flex-col items-center text-center">
+            <div className="w-10 h-10 mb-2 flex items-center justify-center">
+              <svg className="w-6 h-6" viewBox="0 0 50 50" fill="none">
+                <path d="M6.25 20.8333H37.5V33.3333H6.25V20.8333Z" stroke="#503217" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M37.5 29.1667H43.75L45.8333 25H43.75V20.8333H37.5V29.1667Z" stroke="#503217" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <circle cx="12.5" cy="37.5" r="4.1667" stroke="#503217" strokeWidth="2.5"/>
+                <circle cx="37.5" cy="37.5" r="4.1667" stroke="#503217" strokeWidth="2.5"/>
+              </svg>
+            </div>
+            <h3 className="font-poppins font-medium text-sm sm:text-base" style={{ color: '#503217' }}>
+              Free shipping
+            </h3>
+          </div>
+
+          {/* Easy refund */}
+          <div className="flex flex-col items-center text-center">
+            <div className="w-10 h-10 mb-2 flex items-center justify-center">
+              <svg className="w-6 h-6" viewBox="0 0 50 50" fill="none">
+                <path d="M37.5 12.5H6.25C4.1789 12.5 2.5 14.1789 2.5 16.25V35.4167C2.5 37.4878 4.1789 39.1667 6.25 39.1667H37.5C39.5711 39.1667 41.25 37.4878 41.25 35.4167V16.25C41.25 14.1789 39.5711 12.5 37.5 12.5Z" stroke="#503217" strokeWidth="2.5"/>
+                <path d="M12.5 25H31.25" stroke="#503217" strokeWidth="2.5" strokeLinecap="round"/>
+                <circle cx="35.4167" cy="20.8333" r="2.0833" fill="#503217"/>
+              </svg>
+            </div>
+            <h3 className="font-poppins font-medium text-sm sm:text-base" style={{ color: '#503217' }}>
+              Easy refund
+            </h3>
+          </div>
+
+          {/* Online support */}
+          <div className="flex flex-col items-center text-center">
+            <div className="w-10 h-10 mb-2 flex items-center justify-center">
+              <svg className="w-6 h-6" viewBox="0 0 50 50" fill="none">
+                <path d="M18.75 12.5C18.75 5.59644 24.3464 0 31.25 0C38.1536 0 43.75 5.59644 43.75 12.5V25C43.75 31.9036 38.1536 37.5 31.25 37.5C24.3464 37.5 18.75 31.9036 18.75 25V12.5Z" stroke="#503217" strokeWidth="2.5"/>
+                <path d="M12.5 25C12.5 35.4167 20.8333 43.75 31.25 43.75C41.6667 43.75 50 35.4167 50 25" stroke="#503217" strokeWidth="2.5" strokeLinecap="round"/>
+                <path d="M31.25 50V43.75" stroke="#503217" strokeWidth="2.5" strokeLinecap="round"/>
+                <path d="M25 50H37.5" stroke="#503217" strokeWidth="2.5" strokeLinecap="round"/>
+              </svg>
+            </div>
+            <h3 className="font-poppins font-medium text-sm sm:text-base" style={{ color: '#503217' }}>
+              Online support
+            </h3>
+          </div>
+
+          {/* Flexible payment */}
+          <div className="flex flex-col items-center text-center">
+            <div className="w-10 h-10 mb-2 flex items-center justify-center">
+              <svg className="w-6 h-6" viewBox="0 0 50 50" fill="none">
+                <rect x="6.25" y="8.3333" width="37.5" height="25" rx="4" stroke="#503217" strokeWidth="2.5"/>
+                <path d="M6.25 18.75H43.75" stroke="#503217" strokeWidth="2.5"/>
+                <rect x="35.9375" y="23.4375" width="3.125" height="3.125" fill="#503217"/>
+              </svg>
+            </div>
+            <h3 className="font-poppins font-medium text-sm sm:text-base" style={{ color: '#503217' }}>
+              Flexible payment
+            </h3>
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 };
