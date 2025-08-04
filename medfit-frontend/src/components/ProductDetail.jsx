@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Navbar from './Navbar';
 import ProductImage from './ProductImage';
 import ProductInfo from './ProductInfo';
@@ -18,6 +19,55 @@ const ProductDetail = ({
     ]
   }
 }) => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  
+  // Testimonials data - can add more testimonials here
+  const testimonials = [
+    {
+      id: 1,
+      name: "Olivia Garcia",
+      image: "/shopdetail/customer-1.jpg",
+      reviewImage: "/shopdetail/review-1.png",
+      review: "B12 Medicine keeps me energized and focused all day. A true lifesaver for vitality and wellness!"
+    },
+    {
+      id: 2,
+      name: "Sophia Brown", 
+      image: "/shopdetail/customer-2.jpg",
+      reviewImage: "/shopdetail/review-2.png",
+      review: "I've regained my energy and feel amazing thanks to B12 Medicine. Highly recommend for health and stamina!"
+    },
+    {
+      id: 3,
+      name: "Ethan Harris",
+      image: "/shopdetail/customer-3.jpg",
+      reviewImage: "/shopdetail/review-3.png", 
+      review: "As a vegetarian, B12 Medicine keeps my energy up and my health on track. Perfect for natural support!"
+    },
+    {
+      id: 4,
+      name: "Emma Wilson",
+      image: "/shopdetail/customer-1.jpg",
+      reviewImage: "/shopdetail/review-1.png",
+      review: "Amazing results! My energy levels have improved dramatically since taking B12 Medicine daily."
+    },
+    {
+      id: 5,
+      name: "Michael Johnson",
+      image: "/shopdetail/customer-2.jpg",
+      reviewImage: "/shopdetail/review-3.png", 
+      review: "Best B12 supplement I've tried. Quality ingredients and fast results. Highly recommended!"
+    }
+  ];
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % (testimonials.length - 2));
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + (testimonials.length - 2)) % (testimonials.length - 2));
+  };
+
   return (
     <div className="min-h-screen bg-medifit-white">
       {/* Navigation */}
@@ -127,144 +177,72 @@ const ProductDetail = ({
               </h2>
             </div>
 
-            {/* Testimonials Grid */}
-            <div className="flex flex-col lg:flex-row justify-center items-start gap-8 lg:gap-6 xl:gap-8">
-              {/* Testimonial 1 - Olivia Garcia */}
-              <div className="flex flex-col items-start max-w-md">
-                {/* Review Card */}
-                <div 
-                  className="w-full p-6 mb-4 rounded-[25px_25px_25px_0px]"
-                  style={{ backgroundColor: '#F2F2F2' }}
-                >
-                  <div className="flex items-start gap-2 mb-2">
-                    <svg className="w-6 h-6 flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="none">
-                      <path d="M3 4C3 3.44772 3.44772 3 4 3H20C20.5523 3 21 3.44772 21 4V13C21 13.5523 20.5523 14 20 14H13L8 17V14H4C3.44772 14 3 13.5523 3 13V4Z" stroke="#8F7D6A" strokeWidth="1.5"/>
-                      <path d="M8 9H16" stroke="#8F7D6A" strokeWidth="1.5" strokeLinecap="round"/>
-                      <path d="M6 17H12" stroke="#8F7D6A" strokeWidth="1.5" strokeLinecap="round"/>
-                    </svg>
-                  </div>
-                  <p 
-                    className="text-lg leading-relaxed"
-                    style={{ 
-                      color: '#8F7D6A',
-                      fontFamily: 'Sans Serif Collection',
-                      fontWeight: 400 
-                    }}
-                  >
-                    B12 Medicine keeps me energized and focused all day. A true lifesaver for vitality and wellness!
-                  </p>
-                </div>
-                
-                {/* User Info */}
-                <div className="flex items-center gap-4">
-                  <div className="w-15 h-15 rounded-full overflow-hidden bg-gray-200 flex-shrink-0">
-                    <div 
-                      className="w-full h-full bg-cover bg-center"
-                      style={{ 
-                        backgroundImage: "url('/shopdetail/customer-1.jpg')",
-                        backgroundColor: '#F2F2F2'
-                      }}
-                    ></div>
-                  </div>
-                  <h3 
-                    className="text-lg font-poppins font-medium"
-                    style={{ color: '#503217' }}
-                  >
-                    Olivia Garcia
-                  </h3>
-                </div>
-              </div>
+            {/* Testimonials Carousel */}
+            <div className="relative overflow-hidden">
+              {/* Mouse hover areas for navigation */}
+              <div 
+                className="absolute left-0 top-0 w-1/4 h-full z-10 cursor-pointer"
+                onMouseEnter={prevSlide}
+              ></div>
+              
+              <div 
+                className="absolute right-0 top-0 w-1/4 h-full z-10 cursor-pointer"
+                onMouseEnter={nextSlide}
+              ></div>
 
-              {/* Testimonial 2 - Sophia Brown */}
-              <div className="flex flex-col items-start max-w-md">
-                {/* Review Card */}
-                <div 
-                  className="w-full p-6 mb-4 rounded-[25px_25px_25px_0px]"
-                  style={{ backgroundColor: '#F2F2F2' }}
-                >
-                  <div className="flex items-start gap-2 mb-2">
-                    <svg className="w-6 h-6 flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="none">
-                      <path d="M3 4C3 3.44772 3.44772 3 4 3H20C20.5523 3 21 3.44772 21 4V13C21 13.5523 20.5523 14 20 14H13L8 17V14H4C3.44772 14 3 13.5523 3 13V4Z" stroke="#8F7D6A" strokeWidth="1.5"/>
-                      <path d="M8 9H16" stroke="#8F7D6A" strokeWidth="1.5" strokeLinecap="round"/>
-                      <path d="M6 17H12" stroke="#8F7D6A" strokeWidth="1.5" strokeLinecap="round"/>
-                    </svg>
+              {/* Carousel Container */}
+              <div className="flex gap-6 transition-transform duration-700 ease-in-out" style={{ transform: `translateX(-${currentSlide * 33.333}%)` }}>
+                {testimonials.map((testimonial, index) => (
+                  <div key={testimonial.id} className="w-1/3 flex-shrink-0 px-3">
+                    <div className="flex flex-col items-start h-full">
+                      {/* Review Card */}
+                      <div 
+                        className="w-full p-8 mb-6 rounded-[25px_25px_25px_0px] relative h-48 flex flex-col"
+                        style={{ backgroundColor: '#F2F2F2' }}
+                      >
+                        {/* Comment Icon */}
+                        <div className="absolute top-4 left-6">
+                          <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 4C3 3.44772 3.44772 3 4 3H20C20.5523 3 21 3.44772 21 4V13C21 13.5523 20.5523 14 20 14H13L8 17V14H4C3.44772 14 3 13.5523 3 13V4Z" stroke="#8F7D6A" strokeWidth="1.5"/>
+                            <path d="M8 9H16" stroke="#8F7D6A" strokeWidth="1.5" strokeLinecap="round"/>
+                            <path d="M6 17H12" stroke="#8F7D6A" strokeWidth="1.5" strokeLinecap="round"/>
+                          </svg>
+                        </div>
+                        
+                        {/* Review Text */}
+                        <div className="flex-1 flex items-center mt-8">
+                          <p 
+                            className="text-base leading-relaxed"
+                            style={{ 
+                              color: '#8F7D6A',
+                              fontFamily: 'Sans Serif Collection',
+                              fontWeight: 400 
+                            }}
+                          >
+                            {testimonial.review}
+                          </p>
+                        </div>
+                      </div>
+                      
+                      {/* User Info */}
+                      <div className="flex items-center gap-4">
+                        <div className="w-15 h-15 rounded-full overflow-hidden bg-gray-200 flex-shrink-0 flex items-center justify-center">
+                          <img 
+                            src={testimonial.reviewImage}
+                            alt={`Review by ${testimonial.name}`}
+                            className="w-10 h-10 object-contain"
+                          />
+                        </div>
+                        <h3 
+                          className="text-lg font-poppins font-medium"
+                          style={{ color: '#503217' }}
+                        >
+                          {testimonial.name}
+                        </h3>
+                      </div>
+                    </div>
                   </div>
-                  <p 
-                    className="text-lg leading-relaxed"
-                    style={{ 
-                      color: '#8F7D6A',
-                      fontFamily: 'Sans Serif Collection',
-                      fontWeight: 400 
-                    }}
-                  >
-                    I've regained my energy and feel amazing thanks to B12 Medicine. Highly recommend for health and stamina!
-                  </p>
-                </div>
-                
-                {/* User Info */}
-                <div className="flex items-center gap-4">
-                  <div className="w-15 h-15 rounded-full overflow-hidden bg-gray-200 flex-shrink-0">
-                    <div 
-                      className="w-full h-full bg-cover bg-center"
-                      style={{ 
-                        backgroundImage: "url('/shopdetail/customer-2.jpg')",
-                        backgroundColor: '#F2F2F2'
-                      }}
-                    ></div>
-                  </div>
-                  <h3 
-                    className="text-lg font-poppins font-medium"
-                    style={{ color: '#503217' }}
-                  >
-                    Sophia Brown
-                  </h3>
-                </div>
-              </div>
-
-              {/* Testimonial 3 - Ethan Harris */}
-              <div className="flex flex-col items-start max-w-md">
-                {/* Review Card */}
-                <div 
-                  className="w-full p-6 mb-4 rounded-[25px_25px_25px_0px]"
-                  style={{ backgroundColor: '#F2F2F2' }}
-                >
-                  <div className="flex items-start gap-2 mb-2">
-                    <svg className="w-6 h-6 flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="none">
-                      <path d="M3 4C3 3.44772 3.44772 3 4 3H20C20.5523 3 21 3.44772 21 4V13C21 13.5523 20.5523 14 20 14H13L8 17V14H4C3.44772 14 3 13.5523 3 13V4Z" stroke="#8F7D6A" strokeWidth="1.5"/>
-                      <path d="M8 9H16" stroke="#8F7D6A" strokeWidth="1.5" strokeLinecap="round"/>
-                      <path d="M6 17H12" stroke="#8F7D6A" strokeWidth="1.5" strokeLinecap="round"/>
-                    </svg>
-                  </div>
-                  <p 
-                    className="text-lg leading-relaxed"
-                    style={{ 
-                      color: '#8F7D6A',
-                      fontFamily: 'Sans Serif Collection',
-                      fontWeight: 400 
-                    }}
-                  >
-                    As a vegetarian, B12 Medicine keeps my energy up and my health on track. Perfect for natural support!
-                  </p>
-                </div>
-                
-                {/* User Info */}
-                <div className="flex items-center gap-4">
-                  <div className="w-15 h-15 rounded-full overflow-hidden bg-gray-200 flex-shrink-0">
-                    <div 
-                      className="w-full h-full bg-cover bg-center"
-                      style={{ 
-                        backgroundImage: "url('/shopdetail/customer-3.jpg')",
-                        backgroundColor: '#F2F2F2'
-                      }}
-                    ></div>
-                  </div>
-                  <h3 
-                    className="text-lg font-poppins font-medium"
-                    style={{ color: '#503217' }}
-                  >
-                    Ethan Harris
-                  </h3>
-                </div>
+                ))}
               </div>
             </div>
           </div>
