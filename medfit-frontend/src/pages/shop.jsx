@@ -8,7 +8,7 @@ const Shop = () => {
 
       {/* Hero Section */}
 
-      <div className=" w-full  bg-[#E8E6DE] flex flex-col items-center justify-center">
+      <div className="w-full bg-[#E8E6DE] flex flex-col items-center justify-center pt-[111px]">
         <div className="container w-full bg-#E8E6DE">
           <div className="md:bg-#E8E6DE  lg:bg-#E8E6DEbg-#E8E6DE xl:bg-#E8E6DE grid lg:grid-cols-2 grid-cols-1">
             <div className=" bg-#E8E6DE">

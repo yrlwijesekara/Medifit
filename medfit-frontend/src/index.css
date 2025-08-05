@@ -2,24 +2,16 @@
 
 /* Google Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-/* Reset and base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 body {
   margin: 0;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  padding: 0;
+  font-family: 'Sans Serif Collection', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  background-color: #EEEDE7;
 }
 
 #root {
@@ -32,7 +24,7 @@ body {
   min-height: 100vh;
 }
 
-/* Custom utility classes for Medifit */
+/* Custom utility for opacity-15 */
 .opacity-15 {
   opacity: 0.15;
 }
@@ -40,45 +32,4 @@ body {
 /* Custom matrix transformation as specified in design */
 .matrix-transform {
   transform: matrix(0.95, -0.31, 0.34, 0.94, 0, 0);
-}
-
-/* Medifit brand colors */
-:root {
-  --medifit-primary: #503217;
-  --medifit-secondary: #8F7D6A;
-  --medifit-bg: #EEEDE7;
-  --medifit-bg-secondary: #F5F4EE;
-  --medifit-white: #F2F2F2;
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Focus styles for accessibility */
-button:focus,
-input:focus,
-textarea:focus,
-select:focus {
-  outline: 2px solid var(--medifit-primary);
-  outline-offset: 2px;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--medifit-bg);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--medifit-secondary);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--medifit-primary);
 }

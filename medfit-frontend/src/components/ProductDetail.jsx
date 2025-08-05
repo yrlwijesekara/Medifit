@@ -76,13 +76,13 @@ const ProductDetail = ({
       <Navbar />
 
       {/* Spacer to prevent navbar overlap */}
-      <div className="h-[120px] sm:h-[130px] lg:h-[140px]"></div>
+      <div className="h-[95px] sm:h-[100px] lg:h-[110px]"></div>
 
       {/* Main Content */}
-      <div className="flex-1 py-8 lg:py-12">
+      <div className="flex-1 py-2 sm:py-4 lg:py-6">
         <Center maxWidth="1200px" padding="px-4 sm:px-6 lg:px-8">
           {/* Product Detail Section */}
-          <div className="flex flex-col xl:flex-row xl:items-start xl:justify-center gap-8 xl:gap-12 min-h-[600px] mt-8">
+          <div className="flex flex-col xl:flex-row xl:items-start xl:justify-center gap-4 sm:gap-6 xl:gap-8 min-h-[400px] sm:min-h-[500px] mt-2 sm:mt-4">
             {/* Product Images - Left Side */}
             <div className="w-full xl:w-auto xl:flex-shrink-0 flex justify-center">
               <ProductImage
@@ -103,9 +103,71 @@ const ProductDetail = ({
             </div>
           </div>
 
-          {/* Features Section - Desktop (Full Width Below Both Columns) */}
-          <div className="hidden xl:block mt-24 mb-8">
-            <div className="flex justify-center items-center gap-16 lg:gap-24">
+          {/* Features Section - Mobile & Desktop */}
+          <div className="mt-8 sm:mt-12 mb-4 sm:mb-6">
+            
+            {/* Mobile Features - 2x2 Grid */}
+            <div className="xl:hidden grid grid-cols-2 gap-4 sm:gap-6 justify-items-center">
+              {/* Free shipping */}
+              <div className="flex flex-col items-center text-center">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 mb-2 flex items-center justify-center">
+                  <img
+                    src="/shopdetail/features-1.png"
+                    alt="Free shipping"
+                    className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+                  />
+                </div>
+                <h3 className="font-poppins font-medium text-sm sm:text-base" style={{ color: '#503217' }}>
+                  Free shipping
+                </h3>
+              </div>
+
+              {/* Easy refund */}
+              <div className="flex flex-col items-center text-center">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 mb-2 flex items-center justify-center">
+                  <img
+                    src="/shopdetail/features-2.png"
+                    alt="Easy refund"
+                    className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+                  />
+                </div>
+                <h3 className="font-poppins font-medium text-sm sm:text-base" style={{ color: '#503217' }}>
+                  Easy refund
+                </h3>
+              </div>
+
+              {/* Online support */}
+              <div className="flex flex-col items-center text-center">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 mb-2 flex items-center justify-center">
+                  <img
+                    src="/shopdetail/features-3.png"
+                    alt="Online support"
+                    className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+                  />
+                </div>
+                <h3 className="font-poppins font-medium text-sm sm:text-base" style={{ color: '#503217' }}>
+                  Online support
+                </h3>
+              </div>
+
+              {/* Flexible payment */}
+              <div className="flex flex-col items-center text-center">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 mb-2 flex items-center justify-center">
+                  <img
+                    src="/shopdetail/features-4.png"
+                    alt="Flexible payment"
+                    className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+                  />
+                </div>
+                <h3 className="font-poppins font-medium text-sm sm:text-base" style={{ color: '#503217' }}>
+                  Flexible payment
+                </h3>
+              </div>
+            </div>
+
+            {/* Desktop Features - Single Row */}
+            <div className="hidden xl:block">
+              <div className="flex justify-center items-center gap-16 lg:gap-24">
               {/* Free shipping */}
               <div className="flex flex-col items-center text-center">
                 <div className="w-12 h-12 mb-3 flex items-center justify-center">
@@ -162,15 +224,15 @@ const ProductDetail = ({
                 </h3>
               </div>
             </div>
+            </div>
           </div>
 
-          {/* Spacer between sections */}
-          <div className="h-10 lg:h-12"></div>
+          
 
           {/* Customer Testimonials Section */}
-          <div className="mb-20 lg:mb-24">
+          <div className="mb-8 sm:mb-12 lg:mb-16">
             {/* Section Title */}
-            <div className="text-center py-16">
+            <div className="text-center py-4 sm:py-6 lg:py-8">
               <h2
                 className="text-3xl md:text-4xl lg:text-5xl font-poppins font-medium leading-tight my-8"
                 style={{ color: '#503217' }}
@@ -333,13 +395,12 @@ const ProductDetail = ({
             </div>
           </div>
 
-          {/* Spacer between sections */}
-          <div className="h-10 lg:h-12"></div>
+         
 
           {/* Recent Products Section */}
-          <div className="mb-20 lg:mb-24">
+          <div className="mb-8 sm:mb-12 lg:mb-16">
             {/* Section Title */}
-            <div className="text-center py-16">
+            <div className="text-center py-4 sm:py-6 lg:py-8">
               <h2
                 className="text-3xl md:text-4xl lg:text-5xl font-poppins font-medium leading-tight my-8"
                 style={{ color: '#503217' }}
@@ -349,7 +410,7 @@ const ProductDetail = ({
             </div>
 
             {/* Products Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mt-16 justify-items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mt-2 sm:mt-4 justify-items-center">
               {/* Product 1 - Microscope */}
               <ProductCard
                 image="/home/microscope.png"
@@ -389,11 +450,10 @@ const ProductDetail = ({
             </div>
           </div>
 
-          {/* Spacer between sections */}
-          <div className="h-10 lg:h-20"></div>
+         
 
           {/* CTA Section */}
-          <div className="mb-20 lg:mb-24">
+          <div className="mb-8 sm:mb-12 lg:mb-16">
             <div
               className="relative w-full h-[400px] lg:h-[618px] rounded-[10px] overflow-hidden flex items-center"
 
@@ -538,8 +598,7 @@ const ProductDetail = ({
             </div>
           </div>
 
-          {/* Bottom spacer to show testimonials margin */}
-          <div className="h-20 lg:h-24"></div>
+         
         </Center>
       </div>
 

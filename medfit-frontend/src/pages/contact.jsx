@@ -7,7 +7,7 @@ const Contact = () => {
       <Navbar />
 
       {/* Contact Page Content */}
-      <div className="w-full min-h-screen bg-[#E8E6DE] py-20 px-4">
+      <div className="w-full min-h-screen bg-[#E8E6DE] pt-[111px] pb-20 px-4">
         <div className="w-full max-w-[1400px] mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-[#503217] text-[48px] sm:text-[60px] md:text-[70px] leading-[1.2] font-medium font-['Poppins'] mb-8">
