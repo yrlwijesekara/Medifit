@@ -8,8 +8,8 @@ export default {
     extend: {
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
-        'sans-serif-collection': ['Sans Serif Collection', 'sans-serif'],
-        'sans': ['Sans Serif Collection', 'sans-serif'], // Adding as default sans
+        'sans-serif-collection': ['Inter', 'sans-serif'],
+        'sans': ['Inter', 'sans-serif'],
       },
       colors: {
         'medifit': {
