@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Shop = () => {
   return (
@@ -634,6 +635,8 @@ const Shop = () => {
           </div>
         </div>
       
+      {/* Footer */}
+      <Footer />
     </>
   );
 };
