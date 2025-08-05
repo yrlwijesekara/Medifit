@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useCart } from '../context/CartContext';
+import { getProductById } from '../data/products';
 import Navbar from '../components/Navbar';
 import Center from '../components/Center';
 import Footer from '../components/Footer';
@@ -7,6 +10,18 @@ import ProductCard from '../components/ProductCard';
 
 
 const HomePage = () => {
+  const navigate = useNavigate();
+  const { addToCart } = useCart();
+  
+  // Handler for Shop now buttons - adds product to cart and navigates
+  const handleShopNow = (productId = 'b12-medicine') => {
+    const product = getProductById(productId);
+    if (product) {
+      addToCart(product);
+    }
+    navigate('/cart');
+  };
+  
   // State for mobile badge visibility
   const [mobileBadges, setMobileBadges] = useState({
     // CTA cards
@@ -69,7 +84,10 @@ const HomePage = () => {
             </div>
 
             {/* Frame 77 - Shop Now Button */}
-            <button className="flex flex-row justify-center items-center p-5 gap-[10px] w-[158px] h-[48px] bg-[#503217] rounded-[10px] flex-none order-1 hover:bg-[#6B4228] transition-colors duration-200">
+            <button 
+              onClick={handleShopNow}
+              className="flex flex-row justify-center items-center p-5 gap-[10px] w-[158px] h-[48px] bg-[#503217] rounded-[10px] flex-none order-1 hover:bg-[#6B4228] transition-colors duration-200"
+            >
               {/* Bag Icon - 24x24px */}
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-none order-0">
                 <rect
@@ -131,7 +149,10 @@ const HomePage = () => {
               <p className="font-sans-serif-collection font-normal text-[16px] leading-[150%] text-[#8F7D6A] mb-8 max-w-[400px]">
                 For the best results, align your health needs with your medication plan.
               </p>
-              <button className="flex items-center justify-center gap-3 px-5 py-3 bg-[#503217] rounded-[10px] hover:bg-[#6B4228] transition-colors duration-200">
+              <button 
+                onClick={handleShopNow}
+                className="flex items-center justify-center gap-3 px-5 py-3 bg-[#503217] rounded-[10px] hover:bg-[#6B4228] transition-colors duration-200"
+              >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="2" y="3" width="20" height="18" rx="2" stroke="#EEEDE7" strokeWidth="1.5" />
                   <path d="M8 7v-2a4 4 0 0 1 8 0v2" stroke="#EEEDE7" strokeWidth="1.5" />
@@ -171,7 +192,10 @@ const HomePage = () => {
               </div>
             </div>
 
-            <button className="flex items-center justify-center gap-3 px-5 py-3 bg-[#503217] rounded-[10px] hover:bg-[#6B4228] transition-colors duration-200 mx-auto">
+            <button 
+              onClick={handleShopNow}
+              className="flex items-center justify-center gap-3 px-5 py-3 bg-[#503217] rounded-[10px] hover:bg-[#6B4228] transition-colors duration-200 mx-auto"
+            >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="2" y="3" width="20" height="18" rx="2" stroke="#EEEDE7" strokeWidth="1.5" />
                 <path d="M8 7v-2a4 4 0 0 1 8 0v2" stroke="#EEEDE7" strokeWidth="1.5" />
@@ -579,7 +603,10 @@ const HomePage = () => {
                   </h3>
 
                   {/* Shop Now Link */}
-                  <div className="flex items-center gap-[10px] group">
+                  <div 
+                    onClick={() => handleShopNow('hand-sanitizer')}
+                    className="flex items-center gap-[10px] group cursor-pointer"
+                  >
                     <div className="w-6 h-6 flex items-center justify-center">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="2" y="3" width="20" height="18" rx="2" stroke="#8F7D6A" strokeWidth="2" />
@@ -715,7 +742,10 @@ const HomePage = () => {
                   </h3>
 
                   {/* Shop Now Link */}
-                  <div className="flex items-center gap-2 group">
+                  <div 
+                    onClick={() => handleShopNow('hand-sanitizer')}
+                    className="flex items-center gap-2 group cursor-pointer"
+                  >
                     <div className="w-4 h-4 flex items-center justify-center">
                       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="2" y="3" width="20" height="18" rx="2" stroke="#8F7D6A" strokeWidth="2" />
@@ -857,7 +887,10 @@ const HomePage = () => {
                 </div>
 
                 {/* Shop Now Button - Hidden by default, shown on hover */}
-                <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[262px] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div 
+                  onClick={() => handleShopNow('microscope')}
+                  className="absolute flex justify-center items-center px-[10px] py-[5px] w-[262px] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+                >
                   <div className="flex items-center gap-[5px]">
                     {/* Cart Icon */}
                     <div className="w-6 h-6 flex items-center justify-center">
@@ -898,7 +931,10 @@ const HomePage = () => {
                 </div>
 
                 {/* Shop Now Button - Hidden by default, shown on hover */}
-                <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[262px] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div 
+                  onClick={() => handleShopNow('pulse-oximeter')}
+                  className="absolute flex justify-center items-center px-[10px] py-[5px] w-[262px] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+                >
                   <div className="flex items-center gap-[5px]">
                     {/* Cart Icon */}
                     <div className="w-6 h-6 flex items-center justify-center">
@@ -947,7 +983,10 @@ const HomePage = () => {
                 </div>
 
                 {/* Shop Now Button - Hidden by default, shown on hover */}
-                <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[262px] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div 
+                  onClick={() => handleShopNow('vitamin-serum')}
+                  className="absolute flex justify-center items-center px-[10px] py-[5px] w-[262px] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+                >
                   <div className="flex items-center gap-[5px]">
                     {/* Cart Icon */}
                     <div className="w-6 h-6 flex items-center justify-center">
@@ -1001,7 +1040,10 @@ const HomePage = () => {
                 </div>
 
                 {/* Shop Now Button - Hidden by default, shown on hover */}
-                <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[262px] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div 
+                  onClick={() => handleShopNow('high-protein')}
+                  className="absolute flex justify-center items-center px-[10px] py-[5px] w-[262px] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+                >
                   <div className="flex items-center gap-[5px]">
                     {/* Cart Icon */}
                     <div className="w-6 h-6 flex items-center justify-center">
@@ -1053,7 +1095,13 @@ const HomePage = () => {
                   </div>
 
                   {/* Shop Now Button - Mobile: onClick toggle, Desktop: hover */}
-                  <div className={`absolute flex justify-center items-center px-[8px] py-[4px] w-[120px] h-[25px] bg-[#E2DFCF] rounded-[6px] bottom-3 left-5 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.product1 ? 'opacity-100' : 'opacity-0'}`}>
+                  <div 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleShopNow('microscope');
+                    }}
+                    className={`absolute flex justify-center items-center px-[8px] py-[4px] w-[120px] h-[25px] bg-[#E2DFCF] rounded-[6px] bottom-3 left-5 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 cursor-pointer ${mobileBadges.product1 ? 'opacity-100' : 'opacity-0'}`}
+                  >
                     <div className="flex items-center gap-[3px]">
                       {/* Cart Icon */}
                       <div className="w-4 h-4 flex items-center justify-center">
@@ -1094,7 +1142,13 @@ const HomePage = () => {
                   </div>
 
                   {/* Shop Now Button - Mobile: onClick toggle, Desktop: hover */}
-                  <div className={`absolute flex justify-center items-center px-[8px] py-[4px] w-[120px] h-[25px] bg-[#E2DFCF] rounded-[6px] bottom-3 left-5 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.product2 ? 'opacity-100' : 'opacity-0'}`}>
+                  <div 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleShopNow('pulse-oximeter');
+                    }}
+                    className={`absolute flex justify-center items-center px-[8px] py-[4px] w-[120px] h-[25px] bg-[#E2DFCF] rounded-[6px] bottom-3 left-5 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 cursor-pointer ${mobileBadges.product2 ? 'opacity-100' : 'opacity-0'}`}
+                  >
                     <div className="flex items-center gap-[3px]">
                       {/* Cart Icon */}
                       <div className="w-4 h-4 flex items-center justify-center">
@@ -1146,7 +1200,13 @@ const HomePage = () => {
                   </div>
 
                   {/* Shop Now Button - Mobile: onClick toggle, Desktop: hover */}
-                  <div className={`absolute flex justify-center items-center px-[8px] py-[4px] w-[120px] h-[25px] bg-[#E2DFCF] rounded-[6px] bottom-3 left-5 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.product3 ? 'opacity-100' : 'opacity-0'}`}>
+                  <div 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleShopNow('vitamin-serum');
+                    }}
+                    className={`absolute flex justify-center items-center px-[8px] py-[4px] w-[120px] h-[25px] bg-[#E2DFCF] rounded-[6px] bottom-3 left-5 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 cursor-pointer ${mobileBadges.product3 ? 'opacity-100' : 'opacity-0'}`}
+                  >
                     <div className="flex items-center gap-[3px]">
                       {/* Cart Icon */}
                       <div className="w-4 h-4 flex items-center justify-center">
@@ -1200,7 +1260,13 @@ const HomePage = () => {
                   </div>
 
                   {/* Shop Now Button - Mobile: onClick toggle, Desktop: hover */}
-                  <div className={`absolute flex justify-center items-center px-[8px] py-[4px] w-[120px] h-[25px] bg-[#E2DFCF] rounded-[6px] bottom-3 left-5 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${mobileBadges.product4 ? 'opacity-100' : 'opacity-0'}`}>
+                  <div 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleShopNow('high-protein');
+                    }}
+                    className={`absolute flex justify-center items-center px-[8px] py-[4px] w-[120px] h-[25px] bg-[#E2DFCF] rounded-[6px] bottom-3 left-5 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 cursor-pointer ${mobileBadges.product4 ? 'opacity-100' : 'opacity-0'}`}
+                  >
                     <div className="flex items-center gap-[3px]">
                       {/* Cart Icon */}
                       <div className="w-4 h-4 flex items-center justify-center">
@@ -1433,7 +1499,10 @@ const HomePage = () => {
                   </div>
 
                   {/* Shop Now Button - Hidden by default, shown on hover */}
-                  <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div 
+                    onClick={() => handleShopNow('b12-medicine')}
+                    className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+                  >
                     <div className="flex items-center gap-[5px]">
                       {/* Cart Icon */}
                       <div className="w-6 h-6 flex items-center justify-center">
@@ -1476,7 +1545,10 @@ const HomePage = () => {
                   </div>
 
                   {/* Shop Now Button - Hidden by default, shown on hover */}
-                  <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div 
+                    onClick={() => handleShopNow('vitamin-d3')}
+                    className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+                  >
                     <div className="flex items-center gap-[5px]">
                       {/* Cart Icon */}
                       <div className="w-6 h-6 flex items-center justify-center">
@@ -1519,7 +1591,10 @@ const HomePage = () => {
                   </div>
 
                   {/* Shop Now Button - Hidden by default, shown on hover */}
-                  <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div 
+                    onClick={() => handleShopNow('calcium-tablets')}
+                    className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+                  >
                     <div className="flex items-center gap-[5px]">
                       {/* Cart Icon */}
                       <div className="w-6 h-6 flex items-center justify-center">
@@ -1562,7 +1637,10 @@ const HomePage = () => {
                   </div>
 
                   {/* Shop Now Button - Hidden by default, shown on hover */}
-                  <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div 
+                    onClick={() => handleShopNow('multivitamin')}
+                    className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+                  >
                     <div className="flex items-center gap-[5px]">
                       {/* Cart Icon */}
                       <div className="w-6 h-6 flex items-center justify-center">
@@ -1609,7 +1687,10 @@ const HomePage = () => {
                   </div>
 
                   {/* Shop Now Button - Hidden by default, shown on hover */}
-                  <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div 
+                    onClick={() => handleShopNow('omega-3')}
+                    className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+                  >
                     <div className="flex items-center gap-[5px]">
                       {/* Cart Icon */}
                       <div className="w-6 h-6 flex items-center justify-center">
@@ -1657,7 +1738,10 @@ const HomePage = () => {
                   </div>
 
                   {/* Shop Now Button - Hidden by default, shown on hover */}
-                  <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div 
+                    onClick={() => handleShopNow('iron-supplement')}
+                    className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+                  >
                     <div className="flex items-center gap-[5px]">
                       {/* Cart Icon */}
                       <div className="w-6 h-6 flex items-center justify-center">
@@ -1700,7 +1784,10 @@ const HomePage = () => {
                   </div>
 
                   {/* Shop Now Button - Hidden by default, shown on hover */}
-                  <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div 
+                    onClick={() => handleShopNow('probiotics')}
+                    className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+                  >
                     <div className="flex items-center gap-[5px]">
                       {/* Cart Icon */}
                       <div className="w-6 h-6 flex items-center justify-center">
@@ -1752,7 +1839,10 @@ const HomePage = () => {
                   </div>
 
                   {/* Shop Now Button - Hidden by default, shown on hover */}
-                  <div className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div 
+                    onClick={() => handleShopNow('magnesium')}
+                    className="absolute flex justify-center items-center px-[10px] py-[5px] w-[calc(100%-40px)] h-[35px] bg-[#E2DFCF] rounded-[10px] bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+                  >
                     <div className="flex items-center gap-[5px]">
                       {/* Cart Icon */}
                       <div className="w-6 h-6 flex items-center justify-center">
