@@ -76,13 +76,13 @@ const ProductDetail = ({
       <Navbar />
 
       {/* Spacer to prevent navbar overlap */}
-      <div className="h-[95px] sm:h-[100px] lg:h-[110px]"></div>
+      <div className="h-[90px] sm:h-[95px] lg:h-[110px]"></div>
 
       {/* Main Content */}
-      <div className="flex-1 py-2 sm:py-4 lg:py-6">
+      <div className="flex-1 py-1 sm:py-3 lg:py-6">
         <Center maxWidth="1200px" padding="px-4 sm:px-6 lg:px-8">
           {/* Product Detail Section */}
-          <div className="flex flex-col xl:flex-row xl:items-start xl:justify-center gap-4 sm:gap-6 xl:gap-8 min-h-[400px] sm:min-h-[500px] mt-2 sm:mt-4">
+          <div className="flex flex-col xl:flex-row xl:items-start xl:justify-center gap-3 sm:gap-5 xl:gap-8 min-h-[350px] sm:min-h-[450px] mt-1 sm:mt-3">
             {/* Product Images - Left Side */}
             <div className="w-full xl:w-auto xl:flex-shrink-0 flex justify-center">
               <ProductImage
@@ -104,10 +104,10 @@ const ProductDetail = ({
           </div>
 
           {/* Features Section - Mobile & Desktop */}
-          <div className="mt-8 sm:mt-12 mb-4 sm:mb-6">
+          <div className="mt-6 sm:mt-10 mb-3 sm:mb-5">
             
             {/* Mobile Features - 2x2 Grid */}
-            <div className="xl:hidden grid grid-cols-2 gap-4 sm:gap-6 justify-items-center">
+            <div className="xl:hidden grid grid-cols-2 gap-3 sm:gap-5 justify-items-center">
               {/* Free shipping */}
               <div className="flex flex-col items-center text-center">
                 <div className="w-8 h-8 sm:w-10 sm:h-10 mb-2 flex items-center justify-center">
@@ -230,9 +230,9 @@ const ProductDetail = ({
           
 
           {/* Customer Testimonials Section */}
-          <div className="mb-8 sm:mb-12 lg:mb-16">
+          <div className="mb-6 sm:mb-10 lg:mb-16">
             {/* Section Title */}
-            <div className="text-center py-4 sm:py-6 lg:py-8">
+            <div className="text-center py-3 sm:py-5 lg:py-8">
               <h2
                 className="text-3xl md:text-4xl lg:text-5xl font-poppins font-medium leading-tight my-8"
                 style={{ color: '#503217' }}
@@ -398,9 +398,9 @@ const ProductDetail = ({
          
 
           {/* Recent Products Section */}
-          <div className="mb-8 sm:mb-12 lg:mb-16">
+          <div className="mb-6 sm:mb-10 lg:mb-16">
             {/* Section Title */}
-            <div className="text-center py-4 sm:py-6 lg:py-8">
+            <div className="text-center py-3 sm:py-5 lg:py-8">
               <h2
                 className="text-3xl md:text-4xl lg:text-5xl font-poppins font-medium leading-tight my-8"
                 style={{ color: '#503217' }}
@@ -410,7 +410,7 @@ const ProductDetail = ({
             </div>
 
             {/* Products Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mt-2 sm:mt-4 justify-items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 lg:gap-8 mt-1 sm:mt-3 justify-items-center">
               {/* Product 1 - Microscope */}
               <ProductCard
                 image="/home/microscope.png"
@@ -453,7 +453,7 @@ const ProductDetail = ({
          
 
           {/* CTA Section */}
-          <div className="mb-8 sm:mb-12 lg:mb-16">
+          <div className="mb-6 sm:mb-10 lg:mb-16">
             <div
               className="relative w-full h-[400px] lg:h-[618px] rounded-[10px] overflow-hidden flex items-center"
 
