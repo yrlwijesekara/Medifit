@@ -42,7 +42,7 @@ const Navbar = () => {
               Home
             </Link>
             <Link
-              to="/product"
+              to="/shop"
               className="text-[18px] font-normal text-medifit-primary hover:text-medifit-secondary hover:bg-medifit-bg-secondary hover:scale-105 transition-all duration-200 leading-[150%] w-[43px] h-[26px] flex items-center rounded-md px-2"
             >
               Shop
@@ -105,12 +105,12 @@ const Navbar = () => {
             >
               About
             </a>
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="text-[18px] font-normal text-medifit-primary hover:text-medifit-secondary hover:bg-medifit-bg-secondary hover:scale-105 transition-all duration-200 leading-[150%] w-[67px] h-[26px] flex items-center rounded-md px-2"
             >
               Contact
-            </a>
+            </Link>
           </div>
 
           {/* Right Side Icons */}
@@ -176,7 +176,7 @@ const Navbar = () => {
                 </span>
               </Link>
               <Link
-                to="/product"
+                to="/shop"
                 className="group block text-[18px] font-medium text-medifit-primary hover:text-medifit-secondary transition-all duration-300 py-3 px-4 rounded-xl hover:bg-white/50 hover:shadow-md hover:scale-[1.02] transform"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -271,8 +271,8 @@ const Navbar = () => {
                   <span>About</span>
                 </span>
               </a>
-              <a
-                href="#contact"
+              <Link
+                to="/contact"
                 className="group block text-[18px] font-medium text-medifit-primary hover:text-medifit-secondary transition-all duration-300 py-3 px-4 rounded-xl hover:bg-white/50 hover:shadow-md hover:scale-[1.02] transform"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -280,7 +280,7 @@ const Navbar = () => {
                   <span className="w-2 h-2 bg-medifit-primary rounded-full group-hover:bg-medifit-secondary transition-colors duration-300"></span>
                   <span>Contact</span>
                 </span>
-              </a>
+              </Link>
             </div>
           </div>
         )}
