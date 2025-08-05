@@ -1,7 +1,51 @@
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    schedule: '',
+    message: ''
+  });
+  const [showSuccessPopup, setShowSuccessPopup] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission delay
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setShowSuccessPopup(true);
+      
+      // Reset form
+      setFormData({
+        fullName: '',
+        email: '',
+        phone: '',
+        schedule: '',
+        message: ''
+      });
+      
+      // Hide success popup after 3 seconds
+      setTimeout(() => {
+        setShowSuccessPopup(false);
+      }, 3000);
+    }, 1000);
+  };
+
   return (
     <>
       {/* Navigation Bar */}
@@ -23,7 +67,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form Section */}
-          <div className="bg-[#E8E6DE] text-[#4b2f17] p-6 rounded-lg max-w-4xl mx-auto space-y-6">
+          <form onSubmit={handleSubmit} className="bg-[#E8E6DE] text-[#4b2f17] p-6 rounded-lg max-w-4xl mx-auto space-y-6 relative">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label className="block mb-1 font-medium" htmlFor="full-name">
@@ -31,9 +75,13 @@ const Contact = () => {
                 </label>
                 <input
                   id="full-name"
+                  name="fullName"
                   type="text"
-                  placeholder=""
-                  className="w-full p-3 rounded-md bg-[#eee9df] border border-[#4b2f17] outline-none"
+                  value={formData.fullName}
+                  onChange={handleInputChange}
+                  placeholder="Enter your full name"
+                  className="w-full p-3 rounded-md bg-[#eee9df] border border-[#4b2f17] outline-none focus:ring-2 focus:ring-[#4b2f17] focus:border-transparent"
+                  required
                 />
               </div>
               <div>
@@ -43,9 +91,13 @@ const Contact = () => {
                 <div className="relative">
                   <input
                     id="email"
+                    name="email"
                     type="email"
-                    placeholder=""
-                    className="w-full p-3 pl-10 rounded-md bg-[#eee9df] border border-[#4b2f17] outline-none"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    placeholder="Enter your email address"
+                    className="w-full p-3 pl-10 rounded-md bg-[#eee9df] border border-[#4b2f17] outline-none focus:ring-2 focus:ring-[#4b2f17] focus:border-transparent"
+                    required
                   />
                 </div>
               </div>
@@ -55,9 +107,13 @@ const Contact = () => {
                 </label>
                 <input
                   id="phone"
-                  type="text"
-                  placeholder=""
-                  className="w-full p-3 rounded-md bg-[#eee9df] border border-[#4b2f17] outline-none"
+                  name="phone"
+                  type="tel"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  placeholder="Enter your phone number"
+                  className="w-full p-3 rounded-md bg-[#eee9df] border border-[#4b2f17] outline-none focus:ring-2 focus:ring-[#4b2f17] focus:border-transparent"
+                  required
                 />
               </div>
               <div>
@@ -67,9 +123,12 @@ const Contact = () => {
                 <div className="relative">
                   <input
                     id="schedule"
+                    name="schedule"
                     type="text"
-                    placeholder=""
-                    className="w-full p-3 pl-10 rounded-md bg-[#eee9df] border border-[#4b2f17] outline-none"
+                    value={formData.schedule}
+                    onChange={handleInputChange}
+                    placeholder="e.g., Monday 10-11 AM"
+                    className="w-full p-3 pl-10 rounded-md bg-[#eee9df] border border-[#4b2f17] outline-none focus:ring-2 focus:ring-[#4b2f17] focus:border-transparent"
                   />
                 </div>
               </div>
@@ -82,18 +141,57 @@ const Contact = () => {
               <div className="relative">
                 <textarea
                   id="message"
+                  name="message"
                   rows="6"
-                  placeholder=""
-                  className="w-full p-3 pl-10 rounded-md bg-[#eee9df] border border-[#4b2f17] outline-none"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  placeholder="Enter your message here..."
+                  className="w-full p-3 pl-10 rounded-md bg-[#eee9df] border border-[#4b2f17] outline-none focus:ring-2 focus:ring-[#4b2f17] focus:border-transparent"
+                  required
                 ></textarea>
                 
               </div>
             </div>
 
-            <button className="bg-[#4b2f17] text-white px-6 py-2 rounded-md flex items-center gap-2 hover:bg-[#3a2411]  cursor-pointer">
-              Submit 
+            <button 
+              type="submit"
+              disabled={isSubmitting}
+              className="bg-[#4b2f17] text-white px-6 py-3 rounded-md flex items-center gap-2 hover:bg-[#3a2411] disabled:bg-[#8F7D6A] disabled:cursor-not-allowed transition-colors duration-200"
+            >
+              {isSubmitting ? (
+                <>
+                  <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Submitting...
+                </>
+              ) : (
+                'Submit'
+              )}
             </button>
-          </div>
+            
+            {/* Success Popup */}
+            {showSuccessPopup && (
+              <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                <div className="bg-white rounded-lg p-8 max-w-md mx-4 text-center shadow-2xl transform animate-pulse">
+                  <div className="mb-4">
+                    <svg className="mx-auto h-16 w-16 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold text-[#503217] mb-2">Success!</h3>
+                  <p className="text-[#8F7D6A] mb-6">Your message has been sent successfully. We'll get back to you soon!</p>
+                  <button 
+                    onClick={() => setShowSuccessPopup(false)}
+                    className="bg-[#503217] text-white px-6 py-2 rounded-md hover:bg-[#3a2411] transition-colors duration-200"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            )}
+          </form>
         </div>
       </div>
 
