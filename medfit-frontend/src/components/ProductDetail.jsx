@@ -455,7 +455,7 @@ const ProductDetail = ({
           {/* CTA Section */}
           <div className="mb-6 sm:mb-10 lg:mb-16">
             <div
-              className="relative w-full h-[400px] lg:h-[618px] rounded-[10px] overflow-hidden flex items-center"
+              className="relative w-full h-[500px] sm:h-[450px] lg:h-[618px] rounded-[10px] overflow-hidden flex items-center"
 
             >
               {/* Content Container */}
@@ -512,7 +512,7 @@ const ProductDetail = ({
                       </button>
 
                       {/* Mobile CTA Images - 2 Rows Display */}
-                      <div className="lg:hidden w-full max-w-[300px] space-y-3">
+                      <div className="lg:hidden w-full max-w-[350px] space-y-3">
                         {/* First Row - 2 Images */}
                         <div className="flex gap-2 overflow-hidden">
                           <div className="w-1/2 h-[80px] rounded-[5px] overflow-hidden">
@@ -522,7 +522,7 @@ const ProductDetail = ({
                               className="w-full h-full object-cover"
                             />
                           </div>
-                          <div className="w-1/2 h-[80px] rounded-[5px] overflow-hidden -mr-4">
+                          <div className="w-1/2 h-[80px] rounded-[5px] overflow-hidden">
                             <img
                               src="./shopdetail/cta-2.png"
                               alt="Hand holding medication blister pack"
@@ -540,7 +540,7 @@ const ProductDetail = ({
                               className="w-full h-full object-cover"
                             />
                           </div>
-                          <div className="w-1/2 h-[80px] rounded-[5px] overflow-hidden -mr-4">
+                          <div className="w-1/2 h-[80px] rounded-[5px] overflow-hidden">
                             <img
                               src="./shopdetail/cta-4.png"
                               alt="Colorful vitamins and supplements"

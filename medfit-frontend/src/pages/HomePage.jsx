@@ -240,7 +240,7 @@ const HomePage = () => {
       </div>
 
       {/* Shop by Category Section */}
-      <div className="absolute w-full h-[900px] md:h-[389px] left-0 top-[830px] md:top-[1200px] overflow-hidden">
+      <div className="absolute w-full h-[900px] md:h-[389px] left-0 top-[830px] md:top-[1100px] overflow-hidden">
 
         {/* Background Category Main Image - Right Side */}
         <div className="absolute w-[400px] h-[400px] right-[-50px] top-[-50px] opacity-40 z-0 hidden md:block">
@@ -539,7 +539,7 @@ const HomePage = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="absolute w-full left-0 top-[1780px] md:top-[1689px] h-[650px] md:h-[300px] overflow-hidden">
+      <div className="absolute w-full left-0 top-[1680px] md:top-[1520px] h-[650px] md:h-[300px] overflow-hidden">
 
         {/* CTA Cards Container */}
         <div className="absolute w-full left-0 top-0 px-4 md:px-0">
@@ -814,7 +814,7 @@ const HomePage = () => {
       </div>
 
       {/* Latest health product Section */}
-      <div className="absolute w-full left-0 top-[2480px] md:top-[2089px] h-[800px] md:h-[479px] overflow-hidden">
+      <div className="absolute w-full left-0 top-[2480px] md:top-[1850px] h-[800px] md:h-[479px] overflow-hidden">
 
 
         {/* Section Title */}
@@ -1309,7 +1309,7 @@ const HomePage = () => {
       </div>
 
       {/* Features Section - Group 179 */}
-      <div className="absolute w-[1300px] h-[140px] left-1/2 transform -translate-x-1/2 top-[2778px] hidden lg:block">
+      <div className="absolute w-[1300px] h-[140px] left-1/2 transform -translate-x-1/2 top-[2360px] hidden lg:block">
 
         {/* Background Rectangle 89 */}
         <div className="absolute w-[1300px] h-[140px] left-0 top-0 bg-[#F2F2F2] rounded-[10px]"></div>
@@ -1394,7 +1394,7 @@ const HomePage = () => {
       </div>
 
       {/* Store Collection Section */}
-      <div className="absolute w-full left-0 top-[3300px] md:top-[2800px] lg:top-[2900px] min-h-[1200px] lg:min-h-[1000px]">
+      <div className="absolute w-full left-0 top-[3300px] md:top-[2400px] lg:top-[2530px] min-h-[1200px] lg:min-h-[1000px]">
 
         {/* Section Title */}
         <div className="absolute w-full left-0 top-0">
@@ -1779,7 +1779,7 @@ const HomePage = () => {
          
 
           {/* Newsletter Section */}
-          <div className="relative w-full flex justify-center items-center mt-32 mb-24 z-10">
+          <div className="relative w-full flex justify-center items-center mt-16 mb-24 z-10">
             <div className="relative w-full max-w-[1300px] mx-4 md:mx-auto bg-transparent flex flex-col md:flex-row rounded-[10px] overflow-hidden shadow-none">
               {/* Image */}
               <div className="w-full md:w-1/2 h-[200px] md:h-[562px] relative">
