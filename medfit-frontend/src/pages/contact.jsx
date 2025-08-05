@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Contact = () => {
   return (
@@ -235,7 +236,9 @@ const Contact = () => {
           </section>
         </div>
       </div>
-      {/* Footer can be added here if needed */}
+      
+      {/* Footer */}
+      <Footer />
     </>
   );
 };
