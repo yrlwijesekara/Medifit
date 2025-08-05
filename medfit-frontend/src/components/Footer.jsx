@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="relative w-full min-h-[auto] overflow-hidden bg-[#E8E6DE]">
       <Center maxWidth="1200px" padding="px-4 sm:px-6 lg:px-8">
         {/* Main Footer Container */}
-        <div className="relative w-full py-8 lg:py-16">
+        <div className="relative w-full py-6 lg:py-10">
           
           {/* Decorative Elements */}
           {/* Bottom Left Decorative Line */}
@@ -229,7 +229,7 @@ const Footer = () => {
           </div>
           
           {/* Bottom Section */}
-          <div className="mt-12 lg:mt-16 pt-6 lg:pt-8 border-t border-[#E2DFCF]">
+          <div className="mt-8 lg:mt-6 pt-4 lg:pt-5 border-t border-[#E2DFCF]">
             <p className="font-poppins font-medium text-[14px] lg:text-[16px] leading-[150%] text-center text-[#503217]">
               Design By Fuchsius, Powered By Fuchsius
             </p>
