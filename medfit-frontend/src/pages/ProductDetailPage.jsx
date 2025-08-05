@@ -21,7 +21,7 @@ const ProductDetailPage = () => {
     ]
   };
 
-  return <ProductDetail product={sampleProduct} />;
+  return <ProductDetail product={sampleProduct} productId="b12-medicine" />;
 };
 
 export default ProductDetailPage;

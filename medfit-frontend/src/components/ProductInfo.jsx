@@ -1,5 +1,8 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FiShoppingCart, FiChevronUp, FiChevronDown, FiX, FiCheck } from 'react-icons/fi';
+import { useCart } from '../context/CartContext';
+import { getProductById } from '../data/products';
 
 const ProductInfo = ({ 
   name = "B12 Medicine",
@@ -11,10 +14,13 @@ const ProductInfo = ({
     "Supports healthy brain function.",
     "Promotes red blood cell production.",
     "Aids in maintaining nerve health."
-  ]
+  ],
+  productId = "b12-medicine"
 }) => {
   const [quantity, setQuantity] = useState(1);
   const [showCartPopup, setShowCartPopup] = useState(false);
+  const { addToCart } = useCart();
+  const navigate = useNavigate();
 
   const incrementQuantity = () => {
     setQuantity(prev => prev + 1);
@@ -25,10 +31,31 @@ const ProductInfo = ({
   };
 
   const handleAddToCart = () => {
+    // Get product from database or create product object
+    let product = getProductById(productId);
+    
+    if (!product) {
+      // If not found in database, create product from current props
+      product = {
+        id: productId,
+        name: name,
+        price: currentPrice,
+        originalPrice: originalPrice,
+        image: '/home/storecollection-1.png', // Default image
+        category: 'Medicine'
+      };
+    }
+    
+    // Add multiple quantities if user selected more than 1
+    for (let i = 0; i < quantity; i++) {
+      addToCart(product);
+    }
+    
     setShowCartPopup(true);
     setTimeout(() => {
       setShowCartPopup(false);
-    }, 3000);
+      navigate('/cart');
+    }, 1500);
   };
 
   return (
@@ -134,6 +161,14 @@ const ProductInfo = ({
           ))}
         </div>
       </div>
+
+      {/* Success Popup */}
+      {showCartPopup && (
+        <div className="fixed top-4 right-4 z-50 flex items-center gap-3 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg animate-pulse">
+          <FiCheck className="w-5 h-5" />
+          <span className="font-medium">Added to cart! Redirecting...</span>
+        </div>
+      )}
 
       {/* Features Section - Mobile (below key benefits) */}
       <div className="xl:hidden mt-12 mb-8">

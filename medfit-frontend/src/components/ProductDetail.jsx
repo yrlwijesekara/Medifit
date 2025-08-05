@@ -19,7 +19,8 @@ const ProductDetail = ({
       "Promotes red blood cell production.",
       "Aids in maintaining nerve health."
     ]
-  }
+  },
+  productId = "b12-medicine"
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -99,6 +100,7 @@ const ProductDetail = ({
                 originalPrice={product.originalPrice}
                 description={product.description}
                 benefits={product.benefits}
+                productId={productId}
               />
             </div>
           </div>
@@ -418,6 +420,7 @@ const ProductDetail = ({
                 price="$45.00 USD"
                 badge="New"
                 hasShopNow={true}
+                productId="microscope"
               />
 
               {/* Product 2 - Pulse Oximeter */}
@@ -428,6 +431,7 @@ const ProductDetail = ({
                 originalPrice="$25.00 USD"
                 badge="Save 10%"
                 hasShopNow={true}
+                productId="pulse-oximeter"
               />
 
               {/* Product 3 - Vitamin Serum */}
@@ -437,6 +441,7 @@ const ProductDetail = ({
                 price="$20.00 USD"
                 originalPrice="$30.00 USD"
                 hasShopNow={true}
+                productId="vitamin-serum"
               />
 
               {/* Product 4 - High Protein */}
@@ -446,6 +451,7 @@ const ProductDetail = ({
                 price="$50.00 USD"
                 badge="New"
                 hasShopNow={true}
+                productId="high-protein"
               />
             </div>
           </div>

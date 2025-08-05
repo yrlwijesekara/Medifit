@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useCart } from '../context/CartContext';
+import { getProductById } from '../data/products';
 
 const ProductCard = ({ 
   image, 
@@ -7,13 +10,27 @@ const ProductCard = ({
   originalPrice, 
   badge, 
   badgeColor = "#D3744A",
-  hasShopNow = false 
+  hasShopNow = false,
+  productId = "b12-medicine"
 }) => {
   const [isClicked, setIsClicked] = useState(false);
+  const { addToCart } = useCart();
+  const navigate = useNavigate();
 
   const handleCardClick = () => {
     if (hasShopNow) {
       setIsClicked(!isClicked);
+    }
+  };
+  
+  const handleShopNow = (e) => {
+    e.stopPropagation();
+    
+    // Get product from database
+    const product = getProductById(productId);
+    if (product) {
+      addToCart(product);
+      navigate('/cart');
     }
   };
 
@@ -45,9 +62,12 @@ const ProductCard = ({
           </div>
         )}
 
-        {/* Shop Now Button - Only for microscope */}
+        {/* Shop Now Button */}
         {hasShopNow && (
-          <div className={`absolute flex justify-center items-center px-[10px] py-[5px] w-[210px] h-[35px] bottom-5 left-5 bg-[#E2DFCF] rounded-[10px] transition-opacity duration-300 ${isClicked ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}>
+          <div 
+            onClick={handleShopNow}
+            className={`absolute flex justify-center items-center px-[10px] py-[5px] w-[210px] h-[35px] bottom-5 left-5 bg-[#E2DFCF] rounded-[10px] transition-opacity duration-300 cursor-pointer hover:bg-[#D3D0C1] ${isClicked ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}
+          >
             <span className="font-poppins font-medium text-[16px] leading-[150%] text-[#503217]">
               Shop now
             </span>

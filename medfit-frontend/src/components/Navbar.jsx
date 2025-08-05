@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FiSearch, FiShoppingCart, FiMenu, FiX } from 'react-icons/fi';
+import { useCart } from '../context/CartContext';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isPagesDropdownOpen, setIsPagesDropdownOpen] = useState(false);
   const navigate = useNavigate();
+  const { getCartItemsCount } = useCart();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -13,6 +15,10 @@ const Navbar = () => {
 
   const togglePagesDropdown = () => {
     setIsPagesDropdownOpen(!isPagesDropdownOpen);
+  };
+
+  const handleCartClick = () => {
+    navigate('/cart');
   };
 
   return (
@@ -125,7 +131,10 @@ const Navbar = () => {
             </button>
 
             {/* Cart Icon with Badge */}
-            <button className="flex relative p-2 hover:bg-medifit-bg-secondary hover:scale-110 rounded-md transition-all duration-200 w-[40px] h-[40px] items-center justify-center">
+            <button 
+              onClick={handleCartClick}
+              className="flex relative p-2 hover:bg-medifit-bg-secondary hover:scale-110 rounded-md transition-all duration-200 w-[40px] h-[40px] items-center justify-center"
+            >
               <FiShoppingCart 
                 size={18} 
                 color="#503217"
@@ -133,11 +142,13 @@ const Navbar = () => {
               />
               
               {/* Cart Badge */}
-              <div className="absolute -top-1 -right-1 w-[16px] h-[16px] lg:w-[18px] lg:h-[18px] bg-medifit-primary rounded-full flex items-center justify-center">
-                <span className="text-[9px] lg:text-[10px] font-normal text-white leading-[150%]">
-                  0
-                </span>
-              </div>
+              {getCartItemsCount() > 0 && (
+                <div className="absolute -top-1 -right-1 w-[16px] h-[16px] lg:w-[18px] lg:h-[18px] bg-medifit-primary rounded-full flex items-center justify-center">
+                  <span className="text-[9px] lg:text-[10px] font-normal text-white leading-[150%]">
+                    {getCartItemsCount()}
+                  </span>
+                </div>
+              )}
             </button>
 
             {/* Mobile Menu Toggle */}
