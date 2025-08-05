@@ -99,12 +99,12 @@ const Navbar = () => {
               </div>
             </div>
             
-            <a
-              href="#about"
+            <Link
+              to="/about"
               className="text-[18px] font-normal text-medifit-primary hover:text-medifit-secondary hover:bg-medifit-bg-secondary hover:scale-105 transition-all duration-200 leading-[150%] w-[52px] h-[26px] flex items-center rounded-md px-2"
             >
               About
-            </a>
+            </Link>
             <Link
               to="/contact"
               className="text-[18px] font-normal text-medifit-primary hover:text-medifit-secondary hover:bg-medifit-bg-secondary hover:scale-105 transition-all duration-200 leading-[150%] w-[67px] h-[26px] flex items-center rounded-md px-2"
@@ -261,8 +261,8 @@ const Navbar = () => {
                 )}
               </div>
               
-              <a
-                href="#about"
+              <Link
+                to="/about"
                 className="group block text-[18px] font-medium text-medifit-primary hover:text-medifit-secondary transition-all duration-300 py-3 px-4 rounded-xl hover:bg-white/50 hover:shadow-md hover:scale-[1.02] transform"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -270,7 +270,7 @@ const Navbar = () => {
                   <span className="w-2 h-2 bg-medifit-primary rounded-full group-hover:bg-medifit-secondary transition-colors duration-300"></span>
                   <span>About</span>
                 </span>
-              </a>
+              </Link>
               <Link
                 to="/contact"
                 className="group block text-[18px] font-medium text-medifit-primary hover:text-medifit-secondary transition-all duration-300 py-3 px-4 rounded-xl hover:bg-white/50 hover:shadow-md hover:scale-[1.02] transform"
