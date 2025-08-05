@@ -1780,19 +1780,19 @@ const HomePage = () => {
 
           {/* Newsletter Section */}
           <div className="relative w-full flex justify-center items-center mt-32 mb-24 z-10">
-            <div className="relative w-[1300px] h-[562px] bg-transparent flex rounded-[10px] overflow-hidden shadow-none">
-              {/* Left: Image */}
-              <div className="hidden md:block w-1/2 h-full relative">
-                <div className="absolute w-full h-full bg-[#F2F2F2] rounded-l-[10px]"></div>
+            <div className="relative w-full max-w-[1300px] mx-4 md:mx-auto bg-transparent flex flex-col md:flex-row rounded-[10px] overflow-hidden shadow-none">
+              {/* Image */}
+              <div className="w-full md:w-1/2 h-[200px] md:h-[562px] relative">
+                <div className="absolute w-full h-full bg-[#F2F2F2] rounded-t-[10px] md:rounded-l-[10px] md:rounded-tr-none"></div>
                 <img
                   src={"/home/newslettersection.png"}
                   alt="Newsletter section"
-                  className="absolute w-full h-full object-cover object-center rounded-l-[10px]"
+                  className="absolute w-full h-full object-cover object-center rounded-t-[10px] md:rounded-l-[10px] md:rounded-tr-none"
                   style={{ transform: "scaleX(-1)" }}
                 />
               </div>
-              {/* Right: Form */}
-              <div className="w-full md:w-1/2 h-full flex flex-col justify-center items-center bg-[#F2F2F2] rounded-r-[10px] px-8 py-12">
+              {/* Form */}
+              <div className="w-full md:w-1/2 h-auto md:h-[562px] flex flex-col justify-center items-center bg-[#F2F2F2] rounded-b-[10px] md:rounded-r-[10px] md:rounded-bl-none px-8 py-12">
                 <div className="mb-2">
                   <span className="font-poppins font-medium text-[24px] leading-[150%] text-[#6C543E]">
                     Join our Newsletter
