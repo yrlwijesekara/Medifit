@@ -57,7 +57,7 @@ const About = () => {
       <div className=" w-full  bg-[#E8E6DE] flex flex-col items-center justify-center relative">
         <div className="container w-full bg-[#E8E6DE]">
           <div className="md:bg-green-400  lg:bg-blue-400 bg-yellow-400 xl:bg-pink-400 grid lg:grid-cols-2 grid-cols-1"></div>
-          <div class="grid grid-flow-col justify-items-center ..."></div>
+          <div className="grid grid-flow-col justify-items-center ..."></div>
           {/* Header */}
           <div className="flex flex-col items-center mb-12 ">
             {/* Icon */}
@@ -92,7 +92,7 @@ const About = () => {
       <div className=" w-full  bg-[#E8E6DE] flex flex-col items-center justify-center relative">
         <div className="container w-full bg-[#E8E6DE]">
           <div className="md:bg-green-400  lg:bg-blue-400 bg-yellow-400 xl:bg-pink-400 grid lg:grid-cols-2 grid-cols-1"></div>
-          <div class="grid grid-flow-col justify-items-center ..."></div>
+          <div className="grid grid-flow-col justify-items-center ..."></div>
           <div className="w-full bg-[#E8E6DE] py-10">
             <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div className="flex flex-col items-center">
@@ -166,13 +166,13 @@ const About = () => {
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
-                      stroke-width="1.5"
+                      strokeWidth="1.5"
                       stroke="currentColor"
                       className="size-6 transition-transform duration-300 hover:scale-125"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"
                       />
                     </svg>
@@ -244,7 +244,7 @@ const About = () => {
       <div className=" w-full  bg-[#E8E6DE] flex flex-col items-center justify-center relative">
         <div className="container w-full bg-[#E8E6DE]">
           <div className="md:bg-green-400  lg:bg-blue-400 bg-yellow-400 xl:bg-pink-400 grid lg:grid-cols-2 grid-cols-1"></div>
-          <div class="grid grid-flow-col justify-items-center ..."></div>
+          <div className="grid grid-flow-col justify-items-center ..."></div>
           <section className="bg-[#F2F2F2]  px-6 py-16">
             <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
               <div>
