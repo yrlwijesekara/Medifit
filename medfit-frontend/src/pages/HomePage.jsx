@@ -34,6 +34,9 @@ const HomePage = () => {
     product3: false,
     product4: false,
   });
+  
+  // State for customer reviews carousel
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   // Toggle badge visibility for mobile
   const toggleMobileBadge = (cardId) => {
@@ -41,6 +44,54 @@ const HomePage = () => {
       ...prev,
       [cardId]: !prev[cardId]
     }));
+  };
+  
+  // Testimonials data
+  const testimonials = [
+    {
+      id: 1,
+      name: "Olivia Garcia",
+      image: "/shopdetail/customer-1.jpg",
+      reviewImage: "/shopdetail/review-1.png",
+      review: "Medifit products have transformed my health routine. Amazing quality and fast delivery!"
+    },
+    {
+      id: 2,
+      name: "Sophia Brown",
+      image: "/shopdetail/customer-2.jpg",
+      reviewImage: "/shopdetail/review-2.png",
+      review: "I've been using Medifit supplements for months. The results speak for themselves!"
+    },
+    {
+      id: 3,
+      name: "Ethan Harris",
+      image: "/shopdetail/customer-3.jpg",
+      reviewImage: "/shopdetail/review-3.png",
+      review: "As a fitness enthusiast, Medifit products give me the edge I need. Highly recommended!"
+    },
+    {
+      id: 4,
+      name: "Emma Wilson",
+      image: "/shopdetail/customer-1.jpg",
+      reviewImage: "/shopdetail/review-1.png",
+      review: "Professional quality at affordable prices. Medifit is my go-to health store!"
+    },
+    {
+      id: 5,
+      name: "Michael Johnson",
+      image: "/shopdetail/customer-2.jpg",
+      reviewImage: "/shopdetail/review-3.png",
+      review: "Excellent customer service and premium products. 5 stars from me!"
+    }
+  ];
+  
+  // Carousel navigation functions
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
   return (
@@ -1923,6 +1974,177 @@ const HomePage = () => {
               </div>
             </div>
           </div>
+
+          {/* Customer Reviews Section */}
+          <div className="relative w-full mb-16">
+            <Center>
+              <div className="mb-6 sm:mb-10 lg:mb-16">
+                {/* Section Title */}
+                <div className="text-center py-3 sm:py-5 lg:py-8">
+                  <h2
+                    className="text-3xl md:text-4xl lg:text-5xl font-poppins font-medium leading-tight my-8"
+                    style={{ color: '#503217' }}
+                  >
+                    Our happy clients
+                  </h2>
+                </div>
+
+                {/* Mobile Carousel - Click Navigation */}
+                <div className="lg:hidden relative">
+                  {/* Navigation Buttons */}
+                  <button
+                    onClick={prevSlide}
+                    className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/50 transition-all duration-200"
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="#503217" viewBox="0 0 24 24" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+
+                  <button
+                    onClick={nextSlide}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/50 transition-all duration-200"
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="#503217" viewBox="0 0 24 24" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+
+                  {/* Single Card Display */}
+                  <div className="overflow-hidden">
+                    <div
+                      className="flex transition-transform duration-500 ease-in-out"
+                      style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                    >
+                      {testimonials.map((testimonial, index) => (
+                        <div key={testimonial.id} className="w-full flex-shrink-0 px-4">
+                          <div className="flex flex-col items-start">
+                            {/* Review Card */}
+                            <div
+                              className="w-full p-8 mb-6 rounded-[25px_25px_25px_0px] relative h-48 flex flex-col"
+                              style={{ backgroundColor: '#F2F2F2' }}
+                            >
+                              {/* Comment Icon */}
+                              <div className="absolute top-4 left-6">
+                                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+                                  <path d="M3 4C3 3.44772 3.44772 3 4 3H20C20.5523 3 21 3.44772 21 4V13C21 13.5523 20.5523 14 20 14H13L8 17V14H4C3.44772 14 3 13.5523 3 13V4Z" stroke="#8F7D6A" strokeWidth="1.5" />
+                                  <path d="M8 9H16" stroke="#8F7D6A" strokeWidth="1.5" strokeLinecap="round" />
+                                  <path d="M6 17H12" stroke="#8F7D6A" strokeWidth="1.5" strokeLinecap="round" />
+                                </svg>
+                              </div>
+
+                              {/* Review Text */}
+                              <div className="flex-1 flex items-center mt-8">
+                                <p
+                                  className="text-base leading-relaxed"
+                                  style={{
+                                    color: '#8F7D6A',
+                                    fontFamily: 'Sans Serif Collection',
+                                    fontWeight: 400
+                                  }}
+                                >
+                                  {testimonial.review}
+                                </p>
+                              </div>
+                            </div>
+
+                            {/* User Info */}
+                            <div className="flex items-center gap-4">
+                              <div className="w-15 h-15 rounded-full overflow-hidden bg-gray-200 flex-shrink-0 flex items-center justify-center">
+                                <img
+                                  src={testimonial.reviewImage}
+                                  alt={`Review by ${testimonial.name}`}
+                                  className="w-10 h-10 object-contain"
+                                />
+                              </div>
+                              <h3
+                                className="text-lg font-poppins font-medium"
+                                style={{ color: '#503217' }}
+                              >
+                                {testimonial.name}
+                              </h3>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Desktop Layout - 3 Full Cards with Hover Navigation */}
+                <div className="hidden lg:block relative">
+                  {/* Mouse hover areas for navigation */}
+                  <div
+                    className="absolute left-0 top-0 w-1/4 h-full z-10 cursor-pointer"
+                    onMouseEnter={prevSlide}
+                  ></div>
+
+                  <div
+                    className="absolute right-0 top-0 w-1/4 h-full z-10 cursor-pointer"
+                    onMouseEnter={nextSlide}
+                  ></div>
+
+                  {/* 3 Cards Display */}
+                  <div className="flex gap-6 justify-center">
+                    {testimonials.slice(currentSlide, currentSlide + 3).concat(
+                      currentSlide + 3 > testimonials.length ? testimonials.slice(0, (currentSlide + 3) - testimonials.length) : []
+                    ).slice(0, 3).map((testimonial, index) => (
+                      <div key={`${testimonial.id}-${index}`} className="w-1/3 flex-shrink-0">
+                        <div className="flex flex-col items-start h-full">
+                          {/* Review Card */}
+                          <div
+                            className="w-full p-8 mb-6 rounded-[25px_25px_25px_0px] relative h-48 flex flex-col"
+                            style={{ backgroundColor: '#F2F2F2' }}
+                          >
+                            {/* Comment Icon */}
+                            <div className="absolute top-4 left-6">
+                              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 4C3 3.44772 3.44772 3 4 3H20C20.5523 3 21 3.44772 21 4V13C21 13.5523 20.5523 14 20 14H13L8 17V14H4C3.44772 14 3 13.5523 3 13V4Z" stroke="#8F7D6A" strokeWidth="1.5" />
+                                <path d="M8 9H16" stroke="#8F7D6A" strokeWidth="1.5" strokeLinecap="round" />
+                                <path d="M6 17H12" stroke="#8F7D6A" strokeWidth="1.5" strokeLinecap="round" />
+                              </svg>
+                            </div>
+
+                            {/* Review Text */}
+                            <div className="flex-1 flex items-center mt-8">
+                              <p
+                                className="text-base leading-relaxed"
+                                style={{
+                                  color: '#8F7D6A',
+                                  fontFamily: 'Sans Serif Collection',
+                                  fontWeight: 400
+                                }}
+                              >
+                                {testimonial.review}
+                              </p>
+                            </div>
+                          </div>
+
+                          {/* User Info */}
+                          <div className="flex items-center gap-4">
+                            <div className="w-15 h-15 rounded-full overflow-hidden bg-gray-200 flex-shrink-0 flex items-center justify-center">
+                              <img
+                                src={testimonial.reviewImage}
+                                alt={`Review by ${testimonial.name}`}
+                                className="w-10 h-10 object-contain"
+                              />
+                            </div>
+                            <h3
+                              className="text-lg font-poppins font-medium"
+                              style={{ color: '#503217' }}
+                            >
+                              {testimonial.name}
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </Center>
+          </div>
+
           {/* Footer */}
       <Footer />
 
